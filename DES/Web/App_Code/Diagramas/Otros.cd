@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Utilidades">
+    <Position X="3.5" Y="2.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAEBAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\Utilidades.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Usuarios">
+    <Position X="3.5" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>App_Code\Usuarios.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FiltroBusqueda">
+    <Position X="0.5" Y="0.5" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="FiltroBusqueda.TipoFiltroBusqueda">
+        <TypeIdentifier>
+          <NewMemberFileName>App_Code\FiltroBusqueda.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>oGCIxABQhEBgAAQEQCAABAQgAQAgEAAAAKAIEAAgCBQ=</HashCode>
+      <FileName>App_Code\FiltroBusqueda.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ApplicationCache">
+    <Position X="3.5" Y="4.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAABAAA=</HashCode>
+      <FileName>App_Code\ApplicationCache.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

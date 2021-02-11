@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="67158fae-0120-4c7f-998b-536ba730e52f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.1.253.88/PRE/Documental/DocumentosDigitales.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DocumentosDigitales7.xsd" MetadataType="Schema" ID="574b4f5b-72a7-45a1-bb55-a712b4d2b574" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Documental/DocumentosDigitales.svc?xsd=xsd2" />
+    <MetadataFile FileName="DocumentosDigitales72.xsd" MetadataType="Schema" ID="944d3997-d060-44dd-9948-c1131b973785" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Documental/DocumentosDigitales.svc?xsd=xsd3" />
+    <MetadataFile FileName="dseDocumentosDigitales1.xsd" MetadataType="Schema" ID="b304cfbf-be69-4759-b25e-ca7d1f52a6b6" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Documental/DocumentosDigitales.svc?xsd=xsd5" />
+    <MetadataFile FileName="DocumentosDigitales1.disco" MetadataType="Disco" ID="8a62c1b0-e0f5-40c1-a923-6c6f6c160278" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Documental/DocumentosDigitales.svc?disco" />
+    <MetadataFile FileName="DocumentosDigitales74.xsd" MetadataType="Schema" ID="894dfbff-c9b5-4a08-88a8-79e2893581ca" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Documental/DocumentosDigitales.svc?xsd=xsd4" />
+    <MetadataFile FileName="DocumentosDigitales1.wsdl" MetadataType="Wsdl" ID="056b700e-3ccc-455f-bd8a-3201b3dd8d66" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Documental/DocumentosDigitales.svc?wsdl" />
+    <MetadataFile FileName="DocumentosDigitales75.xsd" MetadataType="Schema" ID="92849e34-0eb0-46b5-9d2f-7bd07bb9ae4f" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Documental/DocumentosDigitales.svc?xsd=xsd6" />
+    <MetadataFile FileName="DocumentosDigitales76.xsd" MetadataType="Schema" ID="64372f1f-0654-43b3-b28c-116c353b5cbd" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Documental/DocumentosDigitales.svc?xsd=xsd7" />
+    <MetadataFile FileName="DocumentosDigitales77.xsd" MetadataType="Schema" ID="5647fa2a-e973-4966-9509-eb7d046ab822" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Documental/DocumentosDigitales.svc?xsd=xsd0" />
+    <MetadataFile FileName="DocumentosDigitales73.xsd" MetadataType="Schema" ID="e9afc88b-cce2-49c9-b29a-040381a4fde9" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Documental/DocumentosDigitales.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ds_TerrenoMercado" targetNamespace="http://tempuri.org/ds_TerrenoMercado.xsd" xmlns:mstns="http://tempuri.org/ds_TerrenoMercado.xsd" xmlns="http://tempuri.org/ds_TerrenoMercado.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ds_TerrenoMercado" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="ds_TerrenoMercado" msprop:Generator_UserDSName="ds_TerrenoMercado">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FEXAVA_DATOSMERCADO" msprop:Generator_TableClassName="FEXAVA_DATOSMERCADODataTable" msprop:Generator_TableVarName="tableFEXAVA_DATOSMERCADO" msprop:Generator_TablePropName="FEXAVA_DATOSMERCADO" msprop:Generator_RowDeletingName="FEXAVA_DATOSMERCADORowDeleting" msprop:Generator_RowChangingName="FEXAVA_DATOSMERCADORowChanging" msprop:Generator_RowEvHandlerName="FEXAVA_DATOSMERCADORowChangeEventHandler" msprop:Generator_RowDeletedName="FEXAVA_DATOSMERCADORowDeleted" msprop:Generator_UserTableName="FEXAVA_DATOSMERCADO" msprop:Generator_RowChangedName="FEXAVA_DATOSMERCADORowChanged" msprop:Generator_RowEvArgName="FEXAVA_DATOSMERCADORowChangeEvent" msprop:Generator_RowClassName="FEXAVA_DATOSMERCADORow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TOTALINGRESOS" msprop:Generator_ColumnVarNameInTable="columnTOTALINGRESOS" msprop:Generator_ColumnPropNameInRow="TOTALINGRESOS" msprop:Generator_ColumnPropNameInTable="TOTALINGRESOSColumn" msprop:Generator_UserColumnName="TOTALINGRESOS" type="xs:string" minOccurs="0" />
+              <xs:element name="TOTALEGRESOS" msprop:Generator_ColumnVarNameInTable="columnTOTALEGRESOS" msprop:Generator_ColumnPropNameInRow="TOTALEGRESOS" msprop:Generator_ColumnPropNameInTable="TOTALEGRESOSColumn" msprop:Generator_UserColumnName="TOTALEGRESOS" type="xs:string" minOccurs="0" />
+              <xs:element name="UTILIDAD" msprop:Generator_ColumnVarNameInTable="columnUTILIDAD" msprop:Generator_ColumnPropNameInRow="UTILIDAD" msprop:Generator_ColumnPropNameInTable="UTILIDADColumn" msprop:Generator_UserColumnName="UTILIDAD" type="xs:string" minOccurs="0" />
+              <xs:element name="VALORUNITARIORESIDUAL" msprop:Generator_ColumnVarNameInTable="columnVALORUNITARIORESIDUAL" msprop:Generator_ColumnPropNameInRow="VALORUNITARIORESIDUAL" msprop:Generator_ColumnPropNameInTable="VALORUNITARIORESIDUALColumn" msprop:Generator_UserColumnName="VALORUNITARIORESIDUAL" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

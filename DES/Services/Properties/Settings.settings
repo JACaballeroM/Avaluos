@@ -1,0 +1,56 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SIGAPred.FuentesExternas.Avaluos.Services.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Address" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">nlarrea@tracasa.es</Value>
+    </Setting>
+    <Setting Name="Password" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="User" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Host" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">172.30.160.60</Value>
+    </Setting>
+    <Setting Name="From" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">nlarrea@tracasa.es</Value>
+    </Setting>
+    <Setting Name="Port" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">25</Value>
+    </Setting>
+    <Setting Name="SmtpHost" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MaxLengthUploadFile" Type="System.UInt32" Scope="Application">
+      <Value Profile="(Default)">999999999</Value>
+    </Setting>
+    <Setting Name="DPIImagen" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">72</Value>
+    </Setting>
+    <Setting Name="ResolucionVImagen" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">480</Value>
+    </Setting>
+    <Setting Name="ResolucionHImagen" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">640</Value>
+    </Setting>
+    <Setting Name="AltoImagen" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">16.9</Value>
+    </Setting>
+    <Setting Name="anchoImagen" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">22.6</Value>
+    </Setting>
+    <Setting Name="MinMuestras" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="ConnectionString" GenerateDefaultValueInCode="false" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;DATA SOURCE=10.1.253.125:1521/Precat;PASSWORD=fexava;PERSIST SECURITY INFO=True;USER ID=FEXAVA&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;Oracle.DataAccess.Client&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">DATA SOURCE=10.1.253.125:1521/Precat;PASSWORD=fexava;PERSIST SECURITY INFO=True;USER ID=FEXAVA</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

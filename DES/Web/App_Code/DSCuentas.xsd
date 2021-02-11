@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSCuentas" targetNamespace="http://tempuri.org/DSCuentas.xsd" xmlns:mstns="http://tempuri.org/DSCuentas.xsd" xmlns="http://tempuri.org/DSCuentas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSCuentas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DSCuentas" msprop:Generator_DataSetName="DSCuentas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Cuentas" msprop:Generator_TableClassName="CuentasDataTable" msprop:Generator_TableVarName="tableCuentas" msprop:Generator_TablePropName="Cuentas" msprop:Generator_RowDeletingName="CuentasRowDeleting" msprop:Generator_RowChangingName="CuentasRowChanging" msprop:Generator_RowEvHandlerName="CuentasRowChangeEventHandler" msprop:Generator_RowDeletedName="CuentasRowDeleted" msprop:Generator_UserTableName="Cuentas" msprop:Generator_RowChangedName="CuentasRowChanged" msprop:Generator_RowEvArgName="CuentasRowChangeEvent" msprop:Generator_RowClassName="CuentasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NumeroUnico" msprop:Generator_ColumnVarNameInTable="columnNumeroUnico" msprop:Generator_ColumnPropNameInRow="NumeroUnico" msprop:Generator_ColumnPropNameInTable="NumeroUnicoColumn" msprop:Generator_UserColumnName="NumeroUnico" type="xs:string" minOccurs="0" />
+              <xs:element name="CuentaCatastral" msprop:Generator_ColumnVarNameInTable="columnCuentaCatastral" msprop:Generator_ColumnPropNameInRow="CuentaCatastral" msprop:Generator_ColumnPropNameInTable="CuentaCatastralColumn" msprop:Generator_UserColumnName="CuentaCatastral" type="xs:string" minOccurs="0" />
+              <xs:element name="RegistroPerito" msprop:Generator_ColumnVarNameInTable="columnRegistroPerito" msprop:Generator_ColumnPropNameInRow="RegistroPerito" msprop:Generator_ColumnPropNameInTable="RegistroPeritoColumn" msprop:Generator_UserColumnName="RegistroPerito" type="xs:string" minOccurs="0" />
+              <xs:element name="RegistroSociedad" msprop:Generator_ColumnVarNameInTable="columnRegistroSociedad" msprop:Generator_ColumnPropNameInRow="RegistroSociedad" msprop:Generator_ColumnPropNameInTable="RegistroSociedadColumn" msprop:Generator_UserColumnName="RegistroSociedad" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

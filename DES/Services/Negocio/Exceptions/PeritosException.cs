@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Runtime.Serialization;
+using System.ServiceModel;
+
+namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Exceptions
+{
+    /// <summary>
+    /// Clase que define una excepción en los métodos de comunicación con agilepoint
+    /// </summary>
+    [DataContract(Namespace = "http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions")]
+    public class PeritosException:ExceptionBase
+    {
+          #region Constructor
+
+        /// <summary>
+        /// Crea una nueva instancia al objeto
+        /// </summary>
+        /// <param name="ex">Excepción capturada</param>
+        public PeritosException(Exception ex)
+            : base(ex)
+        {
+        }
+
+        /// <summary>
+        /// Crea una nueva instancia al objeto
+        /// </summary>
+        /// <param name="message">Mensaje de la excepcion</param>
+        public PeritosException(string  message)
+            : base(message)
+        {
+        }
+
+        #endregion
+    }
+}

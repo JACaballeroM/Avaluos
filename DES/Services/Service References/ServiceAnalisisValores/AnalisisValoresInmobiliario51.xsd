@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SIGAPred.TomaDecisiones.AnalisisValores.Services.Negocio.Exceptions" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SIGAPred.TomaDecisiones.AnalisisValores.Services.Negocio.Exceptions" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/TomaDecisiones/AnalisisValores/AnalisisValoresInmobiliario.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/SIGAPred.TomaDecisiones.AnalisisValores.Services.Negocio" />
+  <xs:complexType name="AnalisisValoresException">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/SIGAPred.TomaDecisiones.AnalisisValores.Services.Negocio" base="q1:ExceptionBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnalisisValoresException" nillable="true" type="tns:AnalisisValoresException" />
+  <xs:complexType name="AnalisisValoresInfoException">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/SIGAPred.TomaDecisiones.AnalisisValores.Services.Negocio" base="q2:ExceptionBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnalisisValoresInfoException" nillable="true" type="tns:AnalisisValoresInfoException" />
+</xs:schema>

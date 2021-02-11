@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsAvaCat_6" targetNamespace="http://tempuri.org/dsAvaCat_6.xsd" xmlns:mstns="http://tempuri.org/dsAvaCat_6.xsd" xmlns="http://tempuri.org/dsAvaCat_6.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsAvaCat_6" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsAvaCat_6" msprop:Generator_UserDSName="dsAvaCat_6">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FEXAVA_AVALUO" msprop:Generator_TableClassName="FEXAVA_AVALUODataTable" msprop:Generator_TableVarName="tableFEXAVA_AVALUO" msprop:Generator_TablePropName="FEXAVA_AVALUO" msprop:Generator_RowDeletingName="FEXAVA_AVALUORowDeleting" msprop:Generator_RowChangingName="FEXAVA_AVALUORowChanging" msprop:Generator_RowEvHandlerName="FEXAVA_AVALUORowChangeEventHandler" msprop:Generator_RowDeletedName="FEXAVA_AVALUORowDeleted" msprop:Generator_UserTableName="FEXAVA_AVALUO" msprop:Generator_RowChangedName="FEXAVA_AVALUORowChanged" msprop:Generator_RowEvArgName="FEXAVA_AVALUORowChangeEvent" msprop:Generator_RowClassName="FEXAVA_AVALUORow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CONSIDERACIONESPREVIAS" msprop:Generator_ColumnVarNameInTable="columnCONSIDERACIONESPREVIAS" msprop:Generator_ColumnPropNameInRow="CONSIDERACIONESPREVIAS" msprop:Generator_ColumnPropNameInTable="CONSIDERACIONESPREVIASColumn" msprop:Generator_UserColumnName="CONSIDERACIONESPREVIAS" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Avaluos">
+    <Position X="0.5" Y="0.5" Width="13" />
+    <TypeIdentifier>
+      <HashCode>y9IKLNaGyh3S584Rb6SOgeawpcNv588jgMtWLaaFbkI=</HashCode>
+      <FileName>Negocio\Avaluos.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="6.25" Y="33.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Interfaces.IAvaluos">
+    <Position X="13.75" Y="0.5" Width="13.25" />
+    <TypeIdentifier>
+      <HashCode>ggIIBJKAgggSoEIACCSMACSAAQILQgwAgEAUKAAAKAI=</HashCode>
+      <FileName>Negocio\Interfaces\IAvaluos.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

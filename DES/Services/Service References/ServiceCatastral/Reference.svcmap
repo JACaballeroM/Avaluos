@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2e188b03-8bf8-4bb9-ae69-d93cfb33e133" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.1.253.88/PRE/Catastral/Consulta/ConsultaCatastralService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DseRegion1.xsd" MetadataType="Schema" ID="4f002f97-de08-4476-b2cc-b27dcebe4aca" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd5" />
+    <MetadataFile FileName="DseInmuebleF4BA1.xsd" MetadataType="Schema" ID="8d9a8d4d-4d8d-48d7-b327-fc35daf60c64" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd40" />
+    <MetadataFile FileName="ConsultaCatastralService7.xsd" MetadataType="Schema" ID="cb8a7461-e3dd-468c-8daf-e3e47ad8f972" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd38" />
+    <MetadataFile FileName="DseManzanas1.xsd" MetadataType="Schema" ID="ea42fe63-0ed8-4240-9e1f-496a693e7e42" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd25" />
+    <MetadataFile FileName="DseManzanaColonia1.xsd" MetadataType="Schema" ID="30a31395-5352-4363-b4bf-a7562e2f66ac" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd26" />
+    <MetadataFile FileName="ConsultaCatastralService71.xsd" MetadataType="Schema" ID="47acaadf-9e1e-4c56-990b-81d7d90602cd" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd6" />
+    <MetadataFile FileName="DseConstruccion1.xsd" MetadataType="Schema" ID="c0de2efe-f62c-42ba-98c1-e90275e85afa" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd31" />
+    <MetadataFile FileName="ConsultaCatastralService72.xsd" MetadataType="Schema" ID="62e6b40a-a973-4ac8-8ab5-e8c142da36dd" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd3" />
+    <MetadataFile FileName="DsePredios1.xsd" MetadataType="Schema" ID="4d951105-7fc9-4f23-b86d-4e39583393b6" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd29" />
+    <MetadataFile FileName="DseViaColonia1.xsd" MetadataType="Schema" ID="8b5d33ff-5cff-4a05-b55e-10179c224278" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd13" />
+    <MetadataFile FileName="DseInmuebleSIIP1.xsd" MetadataType="Schema" ID="339b56fd-542a-4301-94ae-0642e54c59b7" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd41" />
+    <MetadataFile FileName="ConsultaCatastralService73.xsd" MetadataType="Schema" ID="b5193dec-65b1-470d-bb06-d49b46c4df8a" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd19" />
+    <MetadataFile FileName="DseDelegacionAreaValor1.xsd" MetadataType="Schema" ID="99936d9d-9819-443d-b8f3-4b2aa8f04347" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd32" />
+    <MetadataFile FileName="DseHistoricoInmueblePredio1.xsd" MetadataType="Schema" ID="2a0e2f8d-35db-4aa2-82dd-71ae4c3dcc5f" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd18" />
+    <MetadataFile FileName="DseInmuebleUnidad1.xsd" MetadataType="Schema" ID="e7eff742-7b27-4625-81c6-e14d4804392a" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd9" />
+    <MetadataFile FileName="DseBienesInmueble1.xsd" MetadataType="Schema" ID="ea90be32-2d09-4406-b59e-5da9b97a40b6" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd30" />
+    <MetadataFile FileName="ConsultaCatastralService74.xsd" MetadataType="Schema" ID="21d3f8c6-f3ec-4061-89f4-77348cc00708" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd4" />
+    <MetadataFile FileName="DseOficinasTesoreria1.xsd" MetadataType="Schema" ID="bf27a82c-169d-46aa-987e-d4eeddb9d305" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd28" />
+    <MetadataFile FileName="DseCondominio1.xsd" MetadataType="Schema" ID="a32e4983-e2f3-4541-ae8e-005f59362481" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd35" />
+    <MetadataFile FileName="ConsultaCatastralService75.xsd" MetadataType="Schema" ID="8bfc2af7-de01-47cf-9c5f-9fd47526d4c2" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ConsultaCatastralService1.disco" MetadataType="Disco" ID="9520a91b-7379-4c74-a6ea-979ab4063d1f" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?disco" />
+    <MetadataFile FileName="DseTiposSitios1.xsd" MetadataType="Schema" ID="a2924630-9519-4cfc-a403-3db231c20b59" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd34" />
+    <MetadataFile FileName="DseInmuebleFiltro1.xsd" MetadataType="Schema" ID="02e80dbf-d4f0-4cef-9394-6c1348024a39" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd2" />
+    <MetadataFile FileName="DseAdministracionTributaria1.xsd" MetadataType="Schema" ID="b15dfe85-7c7e-42df-9c46-5509d3240e15" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd33" />
+    <MetadataFile FileName="DseEnclaveValor1.xsd" MetadataType="Schema" ID="7b525f61-d817-4561-bbf1-8d2cea9f346e" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd39" />
+    <MetadataFile FileName="DseVectores1.xsd" MetadataType="Schema" ID="3e8f4de6-eedd-4d8f-aa53-e30b889c55b2" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd12" />
+    <MetadataFile FileName="DseUnidadesGrupoCondominal1.xsd" MetadataType="Schema" ID="c0f3f531-b349-4990-a904-5af796e2e8ab" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd11" />
+    <MetadataFile FileName="DseCondominioPredio1.xsd" MetadataType="Schema" ID="752b4ecc-b9f7-4e70-adbf-e0e6cbf34fe1" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd10" />
+    <MetadataFile FileName="DseDatosBasicos1.xsd" MetadataType="Schema" ID="f81ddfa3-18a7-48b7-a28a-b01391d043f1" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd22" />
+    <MetadataFile FileName="DseTomaAgua1.xsd" MetadataType="Schema" ID="febfc9d8-1ee6-48a2-a8ba-6e272dd20ad1" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd8" />
+    <MetadataFile FileName="DseInmueble1.xsd" MetadataType="Schema" ID="450488cd-5722-436c-b48a-d30929880743" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd20" />
+    <MetadataFile FileName="DseFotos1.xsd" MetadataType="Schema" ID="e5fced97-fb42-4376-93e0-ea8dde14b3c6" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd42" />
+    <MetadataFile FileName="DseSitios1.xsd" MetadataType="Schema" ID="d444dde6-861b-449b-956d-95f2716b17f6" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd7" />
+    <MetadataFile FileName="DseFotosExpediente1.xsd" MetadataType="Schema" ID="4eb4c825-a7b7-4310-bc99-e64708c41bae" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd15" />
+    <MetadataFile FileName="DseViaVector1.xsd" MetadataType="Schema" ID="2faf5133-72ec-44fb-ae55-4e48ffc6921c" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd14" />
+    <MetadataFile FileName="ConsultaCatastralService76.xsd" MetadataType="Schema" ID="9b6bf075-37d6-41e0-8fd2-8c2cceda9422" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DseDelegacionColonia1.xsd" MetadataType="Schema" ID="6763a4e5-00fd-432c-9ec4-282acafc41ca" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd37" />
+    <MetadataFile FileName="DseInmueblePredio1.xsd" MetadataType="Schema" ID="492b559f-f4c2-40df-aa69-b755f6107e61" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd21" />
+    <MetadataFile FileName="DseNumerosExteriores1.xsd" MetadataType="Schema" ID="3877a019-d9e9-4198-9680-2f8313a9b1ea" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd27" />
+    <MetadataFile FileName="DseManzanaDetalle1.xsd" MetadataType="Schema" ID="9776fb1f-83f5-4013-a189-ebf075aa05cc" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd24" />
+    <MetadataFile FileName="DseDelegacionCorredorValor1.xsd" MetadataType="Schema" ID="1267fb8e-39c2-4884-bbfd-8804d8a72096" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd36" />
+    <MetadataFile FileName="DseCatalogos1.xsd" MetadataType="Schema" ID="c7c4a3bb-389e-47ce-9d17-0670bb88cb8a" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd23" />
+    <MetadataFile FileName="ConsultaCatastralService1.wsdl" MetadataType="Wsdl" ID="78010b9d-49c4-4185-a0f0-5fcbcb67db0b" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?wsdl" />
+    <MetadataFile FileName="DseIndiceCartografico1.xsd" MetadataType="Schema" ID="9f29226e-8b89-411b-8a21-877812fb14c0" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd17" />
+    <MetadataFile FileName="DseConjuntoCondominal1.xsd" MetadataType="Schema" ID="6c81e1ff-95e6-44e2-802a-319724052ccd" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd16" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

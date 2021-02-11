@@ -1,0 +1,61 @@
+<publishData>
+  <publishTarget publishUrl="C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Publicaciones\FuentesExternas\Servicios\Avaluos\">
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Data.dll" publishTime="06/18/2015 14:39:38" />
+    <file relUrl="bin/MyExtentions.dll" publishTime="11/27/2018 20:49:24" />
+    <file relUrl="SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Avaluos.svc" publishTime="02/05/2021 13:44:37" />
+    <file relUrl="bin/BouncyCastle.Crypto.dll" publishTime="06/18/2015 13:45:02" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll" publishTime="06/18/2015 14:39:38" />
+    <file relUrl="bin/SIGAPred.Common.DataAccess.dll" publishTime="06/18/2015 14:39:40" />
+    <file relUrl="bin/SecurityCore.dll" publishTime="06/18/2015 14:49:32" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll" publishTime="06/18/2015 14:39:38" />
+    <file relUrl="bin/SIGAPred.Common.Compresion.dll" publishTime="06/18/2015 14:39:40" />
+    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Services.dll.config" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="bin/SIGAPred.Documental.Services.dll" publishTime="06/18/2015 14:39:40" />
+    <file relUrl="bin/SIGAPred.Common.dll" publishTime="06/18/2015 14:39:40" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Common.dll" publishTime="06/18/2015 14:39:38" />
+    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Enum.dll" publishTime="02/05/2021 13:44:02" />
+    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Services.pdb" publishTime="02/05/2021 13:44:12" />
+    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Enum.xml" publishTime="02/05/2021 13:44:02" />
+    <file relUrl="bin/SevenZipSharp.dll" publishTime="06/18/2015 14:39:38" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll" publishTime="06/18/2015 14:39:38" />
+    <file relUrl="bin/Microsoft.Practices.ObjectBuilder2.dll" publishTime="06/18/2015 14:39:38" />
+    <file relUrl="Web.config" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="bin/SIGAPred.Excepciones.ClaseExcepcion.dll" publishTime="11/27/2018 21:04:00" />
+    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Enum.pdb" publishTime="02/05/2021 13:44:02" />
+    <file relUrl="bin/Oracle.DataAccess.dll" publishTime="06/18/2015 14:39:38" />
+    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Services.XML" publishTime="02/05/2021 13:44:10" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll" publishTime="06/18/2015 14:39:38" />
+    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Services.dll" publishTime="02/05/2021 13:44:12" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Logging.dll" publishTime="06/18/2015 14:39:38" />
+  </publishTarget>
+  <publishTarget publishUrl="C:\Users\MarioDaniel\Desktop\Avaluos\">
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Data.dll" publishTime="06/18/2015 14:39:38" />
+    <file relUrl="bin/MyExtentions.dll" publishTime="11/27/2018 20:49:24" />
+    <file relUrl="SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Avaluos.svc" publishTime="04/24/2020 13:36:40" />
+    <file relUrl="bin/SIGAPred.Common.DataAccess.dll" publishTime="06/18/2015 14:39:40" />
+    <file relUrl="bin/BouncyCastle.Crypto.dll" publishTime="06/18/2015 13:45:02" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll" publishTime="06/18/2015 14:39:38" />
+    <file relUrl="bin/SIGAPred.Common.dll" publishTime="06/18/2015 14:39:40" />
+    <file relUrl="bin/SecurityCore.dll" publishTime="06/18/2015 14:49:32" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll" publishTime="06/18/2015 14:39:38" />
+    <file relUrl="bin/SIGAPred.Common.Compresion.dll" publishTime="06/18/2015 14:39:40" />
+    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Services.dll.config" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="bin/SIGAPred.Documental.Services.dll" publishTime="06/18/2015 14:39:40" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Common.dll" publishTime="06/18/2015 14:39:38" />
+    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Enum.dll" publishTime="04/24/2020 13:35:30" />
+    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Services.pdb" publishTime="04/24/2020 13:35:37" />
+    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Enum.xml" publishTime="04/24/2020 13:35:30" />
+    <file relUrl="bin/SecurityCore.pdb" publishTime="06/18/2015 14:49:32" />
+    <file relUrl="bin/SevenZipSharp.dll" publishTime="06/18/2015 14:39:38" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll" publishTime="06/18/2015 14:39:38" />
+    <file relUrl="bin/Microsoft.Practices.ObjectBuilder2.dll" publishTime="06/18/2015 14:39:38" />
+    <file relUrl="Web.config" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="bin/SIGAPred.Excepciones.ClaseExcepcion.dll" publishTime="11/27/2018 21:04:00" />
+    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Enum.pdb" publishTime="04/24/2020 13:35:30" />
+    <file relUrl="bin/Oracle.DataAccess.dll" publishTime="06/18/2015 14:39:38" />
+    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Services.XML" publishTime="04/24/2020 13:35:35" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll" publishTime="06/18/2015 14:39:38" />
+    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Services.dll" publishTime="04/24/2020 13:35:37" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Logging.dll" publishTime="06/18/2015 14:39:38" />
+  </publishTarget>
+</publishData>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="62d2284d-2670-47d1-ad90-2882cabf05c8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.1.253.88/PRE/Fiscal/Marcajes/Marcajes.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DSMarcarClasificadas1.xsd" MetadataType="Schema" ID="df3d5be2-6e89-4997-9341-7b8227fd341d" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd7" />
+    <MetadataFile FileName="Marcajes7.xsd" MetadataType="Schema" ID="0b0068fb-b080-4ce3-bcef-334a251a6e9f" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd0" />
+    <MetadataFile FileName="DSMarcarSituaciones1.xsd" MetadataType="Schema" ID="46a3a2c1-e49b-4208-8f68-1625ea9fb0b0" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd10" />
+    <MetadataFile FileName="Marcajes72.xsd" MetadataType="Schema" ID="430ca5a3-44ed-405b-9354-99ec93b5530c" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd3" />
+    <MetadataFile FileName="Marcajes73.xsd" MetadataType="Schema" ID="35d1973a-e35f-4d62-9dbd-ffcf07c7a548" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd9" />
+    <MetadataFile FileName="Marcajes74.xsd" MetadataType="Schema" ID="15699a77-afe0-46ee-8707-4f4811d0c421" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd6" />
+    <MetadataFile FileName="Marcajes1.disco" MetadataType="Disco" ID="8fa2f2cb-a504-4900-b6cf-4b99c77e2c5f" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?disco" />
+    <MetadataFile FileName="Marcajes1.wsdl" MetadataType="Wsdl" ID="ab360311-b2b1-440f-9a6f-27182bab6227" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?wsdl" />
+    <MetadataFile FileName="Marcajes75.xsd" MetadataType="Schema" ID="a14f633a-3061-4561-942a-0423e46ae621" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd4" />
+    <MetadataFile FileName="DSMarcarLotes1.xsd" MetadataType="Schema" ID="a60a3957-afe0-48ff-95f2-0ed7c740a236" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd5" />
+    <MetadataFile FileName="Marcajes76.xsd" MetadataType="Schema" ID="29cf460f-0511-4d97-8ab3-510fcc0bd480" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd2" />
+    <MetadataFile FileName="DseCatalogosMarcajes1.xsd" MetadataType="Schema" ID="18603a32-99cc-4c6e-9284-e467b70b1be6" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd8" />
+    <MetadataFile FileName="Marcajes77.xsd" MetadataType="Schema" ID="aad765ca-cee2-4800-b271-b6e05d78316f" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

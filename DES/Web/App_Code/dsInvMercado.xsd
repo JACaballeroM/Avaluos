@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsInvMercado" targetNamespace="http://tempuri.org/dsInvMercado.xsd" xmlns:mstns="http://tempuri.org/dsInvMercado.xsd" xmlns="http://tempuri.org/dsInvMercado.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsInvMercado" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsInvMercado" msprop:Generator_DataSetName="dsInvMercado">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DatosInvMercado" msprop:Generator_TableClassName="DatosInvMercadoDataTable" msprop:Generator_TableVarName="tableDatosInvMercado" msprop:Generator_TablePropName="DatosInvMercado" msprop:Generator_RowDeletingName="DatosInvMercadoRowDeleting" msprop:Generator_RowChangingName="DatosInvMercadoRowChanging" msprop:Generator_RowEvHandlerName="DatosInvMercadoRowChangeEventHandler" msprop:Generator_RowDeletedName="DatosInvMercadoRowDeleted" msprop:Generator_UserTableName="DatosInvMercado" msprop:Generator_RowChangedName="DatosInvMercadoRowChanged" msprop:Generator_RowEvArgName="DatosInvMercadoRowChangeEvent" msprop:Generator_RowClassName="DatosInvMercadoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="REGION" msprop:Generator_ColumnVarNameInTable="columnREGION" msprop:Generator_ColumnPropNameInRow="REGION" msprop:Generator_ColumnPropNameInTable="REGIONColumn" msprop:Generator_UserColumnName="REGION" type="xs:string" minOccurs="0" />
+              <xs:element name="MANZANA" msprop:Generator_ColumnVarNameInTable="columnMANZANA" msprop:Generator_ColumnPropNameInRow="MANZANA" msprop:Generator_ColumnPropNameInTable="MANZANAColumn" msprop:Generator_UserColumnName="MANZANA" type="xs:string" minOccurs="0" />
+              <xs:element name="DELEGACION" msprop:Generator_ColumnVarNameInTable="columnDELEGACION" msprop:Generator_ColumnPropNameInRow="DELEGACION" msprop:Generator_ColumnPropNameInTable="DELEGACIONColumn" msprop:Generator_UserColumnName="DELEGACION" type="xs:string" minOccurs="0" />
+              <xs:element name="UBICACION" msprop:Generator_ColumnVarNameInTable="columnUBICACION" msprop:Generator_ColumnPropNameInRow="UBICACION" msprop:Generator_ColumnPropNameInTable="UBICACIONColumn" msprop:Generator_UserColumnName="UBICACION" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" msprop:Generator_UserColumnName="DESCRIPCION" type="xs:string" minOccurs="0" />
+              <xs:element name="TIPO" msprop:Generator_ColumnVarNameInTable="columnTIPO" msprop:Generator_ColumnPropNameInRow="TIPO" msprop:Generator_ColumnPropNameInTable="TIPOColumn" msprop:Generator_UserColumnName="TIPO" type="xs:string" minOccurs="0" />
+              <xs:element name="COLONIA" msprop:Generator_ColumnVarNameInTable="columnCOLONIA" msprop:Generator_ColumnPropNameInRow="COLONIA" msprop:Generator_ColumnPropNameInTable="COLONIAColumn" msprop:Generator_UserColumnName="COLONIA" type="xs:string" minOccurs="0" />
+              <xs:element name="PRECIOSOLICITADO" msprop:Generator_ColumnVarNameInTable="columnPRECIOSOLICITADO" msprop:Generator_ColumnPropNameInRow="PRECIOSOLICITADO" msprop:Generator_ColumnPropNameInTable="PRECIOSOLICITADOColumn" msprop:Generator_UserColumnName="PRECIOSOLICITADO" type="xs:string" minOccurs="0" />
+              <xs:element name="SUPERFICIE" msprop:Generator_ColumnVarNameInTable="columnSUPERFICIE" msprop:Generator_ColumnPropNameInRow="SUPERFICIE" msprop:Generator_ColumnPropNameInTable="SUPERFICIEColumn" msprop:Generator_UserColumnName="SUPERFICIE" type="xs:string" minOccurs="0" />
+              <xs:element name="VU" msprop:Generator_ColumnVarNameInTable="columnVU" msprop:Generator_ColumnPropNameInRow="VU" msprop:Generator_ColumnPropNameInTable="VUColumn" msprop:Generator_UserColumnName="VU" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

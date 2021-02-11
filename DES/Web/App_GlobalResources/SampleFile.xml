@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid XML Studio 6.1.17.0 - FREE Community Edition (http://www.liquid-technologies.com) -->
+<Avaluo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="C:\esquemaavaluo.xsd">
+  <AvaluoComercial>
+    <Identificacion id="a">
+      <NumeroDeAvaluo>1805939258</NumeroDeAvaluo>
+      <FechaAvaluo id="a.2">2000-12-09T12:56:31.81</FechaAvaluo>
+      <ClaveValuador id="a.3">4061978204</ClaveValuador>
+      <ClaveSociedad id="a.4">1771197268</ClaveSociedad>
+    </Identificacion>
+    <Antecedentes id="b">
+      <Solicitante>
+        <A.Paterno id="b.1.1">string</A.Paterno>
+        <A.Materno>string</A.Materno>
+        <Nombre>string</Nombre>
+        <Calle id="b.1.4">string</Calle>
+        <NumeroInterior>string</NumeroInterior>
+        <NumeroExterior>string</NumeroExterior>
+        <Colonia>2687747584</Colonia>
+        <CodigoPostal>string</CodigoPostal>
+        <Delegacion id="b.1.9">2620402496</Delegacion>
+      </Solicitante>
+      <Propietario>
+        <A.Paterno>string</A.Paterno>
+        <A.Materno id="b.2.2">string</A.Materno>
+        <Nombre>string</Nombre>
+        <Calle>string</Calle>
+        <NumeroInterior id="b.2.5">string</NumeroInterior>
+        <NumeroExterior>string</NumeroExterior>
+        <Colonia id="b.2.7">2833192356</Colonia>
+        <CodigoPostal>string</CodigoPostal>
+        <Delegacion>4273702912</Delegacion>
+      </Propietario>
+      <InmuebleQueSeValua>
+        <Calle>string</Calle>
+        <NumeroInterior>string</NumeroInterior>
+        <NumeroExterior>string</NumeroExterior>
+        <Manzana>string</Manzana>
+        <Lote id="b.3.5">string</Lote>
+        <Edificio id="b.3.6">string</Edificio>
+        <Colonia id="b.3.7">1285071395</Colonia>
+        <CodigoPostal>string</CodigoPostal>
+        <Delegacion>2777967667</Delegacion>
+        <CuentaCatastral id="b.3.10">
+          <Region>string</Region>
+          <Manzana id="b.3.10.2">string</Manzana>
+          <Lote>string</Lote>
+          <Localidad>string</Localidad>
+          <DigitoVerificador id="b.3.10.5">string</DigitoVerificador>
+        </CuentaCatastral>
+        <CuentaDeAgua>string</CuentaDeAgua>
+      </InmuebleQueSeValua>
+      <PropositoDelAvaluo id="b.4">string</PropositoDelAvaluo>
+      <ObjetoDelAvaluo>string</ObjetoDelAvaluo>
+      <RegimenDePropiedad id="b.6">1064975796</RegimenDePropiedad>
+    </Antecedentes>
+    <CaracteristicasUrbanas id="c">
+      <ContaminacionAmbientalEnLaZona>4226,574905803945093</ContaminacionAmbientalEnLaZona>
+      <ClasificacionDeLaZona id="c.1">2984353730</ClasificacionDeLaZona>
+      <IndiceDeSaturacionDeLaZona id="c.2">-7884,205094196054907</IndiceDeSaturacionDeLaZona>
+      <ClaseGeneralDeInmueblesDeLaZona id="c.3">3096057239</ClaseGeneralDeInmueblesDeLaZona>
+      <DensidadDePoblacion id="c.4">4063155025</DensidadDePoblacion>
+      <NivelSocioeconomicoDeLaZona id="c.5">3745726877</NivelSocioeconomicoDeLaZona>
+      <UsoDelSuelo id="c.6">
+        <UsoDelSuelo id="c.6.1">string</UsoDelSuelo>
+        <AreaLibreObligatoria>8716,074905803945093</AreaLibreObligatoria>
+        <NumeroMaximoDeNivelesAConstruir id="c.6.3">8788,694905803945093</NumeroMaximoDeNivelesAConstruir>
+        <CoeficienteDeUsoDelSuelo id="c.6.4">4563,294905803945093</CoeficienteDeUsoDelSuelo>
+      </UsoDelSuelo>
+      <ViasDeAccesoEImportancia>string</ViasDeAccesoEImportancia>
+      <ServiciosPublicosYEquipamientoUrbano id="c.8">
+        <RedDeDistribucionAguaPotable id="c.8.1">3911211967</RedDeDistribucionAguaPotable>
+        <RedDeRecoleccionDeAguasResiduales>604877424</RedDeRecoleccionDeAguasResiduales>
+        <RedDeDrenajeDeAguasPluvialesEnLaCalle id="c.8.3">675658485</RedDeDrenajeDeAguasPluvialesEnLaCalle>
+        <RedDeDrenajeDeAguasPluvialesEnLaZona id="c.8.4">105600361</RedDeDrenajeDeAguasPluvialesEnLaZona>
+        <SistemaMixto>1602817370</SistemaMixto>
+        <SuministroElectrico>2445382579</SuministroElectrico>
+        <AcometidaAlInmueble>2746146254</AcometidaAlInmueble>
+        <AlumbradoPublico>3319146431</AlumbradoPublico>
+        <Vialidades>3712638449</Vialidades>
+        <Banquetas id="c.8.11">4191888080</Banquetas>
+        <Guarniciones>2782185324</Guarniciones>
+        <NivelDeInfraestructuraEnLaZona>8689,114905803945093</NivelDeInfraestructuraEnLaZona>
+        <GasNatural id="c.8.14">1112701472</GasNatural>
+        <TelefonosSuministro id="c.8.15">3176351653</TelefonosSuministro>
+        <AcometidaAlInmuebleTel>4262136565</AcometidaAlInmuebleTel>
+        <SennalizacionDeVias id="c.8.17">774837870</SennalizacionDeVias>
+        <NomenclaturaDeCalles id="c.8.18">334547888</NomenclaturaDeCalles>
+        <DistanciaTranporteUrbano>2250,634905803945093</DistanciaTranporteUrbano>
+        <FrecuenciaTransporteUrbano>-4807,505094196054907</FrecuenciaTransporteUrbano>
+        <DistanciaTransporteSuburbano id="c.8.21">898,394905803945093</DistanciaTransporteSuburbano>
+        <FrecuenciaTransporteSuburbano id="c.8.22">-6547,985094196054907</FrecuenciaTransporteSuburbano>
+        <Vigilancia>2126386768</Vigilancia>
+        <RecoleccionDeBasura id="c.8.24">1130705975</RecoleccionDeBasura>
+        <Templo id="c.8.25">true</Templo>
+        <Mercados id="c.8.26">0</Mercados>
+        <PlazasPublicas id="c.8.27">1</PlazasPublicas>
+        <ParquesYJardines>true</ParquesYJardines>
+        <Escuelas id="c.8.29">1</Escuelas>
+        <Hospitales id="c.8.30">0</Hospitales>
+        <Bancos id="c.8.31">true</Bancos>
+        <EstacionDeTransporte>0</EstacionDeTransporte>
+        <NivelDeEquipamientoUrbano>-4862,785094196054907</NivelDeEquipamientoUrbano>
+      </ServiciosPublicosYEquipamientoUrbano>
+    </CaracteristicasUrbanas>
+    <Terreno id="d">
+      <CallesTransversalesLimitrofesYOrientacion id="d.1">string</CallesTransversalesLimitrofesYOrientacion>
+      <CroquisMicroLocalizacion id="d.2">YTM0NZomIzI2OTsmIzM0NTueYQ==</CroquisMicroLocalizacion>
+      <CroquisMacroLocalizacion id="d.3">YTM0NZomIzI2OTsmIzM0NTueYQ==</CroquisMacroLocalizacion>
+      <MedidasYColindancias>
+        <FuenteDeInformacionLegal id="d.4.1">
+          <Sentencia id="d.4.1.2">
+            <Juzgado id="d.4.1.2.1">string</Juzgado>
+            <Fecha id="d.4.1.2.2">1981-01-13T16:25:19.89</Fecha>
+            <NumeroExpediente>string</NumeroExpediente>
+          </Sentencia>
+        </FuenteDeInformacionLegal>
+        <Colindancias>
+          <ElementoDescrito>string</ElementoDescrito>
+          <Orientacion id="d.4.2.n.2">string</Orientacion>
+          <MedidaEnMetros id="d.4.2.n.3">string</MedidaEnMetros>
+          <DescripcionColindante>string</DescripcionColindante>
+        </Colindancias>
+      </MedidasYColindancias>
+      <SuperficieDelTerreno id="d.5">
+        <IdentificadorFraccionN1 id="d.5.n.1">string</IdentificadorFraccionN1>
+        <SuperficieFraccionN1 id="d.5.n.2">4145,774905803945093</SuperficieFraccionN1>
+        <Fzo>5940,014905803945093</Fzo>
+        <Fub>843,154905803945093</Fub>
+        <FFr id="d.5.n.5">939,974905803945093</FFr>
+        <Ffo>-9752,225094196054907</Ffo>
+        <Fsu id="d.5.n.7">-8616,685094196054907</Fsu>
+        <ClaveDeAreaDeValor>string</ClaveDeAreaDeValor>
+        <Fot />
+        <ValorUnitarioFraccion id="d.5.n.11">7970,314905803945093</ValorUnitarioFraccion>
+      </SuperficieDelTerreno>
+      <SuperficieDelTerreno>
+        <IdentificadorFraccionN1 id="d.5.n.1">string</IdentificadorFraccionN1>
+        <SuperficieFraccionN1>-5900,825094196054907</SuperficieFraccionN1>
+        <Fzo id="d.5.n.3">3377,814905803945093</Fzo>
+        <Fub id="d.5.n.4">-7454,205094196054907</Fub>
+        <FFr id="d.5.n.5">-4940,285094196054907</FFr>
+        <Ffo>8027,614905803945093</Ffo>
+        <Fsu>-609,965094196054907</Fsu>
+        <ClaveDeAreaDeValor>string</ClaveDeAreaDeValor>
+        <Fot />
+        <ValorUnitarioFraccion id="d.5.n.11">372,234905803945093</ValorUnitarioFraccion>
+      </SuperficieDelTerreno>
+      <Indiviso>string</Indiviso>
+      <TopografiaYConfiguracion>3312386152</TopografiaYConfiguracion>
+      <CaracteristicasPanoramicas>string</CaracteristicasPanoramicas>
+      <DensidadHabitacional>417277548</DensidadHabitacional>
+      <ServidumbresORestricciones>string</ServidumbresORestricciones>
+    </Terreno>
+    <DescripcionDelInmueble id="e">
+      <UsoActual id="e.1">string</UsoActual>
+      <TiposDeConstruccion id="e.2">
+        <Descripcion>string</Descripcion>
+        <ClaveUso>2694086955</ClaveUso>
+        <NumeroDeNivelesDelTipo id="e.2.n.3">-7673,645094196054907</NumeroDeNivelesDelTipo>
+        <ClaveRangoDeNiveles id="e.2.n.4">2756175002</ClaveRangoDeNiveles>
+        <PuntajeDeClasificacion>6458,694905803945093</PuntajeDeClasificacion>
+        <ClaveClase id="e.2.n.6">3970912013</ClaveClase>
+        <Edad id="e.2.n.7">1349,734905803945093</Edad>
+        <VidaUtilTotalDelTipo id="e.2.n.8">2505834244</VidaUtilTotalDelTipo>
+        <VidaUtilRemanente>6562,134905803945093</VidaUtilRemanente>
+        <ClaveConservacion id="e.2.n.10">306012125</ClaveConservacion>
+        <Superficie>6403,914905803945093</Superficie>
+      </TiposDeConstruccion>
+      <TiposDeConstruccion id="e.2">
+        <Descripcion>string</Descripcion>
+        <ClaveUso>46402827</ClaveUso>
+        <NumeroDeNivelesDelTipo id="e.2.n.3">-997,205094196054907</NumeroDeNivelesDelTipo>
+        <ClaveRangoDeNiveles id="e.2.n.4">3455966909</ClaveRangoDeNiveles>
+        <PuntajeDeClasificacion>2203,814905803945093</PuntajeDeClasificacion>
+        <ClaveClase>2946076981</ClaveClase>
+        <Edad>-7100,585094196054907</Edad>
+        <VidaUtilTotalDelTipo id="e.2.n.8">2518633246</VidaUtilTotalDelTipo>
+        <VidaUtilRemanente>-3783,885094196054907</VidaUtilRemanente>
+        <ClaveConservacion id="e.2.n.10">133826886</ClaveConservacion>
+        <Superficie id="e.2.n.11">-6706,885094196054907</Superficie>
+      </TiposDeConstruccion>
+      <TiposDeConstruccion>
+        <Descripcion>string</Descripcion>
+        <ClaveUso id="e.2.n.2">2519870197</ClaveUso>
+        <NumeroDeNivelesDelTipo>9232,754905803945093</NumeroDeNivelesDelTipo>
+        <ClaveRangoDeNiveles id="e.2.n.4">2801031641</ClaveRangoDeNiveles>
+        <PuntajeDeClasificacion id="e.2.n.5">1425,334905803945093</PuntajeDeClasificacion>
+        <ClaveClase>3168234165</ClaveClase>
+        <Edad id="e.2.n.7">-196,445094196054907</Edad>
+        <VidaUtilTotalDelTipo id="e.2.n.8">1449800570</VidaUtilTotalDelTipo>
+        <VidaUtilRemanente id="e.2.n.9">-426,885094196054907</VidaUtilRemanente>
+        <ClaveConservacion>1548039357</ClaveConservacion>
+        <Superficie>2564,934905803945093</Superficie>
+      </TiposDeConstruccion>
+      <TiposDeConstruccion id="e.2">
+        <Descripcion>string</Descripcion>
+        <ClaveUso>4257927497</ClaveUso>
+        <NumeroDeNivelesDelTipo id="e.2.n.3">9171,614905803945093</NumeroDeNivelesDelTipo>
+        <ClaveRangoDeNiveles id="e.2.n.4">2568051140</ClaveRangoDeNiveles>
+        <PuntajeDeClasificacion>-4719,265094196054907</PuntajeDeClasificacion>
+        <ClaveClase id="e.2.n.6">1622037349</ClaveClase>
+        <Edad>-9565,885094196054907</Edad>
+        <VidaUtilTotalDelTipo>523638118</VidaUtilTotalDelTipo>
+        <VidaUtilRemanente id="e.2.n.9">-5291,025094196054907</VidaUtilRemanente>
+        <ClaveConservacion>836715464</ClaveConservacion>
+        <Superficie id="e.2.n.11">-5310,025094196054907</Superficie>
+      </TiposDeConstruccion>
+      <VidaUtilTotalPonderadaDelInmueble>-1112,165094196054907</VidaUtilTotalPonderadaDelInmueble>
+      <EdadPonderadaDelInmueble>6680,294905803945093</EdadPonderadaDelInmueble>
+      <VidaUtilRemanentePonderadaDelInmueble>8892,134905803945093</VidaUtilRemanentePonderadaDelInmueble>
+    </DescripcionDelInmueble>
+    <ElementosDeLaConstruccion id="f">
+      <ObraNegra />
+      <RevestimientosYAcabadosInteriores />
+      <Carpinteria />
+      <InstalacionesHidraulicasYSanitrias id="f.4" />
+      <PuertasYVentaneriaMetalica id="f.5" />
+      <Vidreria id="f.6">string</Vidreria>
+      <InstalacionesEspeciales />
+      <ElementosAccesorios />
+      <ObrasComplementarias />
+    </ElementosDeLaConstruccion>
+    <ConsideracionesPreviasAlAvaluo id="g" />
+    <EnfoqueDeMercado id="h">
+      <Terrenos id="h.1">
+        <TerrenosDirectos>
+          <Calle id="h.1.1.1">string</Calle>
+          <Colonia id="h.1.1.2">4291874919</Colonia>
+          <Delegacion id="h.1.1.3">2622429721</Delegacion>
+          <CodigoPostal>string</CodigoPostal>
+          <FuenteDeInformacion id="h.1.1.n.5">
+            <Telefono id="h.1.1.n.5.1">string</Telefono>
+            <Informante id="h.1.1.n.5.2">string</Informante>
+          </FuenteDeInformacion>
+          <DescripcionDelPredio id="h.1.1.n.6">string</DescripcionDelPredio>
+          <UsoDelSuelo>string</UsoDelSuelo>
+          <CUS>-5624,145094196054907</CUS>
+          <Superficie>8183,994905803945093</Superficie>
+          <Fzo>9583,814905803945093</Fzo>
+          <Fub>1712,834905803945093</Fub>
+          <FFr>9214,574905803945093</FFr>
+          <Ffo id="h.1.1.n.13">-4987,485094196054907</Ffo>
+          <Fsu>9912,054905803945093</Fsu>
+          <Fot id="h.1.1.n.18" />
+          <PrecioSolicitado id="h.1.1.n.15">7794,274905803945093</PrecioSolicitado>
+          <FactorDeNegociacion>-9776,505094196054907</FactorDeNegociacion>
+        </TerrenosDirectos>
+        <TerrenosDirectos id="h.1.1">
+          <Calle id="h.1.1.1">string</Calle>
+          <Colonia>4158241306</Colonia>
+          <Delegacion>3923864941</Delegacion>
+          <CodigoPostal>string</CodigoPostal>
+          <FuenteDeInformacion id="h.1.1.n.5">
+            <Telefono>string</Telefono>
+            <Informante>string</Informante>
+          </FuenteDeInformacion>
+          <DescripcionDelPredio>string</DescripcionDelPredio>
+          <UsoDelSuelo>string</UsoDelSuelo>
+          <CUS id="h.1.1.n.8">8074,054905803945093</CUS>
+          <Superficie id="h.1.1.n.9">7667,554905803945093</Superficie>
+          <Fzo id="h.1.1.n.10">5759,214905803945093</Fzo>
+          <Fub>-5769,765094196054907</Fub>
+          <FFr>2260,154905803945093</FFr>
+          <Ffo>-3585,885094196054907</Ffo>
+          <Fsu id="h.1.1.n.14">-8129,005094196054907</Fsu>
+          <Fot />
+          <PrecioSolicitado>934,734905803945093</PrecioSolicitado>
+          <FactorDeNegociacion>-1702,105094196054907</FactorDeNegociacion>
+        </TerrenosDirectos>
+        <TerrenosDirectos id="h.1.1">
+          <Calle>string</Calle>
+          <Colonia>759272908</Colonia>
+          <Delegacion>2512912350</Delegacion>
+          <CodigoPostal>string</CodigoPostal>
+          <FuenteDeInformacion id="h.1.1.n.5">
+            <Telefono>string</Telefono>
+            <Informante>string</Informante>
+          </FuenteDeInformacion>
+          <DescripcionDelPredio>string</DescripcionDelPredio>
+          <UsoDelSuelo>string</UsoDelSuelo>
+          <CUS id="h.1.1.n.8">2588,794905803945093</CUS>
+          <Superficie id="h.1.1.n.9">-570,645094196054907</Superficie>
+          <Fzo id="h.1.1.n.10">8134,214905803945093</Fzo>
+          <Fub>-9839,245094196054907</Fub>
+          <FFr id="h.1.1.n.12">-5353,425094196054907</FFr>
+          <Ffo>-7933,645094196054907</Ffo>
+          <Fsu id="h.1.1.n.14">-4566,265094196054907</Fsu>
+          <Fot />
+          <PrecioSolicitado>9126,954905803945093</PrecioSolicitado>
+          <FactorDeNegociacion id="h.1.1.n.16">7058,494905803945093</FactorDeNegociacion>
+        </TerrenosDirectos>
+        <TerrenosDirectos>
+          <Calle id="h.1.1.1">string</Calle>
+          <Colonia>2953984016</Colonia>
+          <Delegacion>3873317471</Delegacion>
+          <CodigoPostal id="h.1.1.4">string</CodigoPostal>
+          <FuenteDeInformacion id="h.1.1.n.5">
+            <Telefono id="h.1.1.n.5.1">string</Telefono>
+            <Informante id="h.1.1.n.5.2">string</Informante>
+          </FuenteDeInformacion>
+          <DescripcionDelPredio>string</DescripcionDelPredio>
+          <UsoDelSuelo id="h.1.1.n.7">string</UsoDelSuelo>
+          <CUS id="h.1.1.n.8">-6543,965094196054907</CUS>
+          <Superficie id="h.1.1.n.9">-1960,505094196054907</Superficie>
+          <Fzo>7719,614905803945093</Fzo>
+          <Fub>1929,554905803945093</Fub>
+          <FFr>5054,174905803945093</FFr>
+          <Ffo>-9054,785094196054907</Ffo>
+          <Fsu>3064,814905803945093</Fsu>
+          <Fot />
+          <PrecioSolicitado id="h.1.1.n.15">-4269,745094196054907</PrecioSolicitado>
+          <FactorDeNegociacion id="h.1.1.n.16">9633,854905803945093</FactorDeNegociacion>
+        </TerrenosDirectos>
+        <ConclusionesHomologacionTerrenos id="h.1.2">
+          <ValorUnitarioDeTierraPromedio>7321,074905803945093</ValorUnitarioDeTierraPromedio>
+          <ValorUnitarioDeTierraHomologado id="h.1.2.2">603,974905803945093</ValorUnitarioDeTierraHomologado>
+          <ValorUnitarioSinHomologarMinimo id="h.1.2.3">-6358,385094196054907</ValorUnitarioSinHomologarMinimo>
+          <ValorUnitarioSinHomologarMaximo id="h.1.2.4">7899,834905803945093</ValorUnitarioSinHomologarMaximo>
+          <ValorUnitarioHomologadoMinimo id="h.1.2.5">-675,845094196054907</ValorUnitarioHomologadoMinimo>
+          <ValorUnitarioHomologadoMaximo id="h.1.2.6">6769,154905803945093</ValorUnitarioHomologadoMaximo>
+        </ConclusionesHomologacionTerrenos>
+        <TerrenosResidual>
+          <InvestigacionProductosComparables id="h.1.3.4">
+            <Calle>string</Calle>
+            <Colonia id="h.1.3.4.n.2">1380015942</Colonia>
+            <Delegacion id="h.1.3.4.n.3">2608926344</Delegacion>
+            <CodigoPostal id="h.1.3.4.n.4">string</CodigoPostal>
+            <FuenteDeInformacion>
+              <Telefono>string</Telefono>
+              <Informante id="h.1.3.4.n.5.2">string</Informante>
+            </FuenteDeInformacion>
+            <DescripcionDelComparable id="h.1.3.4.n.6">string</DescripcionDelComparable>
+            <SuperficieVendiblePorUnidad>-1227,565094196054907</SuperficieVendiblePorUnidad>
+            <PrecioSolicitado id="h.1.3.4.n.8">3786,994905803945093</PrecioSolicitado>
+            <FactorDeNegociacion>-9777,125094196054907</FactorDeNegociacion>
+          </InvestigacionProductosComparables>
+          <InvestigacionProductosComparables>
+            <Calle id="h.1.3.4.n.1">string</Calle>
+            <Colonia>368722942</Colonia>
+            <Delegacion id="h.1.3.4.n.3">1736386558</Delegacion>
+            <CodigoPostal>string</CodigoPostal>
+            <FuenteDeInformacion id="h.1.3.4.n.5">
+              <Telefono id="h.1.3.4.n.5.1">string</Telefono>
+              <Informante id="h.1.3.4.n.5.2">string</Informante>
+            </FuenteDeInformacion>
+            <DescripcionDelComparable>string</DescripcionDelComparable>
+            <SuperficieVendiblePorUnidad>-8846,865094196054907</SuperficieVendiblePorUnidad>
+            <PrecioSolicitado>5238,374905803945093</PrecioSolicitado>
+            <FactorDeNegociacion id="h.1.3.4.n.9">-9661,225094196054907</FactorDeNegociacion>
+          </InvestigacionProductosComparables>
+          <InvestigacionProductosComparables id="h.1.3.4">
+            <Calle>string</Calle>
+            <Colonia>1331564416</Colonia>
+            <Delegacion id="h.1.3.4.n.3">3569594564</Delegacion>
+            <CodigoPostal id="h.1.3.4.n.4">string</CodigoPostal>
+            <FuenteDeInformacion>
+              <Telefono>string</Telefono>
+              <Informante>string</Informante>
+            </FuenteDeInformacion>
+            <DescripcionDelComparable id="h.1.3.4.n.6">string</DescripcionDelComparable>
+            <SuperficieVendiblePorUnidad>9944,154905803945093</SuperficieVendiblePorUnidad>
+            <PrecioSolicitado id="h.1.3.4.n.8">7428,794905803945093</PrecioSolicitado>
+            <FactorDeNegociacion id="h.1.3.4.n.9">2795,774905803945093</FactorDeNegociacion>
+          </InvestigacionProductosComparables>
+          <InvestigacionProductosComparables id="h.1.3.4">
+            <Calle id="h.1.3.4.n.1">string</Calle>
+            <Colonia>2025734210</Colonia>
+            <Delegacion id="h.1.3.4.n.3">592529393</Delegacion>
+            <CodigoPostal>string</CodigoPostal>
+            <FuenteDeInformacion>
+              <Telefono id="h.1.3.4.n.5.1">string</Telefono>
+              <Informante id="h.1.3.4.n.5.2">string</Informante>
+            </FuenteDeInformacion>
+            <DescripcionDelComparable id="h.1.3.4.n.6">string</DescripcionDelComparable>
+            <SuperficieVendiblePorUnidad>9724,274905803945093</SuperficieVendiblePorUnidad>
+            <PrecioSolicitado>-2531,185094196054907</PrecioSolicitado>
+            <FactorDeNegociacion id="h.1.3.4.n.9">3480,254905803945093</FactorDeNegociacion>
+          </InvestigacionProductosComparables>
+          <ConclusionesHomologacionCompResiduales id="h.1.3.5">
+            <ValorUnitarioPromedio>-315,825094196054907</ValorUnitarioPromedio>
+            <ValorUnitarioHomologado>3315,994905803945093</ValorUnitarioHomologado>
+            <ValorUnitarioSinHomologarMinimo>-8024,605094196054907</ValorUnitarioSinHomologarMinimo>
+            <ValorUnitarioSinHomologarMaximo id="h.1.3.5.4">6245,054905803945093</ValorUnitarioSinHomologarMaximo>
+            <ValorUnitarioHomologadoMinimo>-1304,445094196054907</ValorUnitarioHomologadoMinimo>
+            <ValorUnitarioHomologadoMaximo>-4906,585094196054907</ValorUnitarioHomologadoMaximo>
+            <ValorUnitarioAplicableAlResidual>-6856,625094196054907</ValorUnitarioAplicableAlResidual>
+          </ConclusionesHomologacionCompResiduales>
+          <AnalisisResidual id="h.1.3.6">
+            <TotalDeIngresos id="h.1.3.6.1">-7135,305094196054907</TotalDeIngresos>
+            <TotalDeEgresos id="h.1.3.6.2">5903,334905803945093</TotalDeEgresos>
+            <UtilidadPropuesta id="h.1.3.6.3">string</UtilidadPropuesta>
+            <ValorUnitarioDeTierraResidual>1978,514905803945093</ValorUnitarioDeTierraResidual>
+          </AnalisisResidual>
+        </TerrenosResidual>
+        <ValorUnitarioDeTierraAplicableAlAvaluo>13,554905803945093</ValorUnitarioDeTierraAplicableAlAvaluo>
+      </Terrenos>
+      <ConstruccionesEnVenta>
+        <InvestigacionProductosComparables>
+          <Calle id="h.2.1.n.1">string</Calle>
+          <Colonia>2587296888</Colonia>
+          <Delegacion>3523951946</Delegacion>
+          <CodigoPostal>string</CodigoPostal>
+          <FuenteDeInformacion id="h.2.1.n.5">
+            <Telefono>string</Telefono>
+            <Informante id="h.2.1.n.5.2">string</Informante>
+          </FuenteDeInformacion>
+          <DescripcionDelComparable>string</DescripcionDelComparable>
+          <SuperficieVendiblePorUnidad>-8436,885094196054907</SuperficieVendiblePorUnidad>
+          <PrecioSolicitado id="h.2.1.n.8">2213,014905803945093</PrecioSolicitado>
+          <FactorDeNegociacion>3452,754905803945093</FactorDeNegociacion>
+        </InvestigacionProductosComparables>
+        <InvestigacionProductosComparables>
+          <Calle id="h.2.1.n.1">string</Calle>
+          <Colonia id="h.2.1.n.2">193140384</Colonia>
+          <Delegacion id="h.2.1.n.3">1272246622</Delegacion>
+          <CodigoPostal id="h.2.1.n.4">string</CodigoPostal>
+          <FuenteDeInformacion id="h.2.1.n.5">
+            <Telefono id="h.2.1.n.5.1">string</Telefono>
+            <Informante id="h.2.1.n.5.2">string</Informante>
+          </FuenteDeInformacion>
+          <DescripcionDelComparable>string</DescripcionDelComparable>
+          <SuperficieVendiblePorUnidad id="h.2.1.n.7">1693,614905803945093</SuperficieVendiblePorUnidad>
+          <PrecioSolicitado>-9336,265094196054907</PrecioSolicitado>
+          <FactorDeNegociacion id="h.2.1.n.9">-3711,365094196054907</FactorDeNegociacion>
+        </InvestigacionProductosComparables>
+        <InvestigacionProductosComparables id="h.2.1">
+          <Calle id="h.2.1.n.1">string</Calle>
+          <Colonia id="h.2.1.n.2">4226578531</Colonia>
+          <Delegacion id="h.2.1.n.3">1194864196</Delegacion>
+          <CodigoPostal id="h.2.1.n.4">string</CodigoPostal>
+          <FuenteDeInformacion id="h.2.1.n.5">
+            <Telefono>string</Telefono>
+            <Informante>string</Informante>
+          </FuenteDeInformacion>
+          <DescripcionDelComparable id="h.2.1.n.6">string</DescripcionDelComparable>
+          <SuperficieVendiblePorUnidad>5940,574905803945093</SuperficieVendiblePorUnidad>
+          <PrecioSolicitado>928,354905803945093</PrecioSolicitado>
+          <FactorDeNegociacion id="h.2.1.n.9">4101,974905803945093</FactorDeNegociacion>
+        </InvestigacionProductosComparables>
+        <InvestigacionProductosComparables>
+          <Calle id="h.2.1.n.1">string</Calle>
+          <Colonia>898966720</Colonia>
+          <Delegacion id="h.2.1.n.3">855832363</Delegacion>
+          <CodigoPostal>string</CodigoPostal>
+          <FuenteDeInformacion id="h.2.1.n.5">
+            <Telefono id="h.2.1.n.5.1">string</Telefono>
+            <Informante id="h.2.1.n.5.2">string</Informante>
+          </FuenteDeInformacion>
+          <DescripcionDelComparable>string</DescripcionDelComparable>
+          <SuperficieVendiblePorUnidad>-5565,445094196054907</SuperficieVendiblePorUnidad>
+          <PrecioSolicitado>-7133,665094196054907</PrecioSolicitado>
+          <FactorDeNegociacion id="h.2.1.n.9">-6936,365094196054907</FactorDeNegociacion>
+        </InvestigacionProductosComparables>
+        <ConclusionesHomologacionConstruccionesEnVenta>
+          <ValorUnitarioPromedio id="h.2.2.1">8270,814905803945093</ValorUnitarioPromedio>
+          <ValorUnitarioHomologado id="h.2.2.2">-3754,165094196054907</ValorUnitarioHomologado>
+          <ValorUnitarioSinHomologarMinimo>6988,354905803945093</ValorUnitarioSinHomologarMinimo>
+          <ValorUnitarioSinHomologarMaximo>2551,094905803945093</ValorUnitarioSinHomologarMaximo>
+          <ValorUnitarioHomologadoMinimo>-6237,905094196054907</ValorUnitarioHomologadoMinimo>
+          <ValorUnitarioHomologadoMaximo>2017,154905803945093</ValorUnitarioHomologadoMaximo>
+          <ValorUnitarioAplicableAlAvaluo id="h.2.2.7">-2073,685094196054907</ValorUnitarioAplicableAlAvaluo>
+        </ConclusionesHomologacionConstruccionesEnVenta>
+      </ConstruccionesEnVenta>
+      <ValorDeMercadoDelInmueble id="h.3">-5528,045094196054907</ValorDeMercadoDelInmueble>
+      <ConstruccionesEnRenta id="h.4">
+        <InvestigacionProductosComparables id="h.4.1">
+          <Calle>string</Calle>
+          <Colonia id="h.4.1.n.2">4281176155</Colonia>
+          <Delegacion id="h.4.1.n.3">1800647859</Delegacion>
+          <CodigoPostal>string</CodigoPostal>
+          <FuenteDeInformacion>
+            <Telefono>string</Telefono>
+            <Informante id="h.4.1.n.5.2">string</Informante>
+          </FuenteDeInformacion>
+          <DescripcionDelComparable>string</DescripcionDelComparable>
+          <SuperficieVendiblePorUnidad>6797,934905803945093</SuperficieVendiblePorUnidad>
+          <PrecioSolicitado>-1671,625094196054907</PrecioSolicitado>
+          <FactorDeNegociacion id="h.4.1.n.9">2439,694905803945093</FactorDeNegociacion>
+        </InvestigacionProductosComparables>
+        <ConclusionesHomologacionConstruccionesEnVenta id="h.4.2">
+          <ValorUnitarioPromedio>6492,834905803945093</ValorUnitarioPromedio>
+          <ValorUnitarioHomologado id="h.4.2.2">9030,894905803945093</ValorUnitarioHomologado>
+          <ValorUnitarioSinHomologarMinimo id="h.4.2.3">8435,014905803945093</ValorUnitarioSinHomologarMinimo>
+          <ValorUnitarioSinHomologarMaximo>-3786,365094196054907</ValorUnitarioSinHomologarMaximo>
+          <ValorUnitarioHomologadoMinimo id="h.4.2.5">-4506,865094196054907</ValorUnitarioHomologadoMinimo>
+          <ValorUnitarioHomologadoMaximo>2573,594905803945093</ValorUnitarioHomologadoMaximo>
+          <ValorUnitarioAplicableAlAvaluo id="h.4.2.7">-9303,385094196054907</ValorUnitarioAplicableAlAvaluo>
+        </ConclusionesHomologacionConstruccionesEnVenta>
+      </ConstruccionesEnRenta>
+    </EnfoqueDeMercado>
+    <EnfoqueDeCostos id="i">
+      <DelTerreno id="i.1">
+        <Terreno>
+          <IdentificadorFraccionN1 id="d.5.n.1">string</IdentificadorFraccionN1>
+          <ClaveDeAreaDeValor id="d.5.n.8">string</ClaveDeAreaDeValor>
+          <SuperficieFraccionN1>9343,234905803945093</SuperficieFraccionN1>
+          <Fzo id="d.5.n.3">-2074,545094196054907</Fzo>
+          <Fub>6610,274905803945093</Fub>
+          <FFr id="d.5.n.5">-1209,865094196054907</FFr>
+          <Ffo id="d.5.n.6">4503,034905803945093</Ffo>
+          <Fsu id="d.5.n.7">-2779,565094196054907</Fsu>
+          <Fot />
+          <Fre id="i.1.1.n.1">-61,505094196054907</Fre>
+          <ValorDeLaFraccionN id="i.1.1.n.2">-4393,745094196054907</ValorDeLaFraccionN>
+        </Terreno>
+        <SuperficieTotalDelTerreno>-8687,025094196054907</SuperficieTotalDelTerreno>
+        <ValorTotalDelTerreno id="i.1.3">4876,594905803945093</ValorTotalDelTerreno>
+      </DelTerreno>
+      <DeLasConstruccionesPrivativas id="i.2">
+        <Construccion>
+          <Descripcion id="e.2.n.1">string</Descripcion>
+          <ClaveUso>3105029426</ClaveUso>
+          <ClaveRangoDeNiveles id="e.2.n.4">675508161</ClaveRangoDeNiveles>
+          <ClaveClase>3296172651</ClaveClase>
+          <Superficie id="e.2.n.11">2,134905803945093</Superficie>
+          <ValorunitariodereposicionNuevo id="i.2.1.n.1">-2127,625094196054907</ValorunitariodereposicionNuevo>
+          <FactorDeEdad>-2998,525094196054907</FactorDeEdad>
+          <FactorDeConservacion>4013466549</FactorDeConservacion>
+          <FactorResultante>3649,394905803945093</FactorResultante>
+          <ValorDeLaFraccionN>-1520,625094196054907</ValorDeLaFraccionN>
+        </Construccion>
+        <SuperficieTotalDeConstruccionesPrivativas>3655,634905803945093</SuperficieTotalDeConstruccionesPrivativas>
+        <ValorTotalDeConstruccionesPrivativas id="i.2.3">5766,834905803945093</ValorTotalDeConstruccionesPrivativas>
+      </DeLasConstruccionesPrivativas>
+      <DeLasInstEspecialesObrasCompYAccesoriosPrivativas>
+        <InstalacionesEspecialesPrivativas>
+          <ClaveInstalacionEspecial>1543800224</ClaveInstalacionEspecial>
+          <DescripcionInstalacionEspecial>3296413169</DescripcionInstalacionEspecial>
+          <UnidadInstalacionEspecial>string</UnidadInstalacionEspecial>
+          <CantidadInstalacionEspecial>-8682,725094196054907</CantidadInstalacionEspecial>
+          <ValorUnitarioInstalacionEspecial>-9126,125094196054907</ValorUnitarioInstalacionEspecial>
+          <FactorDeEdadInstalacionEspecial id="i.4.1.n.1">-1661,765094196054907</FactorDeEdadInstalacionEspecial>
+          <ImporteInstalacionEspecial id="i.4.1.n.2">-1166,305094196054907</ImporteInstalacionEspecial>
+        </InstalacionesEspecialesPrivativas>
+        <ImporteTotalInstalacionesEspecialesPrivativas>-6332,925094196054907</ImporteTotalInstalacionesEspecialesPrivativas>
+        <AccesoriosPrivativas>
+          <ClaveElementoAccesorio>1148212262</ClaveElementoAccesorio>
+          <DescripcionElementoAccesorio>4007457889</DescripcionElementoAccesorio>
+          <UnidadElementoAccesorio id="f.10.1.n.3">string</UnidadElementoAccesorio>
+          <CantidadElementoAccesorio id="f.10.1.n.4">-2593,325094196054907</CantidadElementoAccesorio>
+          <ValorUnitarioElementoAccesorio id="f.10.1.n.7">5954,474905803945093</ValorUnitarioElementoAccesorio>
+          <FactorDeEdadElementoAccesorio id="i.4.3.n.1">-6949,485094196054907</FactorDeEdadElementoAccesorio>
+          <ImporteElementoAccesorio>-9775,705094196054907</ImporteElementoAccesorio>
+        </AccesoriosPrivativas>
+        <ImporteTotalElementosAccesoriosPrivativas>8197,114905803945093</ImporteTotalElementosAccesoriosPrivativas>
+        <ObrasComplementariasPrivativas id="i.4.5">
+          <ClaveObraComplementaria id="f.11.1.n.1">3425154813</ClaveObraComplementaria>
+          <DescripcionObraComplementaria>3573554523</DescripcionObraComplementaria>
+          <UnidadObraComplementaria id="f.11.1.n.3">string</UnidadObraComplementaria>
+          <CantidadObraComplementaria id="f.11.1.n.4">-3241,465094196054907</CantidadObraComplementaria>
+          <ValorUnitarioObraComplementaria>-5327,665094196054907</ValorUnitarioObraComplementaria>
+          <FactorDeEdadObraComplementaria>9736,474905803945093</FactorDeEdadObraComplementaria>
+          <ImporteObraComplementaria>-2552,665094196054907</ImporteObraComplementaria>
+        </ObrasComplementariasPrivativas>
+        <ImporteTotalObrasComplementariasPrivativas id="i.4.6">7435,554905803945093</ImporteTotalObrasComplementariasPrivativas>
+        <ImporteTotalInstalacionesAccesoriosComplementariasPrivativas>-3935,425094196054907</ImporteTotalInstalacionesAccesoriosComplementariasPrivativas>
+      </DeLasInstEspecialesObrasCompYAccesoriosPrivativas>
+      <DeLasInstEspecialesObrasCompYElementosAccesoriosComunes id="i.5" />
+    </EnfoqueDeCostos>
+    <EnfoqueDeIngresos id="k">
+      <Deducciones>
+        <Vacios>2487,694905803945093</Vacios>
+        <ImpuestoPredial id="k.2.2">8581,874905803945093</ImpuestoPredial>
+        <ServicioDeAgua id="k.2.3">-9664,605094196054907</ServicioDeAgua>
+        <ConservacionYMantenimiento>5932,794905803945093</ConservacionYMantenimiento>
+        <ServicioEnergiaElectrica>-4106,265094196054907</ServicioEnergiaElectrica>
+        <Administracion>-7386,405094196054907</Administracion>
+        <Seguros id="k.2.7">-148,785094196054907</Seguros>
+        <DepreciacionFiscal id="k.2.8">-5147,545094196054907</DepreciacionFiscal>
+        <Otros id="k.2.9">6202,974905803945093</Otros>
+        <DeduccionesFiscales>-7409,045094196054907</DeduccionesFiscales>
+        <ImpuestoSobreLaRenta>-87,005094196054907</ImpuestoSobreLaRenta>
+        <DeduccionesMensuales id="k.2.12">-8274,665094196054907</DeduccionesMensuales>
+        <PorcentajeDeduccionesMensuales id="k.2.13">3430,054905803945093</PorcentajeDeduccionesMensuales>
+      </Deducciones>
+      <ProductoLiquidoAnual id="k.3">-7396,765094196054907</ProductoLiquidoAnual>
+      <TasaDeCapitalizacionAplicable id="k.4">-4807,945094196054907</TasaDeCapitalizacionAplicable>
+      <ImporteEnfoqueDeIngresos id="k.5">-9375,885094196054907</ImporteEnfoqueDeIngresos>
+    </EnfoqueDeIngresos>
+    <ResumenDeValores id="i">
+      <ValorDeMercadoDelInmueble>-5056,185094196054907</ValorDeMercadoDelInmueble>
+      <ImporteTotalDelEnfoqueDeCostos>-429,585094196054907</ImporteTotalDelEnfoqueDeCostos>
+      <ImporteEnfoqueDeIngresos id="k.5">6997,694905803945093</ImporteEnfoqueDeIngresos>
+    </ResumenDeValores>
+    <ConsideracionesPreviasALaConclusion id="n" />
+    <ConclusionDelAvaluo id="o">
+      <ValorComercialDelInmueble id="o.1">1956,774905803945093</ValorComercialDelInmueble>
+    </ConclusionDelAvaluo>
+    <ValorReferido id="p">
+      <FechaDeValorReferido id="p.1">1976-10-03T05:49:00.06</FechaDeValorReferido>
+      <IndiceActual>-7823,945094196054907</IndiceActual>
+      <FactorDeConversion id="p.4">7170,454905803945093</FactorDeConversion>
+      <ValorReferido>-2114,325094196054907</ValorReferido>
+    </ValorReferido>
+    <AnexoFotografico id="q">
+      <Sujeto id="q.1">string</Sujeto>
+    </AnexoFotografico>
+  </AvaluoComercial>
+</Avaluo>

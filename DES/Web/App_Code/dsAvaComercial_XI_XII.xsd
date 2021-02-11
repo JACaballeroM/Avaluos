@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsAvaComercial_XI_XII" targetNamespace="http://tempuri.org/dsAvaComercial_XI_XII.xsd" xmlns:mstns="http://tempuri.org/dsAvaComercial_XI_XII.xsd" xmlns="http://tempuri.org/dsAvaComercial_XI_XII.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsAvaComercial_XI_XII" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsAvaComercial_XI_XII" msprop:Generator_UserDSName="dsAvaComercial_XI_XII">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FEXAVA_AVALUO" msprop:Generator_TableClassName="FEXAVA_AVALUODataTable" msprop:Generator_TableVarName="tableFEXAVA_AVALUO" msprop:Generator_TablePropName="FEXAVA_AVALUO" msprop:Generator_RowDeletingName="FEXAVA_AVALUORowDeleting" msprop:Generator_RowChangingName="FEXAVA_AVALUORowChanging" msprop:Generator_RowEvHandlerName="FEXAVA_AVALUORowChangeEventHandler" msprop:Generator_RowDeletedName="FEXAVA_AVALUORowDeleted" msprop:Generator_UserTableName="FEXAVA_AVALUO" msprop:Generator_RowChangedName="FEXAVA_AVALUORowChanged" msprop:Generator_RowEvArgName="FEXAVA_AVALUORowChangeEvent" msprop:Generator_RowClassName="FEXAVA_AVALUORow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOMBRE_SOCI" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_SOCI" msprop:Generator_ColumnPropNameInRow="NOMBRE_SOCI" msprop:Generator_ColumnPropNameInTable="NOMBRE_SOCIColumn" msprop:Generator_UserColumnName="NOMBRE_SOCI" type="xs:string" minOccurs="0" />
+              <xs:element name="CONSIDERACIONESPREVIASCONCLUSION" msprop:Generator_ColumnVarNameInTable="columnCONSIDERACIONESPREVIASCONCLUSION" msprop:Generator_ColumnPropNameInRow="CONSIDERACIONESPREVIASCONCLUSION" msprop:Generator_ColumnPropNameInTable="CONSIDERACIONESPREVIASCONCLUSIONColumn" msprop:Generator_UserColumnName="CONSIDERACIONESPREVIASCONCLUSION" type="xs:string" minOccurs="0" />
+              <xs:element name="VALORCOMERCIAL" msprop:Generator_ColumnVarNameInTable="columnVALORCOMERCIAL" msprop:Generator_ColumnPropNameInRow="VALORCOMERCIAL" msprop:Generator_ColumnPropNameInTable="VALORCOMERCIALColumn" msprop:Generator_UserColumnName="VALORCOMERCIAL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VALORREFERIDO" msprop:Generator_ColumnVarNameInTable="columnVALORREFERIDO" msprop:Generator_ColumnPropNameInRow="VALORREFERIDO" msprop:Generator_ColumnPropNameInTable="VALORREFERIDOColumn" msprop:Generator_UserColumnName="VALORREFERIDO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FECHAVALORREFERIDO" msprop:Generator_ColumnVarNameInTable="columnFECHAVALORREFERIDO" msprop:Generator_ColumnPropNameInRow="FECHAVALORREFERIDO" msprop:Generator_ColumnPropNameInTable="FECHAVALORREFERIDOColumn" msprop:Generator_UserColumnName="FECHAVALORREFERIDO" type="xs:string" minOccurs="0" />
+              <xs:element name="FACTORCONVERSION" msprop:Generator_ColumnVarNameInTable="columnFACTORCONVERSION" msprop:Generator_ColumnPropNameInRow="FACTORCONVERSION" msprop:Generator_ColumnPropNameInTable="FACTORCONVERSIONColumn" msprop:Generator_UserColumnName="FACTORCONVERSION" type="xs:decimal" minOccurs="0" />
+              <xs:element name="REGTDF_PERITO" msprop:Generator_ColumnVarNameInTable="columnREGTDF_PERITO" msprop:Generator_ColumnPropNameInRow="REGTDF_PERITO" msprop:Generator_ColumnPropNameInTable="REGTDF_PERITOColumn" msprop:Generator_UserColumnName="REGTDF_PERITO" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE_PERITO" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_PERITO" msprop:Generator_ColumnPropNameInRow="NOMBRE_PERITO" msprop:Generator_ColumnPropNameInTable="NOMBRE_PERITOColumn" msprop:Generator_UserColumnName="NOMBRE_PERITO" type="xs:string" minOccurs="0" />
+              <xs:element name="REGTDF_SOCIEDAD" msprop:Generator_ColumnVarNameInTable="columnREGTDF_SOCIEDAD" msprop:Generator_ColumnPropNameInRow="REGTDF_SOCIEDAD" msprop:Generator_ColumnPropNameInTable="REGTDF_SOCIEDADColumn" msprop:Generator_UserColumnName="REGTDF_SOCIEDAD" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

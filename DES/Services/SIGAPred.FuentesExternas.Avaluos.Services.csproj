@@ -1,0 +1,877 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{67264F9A-7A77-4FC2-8F9A-CC78006DA4A8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SIGAPred.FuentesExternas.Avaluos.Services</RootNamespace>
+    <AssemblyName>SIGAPred.FuentesExternas.Avaluos.Services</AssemblyName>
+    <ProjectTypeGuids>{3D9AD99F-2412-4246-B90B-4EAA41C64699};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <StartArguments>/client:"WcfTestClient.exe"</StartArguments>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\Debug\SIGAPred.FuentesExternas.Avaluos.Services.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\Release\SIGAPred.FuentesExternas.Avaluos.Services.XML</DocumentationFile>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\..\..\Adycon\References\SIGAPred\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\References\Microsoft\Practices\EnterpriseLibrary\4.0.0.0\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\References\Microsoft\Practices\EnterpriseLibrary\4.0.0.0\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design">
+      <HintPath>..\..\References\Microsoft\Practices\EnterpriseLibrary\4.0.0.0\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\References\Microsoft\Practices\EnterpriseLibrary\4.0.0.0\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\References\Microsoft\Practices\EnterpriseLibrary\4.0.0.0\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\References\Microsoft\Practices\EnterpriseLibrary\4.0.0.0\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\References\Microsoft\Practices\EnterpriseLibrary\4.0.0.0\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="MyExtentions">
+      <HintPath>..\..\..\SIGAPred-FuentesExternas\Avaluos\DES\SIGAPred.FE.Avaluos\Web\Bin\MyExtentions.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.112.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\Oracle\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="SecurityCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SecurityCore\DES\SecurityCore\bin\Release\SecurityCore.dll</HintPath>
+    </Reference>
+    <Reference Include="SevenZipSharp, Version=0.60.3695.26174, Culture=neutral, PublicKeyToken=20de82c62b055c88, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\SevenZipSharp\SevenZipSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="SIGAPred.Common, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\SIGAPred\Common\1.1.0.0\SIGAPred.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="SIGAPred.Common.Compresion, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\SIGAPred\Common\1.1.0.0\SIGAPred.Common.Compresion.dll</HintPath>
+    </Reference>
+    <Reference Include="SIGAPred.Common.DataAccess, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\SIGAPred\Common\1.1.0.0\SIGAPred.Common.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="SIGAPred.Documental.Services, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\SIGAPred\Documental\1.1.0.0\SIGAPred.Documental.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="SIGAPred.Excepciones.ClaseExcepcion, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SIGAPredFront\REFERENCE\SIGAPred.Excepciones.ClaseExcepcion.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccesoDatos\App_Code\Helpers\TransactionHelper.cs" />
+    <Compile Include="AccesoDatos\DseAvaluoCatConsulta.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DseAvaluoCatConsulta.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\DseAvaluoMant.cs">
+      <DependentUpon>DseAvaluoMant.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\DseAvaluoMant.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DseAvaluoMant.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\Settings.cs" />
+    <Compile Include="Negocio\DemeritoSection.cs" />
+    <Compile Include="Negocio\DemeritoSectionCollection.cs" />
+    <Compile Include="Negocio\DemeritoSectionElement.cs" />
+    <Compile Include="Negocio\EsquemaAvaluo.cs" />
+    <Compile Include="Negocio\Exceptions\ExceptionBase.cs" />
+    <Compile Include="Negocio\Exceptions\AvaluosException.cs" />
+    <Compile Include="Negocio\Exceptions\AvaluosInfoException.cs" />
+    <Compile Include="Negocio\Exceptions\PeritosException.cs" />
+    <Compile Include="Negocio\Exceptions\PeritosInfoException.cs" />
+    <Compile Include="Negocio\Interfaces\Cedula.cs" />
+    <Compile Include="Negocio\Interfaces\IAvaluos.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceAnalisisValores\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceCatastral\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceDocumental\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceDocumentosDigitales\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceFiscal\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServicePeritosSociedades\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceRCON\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccesoDatos\DseAvaluoCatConsulta.cs">
+      <DependentUpon>DseAvaluoCatConsulta.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\DseAvaluoConsulta.cs">
+      <DependentUpon>DseAvaluoConsulta.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\DseAvaluoConsulta.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DseAvaluoConsulta.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\DseAvaluoConsultaFis.cs">
+      <DependentUpon>DseAvaluoConsultaFis.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\DseAvaluoConsultaFis.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DseAvaluoConsultaFis.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\DseAvaluoMantInf.cs">
+      <DependentUpon>DseAvaluoMantInf.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\DseAvaluoMantInf.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DseAvaluoMantInf.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\DseNotarios.cs">
+      <DependentUpon>DseNotarios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\DseNotarios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DseNotarios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\App_Code\ApplicationCache.cs" />
+    <Compile Include="AccesoDatos\App_Code\AvaluosUtils.cs" />
+    <Compile Include="AccesoDatos\App_Code\Constantes.cs" />
+    <Compile Include="AccesoDatos\App_Code\ConstantesTraduccion.cs" />
+    <Compile Include="AccesoDatos\App_Code\CatastralUtils.cs" />
+    <Compile Include="AccesoDatos\App_Code\ValidarCamposCalculados.cs" />
+    <Compile Include="AccesoDatos\App_Code\XmlUtils.cs" />
+    <Compile Include="Negocio\Avaluos.cs" />
+    <Compile Include="Negocio\AvaluosInforme.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Negocio\ExceptionPolicyWrapper.cs" />
+    <Compile Include="AccesoDatos\App_Code\FiscalUtils.cs" />
+    <None Include="AccesoDatos\DseAvaluoMant.xsc">
+      <DependentUpon>DseAvaluoMant.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseAvaluoMant.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DseAvaluoMant.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AccesoDatos\DseAvaluoMant.xss">
+      <DependentUpon>DseAvaluoMant.xsd</DependentUpon>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AccesoDatos\App_Code\Diagramas\ApplicationCache.cd" />
+    <None Include="AccesoDatos\App_Code\Diagramas\Utils.cd" />
+    <None Include="AccesoDatos\App_Code\Diagramas\ValidarCamposCalculados.cd" />
+    <None Include="Negocio\Diagramas\Avaluos.cd" />
+    <None Include="Negocio\Diagramas\AvaluosInforme.cd" />
+    <None Include="Negocio\Diagramas\Exceptions.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceAnalisisValores\AnalisisValoresInmobiliario1.wsdl" />
+    <None Include="Service References\ServiceAnalisisValores\AnalisisValoresInmobiliario5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceAnalisisValores\AnalisisValoresInmobiliario51.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceAnalisisValores\AnalisisValoresInmobiliario52.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceAnalisisValores\AnalisisValoresInmobiliario53.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceAnalisisValores\AnalisisValoresInmobiliario54.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceAnalisisValores\dsAnalisisValoresInmobiliario1.xsd" />
+    <None Include="Service References\ServiceAnalisisValores\SIGAPred.FuentesExternas.Avaluos.Services.ServiceAnalisisValores.dsAnalisisValoresInmobiliario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\ConsultaCatastralService1.wsdl" />
+    <None Include="Service References\ServiceCatastral\ConsultaCatastralService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceCatastral\ConsultaCatastralService71.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceCatastral\ConsultaCatastralService72.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceCatastral\ConsultaCatastralService73.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceCatastral\ConsultaCatastralService74.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceCatastral\ConsultaCatastralService75.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceCatastral\ConsultaCatastralService76.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceCatastral\DseAdministracionTributaria1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseBienesInmueble1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseCatalogos1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseCondominio1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseCondominioPredio1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseConjuntoCondominal1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseConstruccion1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseDatosBasicos1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseDelegacionAreaValor1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseDelegacionColonia1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseDelegacionCorredorValor1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseEnclaveValor1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseFotos1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseFotosExpediente1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseHistoricoInmueblePredio1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseIndiceCartografico1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseInmueble1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseInmuebleF4BA1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseInmuebleFiltro1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseInmueblePredio1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseInmuebleSIIP1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseInmuebleUnidad1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseManzanaColonia1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseManzanaDetalle1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseManzanas1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseNumerosExteriores1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseOficinasTesoreria1.xsd" />
+    <None Include="Service References\ServiceCatastral\DsePredios1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseRegion1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseSitios1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseTiposSitios1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseTomaAgua1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseUnidadesGrupoCondominal1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseVectores1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseViaColonia1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseViaVector1.xsd" />
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.CartaDelegacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DelegacionManzana.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseAdministracionTributaria.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseBienesInmueble.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseCatalogos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseCondominio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseCondominioPredio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseConjuntoCondominal.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseConstruccion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseDatosBasicos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseDelegacionAreaValor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseDelegacionColonia.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseDelegacionCorredorValor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseEnclaveValor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseFotos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseFotosExpediente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseHistoricoInmueblePredio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseIndiceCartografico.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseInmueble.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseInmuebleF4BA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseInmuebleFiltro.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseInmueblePredio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseInmuebleSIIP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseInmuebleUnidad.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseManzanaColonia.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseManzanaDetalle.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseManzanas.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseNumerosExteriores.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseOficinasTesoreria.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DsePredios.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseRegion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseSitios.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseTiposSitios.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseTomaAgua.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseUnidadesGrupoCondominal.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseVectores.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseViaColonia.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseViaVector.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.InfoBaja.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDocumental\AltasDocumentos1.wsdl" />
+    <None Include="Service References\ServiceDocumental\AltasDocumentos5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceDocumental\AltasDocumentos51.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceDocumental\AltasDocumentos52.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceDocumental\AltasDocumentos53.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceDocumental\AltasDocumentos54.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceDocumentosDigitales\DocumentosDigitales1.wsdl" />
+    <None Include="Service References\ServiceDocumentosDigitales\DocumentosDigitales7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceDocumentosDigitales\DocumentosDigitales71.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceDocumentosDigitales\DocumentosDigitales72.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceDocumentosDigitales\DocumentosDigitales73.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceDocumentosDigitales\DocumentosDigitales74.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceDocumentosDigitales\DocumentosDigitales75.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceDocumentosDigitales\DocumentosDigitales76.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceDocumentosDigitales\dseDocumentosDigitales1.xsd" />
+    <None Include="Service References\ServiceDocumentosDigitales\SIGAPred.FuentesExternas.Avaluos.Services.ServiceDocumentosDigitales.dseDocumentosDigitales.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDocumentosDigitales\SIGAPred.FuentesExternas.Avaluos.Services.ServiceDocumentosDigitales.Foto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceFiscal\Administracion.wsdl" />
+    <None Include="Service References\ServiceFiscal\Administracion.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceFiscal\Administracion1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceFiscal\Administracion2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceFiscal\Administracion3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceFiscal\Administracion4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceFiscal\Administracion5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceFiscal\Administracion6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceFiscal\DseAdministracion.xsd" />
+    <None Include="Service References\ServiceFiscal\DseInmueble.xsd" />
+    <None Include="Service References\ServiceFiscal\SIGAPred.FuentesExternas.Avaluos.Services.ServiceFiscal.DseAdministracion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceFiscal\SIGAPred.FuentesExternas.Avaluos.Services.ServiceFiscal.DseInmueble.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServicePeritosSociedades\DsePeritosSociedades1.xsd" />
+    <None Include="Service References\ServicePeritosSociedades\PeritosSociedadesService1.wsdl" />
+    <None Include="Service References\ServicePeritosSociedades\PeritosSociedadesService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicePeritosSociedades\PeritosSociedadesService51.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicePeritosSociedades\PeritosSociedadesService52.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicePeritosSociedades\PeritosSociedadesService53.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicePeritosSociedades\PeritosSociedadesService54.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicePeritosSociedades\SIGAPred.FuentesExternas.Avaluos.Services.ServicePeritosSociedades.DsePeritosSociedades.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceRCON\DseAsentamientos1.xsd" />
+    <None Include="Service References\ServiceRCON\DseCatalogos1.xsd" />
+    <None Include="Service References\ServiceRCON\DseCiudades1.xsd" />
+    <None Include="Service References\ServiceRCON\DseColoniaAsentamiento.xsd" />
+    <None Include="Service References\ServiceRCON\DseColoniaAsentamiento1.xsd" />
+    <None Include="Service References\ServiceRCON\DseContribuyentes1.xsd" />
+    <None Include="Service References\ServiceRCON\DseDatosRepresentacion1.xsd" />
+    <None Include="Service References\ServiceRCON\DseDireccionesInmueble1.xsd" />
+    <None Include="Service References\ServiceRCON\DseEstados1.xsd" />
+    <None Include="Service References\ServiceRCON\DseHistorico1.xsd" />
+    <None Include="Service References\ServiceRCON\DseInfoContribuyente1.xsd" />
+    <None Include="Service References\ServiceRCON\DseInfoDirecciones1.xsd" />
+    <None Include="Service References\ServiceRCON\DseInfoNotarios1.xsd" />
+    <None Include="Service References\ServiceRCON\DseInmuebleDireccion1.xsd" />
+    <None Include="Service References\ServiceRCON\DseMunicipios1.xsd" />
+    <None Include="Service References\ServiceRCON\DseNotarios1.xsd" />
+    <None Include="Service References\ServiceRCON\DsePersonasSimilares1.xsd" />
+    <None Include="Service References\ServiceRCON\RegistroContribuyentesService1.wsdl" />
+    <None Include="Service References\ServiceRCON\RegistroContribuyentesService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceRCON\RegistroContribuyentesService61.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceRCON\RegistroContribuyentesService62.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceRCON\RegistroContribuyentesService63.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceRCON\RegistroContribuyentesService64.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceRCON\RegistroContribuyentesService65.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceRCON\SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseAsentamientos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceRCON\SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseCatalogos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceRCON\SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseCiudades.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceRCON\SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseColoniaAsentamiento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceRCON\SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseContribuyentes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceRCON\SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseDatosRepresentacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceRCON\SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseDireccionesInmueble.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceRCON\SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseEstados.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceRCON\SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseHistorico.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceRCON\SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseInfoContribuyente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceRCON\SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseInfoDirecciones.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceRCON\SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseInfoNotarios.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceRCON\SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseInmuebleDireccion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceRCON\SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseMunicipios.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceRCON\SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseNotarios.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceRCON\SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DsePeritosSociedades1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceRCON\SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DsePersonasSimilares.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AccesoDatos\DseNotarios.xsc">
+      <DependentUpon>DseNotarios.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseNotarios.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DseNotarios.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AccesoDatos\DseNotarios.xss">
+      <DependentUpon>DseNotarios.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AccesoDatos\DseAvaluoConsulta.xsc">
+      <DependentUpon>DseAvaluoConsulta.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseAvaluoConsulta.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DseAvaluoConsulta.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AccesoDatos\DseAvaluoConsulta.xss">
+      <DependentUpon>DseAvaluoConsulta.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Enum\SIGAPred.FuentesExternas.Avaluos.Enum.csproj">
+      <Project>{504BF321-DBA7-463A-A190-E9C7126D675F}</Project>
+      <Name>SIGAPred.FuentesExternas.Avaluos.Enum</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AccesoDatos\DseAvaluoMantInf.xsc">
+      <DependentUpon>DseAvaluoMantInf.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseAvaluoMantInf.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DseAvaluoMantInf.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AccesoDatos\DseAvaluoMantInf.xss">
+      <DependentUpon>DseAvaluoMantInf.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\SIGAPred.Documental.Services.AccesoDatos.Gestion.DocumentosDigitales.dseDocumentosDigitales.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AccesoDatos\DseAvaluoCatConsulta.xsc">
+      <DependentUpon>DseAvaluoCatConsulta.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseAvaluoCatConsulta.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DseAvaluoCatConsulta.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AccesoDatos\DseAvaluoCatConsulta.xss">
+      <DependentUpon>DseAvaluoCatConsulta.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AccesoDatos\DseAvaluoConsultaFis.xsc">
+      <DependentUpon>DseAvaluoConsultaFis.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseAvaluoConsultaFis.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DseAvaluoConsultaFis.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AccesoDatos\DseAvaluoConsultaFis.xss">
+      <DependentUpon>DseAvaluoConsultaFis.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EsquemaAvaluo.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceAnalisisValores\" />
+    <WCFMetadataStorage Include="Service References\ServiceCatastral\" />
+    <WCFMetadataStorage Include="Service References\ServiceDocumental\" />
+    <WCFMetadataStorage Include="Service References\ServiceDocumentosDigitales\" />
+    <WCFMetadataStorage Include="Service References\ServiceFiscal\" />
+    <WCFMetadataStorage Include="Service References\ServicePeritosSociedades\" />
+    <WCFMetadataStorage Include="Service References\ServiceRCON\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceRCON\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceRCON\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceRCON\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceAnalisisValores\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceAnalisisValores\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceAnalisisValores\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceDocumentosDigitales\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceDocumentosDigitales\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceDocumentosDigitales\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceDocumental\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceDocumental\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceDocumental\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceCatastral\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceCatastral\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceCatastral\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceFiscal\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceFiscal\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceFiscal\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicePeritosSociedades\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicePeritosSociedades\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicePeritosSociedades\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceAnalisisValores\AnalisisValoresInmobiliario1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicePeritosSociedades\PeritosSociedadesService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceRCON\RegistroContribuyentesService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceDocumentosDigitales\DocumentosDigitales1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceDocumental\AltasDocumentos1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceCatastral\ConsultaCatastralService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceFiscal\Administracion.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{3D9AD99F-2412-4246-B90B-4EAA41C64699}">
+        <WcfProjectProperties>
+          <AutoStart>False</AutoStart>
+        </WcfProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

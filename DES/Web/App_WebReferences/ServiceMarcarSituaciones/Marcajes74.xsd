@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.AccesoDatos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.AccesoDatos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DSMarcarLotes.INMUEBLESDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSMarcarLotes.INMUEBLESDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/DSMarcarLotes.xsd" name="namespace" />
+      <xs:attribute fixed="INMUEBLESDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DSMarcarClasificadas.FIS_MARCARCLASIFICADASDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSMarcarClasificadas.FIS_MARCARCLASIFICADASDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/DSMarcarClasificadas.xsd" name="namespace" />
+      <xs:attribute fixed="FIS_MARCARCLASIFICADASDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DSMarcarClasificadas.FIS_MARCARCLASIFICADASHDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSMarcarClasificadas.FIS_MARCARCLASIFICADASHDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/DSMarcarClasificadas.xsd" name="namespace" />
+      <xs:attribute fixed="FIS_MARCARCLASIFICADASHDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseCatalogosMarcajes.FIS_CATCLASIFICADASDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseCatalogosMarcajes.FIS_CATCLASIFICADASDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/dseCatalogos.xsd" name="namespace" />
+      <xs:attribute fixed="FIS_CATCLASIFICADASDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseCatalogosMarcajes.FIS_CATMARCAJESMOTIVOSDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseCatalogosMarcajes.FIS_CATMARCAJESMOTIVOSDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/dseCatalogos.xsd" name="namespace" />
+      <xs:attribute fixed="FIS_CATMARCAJESMOTIVOSDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseCatalogosMarcajes.FIS_CATMARCAJESSUBMOTIVOSDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseCatalogosMarcajes.FIS_CATMARCAJESSUBMOTIVOSDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/dseCatalogos.xsd" name="namespace" />
+      <xs:attribute fixed="FIS_CATMARCAJESSUBMOTIVOSDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DSMarcarSituaciones.MARCAJESCUENTASDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSMarcarSituaciones.MARCAJESCUENTASDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/DSMarcarSituaciones.xsd" name="namespace" />
+      <xs:attribute fixed="MARCAJESCUENTASDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DSMarcarSituaciones.MARCAJESCUENTASHISTDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSMarcarSituaciones.MARCAJESCUENTASHISTDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/DSMarcarSituaciones.xsd" name="namespace" />
+      <xs:attribute fixed="MARCAJESCUENTASHISTDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DSMarcarClasificadas.FIS_COPIAR_CLASIFICADASDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSMarcarClasificadas.FIS_COPIAR_CLASIFICADASDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/DSMarcarClasificadas.xsd" name="namespace" />
+      <xs:attribute fixed="FIS_COPIAR_CLASIFICADASDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DSMarcarLotes.ASIGNACIONESDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSMarcarLotes.ASIGNACIONESDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/DSMarcarLotes.xsd" name="namespace" />
+      <xs:attribute fixed="ASIGNACIONESDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DSMarcarLotes.LOTEROSDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSMarcarLotes.LOTEROSDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/DSMarcarLotes.xsd" name="namespace" />
+      <xs:attribute fixed="LOTEROSDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DSMarcarLotes.ASIGNACIONESHISTDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSMarcarLotes.ASIGNACIONESHISTDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/DSMarcarLotes.xsd" name="namespace" />
+      <xs:attribute fixed="ASIGNACIONESHISTDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

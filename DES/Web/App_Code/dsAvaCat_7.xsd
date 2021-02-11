@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsAvaCat_7" targetNamespace="http://tempuri.org/dsAvaCat_7.xsd" xmlns:mstns="http://tempuri.org/dsAvaCat_7.xsd" xmlns="http://tempuri.org/dsAvaCat_7.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsAvaCat_7" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsAvaCat_7" msprop:Generator_UserDSName="dsAvaCat_7">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FEXAVA_AVALUO" msprop:Generator_TableClassName="FEXAVA_AVALUODataTable" msprop:Generator_TableVarName="tableFEXAVA_AVALUO" msprop:Generator_TablePropName="FEXAVA_AVALUO" msprop:Generator_RowDeletingName="FEXAVA_AVALUORowDeleting" msprop:Generator_RowChangingName="FEXAVA_AVALUORowChanging" msprop:Generator_RowEvHandlerName="FEXAVA_AVALUORowChangeEventHandler" msprop:Generator_RowDeletedName="FEXAVA_AVALUORowDeleted" msprop:Generator_UserTableName="FEXAVA_AVALUO" msprop:Generator_RowChangedName="FEXAVA_AVALUORowChanged" msprop:Generator_RowEvArgName="FEXAVA_AVALUORowChangeEvent" msprop:Generator_RowClassName="FEXAVA_AVALUORow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TEINDIVISO" msprop:Generator_ColumnVarNameInTable="columnTEINDIVISO" msprop:Generator_ColumnPropNameInRow="TEINDIVISO" msprop:Generator_ColumnPropNameInTable="TEINDIVISOColumn" msprop:Generator_UserColumnName="TEINDIVISO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VALORTOTALDELTERRENOPROP" msprop:Generator_ColumnVarNameInTable="columnVALORTOTALDELTERRENOPROP" msprop:Generator_ColumnPropNameInRow="VALORTOTALDELTERRENOPROP" msprop:Generator_ColumnPropNameInTable="VALORTOTALDELTERRENOPROPColumn" msprop:Generator_UserColumnName="VALORTOTALDELTERRENOPROP" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VALTOTCONSTRUCCIONESPRIVATIVAS" msprop:Generator_ColumnVarNameInTable="columnVALTOTCONSTRUCCIONESPRIVATIVAS" msprop:Generator_ColumnPropNameInRow="VALTOTCONSTRUCCIONESPRIVATIVAS" msprop:Generator_ColumnPropNameInTable="VALTOTCONSTRUCCIONESPRIVATIVASColumn" msprop:Generator_UserColumnName="VALTOTCONSTRUCCIONESPRIVATIVAS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VALTOTCONSTRUCCIONESCOMUNES" msprop:Generator_ColumnVarNameInTable="columnVALTOTCONSTRUCCIONESCOMUNES" msprop:Generator_ColumnPropNameInRow="VALTOTCONSTRUCCIONESCOMUNES" msprop:Generator_ColumnPropNameInTable="VALTOTCONSTRUCCIONESCOMUNESColumn" msprop:Generator_UserColumnName="VALTOTCONSTRUCCIONESCOMUNES" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

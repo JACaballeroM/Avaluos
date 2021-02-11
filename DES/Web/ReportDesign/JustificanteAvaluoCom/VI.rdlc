@@ -1,0 +1,849 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Textbox Name="textbox8">
+        <CanGrow>true</CanGrow>
+        <CanShrink>true</CanShrink>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>VI.- CONSIDERACIONES PREVIAS AL AVALÚO</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <Color>White</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <Left>0.25cm</Left>
+        <Height>0.5cm</Height>
+        <Width>18.75cm</Width>
+        <Style>
+          <BackgroundColor>YellowGreen</BackgroundColor>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>CON FUNDAMENTO EN LO ESTABLECIDO EN EL ARTÍCULO 20 DEL MANUAL DE PROCEDIMIENTOS Y LINEAMIENTOS TÉCNICOS DE VALUACIÓN INMOBILIARIA, PUBLICADO EL 06 DE DICIEMBRE DE 2013 EN LA GACETA OFICIAL DEL DISTRITO FEDERAL, DÉCIMA SEXTA ÉPOCA NO. 1749, Y CONSIDERANDO QUE EL INMUEBLE MOTIVO DEL PRESENTE AVALÚO DEBE SER VALUADO EN FUNCIÓN DE LA OFERTA Y DEMANDA DE INMUEBLES SIMILARES OFERTADOS EN EL MERCADO ABIERTO INMOBILIARIO Y A QUE TAMBIÉN DEBERÁ VALUARSE ATENDIENDO AL PRINCIPIO ECONÓMICO DE SUSTITUCIÓN, POR LO QUE DEBERÁ VALUARSE TAMBIÉN EN FUNCIÓN DE SU VALOR DE REPOSICIÓN NETO Y A QUE EXISTEN INMUEBLES SIMILARES OFERTADOS EN EL MERCADO INMOBILIARIO EN VENTA Y RENTA POR LO QUE RESULTA IMPORTANTE CONOCER EL VALOR PRESENTE NETO DE LOS INGRESOS QUE SERÁ CAPAZ DE PRODUCIR.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>6pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value xml:space="preserve">                                                               </Value>
+                <Style>
+                  <FontSize>6pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <LeftIndent>0cm</LeftIndent>
+            <RightIndent>0cm</RightIndent>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <LineHeight>12pt</LineHeight>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Top>1cm</Top>
+        <Left>0.25cm</Left>
+        <Height>1.98318cm</Height>
+        <Width>18.75cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>I. EXPOSICIÓN DE MOTIVOS:                                                                                            </Value>
+                <Style>
+                  <FontSize>7pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>5cm</Top>
+        <Left>0.25cm</Left>
+        <Height>0.5cm</Height>
+        <Width>18.75cm</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value xml:space="preserve">
+</Value>
+                <Style>
+                  <FontSize>6pt</FontSize>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>a. EL INMUEBLE MOTIVO DEL PRESENTE AVALUÓ DEBE SER VALUADO EN FUNCIÓN DE LA OFERTA Y DEMANDA DE INMUEBLES SIMILARES OFERTADOS EN EL MERCADO ABIERTO INMOBILIARIO.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>6pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>I. MÉTODO COMPARATIVO O ENFOQUE DE MERCADO, ES EL DESARROLLO ANALÍTICO A TRAVÉS DEL CUAL SE OBTIENE UN VALOR QUE RESULTA DE COMPARAR EL BIEN QUE SE VALÚA (SUJETO) CON EL PRECIO OFERTADO BIENES SIMILARES (COMPARABLES), AJUSTADOS POR SUS PRINCIPALES FACTORES DIFERENCIALES (HOMOLOGACIÓN).</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>6pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <LeftIndent>0cm</LeftIndent>
+            <RightIndent>0cm</RightIndent>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <LineHeight>12pt</LineHeight>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>II. VALOR COMERCIAL O DE MERCADO: ES LA CANTIDAD ESTIMADA DE DINERO CIRCULANTE A CAMBIO DE LA CUAL EL VENDEDOR Y EL COMPRADOR DEL BIEN QUE SE VALÚA, ESTANDO BIEN INFORMADOS Y SIN NINGÚN TIPO DE PRESIÓN O APREMIO, ESTARÍAN DISPUESTOS A ACEPTAR EN EFECTIVO POR SU ENAJENACIÓN, EN UN PERIODO RAZONABLE.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>6pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <LeftIndent>0cm</LeftIndent>
+            <RightIndent>0cm</RightIndent>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <LineHeight>12pt</LineHeight>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>III. LOS FACTORES ESPECÍFICOS APLICABLES A ESTA METODOLOGÍA SE DESGLOSAN EN EL SIGUIENTE CAPÍTULO EN EL DESARROLLO DEL MÉTODO.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>6pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">                                                                                             </Value>
+                <Style>
+                  <FontSize>6pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>5.53528cm</Top>
+        <Left>0.25cm</Left>
+        <Height>2.5cm</Height>
+        <Width>18.75cm</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox4">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value xml:space="preserve">
+</Value>
+                <Style>
+                  <FontSize>6pt</FontSize>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>b. DEBERÁ VALUARSE ATENDIENDO AL PRINCIPIO ECONÓMICO QUE DICE QUE NINGÚN COMPRADOR PAGARA POR UN BIEN UNA CANTIDAD SUPERIOR A LA QUE LE COSTARÍA REPRODUCIRLO, POR LO QUE DEBERÁ VALUARSE TAMBIÉN EN FUNCIÓN DE SU VALOR DE REPOSICIÓN NETO.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>6pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>i. MÉTODO FÍSICO, DIRECTO O ENFOQUE DE COSTOS, ES EL PROCESO TÉCNICO NECESARIO PARA ESTIMAR EL COSTO DE REPRODUCCIÓN O DE REEMPLAZO DE UN BIEN SIMILAR AL QUE SE VALÚA, AFECTADO POR LA DEPRECIACIÓN ATRIBUIBLE A LOS FACTORES DE EDAD Y ESTADO DE CONSERVACIÓN Y EN SU CASO, LA OBSOLESCENCIA ECONÓMICA, FUNCIONAL Y TECNOLÓGICA DEL BIEN.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>6pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <LeftIndent>0cm</LeftIndent>
+            <RightIndent>0cm</RightIndent>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <LineHeight>12pt</LineHeight>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>ii. COSTO DE REPOSICIÓN NUEVO, (V.R.N.): ES EL COSTO DIRECTO ACTUAL DE REPRODUCIR DE MODO EFICIENTE UN DETERMINADO BIEN. PARA EL CASO DE LOS INMUEBLES EN RAZÓN DE SU ESTRUCTURA Y ACABADOS, INCLUYENDO ÚNICAMENTE LOS COSTOS INDIRECTOS PROPIOS DEL CONSTRUCTOR O CONTRATISTA.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>6pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <LeftIndent>0cm</LeftIndent>
+            <RightIndent>0cm</RightIndent>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <LineHeight>12pt</LineHeight>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>iii. COSTO NETO DE REPOSICIÓN, (V.N.R.): ES EL QUE RESULTA DE DESCONTAR AL COSTO DE REPOSICIÓN NUEVO (V.R.N.) LOS DEMÉRITOS ATRIBUIBLES A LA DEPRECIACIÓN POR EDAD Y ESTADO DE CONSERVACIÓN Ó SU EQUIVALENTE EN COSTOS DIRECTOS A INCURRIR PARA DEVOLVER A LA CONSTRUCCIÓN SU ESTADO ORIGINAL O NUEVO PARA EL CASO DE LOS INMUEBLES.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>6pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <LeftIndent>0cm</LeftIndent>
+            <RightIndent>0cm</RightIndent>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <LineHeight>12pt</LineHeight>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>iv. LOS COSTOS DE REPOSICIÓN FUERON TOMADOS DE LOS PRONTUARIOS Y ADAPTADOS AL CASO EN PARTICULAR.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>6pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">
+                                                                                        </Value>
+                <Style>
+                  <FontSize>6pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>8cm</Top>
+        <Left>0.25cm</Left>
+        <Height>3.30021cm</Height>
+        <Width>18.75cm</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border />
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox5">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>c. EXISTEN INMUEBLES SIMILARES OFERTADOS EN EL MERCADO INMOBILIARIO EN RENTA POR LO QUE RESULTA IMPORTANTE CONOCER EL VALOR PRESENTE NETO DE LOS INGRESOS QUE EN EL FUTURO SEA CAPAZ DE GENERAR EL INMUEBLE.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>6pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>i. MÉTODO TRADICIONAL DE CAPITALIZACIÓN DE RENTAS O ENFOQUE DE INGRESOS, ES EL PROCEDIMIENTO MEDIANTE EL CUAL SE ESTIMA EL VALOR PRESENTE O CAPITALIZADO DE LOS INGRESOS NETOS POR RENTAS QUE PRODUCE O ES SUSCEPTIBLE DE PRODUCIR UN INMUEBLE A LA FECHA DEL AVALÚO DURANTE UN LARGO PLAZO (MAYOR A 50 AÑOS) DE MODO CONSTANTE (A PERPETUIDAD), DESCONTADOS POR UNA DETERMINADA TASA DE CAPITALIZACIÓN (REAL) APLICABLE AL CASO EN ESTUDIO.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>6pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <LeftIndent>0cm</LeftIndent>
+            <RightIndent>0cm</RightIndent>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <LineHeight>12pt</LineHeight>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>ii. TASA DE CAPITALIZACIÓN (%): ES EL RENDIMIENTO PORCENTUAL NETO ANUAL O TASA DE DESCUENTO REAL QUE LE SERÍA EXIGIBLE A UN DETERMINADO GÉNERO DE INMUEBLES, CLASIFICADOS EN RAZÓN DE SU USO, ESTO ES, A SU NIVEL DE RIESGO (PLAZO DE RETORNO DE LA INVERSIÓN) Y GRADO DE LIQUIDEZ OBTENIDA MEDIANTE LA COMPARACIÓN DE INMUEBLES COMPARABLES CON EL OBJETO DEL AVALÚO TANTO EN VENTA COMO EN RENTA.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>6pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">                                                                                             </Value>
+                <Style>
+                  <FontSize>6pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>11.615cm</Top>
+        <Left>0.25cm</Left>
+        <Height>2.75cm</Height>
+        <Width>18.75cm</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border />
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox6">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>II. DESGLOSE DE LA INFORMACIÓN QUE SUSTENTA LOS CÁLCULOS EFECTUADOS.                                                             </Value>
+                <Style>
+                  <FontSize>7pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>14.865cm</Top>
+        <Left>0.25cm</Left>
+        <Height>0.5cm</Height>
+        <Width>18.75cm</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox7">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>a. LA INFORMACIÓN QUE SE UTILIZA EN LOS TRES MÉTODOS DE VALUACIÓN EMPLEADOS SE DESCRIBE EN EL DESARROLLO DE LA METODOLOGÍA Y SU APLICACIÓN POR LO QUE ESTE CAPÍTULO DE LA MEMORIA DE ANÁLISIS A QUE OBLIGA EL MANUAL DE PROCEDIMIENTOS Y LINEAMIENTOS TÉCNICOS DE VALUACIÓN INMOBILIARIA, EN SU ARTÍCULO 21 SE CONSIDERA CUBIERTO CON EL PROPIO DESARROLLO DE LA METODOLOGÍA.   </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>6pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">                                                                                       </Value>
+                <Style>
+                  <FontSize>6pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>15.615cm</Top>
+        <Left>0.25cm</Left>
+        <Height>1.25cm</Height>
+        <Width>18.75cm</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border />
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox9">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>III. DESCRIPCIÓN DE LOS CÁLCULOS REALIZADOS.</Value>
+                <Style>
+                  <FontSize>7pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>17.365cm</Top>
+        <Left>0.25cm</Left>
+        <Height>0.5cm</Height>
+        <Width>18.75cm</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox10">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>a. LOS CÁLCULOS REALIZADOS EN LOS TRES MÉTODOS DE VALUACIÓN EMPLEADOS SE DESCRIBEN EN EL DESARROLLO DE LA METODOLOGÍA Y SU APLICACIÓN POR LO QUE ESTE CAPÍTULO DE LA MEMORIA DE ANÁLISIS A QUE OBLIGA EL MANUAL DE PROCEDIMIENTOS Y LINEAMIENTOS TÉCNICOS DE VALUACIÓN INMOBILIARIA, EN SU ARTÍCULO 21 SE CONSIDERA CUBIERTO CON EL PROPIO DESARROLLO DE LA METODOLOGÍA.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>6pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">                                                                          </Value>
+                <Style>
+                  <FontSize>6pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>18.115cm</Top>
+        <Left>0.25cm</Left>
+        <Height>1.25cm</Height>
+        <Width>18.75cm</Width>
+        <ZIndex>9</ZIndex>
+        <Style>
+          <Border />
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox11">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>CONDICIONANTES Y SALVEDADES DEL AVALÚO                                                              </Value>
+                <Style>
+                  <FontSize>7pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>19.615cm</Top>
+        <Left>0.25cm</Left>
+        <Height>0.5cm</Height>
+        <Width>18.75cm</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox12">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>LA INFORMACIÓN Y ANTECEDENTES DE PROPIEDAD ASENTADOS EN EL PRESENTE AVALÚO ES LA CONTENIDA EN LA DOCUMENTACIÓN OFICIAL ROPORCIONADA POR EL SOLICITANTE Y/O PROPIETARIO DEL BIEN A VALUAR, LA CUAL ASUMIMOS COMO CORRECTA. ENTRE ELLA, PODEMOS MENCIONAR A LA ESCRITURA DE PROPIEDAD O DOCUMENTO QUE LO IDENTIFICA LEGALMENTE, LOS PLANOS ARQUITECTÓNICOS Y EL REGISTRO CATASTRAL (BOLETA PREDIAL).</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>6pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>LA PROBABLE EXISTENCIA DE GRAVÁMENES, RESERVAS DE DOMINIO, ADEUDOS FISCALES O DE CUALQUIER OTRO TIPO QUE PUDIERAN AFECTAR EL BIEN QUE SE VALÚA, QUE NO HAYAN SIDO DECLARADOS POR EL SOLICITANTE Y/O PROPIETARIO DEL MISMO, NO SERÁN CAUSA DE RESPONSABILIDAD ALGUNA PARA EL PERITO VALUADOR POR INFORMACIÓN OMITIDA EN LA SOLICITUD DEL AVALÚO.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>6pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <LeftIndent>0cm</LeftIndent>
+            <RightIndent>0cm</RightIndent>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <LineHeight>12pt</LineHeight>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>QUIENES INTERVENIMOS EN EL PRESENTE AVALÚO DECLARAMOS BAJO PROTESTA DE DECIR VERDAD QUE NO GUARDAMOS NINGÚN TIPO DE RELACIÓN O NEXO DE PARENTESCO O DE NEGOCIOS CON EL CLIENTE O PROPIETARIO DEL BIEN QUE SE VALÚA.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>6pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">                                                 </Value>
+                <Style>
+                  <FontSize>6pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>20.365cm</Top>
+        <Left>0.25cm</Left>
+        <Height>2.75cm</Height>
+        <Width>18.75cm</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border />
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox13">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>EN LA INSPECCIÓN OCULAR DEL BIEN MOTIVO DEL PRESENTE, NO ES POSIBLE DETECTAR TODOS LOS VICIOS OCULTOS QUE PUDIERAN EXISTIR EN LA PROPIEDAD, POR LO QUE SÓLO SE CONSIDERAN LOS AQUÍ EXPRESADOS COMO RESULTADO DE LA OBSERVACIÓN O POR INFORME EXPRESO DEL SOLICITANTE O PROPIETARIO DEL MISMO BIEN.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>6pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>TODA VEZ QUE EL OBJETIVO DEL PRESENTE AVALÚO NO ES CONSTATAR O VERIFICAR DESLINDES DE PROPIEDAD, NI DE OCUPACIÓN IRREGULAR O CUALQUIER</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>6pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <LeftIndent>0cm</LeftIndent>
+            <RightIndent>0cm</RightIndent>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <LineHeight>12pt</LineHeight>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>OTRA RESTRICCIÓN LEGAL, EL VALOR COMERCIAL ESTIMADO AL QUE SE CONCLUYE EN EL PRESENTE SÓLO CONSIDERA LAS EXPRESADAS EN EL PROPIO AVALÚO, PORQUE SE OBSERVARON DURANTE LA INSPECCIÓN OCULAR AL BIEN O PORQUE FUERON INCLUIDAS EN LA DOCUMENTACIÓN PROPORCIONADA AL EFECTO. LOS CROQUIS DE LOCALIZACIÓN O DE DISTRIBUCIÓN DIBUJADOS EN EL PRESENTE SON APROXIMADOS, POR LO QUE NO DEBEN CONSIDERARSE COMO "PLANOS A ESCALA", ESTO ES, NO REFLEJAN DE MODO EXACTO LA REALIDAD MORFOLÓGICA DEL BIEN INMUEBLE QUE SE VALÚA.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>6pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">                                                   </Value>
+                <Style>
+                  <FontSize>6pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>23.365cm</Top>
+        <Left>0.25cm</Left>
+        <Height>3cm</Height>
+        <Width>18.75cm</Width>
+        <ZIndex>12</ZIndex>
+        <Style>
+          <Border />
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox14">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>ADICIONALMENTE Y PARTIENDO DE QUE LOS TRES ANÁLISIS ARRIBA DESCRITOS SON DISTINTOS A LOS UTILIZADOS POR LA AUTORIDAD FISCAL PARA LA REVISIÓN Y CONSIDERANDO LO ESTABLECIDO EN EL PÁRRAFO III DEL MISMO ARTÍCULO 20 DEL MANUAL DE PROCEDIMIENTOS Y LINEAMIENTOS TÉCNICOS DE VALUACIÓN INMOBILIARIA, PUBLICADO EL 06 DE DICIEMBRE DE 2013 EN LA GACETA OFICIAL DEL DISTRITO FEDERAL, DÉCIMA SEXTA ÉPOCA NO. 1749 SE ANEXA COMO PARTE INTEGRANTE DEL AVALÚO LA SIGUIENTE MEMORIA TÉCNICA.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>6pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>3.13311cm</Top>
+        <Left>0.25cm</Left>
+        <Height>1.5cm</Height>
+        <Width>18.75cm</Width>
+        <ZIndex>13</ZIndex>
+        <Style>
+          <Border />
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox15">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!CONSIDERACIONESPREVIAS.Value, "DataSet1")</Value>
+                <Style>
+                  <FontSize>7pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>textbox15</rd:DefaultName>
+        <Top>26.7975cm</Top>
+        <Left>0.25cm</Left>
+        <Height>0.74074cm</Height>
+        <Width>18.75cm</Width>
+        <ZIndex>14</ZIndex>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <Height>27.80282cm</Height>
+    <Style />
+  </Body>
+  <Width>19.5cm</Width>
+  <Page>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
+    <LeftMargin>2.5cm</LeftMargin>
+    <RightMargin>2.5cm</RightMargin>
+    <TopMargin>2.5cm</TopMargin>
+    <BottomMargin>2.5cm</BottomMargin>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:DataSourceID>ca798fd2-4439-474c-8905-c237f7142e5e</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="dsAvaCat_6">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>2265ba19-86c5-493e-a36d-efd403eedfd8</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>dsAvaCat_6</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="CONSIDERACIONESPREVIAS">
+          <DataField>CONSIDERACIONESPREVIAS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsAvaCat_6</rd:DataSetName>
+        <rd:SchemaPath>C:\TFS\FEX\Avaluos\DES\Web\App_Code\dsAvaCat_6.xsd</rd:SchemaPath>
+        <rd:TableName>FEXAVA_AVALUO</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Language>en-US</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>632adade-f42a-4b22-92e7-9625c4b28192</rd:ReportID>
+</Report>

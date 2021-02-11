@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage/MasterDetalle.master" AutoEventWireup="true"
+    CodeFile="MasterDetalleFE.master.cs" Inherits="MasterPageFE_MasterDetalleFE" %>
+
+<%@ Register Src="../UserControlsCommon/MenuGlobal.ascx" TagName="MenuGlobal" TagPrefix="uc1" %>
+<%@ Register Src="../UserControlsCommon/Login.ascx" TagName="Login" TagPrefix="uc2" %>
+<%@ Register Src="../UserControlsCommon/MenuCabeceraLogo.ascx" TagName="MenuCabeceraLogo" TagPrefix="uc3" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderDImagen" runat="Server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderDImagen" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderDRuta" runat="Server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderDRuta" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolderDContenido" runat="Server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderDContenido" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolderDMenuLocal" runat="Server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderDMenuLocal" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="ContentPlaceHolderLogin" runat="Server">
+    <uc2:Login ID="loginToken" Width="190px" runat="server" />
+</asp:Content>
+<asp:Content ID="Content6" ContentPlaceHolderID="ContentPlaceHolderMenuGlobal" runat="Server">
+    <uc1:MenuGlobal ID="menuGlobal" runat="server" />
+</asp:Content>
+<asp:Content ID="Content7" ContentPlaceHolderID="ContentPlaceHolderMenuCabecera"
+    runat="Server">
+    <uc3:MenuCabeceraLogo ID="menuCabeceraLogo" runat="server" />
+</asp:Content>

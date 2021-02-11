@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsAvaComercial_IX" targetNamespace="http://tempuri.org/dsAvaComercial_IX.xsd" xmlns:mstns="http://tempuri.org/dsAvaComercial_IX.xsd" xmlns="http://tempuri.org/dsAvaComercial_IX.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsAvaComercial_IX" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsAvaComercial_IX" msprop:Generator_UserDSName="dsAvaComercial_IX">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FEXAVA_AVALUO" msprop:Generator_TableClassName="FEXAVA_AVALUODataTable" msprop:Generator_TableVarName="tableFEXAVA_AVALUO" msprop:Generator_TablePropName="FEXAVA_AVALUO" msprop:Generator_RowDeletingName="FEXAVA_AVALUORowDeleting" msprop:Generator_RowChangingName="FEXAVA_AVALUORowChanging" msprop:Generator_RowEvHandlerName="FEXAVA_AVALUORowChangeEventHandler" msprop:Generator_RowDeletedName="FEXAVA_AVALUORowDeleted" msprop:Generator_UserTableName="FEXAVA_AVALUO" msprop:Generator_RowChangedName="FEXAVA_AVALUORowChanged" msprop:Generator_RowEvArgName="FEXAVA_AVALUORowChangeEvent" msprop:Generator_RowClassName="FEXAVA_AVALUORow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EIVACIOS" msprop:Generator_ColumnVarNameInTable="columnEIVACIOS" msprop:Generator_ColumnPropNameInRow="EIVACIOS" msprop:Generator_ColumnPropNameInTable="EIVACIOSColumn" msprop:Generator_UserColumnName="EIVACIOS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="EIIMPUESTOPREDIAL" msprop:Generator_ColumnVarNameInTable="columnEIIMPUESTOPREDIAL" msprop:Generator_ColumnPropNameInRow="EIIMPUESTOPREDIAL" msprop:Generator_ColumnPropNameInTable="EIIMPUESTOPREDIALColumn" msprop:Generator_UserColumnName="EIIMPUESTOPREDIAL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="EISERVICIOAGUA" msprop:Generator_ColumnVarNameInTable="columnEISERVICIOAGUA" msprop:Generator_ColumnPropNameInRow="EISERVICIOAGUA" msprop:Generator_ColumnPropNameInTable="EISERVICIOAGUAColumn" msprop:Generator_UserColumnName="EISERVICIOAGUA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="EICONSERVACIONYMANTENIMIENTO" msprop:Generator_ColumnVarNameInTable="columnEICONSERVACIONYMANTENIMIENTO" msprop:Generator_ColumnPropNameInRow="EICONSERVACIONYMANTENIMIENTO" msprop:Generator_ColumnPropNameInTable="EICONSERVACIONYMANTENIMIENTOColumn" msprop:Generator_UserColumnName="EICONSERVACIONYMANTENIMIENTO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="EIADMINISTRACION" msprop:Generator_ColumnVarNameInTable="columnEIADMINISTRACION" msprop:Generator_ColumnPropNameInRow="EIADMINISTRACION" msprop:Generator_ColumnPropNameInTable="EIADMINISTRACIONColumn" msprop:Generator_UserColumnName="EIADMINISTRACION" type="xs:decimal" minOccurs="0" />
+              <xs:element name="EIENERGIAELECTRICA" msprop:Generator_ColumnVarNameInTable="columnEIENERGIAELECTRICA" msprop:Generator_ColumnPropNameInRow="EIENERGIAELECTRICA" msprop:Generator_ColumnPropNameInTable="EIENERGIAELECTRICAColumn" msprop:Generator_UserColumnName="EIENERGIAELECTRICA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="EISEGUROS" msprop:Generator_ColumnVarNameInTable="columnEISEGUROS" msprop:Generator_ColumnPropNameInRow="EISEGUROS" msprop:Generator_ColumnPropNameInTable="EISEGUROSColumn" msprop:Generator_UserColumnName="EISEGUROS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="EIOTROS" msprop:Generator_ColumnVarNameInTable="columnEIOTROS" msprop:Generator_ColumnPropNameInRow="EIOTROS" msprop:Generator_ColumnPropNameInTable="EIOTROSColumn" msprop:Generator_UserColumnName="EIOTROS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="EIDEPRECIACIONFISCAL" msprop:Generator_ColumnVarNameInTable="columnEIDEPRECIACIONFISCAL" msprop:Generator_ColumnPropNameInRow="EIDEPRECIACIONFISCAL" msprop:Generator_ColumnPropNameInTable="EIDEPRECIACIONFISCALColumn" msprop:Generator_UserColumnName="EIDEPRECIACIONFISCAL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="EIDEDUCCIONESFISCALES" msprop:Generator_ColumnVarNameInTable="columnEIDEDUCCIONESFISCALES" msprop:Generator_ColumnPropNameInRow="EIDEDUCCIONESFISCALES" msprop:Generator_ColumnPropNameInTable="EIDEDUCCIONESFISCALESColumn" msprop:Generator_UserColumnName="EIDEDUCCIONESFISCALES" type="xs:decimal" minOccurs="0" />
+              <xs:element name="EIIMPUESTORENTA" msprop:Generator_ColumnVarNameInTable="columnEIIMPUESTORENTA" msprop:Generator_ColumnPropNameInRow="EIIMPUESTORENTA" msprop:Generator_ColumnPropNameInTable="EIIMPUESTORENTAColumn" msprop:Generator_UserColumnName="EIIMPUESTORENTA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="EIDEDUCCIONESMENSUALES" msprop:Generator_ColumnVarNameInTable="columnEIDEDUCCIONESMENSUALES" msprop:Generator_ColumnPropNameInRow="EIDEDUCCIONESMENSUALES" msprop:Generator_ColumnPropNameInTable="EIDEDUCCIONESMENSUALESColumn" msprop:Generator_UserColumnName="EIDEDUCCIONESMENSUALES" type="xs:decimal" minOccurs="0" />
+              <xs:element name="EIPRODUCTOLIQUIDOANUAL" msprop:Generator_ColumnVarNameInTable="columnEIPRODUCTOLIQUIDOANUAL" msprop:Generator_ColumnPropNameInRow="EIPRODUCTOLIQUIDOANUAL" msprop:Generator_ColumnPropNameInTable="EIPRODUCTOLIQUIDOANUALColumn" msprop:Generator_UserColumnName="EIPRODUCTOLIQUIDOANUAL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="EITASACAPITALIZACION" msprop:Generator_ColumnVarNameInTable="columnEITASACAPITALIZACION" msprop:Generator_ColumnPropNameInRow="EITASACAPITALIZACION" msprop:Generator_ColumnPropNameInTable="EITASACAPITALIZACIONColumn" msprop:Generator_UserColumnName="EITASACAPITALIZACION" type="xs:decimal" minOccurs="0" />
+              <xs:element name="EIIMPORTE" msprop:Generator_ColumnVarNameInTable="columnEIIMPORTE" msprop:Generator_ColumnPropNameInRow="EIIMPORTE" msprop:Generator_ColumnPropNameInTable="EIIMPORTEColumn" msprop:Generator_UserColumnName="EIIMPORTE" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

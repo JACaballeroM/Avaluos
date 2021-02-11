@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0d96d14d-b52b-4663-a987-caec63eff1b1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.1.253.88/PRE/RegistroContribuyentes/PeritosSociedadesService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PeritosSociedadesService1.disco" MetadataType="Disco" ID="d9d20a47-023e-4847-b021-afde946c7961" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/PeritosSociedadesService.svc?disco" />
+    <MetadataFile FileName="DsePeritosSociedades1.xsd" MetadataType="Schema" ID="ebf771f8-64b8-4d1f-9059-8f56dfcebfbd" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/PeritosSociedadesService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PeritosSociedadesService5.xsd" MetadataType="Schema" ID="54a32682-fc6f-495e-baac-8db473152e2e" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/PeritosSociedadesService.svc?xsd=xsd3" />
+    <MetadataFile FileName="PeritosSociedadesService52.xsd" MetadataType="Schema" ID="98f8af16-281a-427b-8a52-464d335eceb2" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/PeritosSociedadesService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PeritosSociedadesService53.xsd" MetadataType="Schema" ID="c7e63aef-21c4-4219-8c43-736761bd0a3d" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/PeritosSociedadesService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PeritosSociedadesService1.wsdl" MetadataType="Wsdl" ID="a3bd46f8-fb10-4816-9006-07b4a5a4f66c" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/PeritosSociedadesService.svc?wsdl" />
+    <MetadataFile FileName="PeritosSociedadesService54.xsd" MetadataType="Schema" ID="b3cdecd2-ce13-468f-9c54-6b6f3aa55f33" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/PeritosSociedadesService.svc?xsd=xsd4" />
+    <MetadataFile FileName="PeritosSociedadesService55.xsd" MetadataType="Schema" ID="b630f6ca-e614-4f9a-9a48-81d1fe649f53" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/PeritosSociedadesService.svc?xsd=xsd5" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

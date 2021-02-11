@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AnalisisValoresInmobiliario" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="AnalisisValoresInmobiliario_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/TomaDecisiones/AnalisisValores/AnalisisValoresInmobiliario.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/TomaDecisiones/AnalisisValores/AnalisisValoresInmobiliario.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/SIGAPred.TomaDecisiones.AnalisisValores.Services.Negocio.Exceptions" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/TomaDecisiones/AnalisisValores/AnalisisValoresInmobiliario.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/TomaDecisiones/AnalisisValores/AnalisisValoresInmobiliario.svc?xsd=xsd2" namespace="http://tempuri.org/dsAnalisisValoresInmobiliario.xsd" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/TomaDecisiones/AnalisisValores/AnalisisValoresInmobiliario.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SIGAPred.TomaDecisiones.AnalisisValores.Services.AccesoDatos" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/TomaDecisiones/AnalisisValores/AnalisisValoresInmobiliario.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/SIGAPred.TomaDecisiones.AnalisisValores.Services.Negocio" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAnalisisValoresInmobiliario_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IAnalisisValoresInmobiliario_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnalisisValoresInmobiliario_ObtenerValidacionAvaluo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerValidacionAvaluo" />
+  </wsdl:message>
+  <wsdl:message name="IAnalisisValoresInmobiliario_ObtenerValidacionAvaluo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerValidacionAvaluoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnalisisValoresInmobiliario_ObtenerValidacionAvaluo_AnalisisValoresExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/SIGAPred.TomaDecisiones.AnalisisValores.Services.Negocio.Exceptions" name="detail" element="q1:AnalisisValoresException" />
+  </wsdl:message>
+  <wsdl:message name="IAnalisisValoresInmobiliario_ObtenerValidacionAvaluo_AnalisisValoresInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/SIGAPred.TomaDecisiones.AnalisisValores.Services.Negocio.Exceptions" name="detail" element="q2:AnalisisValoresInfoException" />
+  </wsdl:message>
+  <wsdl:portType name="IAnalisisValoresInmobiliario">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnalisisValoresInmobiliario/DoWork" message="tns:IAnalisisValoresInmobiliario_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnalisisValoresInmobiliario/DoWorkResponse" message="tns:IAnalisisValoresInmobiliario_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerValidacionAvaluo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnalisisValoresInmobiliario/ObtenerValidacionAvaluo" message="tns:IAnalisisValoresInmobiliario_ObtenerValidacionAvaluo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnalisisValoresInmobiliario/ObtenerValidacionAvaluoResponse" message="tns:IAnalisisValoresInmobiliario_ObtenerValidacionAvaluo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAnalisisValoresInmobiliario/ObtenerValidacionAvaluoAnalisisValoresExceptionFault" name="AnalisisValoresExceptionFault" message="tns:IAnalisisValoresInmobiliario_ObtenerValidacionAvaluo_AnalisisValoresExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAnalisisValoresInmobiliario/ObtenerValidacionAvaluoAnalisisValoresInfoExceptionFault" name="AnalisisValoresInfoExceptionFault" message="tns:IAnalisisValoresInmobiliario_ObtenerValidacionAvaluo_AnalisisValoresInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AnalisisValoresInmobiliario" type="tns:IAnalisisValoresInmobiliario">
+    <wsp:PolicyReference URI="#AnalisisValoresInmobiliario_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap12:operation soapAction="http://tempuri.org/IAnalisisValoresInmobiliario/DoWork" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerValidacionAvaluo">
+      <soap12:operation soapAction="http://tempuri.org/IAnalisisValoresInmobiliario/ObtenerValidacionAvaluo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AnalisisValoresExceptionFault">
+        <soap12:fault use="literal" name="AnalisisValoresExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AnalisisValoresInfoExceptionFault">
+        <soap12:fault use="literal" name="AnalisisValoresInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AnalisisValoresInmobiliario">
+    <wsdl:port name="AnalisisValoresInmobiliario" binding="tns:AnalisisValoresInmobiliario">
+      <soap12:address location="http://psur-prbs-sbs01.promocapre.int/PRE/TomaDecisiones/AnalisisValores/AnalisisValoresInmobiliario.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://psur-prbs-sbs01.promocapre.int/PRE/TomaDecisiones/AnalisisValores/AnalisisValoresInmobiliario.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

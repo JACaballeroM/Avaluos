@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/Home.aspx" title="Avalúos"  description="">
+          <siteMapNode url="~/BandejaEntrada.aspx" title="Bandeja de Entrada"  description="" >
+                <siteMapNode url="~/Avaluo.aspx" title="Detalle Avalúo"  description="" />                
+                <siteMapNode url="~/AvaluosProximos.aspx" title="Avalúos Próximos"  description="" />
+     
+        </siteMapNode>
+        <siteMapNode url="~/SubirAvaluo.aspx" title="Subir Avalúo"  description="" />
+        <siteMapNode url="~/DescargarAvaluo.aspx" title="Descargar Avalúo"  description="" />
+      <siteMapNode url="" title="Reportes"  description="" > 
+          <siteMapNode url="~/InvMercado.aspx" title="Investigación de mercado"  description="" />
+          <siteMapNode url="~/CuentasDuplicadas.aspx" title="Cuentas Duplicadas"  description="" />
+       </siteMapNode>
+    </siteMapNode>
+</siteMap>

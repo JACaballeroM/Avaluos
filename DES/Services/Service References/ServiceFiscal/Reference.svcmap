@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="40aac9fe-0dae-48ed-adb0-e9efcbedb2c4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.1.253.73/PRO/Fiscal/Administracion/Administracion.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Administracion.xsd" MetadataType="Schema" ID="e4e6c07b-ed6b-44fc-a2fc-29133050aafc" SourceId="1" SourceUrl="http://psur-prod-sbs01.promoca.int/PRO/Fiscal/Administracion/Administracion.svc?xsd=xsd0" />
+    <MetadataFile FileName="DseAdministracion.xsd" MetadataType="Schema" ID="a339e53a-bbc1-4e09-bf95-3ea2285a998d" SourceId="1" SourceUrl="http://psur-prod-sbs01.promoca.int/PRO/Fiscal/Administracion/Administracion.svc?xsd=xsd2" />
+    <MetadataFile FileName="Administracion1.xsd" MetadataType="Schema" ID="83897f8a-fee6-4291-b967-c63312fe2e27" SourceId="1" SourceUrl="http://psur-prod-sbs01.promoca.int/PRO/Fiscal/Administracion/Administracion.svc?xsd=xsd8" />
+    <MetadataFile FileName="Administracion2.xsd" MetadataType="Schema" ID="7b5d537c-24d5-4738-9bb7-f0aeaceaaa42" SourceId="1" SourceUrl="http://psur-prod-sbs01.promoca.int/PRO/Fiscal/Administracion/Administracion.svc?xsd=xsd3" />
+    <MetadataFile FileName="Administracion3.xsd" MetadataType="Schema" ID="f23a4051-551c-4c07-b0db-195fa15933dc" SourceId="1" SourceUrl="http://psur-prod-sbs01.promoca.int/PRO/Fiscal/Administracion/Administracion.svc?xsd=xsd5" />
+    <MetadataFile FileName="Administracion4.xsd" MetadataType="Schema" ID="410de926-fa6c-4c4c-8377-39b7643cf073" SourceId="1" SourceUrl="http://psur-prod-sbs01.promoca.int/PRO/Fiscal/Administracion/Administracion.svc?xsd=xsd1" />
+    <MetadataFile FileName="DseInmueble.xsd" MetadataType="Schema" ID="ed3e57f9-80e3-4a12-bde7-e6dae906abb9" SourceId="1" SourceUrl="http://psur-prod-sbs01.promoca.int/PRO/Fiscal/Administracion/Administracion.svc?xsd=xsd6" />
+    <MetadataFile FileName="Administracion5.xsd" MetadataType="Schema" ID="b22bba2a-71ce-4214-bdb2-20fdfe978cf0" SourceId="1" SourceUrl="http://psur-prod-sbs01.promoca.int/PRO/Fiscal/Administracion/Administracion.svc?xsd=xsd7" />
+    <MetadataFile FileName="Administracion.wsdl" MetadataType="Wsdl" ID="014afb85-8c19-4eb4-844a-51610b9931e9" SourceId="1" SourceUrl="http://psur-prod-sbs01.promoca.int/PRO/Fiscal/Administracion/Administracion.svc?wsdl" />
+    <MetadataFile FileName="Administracion6.xsd" MetadataType="Schema" ID="494786ed-a262-4e4a-81a1-bcdc397f0c6f" SourceId="1" SourceUrl="http://psur-prod-sbs01.promoca.int/PRO/Fiscal/Administracion/Administracion.svc?xsd=xsd4" />
+    <MetadataFile FileName="Administracion.disco" MetadataType="Disco" ID="d2dc73d4-a766-41c4-a501-170dec628995" SourceId="1" SourceUrl="http://psur-prod-sbs01.promoca.int/PRO/Fiscal/Administracion/Administracion.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

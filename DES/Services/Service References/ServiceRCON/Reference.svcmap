@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6e406542-0a65-42f0-bbcf-41302f697f24" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.1.253.88/PRE/RegistroContribuyentes/RegistroContribuyentesService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RegistroContribuyentesService6.xsd" MetadataType="Schema" ID="6be26fae-d642-44b4-aea7-9bafe6edd60d" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DseInmuebleDireccion1.xsd" MetadataType="Schema" ID="3b2a8853-4ef4-4dc3-ad68-1a4cec3c4df2" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd10" />
+    <MetadataFile FileName="DseEstados1.xsd" MetadataType="Schema" ID="b7e2272c-1ff5-4235-a928-0b2b6b21e419" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd19" />
+    <MetadataFile FileName="DseInfoNotarios1.xsd" MetadataType="Schema" ID="79461069-79c9-4054-ba05-b91cccdd57e3" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd9" />
+    <MetadataFile FileName="RegistroContribuyentesService61.xsd" MetadataType="Schema" ID="8dc569a9-6375-4e68-ab3e-66326e7ede3c" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd7" />
+    <MetadataFile FileName="DseNotarios1.xsd" MetadataType="Schema" ID="1f51671c-e83c-4a93-81d7-c55cdb873937" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd16" />
+    <MetadataFile FileName="DseColoniaAsentamiento1.xsd" MetadataType="Schema" ID="b8258f6f-8950-4f7a-87c3-a0d90a7b1a79" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd21" />
+    <MetadataFile FileName="DseDireccionesInmueble1.xsd" MetadataType="Schema" ID="b5283baa-f62d-4746-a8b1-01fb82a24a03" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd15" />
+    <MetadataFile FileName="DseInfoContribuyente1.xsd" MetadataType="Schema" ID="f1ec57fc-df53-454d-8bea-3ac87c0dddfb" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd5" />
+    <MetadataFile FileName="RegistroContribuyentesService62.xsd" MetadataType="Schema" ID="4857e844-ef40-48e1-bfe2-190ba3747407" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd3" />
+    <MetadataFile FileName="RegistroContribuyentesService63.xsd" MetadataType="Schema" ID="13a76983-e786-43bd-b7a7-7a018c43fa41" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd11" />
+    <MetadataFile FileName="DseContribuyentes1.xsd" MetadataType="Schema" ID="0f7212f8-e325-4a66-9f48-c1bbd52b0f3f" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd13" />
+    <MetadataFile FileName="DseInfoDirecciones1.xsd" MetadataType="Schema" ID="875b10c8-893f-4c2c-9035-d9714be12d62" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd8" />
+    <MetadataFile FileName="RegistroContribuyentesService64.xsd" MetadataType="Schema" ID="4553d082-e45d-45d2-a701-9620f29dcb76" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DseCatalogos1.xsd" MetadataType="Schema" ID="0e5fceeb-d9b3-41ca-a1f1-984d93a332e3" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd20" />
+    <MetadataFile FileName="RegistroContribuyentesService1.wsdl" MetadataType="Wsdl" ID="72953218-8301-402b-8a78-dd34b913a289" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/RegistroContribuyentesService.svc?wsdl" />
+    <MetadataFile FileName="DseDatosRepresentacion1.xsd" MetadataType="Schema" ID="c059d4c1-1b5a-443f-a242-a6573bae0254" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd6" />
+    <MetadataFile FileName="DseMunicipios1.xsd" MetadataType="Schema" ID="03f29938-18bf-4dc9-9a05-d2b610b5c7ec" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd18" />
+    <MetadataFile FileName="RegistroContribuyentesService65.xsd" MetadataType="Schema" ID="4b3c24fe-8710-432d-a9c4-41811cf1745a" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd4" />
+    <MetadataFile FileName="DseCiudades1.xsd" MetadataType="Schema" ID="8610c352-5cf7-4e4c-a0ca-5777f67500df" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd2" />
+    <MetadataFile FileName="DseAsentamientos1.xsd" MetadataType="Schema" ID="0a064ddb-51d7-440d-84c4-9cf9d00caf3d" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd17" />
+    <MetadataFile FileName="DsePersonasSimilares1.xsd" MetadataType="Schema" ID="9568e6b6-9b7e-44cc-b36a-7e9c0931a641" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd14" />
+    <MetadataFile FileName="RegistroContribuyentesService1.disco" MetadataType="Disco" ID="3c39a22c-43e7-45d7-87b6-b1c9fd4d29a4" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/RegistroContribuyentesService.svc?disco" />
+    <MetadataFile FileName="DseHistorico1.xsd" MetadataType="Schema" ID="a3bd49c0-8f88-4912-be23-3343ff065432" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd12" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="XmlUtils">
+    <Position X="0.5" Y="0.5" Width="6" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAEAgAAAAIAAAAAAAAAAAAAgAAAAAAAIACAAAAA=</HashCode>
+      <FileName>App_Code\XmlUtils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AvaluosUtils">
+    <Position X="0.5" Y="2.75" Width="6" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAACAAAAAAAAAAAAAAEAAAAABA=</HashCode>
+      <FileName>App_Code\AvaluosUtils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CatastralUtils">
+    <Position X="7" Y="0.5" Width="7.25" />
+    <TypeIdentifier>
+      <HashCode>AgACAAAAAAgQAIAABAAhAQQBABAAAIAQgACBgABAAAY=</HashCode>
+      <FileName>App_Code\CatastralUtils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FiscalUtils">
+    <Position X="0.5" Y="4.5" Width="6" />
+    <TypeIdentifier>
+      <HashCode>SZStAAWQ4JRBKisIYCEhAEmEQCBKIAAIAAkQQCAASAE=</HashCode>
+      <FileName>App_Code\FiscalUtils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

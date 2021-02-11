@@ -1,0 +1,1209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Marcajes" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IMarcajes_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Negocio.Base" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd5" namespace="http://tempuri.org/DSMarcarLotes.xsd" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.AccesoDatos" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd7" namespace="http://tempuri.org/DSMarcarClasificadas.xsd" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd8" namespace="http://tempuri.org/dseCatalogos.xsd" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd9" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd10" namespace="http://tempuri.org/DSMarcarSituaciones.xsd" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMarcajes_InsertarLotesArchivo_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarLotesArchivo" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_InsertarLotesArchivo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarLotesArchivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_InsertarLotesArchivo_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q1:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerInmueblesIdPersona_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerInmueblesIdPersona" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerInmueblesIdPersona_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerInmueblesIdPersonaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerInmueblesIdPersona_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q2:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerClasificadasIdPersona_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerClasificadasIdPersona" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerClasificadasIdPersona_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerClasificadasIdPersonaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerClasificadasIdPersona_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q3:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerClasificadasIdPersonaHistoricos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerClasificadasIdPersonaHistoricos" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerClasificadasIdPersonaHistoricos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerClasificadasIdPersonaHistoricosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerClasificadasIdPersonaHistoricos_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q4:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerTodasCatClasificadas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTodasCatClasificadas" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerTodasCatClasificadas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTodasCatClasificadasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerTodasCatClasificadas_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q5:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerClasificadas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerClasificadas" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerClasificadas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerClasificadasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerClasificadas_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q6:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerClasificadasCuenta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerClasificadasCuenta" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerClasificadasCuenta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerClasificadasCuentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerClasificadasCuenta_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q7:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerClasificadasCuentaHistoricos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerClasificadasCuentaHistoricos" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerClasificadasCuentaHistoricos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerClasificadasCuentaHistoricosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerClasificadasCuentaHistoricos_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q8:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerClasificadasCodigoPaginacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerClasificadasCodigoPaginacion" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerClasificadasCodigoPaginacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerClasificadasCodigoPaginacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerClasificadasCodigoPaginacion_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q9:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_InsertarClasificada_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarClasificada" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_InsertarClasificada_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarClasificadaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_InsertarClasificada_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q10:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ActualizarClasificadas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarClasificadas" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ActualizarClasificadas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarClasificadasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ActualizarClasificadas_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q11:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_BorrarClasificada_InputMessage">
+    <wsdl:part name="parameters" element="tns:BorrarClasificada" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_BorrarClasificada_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BorrarClasificadaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_BorrarClasificada_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q12:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_InsertarClasificadasArchivo_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarClasificadasArchivo" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_InsertarClasificadasArchivo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarClasificadasArchivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_InsertarClasificadasArchivo_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q13:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerCatalogos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCatalogos" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerCatalogos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCatalogosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerCatalogos_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q14:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerCatClasificadas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCatClasificadas" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerCatClasificadas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCatClasificadasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerCatClasificadas_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q15:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerCatClasificadasByEjercicio_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCatClasificadasByEjercicio" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerCatClasificadasByEjercicio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCatClasificadasByEjercicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerCatClasificadasByEjercicio_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q16:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesMotivos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMarcajesMotivos" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesMotivos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMarcajesMotivosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesMotivos_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q17:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesSubmotivos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMarcajesSubmotivos" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesSubmotivos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMarcajesSubmotivosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesSubmotivos_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q18:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesCuentas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMarcajesCuentas" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesCuentas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMarcajesCuentasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesCuentas_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q19:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesCuentasPorLista_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMarcajesCuentasPorLista" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesCuentasPorLista_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMarcajesCuentasPorListaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesCuentasPorLista_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q20:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesCuentasEmision_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMarcajesCuentasEmision" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesCuentasEmision_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMarcajesCuentasEmisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesCuentasEmision_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q21:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesCuentasClave_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMarcajesCuentasClave" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesCuentasClave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMarcajesCuentasClaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesCuentasClave_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q22:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesCuentasClaveHist_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMarcajesCuentasClaveHist" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesCuentasClaveHist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMarcajesCuentasClaveHistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesCuentasClaveHist_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q23:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesCuentasIdPersonaHist_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMarcajesCuentasIdPersonaHist" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesCuentasIdPersonaHist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMarcajesCuentasIdPersonaHistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesCuentasIdPersonaHist_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q24:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesCuentasDescripcion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMarcajesCuentasDescripcion" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesCuentasDescripcion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMarcajesCuentasDescripcionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesCuentasDescripcion_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q25:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesCuentasDescripcionPaginacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMarcajesCuentasDescripcionPaginacion" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesCuentasDescripcionPaginacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMarcajesCuentasDescripcionPaginacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerMarcajesCuentasDescripcionPaginacion_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q26:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_InsertarMarcajeCuenta_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarMarcajeCuenta" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_InsertarMarcajeCuenta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarMarcajeCuentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_InsertarMarcajeCuenta_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q27:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_CopiarClasificadas_InputMessage">
+    <wsdl:part name="parameters" element="tns:CopiarClasificadas" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_CopiarClasificadas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CopiarClasificadasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_CopiarClasificadas_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q28:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_InsertarMarcajesCuentasArchivo_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarMarcajesCuentasArchivo" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_InsertarMarcajesCuentasArchivo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarMarcajesCuentasArchivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_InsertarMarcajesCuentasArchivo_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q29:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ActualizarMarcajeCuenta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarMarcajeCuenta" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ActualizarMarcajeCuenta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarMarcajeCuentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ActualizarMarcajeCuenta_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q30:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_BorrarMarcajeCuenta_InputMessage">
+    <wsdl:part name="parameters" element="tns:BorrarMarcajeCuenta" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_BorrarMarcajeCuenta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BorrarMarcajeCuentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_BorrarMarcajeCuenta_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q31:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerAsignacionesLoteros_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAsignacionesLoteros" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerAsignacionesLoteros_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAsignacionesLoterosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerAsignacionesLoteros_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q32:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerAsignacionesLoterosPaginacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAsignacionesLoterosPaginacion" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerAsignacionesLoterosPaginacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAsignacionesLoterosPaginacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerAsignacionesLoterosPaginacion_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q33:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerLoteros_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerLoteros" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerLoteros_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerLoterosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerLoteros_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q34:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerInmuebles_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerInmuebles" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerInmuebles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerInmueblesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerInmuebles_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q35:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerNoLoteros_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerNoLoteros" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerNoLoteros_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerNoLoterosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerNoLoteros_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q36:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_DesasignarLotero_InputMessage">
+    <wsdl:part name="parameters" element="tns:DesasignarLotero" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_DesasignarLotero_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DesasignarLoteroResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_DesasignarLotero_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q37:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_AsignarLotero_InputMessage">
+    <wsdl:part name="parameters" element="tns:AsignarLotero" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_AsignarLotero_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AsignarLoteroResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_AsignarLotero_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q38:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerAsignacionesByClave_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAsignacionesByClave" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerAsignacionesByClave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAsignacionesByClaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerAsignacionesByClave_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q39:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerAsignacionesByClaveHist_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAsignacionesByClaveHist" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerAsignacionesByClaveHist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAsignacionesByClaveHistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerAsignacionesByClaveHist_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q40:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerAsignacionesHByIdPersona_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAsignacionesHByIdPersona" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerAsignacionesHByIdPersona_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAsignacionesHByIdPersonaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerAsignacionesHByIdPersona_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q41:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerAsignacionesHByIdPersonaPaginacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAsignacionesHByIdPersonaPaginacion" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerAsignacionesHByIdPersonaPaginacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAsignacionesHByIdPersonaPaginacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ObtenerAsignacionesHByIdPersonaPaginacion_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q42:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ExisteLotero_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExisteLotero" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ExisteLotero_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExisteLoteroResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_ExisteLotero_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q43="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q43:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_UpdateLoteroAInmueble_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLoteroAInmueble" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_UpdateLoteroAInmueble_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLoteroAInmuebleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_UpdateLoteroAInmueble_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q44:MarcajesException" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_UpdateLoteroAInmuebleByClave_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLoteroAInmuebleByClave" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_UpdateLoteroAInmuebleByClave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLoteroAInmuebleByClaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcajes_UpdateLoteroAInmuebleByClave_MarcajesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q45="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Marcajes.Services.Negocio.Exceptions" name="detail" element="q45:MarcajesException" />
+  </wsdl:message>
+  <wsdl:portType name="IMarcajes">
+    <wsdl:operation name="InsertarLotesArchivo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/InsertarLotesArchivo" message="tns:IMarcajes_InsertarLotesArchivo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/InsertarLotesArchivoResponse" message="tns:IMarcajes_InsertarLotesArchivo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/InsertarLotesArchivoMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_InsertarLotesArchivo_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerInmueblesIdPersona">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerInmueblesIdPersona" message="tns:IMarcajes_ObtenerInmueblesIdPersona_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerInmueblesIdPersonaResponse" message="tns:IMarcajes_ObtenerInmueblesIdPersona_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerInmueblesIdPersonaMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerInmueblesIdPersona_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClasificadasIdPersona">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerClasificadasIdPersona" message="tns:IMarcajes_ObtenerClasificadasIdPersona_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerClasificadasIdPersonaResponse" message="tns:IMarcajes_ObtenerClasificadasIdPersona_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerClasificadasIdPersonaMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerClasificadasIdPersona_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClasificadasIdPersonaHistoricos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerClasificadasIdPersonaHistoricos" message="tns:IMarcajes_ObtenerClasificadasIdPersonaHistoricos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerClasificadasIdPersonaHistoricosResponse" message="tns:IMarcajes_ObtenerClasificadasIdPersonaHistoricos_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerClasificadasIdPersonaHistoricosMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerClasificadasIdPersonaHistoricos_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTodasCatClasificadas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerTodasCatClasificadas" message="tns:IMarcajes_ObtenerTodasCatClasificadas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerTodasCatClasificadasResponse" message="tns:IMarcajes_ObtenerTodasCatClasificadas_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerTodasCatClasificadasMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerTodasCatClasificadas_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClasificadas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerClasificadas" message="tns:IMarcajes_ObtenerClasificadas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerClasificadasResponse" message="tns:IMarcajes_ObtenerClasificadas_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerClasificadasMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerClasificadas_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClasificadasCuenta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerClasificadasCuenta" message="tns:IMarcajes_ObtenerClasificadasCuenta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerClasificadasCuentaResponse" message="tns:IMarcajes_ObtenerClasificadasCuenta_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerClasificadasCuentaMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerClasificadasCuenta_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClasificadasCuentaHistoricos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerClasificadasCuentaHistoricos" message="tns:IMarcajes_ObtenerClasificadasCuentaHistoricos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerClasificadasCuentaHistoricosResponse" message="tns:IMarcajes_ObtenerClasificadasCuentaHistoricos_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerClasificadasCuentaHistoricosMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerClasificadasCuentaHistoricos_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClasificadasCodigoPaginacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerClasificadasCodigoPaginacion" message="tns:IMarcajes_ObtenerClasificadasCodigoPaginacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerClasificadasCodigoPaginacionResponse" message="tns:IMarcajes_ObtenerClasificadasCodigoPaginacion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerClasificadasCodigoPaginacionMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerClasificadasCodigoPaginacion_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarClasificada">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/InsertarClasificada" message="tns:IMarcajes_InsertarClasificada_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/InsertarClasificadaResponse" message="tns:IMarcajes_InsertarClasificada_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/InsertarClasificadaMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_InsertarClasificada_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarClasificadas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ActualizarClasificadas" message="tns:IMarcajes_ActualizarClasificadas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ActualizarClasificadasResponse" message="tns:IMarcajes_ActualizarClasificadas_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ActualizarClasificadasMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ActualizarClasificadas_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BorrarClasificada">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/BorrarClasificada" message="tns:IMarcajes_BorrarClasificada_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/BorrarClasificadaResponse" message="tns:IMarcajes_BorrarClasificada_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/BorrarClasificadaMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_BorrarClasificada_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarClasificadasArchivo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/InsertarClasificadasArchivo" message="tns:IMarcajes_InsertarClasificadasArchivo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/InsertarClasificadasArchivoResponse" message="tns:IMarcajes_InsertarClasificadasArchivo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/InsertarClasificadasArchivoMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_InsertarClasificadasArchivo_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCatalogos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerCatalogos" message="tns:IMarcajes_ObtenerCatalogos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerCatalogosResponse" message="tns:IMarcajes_ObtenerCatalogos_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerCatalogosMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerCatalogos_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCatClasificadas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerCatClasificadas" message="tns:IMarcajes_ObtenerCatClasificadas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerCatClasificadasResponse" message="tns:IMarcajes_ObtenerCatClasificadas_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerCatClasificadasMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerCatClasificadas_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCatClasificadasByEjercicio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerCatClasificadasByEjercicio" message="tns:IMarcajes_ObtenerCatClasificadasByEjercicio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerCatClasificadasByEjercicioResponse" message="tns:IMarcajes_ObtenerCatClasificadasByEjercicio_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerCatClasificadasByEjercicioMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerCatClasificadasByEjercicio_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMarcajesMotivos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesMotivos" message="tns:IMarcajes_ObtenerMarcajesMotivos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesMotivosResponse" message="tns:IMarcajes_ObtenerMarcajesMotivos_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesMotivosMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerMarcajesMotivos_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMarcajesSubmotivos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesSubmotivos" message="tns:IMarcajes_ObtenerMarcajesSubmotivos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesSubmotivosResponse" message="tns:IMarcajes_ObtenerMarcajesSubmotivos_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesSubmotivosMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerMarcajesSubmotivos_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMarcajesCuentas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentas" message="tns:IMarcajes_ObtenerMarcajesCuentas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasResponse" message="tns:IMarcajes_ObtenerMarcajesCuentas_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerMarcajesCuentas_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMarcajesCuentasPorLista">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasPorLista" message="tns:IMarcajes_ObtenerMarcajesCuentasPorLista_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasPorListaResponse" message="tns:IMarcajes_ObtenerMarcajesCuentasPorLista_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasPorListaMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerMarcajesCuentasPorLista_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMarcajesCuentasEmision">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasEmision" message="tns:IMarcajes_ObtenerMarcajesCuentasEmision_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasEmisionResponse" message="tns:IMarcajes_ObtenerMarcajesCuentasEmision_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasEmisionMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerMarcajesCuentasEmision_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMarcajesCuentasClave">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasClave" message="tns:IMarcajes_ObtenerMarcajesCuentasClave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasClaveResponse" message="tns:IMarcajes_ObtenerMarcajesCuentasClave_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasClaveMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerMarcajesCuentasClave_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMarcajesCuentasClaveHist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasClaveHist" message="tns:IMarcajes_ObtenerMarcajesCuentasClaveHist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasClaveHistResponse" message="tns:IMarcajes_ObtenerMarcajesCuentasClaveHist_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasClaveHistMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerMarcajesCuentasClaveHist_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMarcajesCuentasIdPersonaHist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasIdPersonaHist" message="tns:IMarcajes_ObtenerMarcajesCuentasIdPersonaHist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasIdPersonaHistResponse" message="tns:IMarcajes_ObtenerMarcajesCuentasIdPersonaHist_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasIdPersonaHistMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerMarcajesCuentasIdPersonaHist_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMarcajesCuentasDescripcion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasDescripcion" message="tns:IMarcajes_ObtenerMarcajesCuentasDescripcion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasDescripcionResponse" message="tns:IMarcajes_ObtenerMarcajesCuentasDescripcion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasDescripcionMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerMarcajesCuentasDescripcion_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMarcajesCuentasDescripcionPaginacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasDescripcionPaginacion" message="tns:IMarcajes_ObtenerMarcajesCuentasDescripcionPaginacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasDescripcionPaginacionResponse" message="tns:IMarcajes_ObtenerMarcajesCuentasDescripcionPaginacion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasDescripcionPaginacionMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerMarcajesCuentasDescripcionPaginacion_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarMarcajeCuenta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/InsertarMarcajeCuenta" message="tns:IMarcajes_InsertarMarcajeCuenta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/InsertarMarcajeCuentaResponse" message="tns:IMarcajes_InsertarMarcajeCuenta_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/InsertarMarcajeCuentaMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_InsertarMarcajeCuenta_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CopiarClasificadas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/CopiarClasificadas" message="tns:IMarcajes_CopiarClasificadas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/CopiarClasificadasResponse" message="tns:IMarcajes_CopiarClasificadas_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/CopiarClasificadasMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_CopiarClasificadas_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarMarcajesCuentasArchivo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/InsertarMarcajesCuentasArchivo" message="tns:IMarcajes_InsertarMarcajesCuentasArchivo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/InsertarMarcajesCuentasArchivoResponse" message="tns:IMarcajes_InsertarMarcajesCuentasArchivo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/InsertarMarcajesCuentasArchivoMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_InsertarMarcajesCuentasArchivo_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarMarcajeCuenta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ActualizarMarcajeCuenta" message="tns:IMarcajes_ActualizarMarcajeCuenta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ActualizarMarcajeCuentaResponse" message="tns:IMarcajes_ActualizarMarcajeCuenta_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ActualizarMarcajeCuentaMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ActualizarMarcajeCuenta_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BorrarMarcajeCuenta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/BorrarMarcajeCuenta" message="tns:IMarcajes_BorrarMarcajeCuenta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/BorrarMarcajeCuentaResponse" message="tns:IMarcajes_BorrarMarcajeCuenta_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/BorrarMarcajeCuentaMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_BorrarMarcajeCuenta_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAsignacionesLoteros">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerAsignacionesLoteros" message="tns:IMarcajes_ObtenerAsignacionesLoteros_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerAsignacionesLoterosResponse" message="tns:IMarcajes_ObtenerAsignacionesLoteros_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerAsignacionesLoterosMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerAsignacionesLoteros_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAsignacionesLoterosPaginacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerAsignacionesLoterosPaginacion" message="tns:IMarcajes_ObtenerAsignacionesLoterosPaginacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerAsignacionesLoterosPaginacionResponse" message="tns:IMarcajes_ObtenerAsignacionesLoterosPaginacion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerAsignacionesLoterosPaginacionMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerAsignacionesLoterosPaginacion_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerLoteros">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerLoteros" message="tns:IMarcajes_ObtenerLoteros_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerLoterosResponse" message="tns:IMarcajes_ObtenerLoteros_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerLoterosMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerLoteros_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerInmuebles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerInmuebles" message="tns:IMarcajes_ObtenerInmuebles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerInmueblesResponse" message="tns:IMarcajes_ObtenerInmuebles_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerInmueblesMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerInmuebles_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerNoLoteros">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerNoLoteros" message="tns:IMarcajes_ObtenerNoLoteros_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerNoLoterosResponse" message="tns:IMarcajes_ObtenerNoLoteros_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerNoLoterosMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerNoLoteros_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DesasignarLotero">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/DesasignarLotero" message="tns:IMarcajes_DesasignarLotero_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/DesasignarLoteroResponse" message="tns:IMarcajes_DesasignarLotero_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/DesasignarLoteroMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_DesasignarLotero_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AsignarLotero">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/AsignarLotero" message="tns:IMarcajes_AsignarLotero_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/AsignarLoteroResponse" message="tns:IMarcajes_AsignarLotero_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/AsignarLoteroMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_AsignarLotero_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAsignacionesByClave">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerAsignacionesByClave" message="tns:IMarcajes_ObtenerAsignacionesByClave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerAsignacionesByClaveResponse" message="tns:IMarcajes_ObtenerAsignacionesByClave_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerAsignacionesByClaveMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerAsignacionesByClave_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAsignacionesByClaveHist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerAsignacionesByClaveHist" message="tns:IMarcajes_ObtenerAsignacionesByClaveHist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerAsignacionesByClaveHistResponse" message="tns:IMarcajes_ObtenerAsignacionesByClaveHist_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerAsignacionesByClaveHistMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerAsignacionesByClaveHist_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAsignacionesHByIdPersona">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerAsignacionesHByIdPersona" message="tns:IMarcajes_ObtenerAsignacionesHByIdPersona_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerAsignacionesHByIdPersonaResponse" message="tns:IMarcajes_ObtenerAsignacionesHByIdPersona_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerAsignacionesHByIdPersonaMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerAsignacionesHByIdPersona_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAsignacionesHByIdPersonaPaginacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ObtenerAsignacionesHByIdPersonaPaginacion" message="tns:IMarcajes_ObtenerAsignacionesHByIdPersonaPaginacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ObtenerAsignacionesHByIdPersonaPaginacionResponse" message="tns:IMarcajes_ObtenerAsignacionesHByIdPersonaPaginacion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ObtenerAsignacionesHByIdPersonaPaginacionMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ObtenerAsignacionesHByIdPersonaPaginacion_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExisteLotero">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/ExisteLotero" message="tns:IMarcajes_ExisteLotero_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/ExisteLoteroResponse" message="tns:IMarcajes_ExisteLotero_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/ExisteLoteroMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_ExisteLotero_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLoteroAInmueble">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/UpdateLoteroAInmueble" message="tns:IMarcajes_UpdateLoteroAInmueble_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/UpdateLoteroAInmuebleResponse" message="tns:IMarcajes_UpdateLoteroAInmueble_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/UpdateLoteroAInmuebleMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_UpdateLoteroAInmueble_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLoteroAInmuebleByClave">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcajes/UpdateLoteroAInmuebleByClave" message="tns:IMarcajes_UpdateLoteroAInmuebleByClave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcajes/UpdateLoteroAInmuebleByClaveResponse" message="tns:IMarcajes_UpdateLoteroAInmuebleByClave_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMarcajes/UpdateLoteroAInmuebleByClaveMarcajesExceptionFault" name="MarcajesExceptionFault" message="tns:IMarcajes_UpdateLoteroAInmuebleByClave_MarcajesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IMarcajes" type="tns:IMarcajes">
+    <wsp:PolicyReference URI="#WSHttpBinding_IMarcajes_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertarLotesArchivo">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/InsertarLotesArchivo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerInmueblesIdPersona">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerInmueblesIdPersona" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClasificadasIdPersona">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerClasificadasIdPersona" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClasificadasIdPersonaHistoricos">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerClasificadasIdPersonaHistoricos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTodasCatClasificadas">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerTodasCatClasificadas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClasificadas">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerClasificadas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClasificadasCuenta">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerClasificadasCuenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClasificadasCuentaHistoricos">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerClasificadasCuentaHistoricos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClasificadasCodigoPaginacion">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerClasificadasCodigoPaginacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarClasificada">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/InsertarClasificada" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarClasificadas">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ActualizarClasificadas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarClasificada">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/BorrarClasificada" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarClasificadasArchivo">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/InsertarClasificadasArchivo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCatalogos">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerCatalogos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCatClasificadas">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerCatClasificadas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCatClasificadasByEjercicio">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerCatClasificadasByEjercicio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMarcajesMotivos">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerMarcajesMotivos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMarcajesSubmotivos">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerMarcajesSubmotivos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMarcajesCuentas">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMarcajesCuentasPorLista">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasPorLista" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMarcajesCuentasEmision">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasEmision" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMarcajesCuentasClave">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasClave" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMarcajesCuentasClaveHist">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasClaveHist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMarcajesCuentasIdPersonaHist">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasIdPersonaHist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMarcajesCuentasDescripcion">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasDescripcion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMarcajesCuentasDescripcionPaginacion">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerMarcajesCuentasDescripcionPaginacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarMarcajeCuenta">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/InsertarMarcajeCuenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CopiarClasificadas">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/CopiarClasificadas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarMarcajesCuentasArchivo">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/InsertarMarcajesCuentasArchivo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarMarcajeCuenta">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ActualizarMarcajeCuenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarMarcajeCuenta">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/BorrarMarcajeCuenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAsignacionesLoteros">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerAsignacionesLoteros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAsignacionesLoterosPaginacion">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerAsignacionesLoterosPaginacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerLoteros">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerLoteros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerInmuebles">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerInmuebles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerNoLoteros">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerNoLoteros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DesasignarLotero">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/DesasignarLotero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AsignarLotero">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/AsignarLotero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAsignacionesByClave">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerAsignacionesByClave" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAsignacionesByClaveHist">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerAsignacionesByClaveHist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAsignacionesHByIdPersona">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerAsignacionesHByIdPersona" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAsignacionesHByIdPersonaPaginacion">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ObtenerAsignacionesHByIdPersonaPaginacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ExisteLotero">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/ExisteLotero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLoteroAInmueble">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/UpdateLoteroAInmueble" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLoteroAInmuebleByClave">
+      <soap12:operation soapAction="http://tempuri.org/IMarcajes/UpdateLoteroAInmuebleByClave" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MarcajesExceptionFault">
+        <soap12:fault use="literal" name="MarcajesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Marcajes">
+    <wsdl:port name="WSHttpBinding_IMarcajes" binding="tns:WSHttpBinding_IMarcajes">
+      <soap12:address location="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

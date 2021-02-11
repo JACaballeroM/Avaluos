@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5995e762-e69a-428b-9f1d-5c2a6d30ffff" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.1.253.88/PRE//TomaDecisiones/AnalisisValores/AnalisisValoresInmobiliario.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AnalisisValoresInmobiliario5.xsd" MetadataType="Schema" ID="675aa708-a659-4061-8716-9c0b4c75ea19" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/TomaDecisiones/AnalisisValores/AnalisisValoresInmobiliario.svc?xsd=xsd5" />
+    <MetadataFile FileName="AnalisisValoresInmobiliario51.xsd" MetadataType="Schema" ID="0a4018fb-0d4f-425c-9da8-0baa4c96ab2f" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/TomaDecisiones/AnalisisValores/AnalisisValoresInmobiliario.svc?xsd=xsd4" />
+    <MetadataFile FileName="AnalisisValoresInmobiliario52.xsd" MetadataType="Schema" ID="11fc73a5-9918-44c5-9da6-01389723f6c4" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/TomaDecisiones/AnalisisValores/AnalisisValoresInmobiliario.svc?xsd=xsd1" />
+    <MetadataFile FileName="AnalisisValoresInmobiliario53.xsd" MetadataType="Schema" ID="112a7a1c-4396-43e1-b007-1fe8b1d7a4b0" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/TomaDecisiones/AnalisisValores/AnalisisValoresInmobiliario.svc?xsd=xsd0" />
+    <MetadataFile FileName="AnalisisValoresInmobiliario54.xsd" MetadataType="Schema" ID="9adb48e7-5a21-4288-a1e2-e9af41dc36de" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/TomaDecisiones/AnalisisValores/AnalisisValoresInmobiliario.svc?xsd=xsd3" />
+    <MetadataFile FileName="dsAnalisisValoresInmobiliario1.xsd" MetadataType="Schema" ID="ef76da44-5240-4d72-b8d0-0d4396c7cdd4" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/TomaDecisiones/AnalisisValores/AnalisisValoresInmobiliario.svc?xsd=xsd2" />
+    <MetadataFile FileName="AnalisisValoresInmobiliario1.disco" MetadataType="Disco" ID="938d2bc8-d5cd-4269-b952-bba06116ce51" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/TomaDecisiones/AnalisisValores/AnalisisValoresInmobiliario.svc?disco" />
+    <MetadataFile FileName="AnalisisValoresInmobiliario1.wsdl" MetadataType="Wsdl" ID="18071c3e-5b46-478d-8995-6182670d53bd" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/TomaDecisiones/AnalisisValores/AnalisisValoresInmobiliario.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
