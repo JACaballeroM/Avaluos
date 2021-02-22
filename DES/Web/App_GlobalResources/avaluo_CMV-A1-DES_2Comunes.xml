@@ -255,13 +255,13 @@
                     <ClaveRangoDeNiveles id="e.2.5.n.4">10</ClaveRangoDeNiveles>
                     <PuntajeDeClasificacion id="e.2.5.n.5">85</PuntajeDeClasificacion>
                     <ClaveClase id="e.2.5.n.6">2</ClaveClase>
-                    <Edad id="e.2.5.n.7">55</Edad>
+                    
                     <VidaUtilTotalDelTipo id="e.2.5.n.8">60</VidaUtilTotalDelTipo>
                     <VidaUtilRemanente id="e.2.5.n.9">5</VidaUtilRemanente>
                     <ClaveConservacion id="e.2.5.n.10">3</ClaveConservacion>
                     <Superficie id="e.2.5.n.11">1131756</Superficie>
                     <ValorunitariodereposicionNuevo id="e.2.5.n.12">16</ValorunitariodereposicionNuevo>
-                    <FactorDeEdad id="e.2.5.n.13">0.6</FactorDeEdad>
+					<!--<IndiceDelCostoRemanente id="e.2.5.n.13">0.6</IndiceDelCostoRemanente>-->
                     <FactorResultante id="e.2.5.n.14">0.6</FactorResultante>
                     <ValorDeLaFraccionN id="e.2.5.n.15">10864857.6</ValorDeLaFraccionN>
                 </ConstruccionesComunes>
@@ -272,13 +272,13 @@
                 <ClaveRangoDeNiveles id="e.2.5.n.4">10</ClaveRangoDeNiveles>
                 <PuntajeDeClasificacion id="e.2.5.n.5">85</PuntajeDeClasificacion>
                 <ClaveClase id="e.2.5.n.6">2</ClaveClase>
-                <Edad id="e.2.5.n.7">55</Edad>
+                
                 <VidaUtilTotalDelTipo id="e.2.5.n.8">60</VidaUtilTotalDelTipo>
                 <VidaUtilRemanente id="e.2.5.n.9">5</VidaUtilRemanente>
                 <ClaveConservacion id="e.2.5.n.10">3</ClaveConservacion>
                 <Superficie id="e.2.5.n.11">1131756</Superficie>
                 <ValorunitariodereposicionNuevo id="e.2.5.n.12">16</ValorunitariodereposicionNuevo>
-                <FactorDeEdad id="e.2.5.n.13">0.6</FactorDeEdad>
+				<!--<IndiceDelCostoRemanente id="e.2.5.n.13">0.6</IndiceDelCostoRemanente>-->
                 <FactorResultante id="e.2.5.n.14">0.6</FactorResultante>
                 <ValorDeLaFraccionN id="e.2.5.n.15">10864857.6</ValorDeLaFraccionN>
               </ConstruccionesComunes>

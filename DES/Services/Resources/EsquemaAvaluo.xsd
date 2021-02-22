@@ -263,15 +263,6 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<!-- DecimalPositivo12: Decimales positivos con  2 decimales (No admite cadenas texto vacÃ­as) -->
-	<xs:simpleType name="DecimalPositivo12">
-		<xs:restriction base="DecimalPositivo">
-			
-			<xs:fractionDigits value="2" />
-			<xs:pattern value="[0-9]{1}(\.[0-9]{1,2})?" />
-		</xs:restriction>
-	</xs:simpleType>
-
 	<!-- DecimalPositivo30: Decimales positivos con 3 digitos en la parte entera y 0 decimales (No admite cadenas texto vacÃ­as) -->
 	<xs:simpleType name="DecimalPositivo30">
 		<xs:restriction base="DecimalPositivo">
@@ -420,24 +411,25 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="Cat-Delegacion">
-		<xs:restriction base="NonEmptyString50">
-			<!--<xs:enumeration value="01" />
-      <xs:enumeration value="02" />
-      <xs:enumeration value="03" />
-      <xs:enumeration value="04" />
-      <xs:enumeration value="05" />
-      <xs:enumeration value="06" />
-      <xs:enumeration value="07" />
-      <xs:enumeration value="08" />
-      <xs:enumeration value="09" />
-      <xs:enumeration value="10" />
-      <xs:enumeration value="11" />
-      <xs:enumeration value="12" />
-      <xs:enumeration value="13" />
-      <xs:enumeration value="14" />
-      <xs:enumeration value="15" />
-      <xs:enumeration value="16" />-->
+	<xs:simpleType name="Cat-Alcaldia">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="02" />
+			<xs:enumeration value="03" />
+			<xs:enumeration value="04" />
+			<xs:enumeration value="05" />
+			<xs:enumeration value="06" />
+			<xs:enumeration value="07" />
+			<xs:enumeration value="08" />
+			<xs:enumeration value="09" />
+			<xs:enumeration value="10" />
+			<xs:enumeration value="11" />
+			<xs:enumeration value="12" />
+			<xs:enumeration value="13" />
+			<xs:enumeration value="14" />
+			<xs:enumeration value="15" />
+			<xs:enumeration value="16" />
+			<xs:enumeration value="17" />
+
 		</xs:restriction>
 	</xs:simpleType>
 
@@ -594,6 +586,30 @@
 		</xs:restriction>
 	</xs:simpleType>
 
+	<xs:simpleType name="Cat-TipoDeInmueble">
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:enumeration value="1" />
+			<xs:enumeration value="2" />
+			<xs:enumeration value="3" />
+			<xs:enumeration value="4" />
+			<xs:enumeration value="5" />
+			<xs:enumeration value="6" />
+			<xs:enumeration value="7" />
+			<xs:enumeration value="8" />
+			<xs:enumeration value="9" />
+			<xs:enumeration value="10" />
+			<xs:enumeration value="11" />
+			<xs:enumeration value="12" />
+			<xs:enumeration value="13" />
+			<xs:enumeration value="14" />
+			<xs:enumeration value="15" />
+			<xs:enumeration value="16" />
+			<xs:enumeration value="17" />
+			<xs:enumeration value="18" />
+			<xs:enumeration value="19" />
+		</xs:restriction>
+	</xs:simpleType>
+
 	<xs:simpleType name="Cat-UsosConstrucciones">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="A" />
@@ -648,7 +664,7 @@
 
 	<xs:simpleType name="Cat-InstalacionesEspeciales">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="IE01" />
+	<!--		<xs:enumeration value="IE01" />
 			<xs:enumeration value="IE02" />
 			<xs:enumeration value="IE03" />
 			<xs:enumeration value="IE04" />
@@ -695,7 +711,7 @@
 			<xs:enumeration value="OC14" />
 			<xs:enumeration value="OC15" />
 			<xs:enumeration value="OC16" />
-			<xs:enumeration value="OC17" />
+			<xs:enumeration value="OC17" />-->
 		</xs:restriction>
 	</xs:simpleType>
 
@@ -890,7 +906,7 @@
 		</xs:simpleContent>
 	</xs:complexType>
 
-	<xs:complexType name="SUB-VidaUtilRemanente">
+	<xs:complexType name="SUB-VidaMinimaRemanente">
 		<xs:simpleContent>
 			<xs:extension base="NullableDecimalPositivo">
 				<xs:attribute fixed="e.2.1.n.9" name="id" type="xs:string" use="required"/>
@@ -898,7 +914,7 @@
 		</xs:simpleContent>
 	</xs:complexType>
 
-	<xs:complexType name="SUB-VidaUtilRemanenteComunes">
+	<xs:complexType name="SUB-VidaMinimaRemanenteComunes">
 		<xs:simpleContent>
 			<xs:extension base="NullableDecimalPositivo">
 				<xs:attribute fixed="e.2.5.n.9" name="id" type="xs:string" use="required"/>
@@ -938,7 +954,7 @@
 		</xs:simpleContent>
 	</xs:complexType>
 
-	<xs:complexType name="SUB-ValorunitariodereposicionNuevo">
+	<xs:complexType name="SUB-CostoUnitarioDeReposicionNuevo">
 		<xs:simpleContent>
 			<xs:extension base="NullableDecimalPositivo">
 				<xs:attribute fixed="e.2.1.n.12" name="id" type="xs:string" use="required"/>
@@ -946,7 +962,7 @@
 		</xs:simpleContent>
 	</xs:complexType>
 
-	<xs:complexType name="SUB-ValorunitariodereposicionNuevoComunes">
+	<xs:complexType name="SUB-CostoUnitarioDeReposicionNuevoComunes">
 		<xs:simpleContent>
 			<xs:extension base="NullableDecimalPositivo">
 				<xs:attribute fixed="e.2.5.n.12" name="id" type="xs:string" use="required"/>
@@ -954,14 +970,22 @@
 		</xs:simpleContent>
 	</xs:complexType>
 
-	<xs:complexType name="SUB-FactorDeEdad">
+	<xs:complexType name="SUB-IndiceDelCostoRemanente">
 		<xs:simpleContent>
-			<xs:extension base="NullableDecimalPositivo">
+			<xs:extension base="DecimalPositivo222">
 				<xs:attribute fixed="e.2.1.n.13" name="id" type="xs:string" use="required"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
 
+	<xs:complexType name="SUB-IndiceDelCostoRemanenteComunes">
+		<xs:simpleContent>
+			<xs:extension base="DecimalPositivo222">
+				<xs:attribute fixed="e.2.5.n.13" name="id" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
 	<!--
 	<xs:complexType name="SUB-FactorResultante">
 		<xs:simpleContent>
@@ -971,10 +995,18 @@
 		</xs:simpleContent>
 	</xs:complexType>-->
 
-	<xs:complexType name="SUB-ValorDeLaFraccionNDescInmueble">
+	<xs:complexType name="SUB-CostoDeLaFraccionN">
 		<xs:simpleContent>
-			<xs:extension base="NullableDecimalPositivo">
+			<xs:extension base="DecimalPositivo">
 				<xs:attribute fixed="e.2.1.n.15" name="id" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:complexType name="SUB-CostoDeLaFraccionNComunes">
+		<xs:simpleContent>
+			<xs:extension base="DecimalPositivo">
+				<xs:attribute fixed="e.2.5.n.15" name="id" type="xs:string" use="required"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -991,31 +1023,6 @@
 		<xs:simpleContent>
 			<xs:extension base="NullableDecimalPositivo">
 				<xs:attribute fixed="e.2.1.n.17" name="id" type="xs:string" use="required"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-
-	<xs:complexType name="SUB-FactorDeEdadComunes">
-		<xs:simpleContent>
-			<xs:extension base="NullableDecimalPositivo">
-				<xs:attribute fixed="e.2.5.n.13" name="id" type="xs:string" use="required"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-
-	<!--
-	<xs:complexType name="SUB-FactorResultanteComunes">
-		<xs:simpleContent>
-			<xs:extension base="NullableDecimalPositivo">
-				<xs:attribute fixed="e.2.5.n.14" name="id" type="xs:string" use="required"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>-->
-
-	<xs:complexType name="SUB-ValorDeLaFraccionNDescInmuebleComunes">
-		<xs:simpleContent>
-			<xs:extension base="NullableDecimalPositivo">
-				<xs:attribute fixed="e.2.5.n.15" name="id" type="xs:string" use="required"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -1164,10 +1171,10 @@
 									</xs:simpleContent>
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="Delegacion">
+							<xs:element name="Alcaldia">
 								<xs:complexType>
 									<xs:simpleContent>
-										<xs:extension base="Cat-Delegacion">
+										<xs:extension base="Cat-Alcaldia">
 											<xs:attribute fixed="h.1.1.n.3" name="id" type="xs:string" use="required" />
 										</xs:extension>
 									</xs:simpleContent>
@@ -1269,7 +1276,7 @@
 									<xs:element name="Valor">
 										<xs:complexType>
 											<xs:simpleContent>
-												<xs:extension base="DecimalPositivo12">
+												<xs:extension base="DecimalPositivo222">
 													<xs:attribute fixed="h.1.1.n.10.2" name="id" type="xs:string" use="required" />
 												</xs:extension>
 											</xs:simpleContent>
@@ -1308,7 +1315,7 @@
 										<xs:element name="Valor">
 											<xs:complexType>
 												<xs:simpleContent>
-													<xs:extension base="DecimalPositivo12">
+													<xs:extension base="DecimalPositivo222">
 														<xs:attribute fixed="h.1.1.n.11.2" name="id" type="xs:string" use="required" />
 													</xs:extension>
 												</xs:simpleContent>
@@ -1347,7 +1354,7 @@
 										<xs:element name="Valor">
 											<xs:complexType>
 												<xs:simpleContent>
-													<xs:extension base="DecimalPositivo12">
+													<xs:extension base="DecimalPositivo222">
 														<xs:attribute fixed="h.1.1.n.12.2" name="id" type="xs:string" use="required" />
 													</xs:extension>
 												</xs:simpleContent>
@@ -1387,7 +1394,7 @@
 										<xs:element name="Valor">
 											<xs:complexType>
 												<xs:simpleContent>
-													<xs:extension base="DecimalPositivo12">
+													<xs:extension base="DecimalPositivo222">
 														<xs:attribute fixed="h.1.1.n.13.2" name="id" type="xs:string" use="required" />
 													</xs:extension>
 												</xs:simpleContent>
@@ -1428,7 +1435,7 @@
 										<xs:element name="Valor">
 											<xs:complexType>
 												<xs:simpleContent>
-													<xs:extension base="DecimalPositivo12">
+													<xs:extension base="DecimalPositivo222">
 														<xs:attribute fixed="h.1.1.n.14.2" name="id" type="xs:string" use="required" />
 													</xs:extension>
 												</xs:simpleContent>
@@ -1510,7 +1517,7 @@
 									</xs:simpleContent>
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="ValorUnitarioDeTierraHomologado">
+							<xs:element name="ValorUnitarioDeTierraHomologadoPromedio">
 								<xs:complexType>
 									<xs:simpleContent>
 										<xs:extension base="DecimalPositivo">
@@ -1616,10 +1623,10 @@
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
-									<xs:element name="Delegacion">
+									<xs:element name="Alcaldia">
 										<xs:complexType>
 											<xs:simpleContent>
-												<xs:extension base="Cat-Delegacion">
+												<xs:extension base="NonEmptyString5">
 													<xs:attribute fixed="h.1.3.4.n.3" name="id" type="xs:string" use="required" />
 												</xs:extension>
 											</xs:simpleContent>
@@ -1882,10 +1889,10 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="Delegacion">
+			<xs:element name="Alcaldia">
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="Cat-Delegacion">
+						<xs:extension base="Cat-Alcaldia">
 							<xs:attribute fixed="b.1.9" name="id" type="xs:string" use="required" />
 						</xs:extension>
 					</xs:simpleContent>
@@ -1949,10 +1956,10 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="Delegacion">
+			<xs:element name="Alcaldia">
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="Cat-Delegacion">
+						<xs:extension base="Cat-Alcaldia">
 							<xs:attribute fixed="b.2.9" name="id" type="xs:string" use="required" />
 						</xs:extension>
 					</xs:simpleContent>
@@ -2148,10 +2155,10 @@
 									</xs:simpleContent>
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="Delegacion">
+							<xs:element name="Alcaldia">
 								<xs:complexType>
 									<xs:simpleContent>
-										<xs:extension base="Cat-Delegacion">
+										<xs:extension base="Cat-Alcaldia">
 											<xs:attribute fixed="b.1.9" name="id" type="xs:string" use="required" />
 										</xs:extension>
 									</xs:simpleContent>
@@ -2242,10 +2249,10 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="Delegacion">
+						<xs:element name="Alcaldia">
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension base="Cat-Delegacion">
+									<xs:extension base="Cat-Alcaldia">
 										<xs:attribute fixed="b.2.9" name="id" type="xs:string" use="required" />
 									</xs:extension>
 								</xs:simpleContent>
@@ -2335,10 +2342,10 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="Delegacion">
+						<xs:element name="Alcaldia">
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension base="Cat-Delegacion">
+									<xs:extension base="Cat-Alcaldia">
 										<xs:attribute fixed="b.3.9" name="id" type="xs:string" use="required" />
 									</xs:extension>
 								</xs:simpleContent>
@@ -2439,7 +2446,7 @@
 			<xs:element name="TipoDeInmueble">
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="String50">
+						<xs:extension base="Cat-TipoDeInmueble">
 							<xs:attribute fixed="b.7" name="id" type="xs:string" use="required" />
 						</xs:extension>
 					</xs:simpleContent>
@@ -2528,10 +2535,10 @@
 									</xs:simpleContent>
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="Delegacion">
+							<xs:element name="Alcaldia">
 								<xs:complexType>
 									<xs:simpleContent>
-										<xs:extension base="Cat-Delegacion">
+										<xs:extension base="Cat-Alcaldia">
 											<xs:attribute fixed="b.1.9" name="id" type="xs:string" use="required" />
 										</xs:extension>
 									</xs:simpleContent>
@@ -2622,10 +2629,10 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="Delegacion">
+						<xs:element name="Alcaldia">
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension base="Cat-Delegacion">
+									<xs:extension base="Cat-Alcaldia">
 										<xs:attribute fixed="b.2.9" name="id" type="xs:string" use="required" />
 									</xs:extension>
 								</xs:simpleContent>
@@ -2715,10 +2722,10 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="Delegacion">
+						<xs:element name="Alcaldia">
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension base="Cat-Delegacion">
+									<xs:extension base="Cat-Alcaldia">
 										<xs:attribute fixed="b.3.9" name="id" type="xs:string" use="required" />
 									</xs:extension>
 								</xs:simpleContent>
@@ -2819,7 +2826,7 @@
 			<xs:element name="TipoDeInmueble">
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="String50">
+						<xs:extension base="Cat-TipoDeInmueble">
 							<xs:attribute fixed="b.7" name="id" type="xs:string" use="required" />
 						</xs:extension>
 					</xs:simpleContent>
@@ -3508,11 +3515,11 @@
 					<xs:sequence>
 						<xs:element name="IdentificadorFraccionN1" type="SUB-IdentificadorFraccionN1" />
 						<xs:element name="SuperficieFraccionN1" type="SUB-SuperficieFraccionN1" />
-						<xs:element name="Fzo" type="SUB-Fzo" />
-						<xs:element name="Fub" type="SUB-Fub" />
-						<xs:element name="FFr" type="SUB-FFr" />
-						<xs:element name="Ffo" type="SUB-Ffo" />
-						<xs:element name="Fsu" type="SUB-Fsu" />
+						<xs:element name="Factor1" type="SUB-Factor1" />
+						<xs:element name="Factor2" type="SUB-Factor2" />
+						<xs:element name="Factor3" type="SUB-Factor3" />
+						<xs:element name="Factor4" type="SUB-Factor4" />
+						<xs:element name="Factor5" type="SUB-Factor5" />
 						<xs:element name="ClaveDeAreaDeValor" type="SUB-ClaveDeAreaDeValor" />
 						<!--<xs:element name="Fot" type="SUB-Fot" minOccurs="0" maxOccurs="1"/>-->
 						<xs:element  name="Fre">
@@ -3959,7 +3966,7 @@
 	</xs:complexType>
 
 
-	<xs:complexType name="SUB-Fzo"  >
+	<xs:complexType name="SUB-Factor1"  >
 		<xs:sequence>
 			<xs:element name="Siglas">
 				<xs:complexType>
@@ -3973,7 +3980,7 @@
 			<xs:element name="Valor">
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="DecimalPositivo12">
+						<xs:extension base="DecimalPositivo222">
 							<xs:attribute fixed="d.5.n.3.2" name="id" type="xs:string" use="required" />
 						</xs:extension>
 					</xs:simpleContent>
@@ -3992,7 +3999,7 @@
 		<xs:attribute fixed="d.5.n.3" name="id" type="xs:string" use="required" />
 	</xs:complexType>
 
-	<xs:complexType name="SUB-Fub"  >
+	<xs:complexType name="SUB-Factor2"  >
 		<xs:sequence>
 			<xs:element name="Siglas">
 				<xs:complexType>
@@ -4006,7 +4013,7 @@
 			<xs:element name="Valor">
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="DecimalPositivo12">
+						<xs:extension base="DecimalPositivo222">
 							<xs:attribute fixed="d.5.n.4.2" name="id" type="xs:string" use="required" />
 						</xs:extension>
 					</xs:simpleContent>
@@ -4025,7 +4032,7 @@
 		<xs:attribute fixed="d.5.n.4" name="id" type="xs:string" use="required" />
 	</xs:complexType>
 
-	<xs:complexType name="SUB-FFr"  >
+	<xs:complexType name="SUB-Factor3"  >
 		<xs:sequence>
 			<xs:element name="Siglas">
 				<xs:complexType>
@@ -4039,7 +4046,7 @@
 			<xs:element name="Valor">
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="DecimalPositivo12">
+						<xs:extension base="DecimalPositivo222">
 							<xs:attribute fixed="d.5.n.5.2" name="id" type="xs:string" use="required" />
 						</xs:extension>
 					</xs:simpleContent>
@@ -4058,7 +4065,7 @@
 		<xs:attribute fixed="d.5.n.5" name="id" type="xs:string" use="required" />
 	</xs:complexType>
 
-	<xs:complexType name="SUB-Ffo"  >
+	<xs:complexType name="SUB-Factor4"  >
 		<xs:sequence>
 			<xs:element name="Siglas">
 				<xs:complexType>
@@ -4072,7 +4079,7 @@
 			<xs:element name="Valor">
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="DecimalPositivo12">
+						<xs:extension base="DecimalPositivo222">
 							<xs:attribute fixed="d.5.n.6.2" name="id" type="xs:string" use="required" />
 						</xs:extension>
 					</xs:simpleContent>
@@ -4091,7 +4098,7 @@
 		<xs:attribute fixed="d.5.n.6" name="id" type="xs:string" use="required" />
 	</xs:complexType>
 
-	<xs:complexType name="SUB-Fsu"  >
+	<xs:complexType name="SUB-Factor5"  >
 		<xs:sequence>
 			<xs:element name="Siglas">
 				<xs:complexType>
@@ -4105,7 +4112,7 @@
 			<xs:element name="Valor">
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="DecimalPositivo12">
+						<xs:extension base="DecimalPositivo222">
 							<xs:attribute fixed="d.5.n.7.2" name="id" type="xs:string" use="required" />
 						</xs:extension>
 					</xs:simpleContent>
@@ -4176,7 +4183,7 @@
 
 	<xs:complexType name="SUB-Fre">
 		<xs:simpleContent>
-			<xs:extension base="DecimalPositivo">
+			<xs:extension base="DecimalPositivo222">
 				<xs:attribute fixed="d.5.n.10" name="id" type="xs:string" use="required" />
 			</xs:extension>
 		</xs:simpleContent>
@@ -4216,15 +4223,16 @@
 									<xs:element name="ClaveRangoDeNiveles" type="SUB-ClaveRangoDeNiveles" />
 									<xs:element name="PuntajeDeClasificacion" type="SUB-PuntajeDeClasificacion"/>
 									<xs:element name="ClaveClase" type="SUB-ClaveClase" />
-									<xs:element name="Edad" type="SUB-Edad"/>
+									<!--<xs:element name="Edad" type="SUB-Edad"/>-->
 									<xs:element name="VidaUtilTotalDelTipo" type ="SUB-VidaUtilTipo"/>
-									<xs:element name="VidaUtilRemanente" type="SUB-VidaUtilRemanente"/>
-									<xs:element name="ClaveConservacion" type="SUB-ClaveConservacion"/>
+									<xs:element name="VidaMinimaRemanente" type="SUB-VidaMinimaRemanente"/>
+									<!--//JACM Se da de baja el campo 2021-02-11
+									<xs:element name="ClaveConservacion" type="SUB-ClaveConservacion"/>-->
 									<xs:element name="Superficie" type="SUB-Superficie" />
-									<xs:element name="ValorunitariodereposicionNuevo" type="SUB-ValorunitariodereposicionNuevo"/>
-									<xs:element name="FactorDeEdad" type="SUB-FactorDeEdad"/>
-									<xs:element name="FactorResultante" type="SUB-FactorResultante"/>
-									<xs:element name="ValorDeLaFraccionN" type="SUB-ValorDeLaFraccionNDescInmueble"/>
+									<xs:element name="CostoUnitarioDeReposicionNuevo" type="SUB-CostoUnitarioDeReposicionNuevo"/>
+									<xs:element name="IndiceDelCostoRemanente" type="SUB-IndiceDelCostoRemanente"/>
+									<!--<xs:element name="FactorResultante" type="SUB-FactorResultante"/>-->
+									<xs:element name="CostoDeLaFraccionN" type="SUB-CostoDeLaFraccionN"/>
 								</xs:sequence>
 								<xs:attribute fixed="e.2.1" name="id" type="xs:string" use="required" />
 							</xs:complexType>
@@ -4245,15 +4253,15 @@
 									<xs:element name="ClaveRangoDeNiveles" type="SUB-ClaveRangoDeNivelesComunes" />
 									<xs:element name="PuntajeDeClasificacion" type="SUB-PuntajeDeClasificacionComunes"/>
 									<xs:element name="ClaveClase" type="SUB-ClaveClaseComunes" />
-									<xs:element name="Edad" type="SUB-EdadComunes"/>
+									<!--<xs:element name="Edad" type="SUB-EdadComunes"/>-->
 									<xs:element name="VidaUtilTotalDelTipo" type ="SUB-VidaUtilTipoComunes"/>
-									<xs:element name="VidaUtilRemanente" type="SUB-VidaUtilRemanenteComunes"/>
+									<xs:element name="VidaMinimaRemanente" type="SUB-VidaMinimaRemanenteComunes"/>
 									<!--<xs:element name="ClaveConservacion" type="SUB-ClaveConservacionComunes"/>-->
 									<xs:element name="Superficie" type="SUB-SuperficieComunes"/>
-									<xs:element name="ValorunitariodereposicionNuevo" type="SUB-ValorunitariodereposicionNuevoComunes"/>
-									<xs:element name="FactorDeEdad" type="SUB-FactorDeEdadComunes"/>
-									<xs:element name="FactorResultante" type="SUB-FactorResultanteComunes"/>
-									<xs:element name="ValorDeLaFraccionN" type="SUB-ValorDeLaFraccionNDescInmuebleComunes"/>
+									<xs:element name="CostoUnitarioDeReposicionNuevo" type="SUB-CostoUnitarioDeReposicionNuevoComunes"/>
+									<xs:element name="IndiceDelCostoRemanente" type="SUB-IndiceDelCostoRemanenteComunes"/>
+									<!--<xs:element name="FactorResultante" type="SUB-FactorResultanteComunes"/>-->
+									<xs:element name="CostoDeLaFraccionN" type="SUB-CostoDeLaFraccionNComunes"/>
 									<xs:element name="PorcentajeIndivisoComunes" type="SUB-PorcentajeIndivisoComunes" minOccurs="0" maxOccurs="1" />
 								</xs:sequence>
 								<xs:attribute fixed="e.2.5" name="id" type="xs:string" use="required" />
@@ -4269,7 +4277,7 @@
 					<xs:attribute fixed="e.2" name="id" type="xs:string" use="required" />
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="VidaUtilTotalPonderadaDelInmueble">
+			<xs:element name="VidaMinimaRemanente">
 				<xs:complexType>
 					<xs:simpleContent>
 						<xs:extension base="NullableDecimalPositivo">
@@ -4278,6 +4286,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
+			<!-- JACM 2021-02-15 Se da de baja el campo para Comercial
 			<xs:element name="EdadPonderadaDelInmueble">
 				<xs:complexType>
 					<xs:simpleContent>
@@ -4286,7 +4295,7 @@
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
-			</xs:element>
+			</xs:element>-->
 			<xs:element name="VidaUtilRemanentePonderadaDelInmueble">
 				<xs:complexType>
 					<xs:simpleContent>
@@ -4338,10 +4347,10 @@
 									<xs:element name="ClaveClase" type="SUB-ClaveClase" />
 									<xs:element name="Edad" type="SUB-Edad"/>
 									<xs:element name="VidaUtilTotalDelTipo" type ="SUB-VidaUtilTipo"/>
-									<xs:element name="VidaUtilRemanente" type="SUB-VidaUtilRemanente"/>
-									<xs:element name="ClaveConservacion" type="SUB-ClaveConservacion"/>
+									<xs:element name="VidaMinimaRemanente" type="SUB-VidaMinimaRemanente"/>
+									<!--<xs:element name="ClaveConservacion" type="SUB-ClaveConservacion"/>-->
 									<xs:element name="Superficie" type="SUB-Superficie" />
-									<xs:element name="ValorDeLaFraccionN" type="SUB-ValorDeLaFraccionNDescInmueble"/>
+									<xs:element name="CostoDeLaFraccionN" type="SUB-CostoDeLaFraccionN"/>
 									<xs:element name="ValorUnitarioCatastral" type="SUB-ValorUnitarioCatastral"/>
 									<xs:element name="DepreciacionPorEdad" type="SUB-DepreciacionPorEdad" />
 								</xs:sequence>
@@ -4367,10 +4376,10 @@
 									<xs:element name="ClaveClase" type="SUB-ClaveClaseComunes" />
 									<xs:element name="Edad" type="SUB-EdadComunes"/>
 									<xs:element name="VidaUtilTotalDelTipo" type ="SUB-VidaUtilTipoComunes"/>
-									<xs:element name="VidaUtilRemanente" type="SUB-VidaUtilRemanenteComunes"/>
+									<xs:element name="VidaMinimaRemanente" type="SUB-VidaMinimaRemanenteComunes"/>
 									<!--<xs:element name="ClaveConservacion" type="SUB-ClaveConservacionComunes"/>-->
 									<xs:element name="Superficie" type="SUB-SuperficieComunes"/>
-									<xs:element name="ValorDeLaFraccionN" type="SUB-ValorDeLaFraccionNDescInmuebleComunes"/>
+									<xs:element name="CostoDeLaFraccionN" type="SUB-CostoDeLaFraccionNComunes"/>
 									<xs:element name="ValorUnitarioCatastral" type="SUB-ValorUnitarioCatastralComunes"/>
 									<xs:element name="DepreciacionPorEdad" type="SUB-DepreciacionPorEdadComunes" />
 									<xs:element name="PorcentajeIndivisoComunes" type="SUB-PorcentajeIndivisoComunes" minOccurs="0" maxOccurs="1" />
@@ -4465,7 +4474,7 @@
 							</xs:complexType>
 						</xs:element>
 						<xs:element name="ClaveClase" type="SUB-ClaveClase" />
-						<xs:element name="Edad">
+						<!--<xs:element name="Edad">
 							<xs:complexType>
 								<xs:simpleContent>
 									<xs:extension base="NullableDecimalPositivo">
@@ -4473,7 +4482,7 @@
 									</xs:extension>
 								</xs:simpleContent>
 							</xs:complexType>
-						</xs:element>
+						</xs:element>-->
 						<xs:element name="VidaUtilTotalDelTipo">
 							<xs:complexType>
 								<xs:simpleContent>
@@ -4483,7 +4492,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="VidaUtilRemanente">
+						<xs:element name="VidaMinimaRemanente">
 							<xs:complexType>
 								<xs:simpleContent>
 									<xs:extension base="NullableDecimalPositivo">
@@ -4847,7 +4856,7 @@
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
-									<xs:element minOccurs="1" maxOccurs="1" name="ValorUnitarioInstalacionEspecial" type="SUB-ValorUnitarioInstalacionEspecial-Privativa" />
+									<xs:element minOccurs="1" maxOccurs="1" name="CostoUnitarioInstalacionEspecial" type="SUB-CostoUnitarioInstalacionEspecial-Privativa" />
 									<xs:element name="FactorDeEdadInstalacionEspecial" type="SUB-FactorDeEdadInstalacionEspecial" minOccurs="1" maxOccurs="1"/>
 									<xs:element name="ImporteInstalacionEspecial" type="SUB-ImporteInstalacionEspecial" minOccurs="1" maxOccurs="1"/>
 								</xs:sequence>
@@ -4879,7 +4888,7 @@
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
-									<xs:element name="ValorUnitarioInstalacionEspecial" type="SUB-ValorUnitarioInstalacionEspecial-Comunes" minOccurs="1" maxOccurs="1" />
+									<xs:element name="CostoUnitarioInstalacionEspecial" type="SUB-CostoUnitarioInstalacionEspecial-Comunes" minOccurs="1" maxOccurs="1" />
 									<xs:element name="FactorDeEdadInstalacionEspecial" type="SUB-FactorDeEdadInstalacionEspecialComunes" minOccurs="1" maxOccurs="1"/>
 									<xs:element name="ImporteInstalacionEspecial" type="SUB-ImporteInstalacionEspecialComunes" minOccurs="1" maxOccurs="1"/>
 									<xs:element name="PorcentajeIndivisoEspecial" type="SUB-PorcentajeIndivisoEspecialComunes" minOccurs="0" maxOccurs="1"/>
@@ -4905,7 +4914,7 @@
 									<xs:element name="CantidadElementoAccesorio" type="SUB-CantidadElementoAccesorio-Privativas" minOccurs="1" maxOccurs="1"/>
 									<xs:element name="EdadElementoAccesorio" type="SUB-EdadElementoAccesorio" minOccurs="1" maxOccurs="1"/>
 									<xs:element name="VidaUtilTotalElementoAccesorio" type="SUB-VidaUtilTotalElementoAccesorio" minOccurs="1" maxOccurs="1"/>
-									<xs:element name="ValorUnitarioElementoAccesorio" type="SUB-ValorUnitarioElementoAccesorio-Privativas" minOccurs="1" maxOccurs="1"/>
+									<xs:element name="CostoUnitarioElementoAccesorio" type="SUB-CostoUnitarioElementoAccesorio-Privativas" minOccurs="1" maxOccurs="1"/>
 									<xs:element name="FactorDeEdadElementoAccesorio" type="SUB-FactorDeEdadElementoAccesorio" minOccurs="1" maxOccurs="1"/>
 									<xs:element name="ImporteElementoAccesorio" type="SUB-ImporteElementoAccesorio" minOccurs="1" maxOccurs="1"/>
 								</xs:sequence>
@@ -4921,7 +4930,7 @@
 									<xs:element name="CantidadElementoAccesorio" type="SUB-CantidadElementoAccesorio-ComunesCom" minOccurs="1" maxOccurs="1"/>
 									<xs:element name="EdadElementoAccesorio" type="SUB-EdadElementoAccesorio-Comunes" minOccurs="1" maxOccurs="1"/>
 									<xs:element name="VidaUtilTotalElementoAccesorio" type="SUB-VidaUtilTotalElementoAccesorioComunes" minOccurs="1" maxOccurs="1"/>
-									<xs:element name="ValorUnitarioElementoAccesorio" type="SUB-ValorUnitarioElementoAccesorio-Comunes" minOccurs="1" maxOccurs="1"/>
+									<xs:element name="CostoUnitarioElementoAccesorio" type="SUB-CostoUnitarioElementoAccesorio-Comunes" minOccurs="1" maxOccurs="1"/>
 									<xs:element name="FactorDeEdadElementoAccesorio" type="SUB-FactorDeEdadElementoAccesorioComunes" minOccurs="1" maxOccurs="1"/>
 									<xs:element name="ImporteElementoAccesorio" type="SUB-ImporteElementoAccesorio-Comunes" minOccurs="1" maxOccurs="1"/>
 									<xs:element name="PorcentajeIndivisoAccesorio" type="SUB-PorcentajeIndivisoAccesorio-Comunes" minOccurs="0" maxOccurs="1"/>
@@ -4955,7 +4964,7 @@
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
-									<xs:element name="ValorUnitarioObraComplementaria" type="SUB-ValorUnitarioObraComplementaria-Privativas" minOccurs="1" maxOccurs="1"/>
+									<xs:element name="CostoUnitarioObraComplementaria" type="SUB-CostoUnitarioObraComplementaria-Privativas" minOccurs="1" maxOccurs="1"/>
 									<xs:element name="FactorDeEdadObraComplementaria" type="SUB-FactorDeEdadObraComplementaria-Privativas" minOccurs="1" maxOccurs="1"/>
 									<xs:element name="ImporteObraComplementaria" type="SUB-ImporteObraComplementaria-Privativas" minOccurs="1" maxOccurs="1"/>
 								</xs:sequence>
@@ -4971,7 +4980,7 @@
 									<xs:element name="CantidadObraComplementaria" type="SUB-CantidadObraComplementaria-ComunesCom" minOccurs="1" maxOccurs="1"/>
 									<xs:element name="EdadObraComplementaria" type="SUB-EdadObraComplementaria-Comunes" minOccurs="1" maxOccurs="1"/>
 									<xs:element name="VidaUtilTotalObraComplementaria" type="SUB-VidaUtilTotalObraComplementaria-Comunes" minOccurs="1" maxOccurs="1"/>
-									<xs:element name="ValorUnitarioObraComplementaria" type="SUB-ValorUnitarioObraComplementaria-Comunes" minOccurs="1" maxOccurs="1"/>
+									<xs:element name="CostoUnitarioObraComplementaria" type="SUB-CostoUnitarioObraComplementaria-Comunes" minOccurs="1" maxOccurs="1"/>
 									<xs:element name="FactorDeEdadObraComplementaria" type="SUB-FactorDeEdadObraComplementaria-Comunes" minOccurs="1" maxOccurs="1"/>
 									<xs:element name="ImporteObraComplementaria" type="SUB-ImporteObraComplementaria-complementaria" minOccurs="1" maxOccurs="1"/>
 									<xs:element name="PorcentajeIndivisoObraComplementaria" type="SUB-PorcentajeIndivisoObraComplementaria-complementaria" minOccurs="0" maxOccurs="1"/>
@@ -4985,8 +4994,8 @@
 					<xs:attribute fixed="f.11" name="id" type="xs:string" use="required" />
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" maxOccurs="1" name="ImporteTotalInstalacionesAccesoriosComplementariasPrivativas" type="SUB-ImporteTotalInstalacionesAccesoriosComplementariasPrivativas" />
-			<xs:element minOccurs="0" maxOccurs="1" name="ImporteTotalInstalacionesAccesoriosComplementariasComunes" type="SUB-ImporteTotalInstalacionesAccesoriosComplementariasComunes"/>
+			<xs:element minOccurs="0" maxOccurs="1" name="SumatoriaTotalInstalacionesEspecialesObrasComplementariasYElementosAccesoriosPrivativas" type="SUB-SumatoriaTotalInstalacionesEspecialesObrasComplementariasYElementosAccesoriosPrivativas" />
+			<xs:element minOccurs="0" maxOccurs="1" name="SumatoriaTotalInstalacionesEspecialesObrasComplementariasYElementosAccesoriosComunes" type="SUB-SumatoriaTotalInstalacionesEspecialesObrasComplementariasYElementosAccesoriosComunes"/>
 			<xs:element minOccurs="0" maxOccurs="1" name="ImporteIndivisoInstalacionesEspecialesObrasComplementariasYElementosAccesoriosComunes" type="SUB-ImporteIndivisoInstalacionesEspecialesObrasComplementariasYElementosAccesoriosComunes" />
 			<xs:element minOccurs="0" maxOccurs="1" name="ImporteIndivisoInstalacionesEspecialesObrasComplementariasYElementosAccesoriosPrivativas" type="SUB-ImporteIndivisoInstalacionesEspecialesObrasComplementariasYElementosAccesoriosPrivativas" />
 		</xs:sequence>
@@ -5357,6 +5366,7 @@
 		</xs:sequence>
 		<xs:attribute fixed="f" name="id" type="xs:string" use="required" />
 	</xs:complexType>
+
 	<xs:complexType name="SUB-ClaveInstalacionEspecial-PrivativaCom" >
 		<xs:simpleContent>
 			<xs:extension base="Cat-InstalacionesEspeciales">
@@ -5371,6 +5381,7 @@
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
+	
 	<xs:complexType name="SUB-DescripcionInstalacionEspecial-Privativa">
 		<xs:simpleContent>
 			<xs:extension base="String100">
@@ -5395,7 +5406,7 @@
 		</xs:simpleContent>
 	</xs:complexType>
 
-	<xs:complexType name="SUB-ValorUnitarioInstalacionEspecial-Privativa">
+	<xs:complexType name="SUB-CostoUnitarioInstalacionEspecial-Privativa">
 		<xs:simpleContent>
 			<xs:extension base="NullableDecimalPositivo">
 				<xs:attribute fixed="f.9.1.n.7" name="id" type="xs:string" use="required" />
@@ -5490,7 +5501,7 @@
 		</xs:simpleContent>
 	</xs:complexType>
 
-	<xs:complexType name="SUB-ValorUnitarioInstalacionEspecial-Comunes">
+	<xs:complexType name="SUB-CostoUnitarioInstalacionEspecial-Comunes">
 		<xs:simpleContent>
 			<xs:extension base="DecimalPositivo">
 				<xs:attribute fixed="f.9.2.n.7" name="id" type="xs:string" use="required" />
@@ -5551,7 +5562,7 @@
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="SUB-ValorUnitarioElementoAccesorio-Privativas">
+	<xs:complexType name="SUB-CostoUnitarioElementoAccesorio-Privativas">
 		<xs:simpleContent>
 			<xs:extension base="DecimalPositivo">
 				<xs:attribute fixed="f.10.1.n.7" name="id" type="xs:string" use="required" />
@@ -5642,7 +5653,7 @@
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="SUB-ValorUnitarioElementoAccesorio-Comunes">
+	<xs:complexType name="SUB-CostoUnitarioElementoAccesorio-Comunes">
 		<xs:simpleContent>
 			<xs:extension base="DecimalPositivo">
 				<xs:attribute fixed="f.10.2.n.7" name="id" type="xs:string" use="required" />
@@ -5734,7 +5745,7 @@
 		</xs:simpleContent>
 	</xs:complexType>
 
-	<xs:complexType name="SUB-ValorUnitarioObraComplementaria-Privativas">
+	<xs:complexType name="SUB-CostoUnitarioObraComplementaria-Privativas">
 		<xs:simpleContent>
 			<xs:extension base="DecimalPositivo">
 				<xs:attribute fixed="f.11.1.n.7" name="id" type="xs:string" use="required" />
@@ -5825,7 +5836,7 @@
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="SUB-ValorUnitarioObraComplementaria-Comunes">
+	<xs:complexType name="SUB-CostoUnitarioObraComplementaria-Comunes">
 		<xs:simpleContent>
 			<xs:extension base="DecimalPositivo">
 				<xs:attribute fixed="f.11.2.n.7" name="id" type="xs:string" use="required" />
@@ -5870,14 +5881,14 @@
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="SUB-ImporteTotalInstalacionesAccesoriosComplementariasPrivativas">
+	<xs:complexType name="SUB-SumatoriaTotalInstalacionesEspecialesObrasComplementariasYElementosAccesoriosPrivativas">
 		<xs:simpleContent>
 			<xs:extension base="NullableDecimalPositivo">
 				<xs:attribute fixed="f.12" name="id" type="xs:string" use="required" />
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="SUB-ImporteTotalInstalacionesAccesoriosComplementariasComunes">
+	<xs:complexType name="SUB-SumatoriaTotalInstalacionesEspecialesObrasComplementariasYElementosAccesoriosComunes">
 		<xs:simpleContent>
 			<xs:extension base="NullableDecimalPositivo">
 				<xs:attribute fixed="f.13" name="id" type="xs:string" use="required" />
@@ -5972,6 +5983,30 @@
 		</xs:sequence>
 		<xs:attribute fixed="g" name="id" type="xs:string" use="required" />
 	</xs:complexType>
+
+	<!--ConsideracionesPreviasAlAvaluoCatastral-->
+	<xs:complexType name="ConsideracionesPreviasAlAvaluo-ACatastral">
+		<xs:sequence>
+			<xs:element name="ConsideracionesPreviasAlAvaluo">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Consideraciones">
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="NonEmptyStringMax">
+										<xs:attribute fixed="g.1.1" name="id" type="xs:string" use="required" />
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+						
+					</xs:sequence>
+					<xs:attribute fixed="g.1" name="id" type="xs:string" use="required" />
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute fixed="g" name="id" type="xs:string" use="required" />
+	</xs:complexType>
 	
 	<xs:complexType name="SUB-ValorDeMercadoDelInmueble">
 		<xs:simpleContent>
@@ -6019,10 +6054,10 @@
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
-									<xs:element name="Delegacion">
+									<xs:element name="Alcaldia">
 										<xs:complexType>
 											<xs:simpleContent>
-												<xs:extension base="Cat-Delegacion">
+												<xs:extension base="Cat-Alcaldia">
 													<xs:attribute fixed="h.2.1.n.3" name="id" type="xs:string" use="required" />
 												</xs:extension>
 											</xs:simpleContent>
@@ -6244,10 +6279,10 @@
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
-									<xs:element name="Delegacion">
+									<xs:element name="Alcaldia">
 										<xs:complexType>
 											<xs:simpleContent>
-												<xs:extension base="Cat-Delegacion">
+												<xs:extension base="Cat-Alcaldia">
 													<xs:attribute fixed="h.4.1.n.3" name="id" type="xs:string" use="required" />
 												</xs:extension>
 											</xs:simpleContent>
@@ -6622,7 +6657,7 @@
 			<xs:element name="TasaDeCapitalizacionAplicable">
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="DecimalPositivo">
+						<xs:extension base="DecimalPositivo222">
 							<xs:attribute fixed="k.4" name="id" type="xs:string" use="required" />
 						</xs:extension>
 					</xs:simpleContent>
@@ -7086,7 +7121,7 @@
 							<xs:element name="Terreno" type="Terreno-ACatastral" />
 							<xs:element name="DescripcionDelInmueble" type="DescripcionDelInmueble-ACatastral" />
 							<xs:element name="ElementosDeLaConstruccion" type="ElementosDeLaConstruccion-ACatastral" />
-							<xs:element name="ConsideracionesPreviasAlAvaluo" type="ConsideracionesPreviasAlAvaluo" />
+							<xs:element name="ConsideracionesPreviasAlAvaluo" type="ConsideracionesPreviasAlAvaluo-ACatastral" />
 							<xs:element name="EnfoqueDeCostos" type="EnfoqueDeCostos-ACatastral" />
 							<xs:element name="ConsideracionesPreviasALaConclusion" type="ConsideracionesPreviasALaConclusion" />
 							<xs:element name="ConclusionDelAvaluo" type="ConclusionDelAvaluo-ACatastral" />

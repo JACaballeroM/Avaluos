@@ -1,0 +1,7 @@
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos\DES\Enum\bin\Release\SIGAPred.FuentesExternas.Avaluos.Enum.XML
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos\DES\Enum\bin\Release\SIGAPred.FuentesExternas.Avaluos.Enum.dll
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos\DES\Enum\bin\Release\SIGAPred.FuentesExternas.Avaluos.Enum.pdb
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos\DES\Enum\obj\Release\SIGAPred.FuentesExternas.Avaluos.Enum.csprojAssemblyReference.cache
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos\DES\Enum\obj\Release\SIGAPred.FuentesExternas.Avaluos.Enum.csproj.CoreCompileInputs.cache
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos\DES\Enum\obj\Release\SIGAPred.FuentesExternas.Avaluos.Enum.dll
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos\DES\Enum\obj\Release\SIGAPred.FuentesExternas.Avaluos.Enum.pdb

@@ -355,8 +355,9 @@ public partial class CuentasDuplicadas : PageBaseAvaluos
     private void RealizarBusqueda()
     {
         AvaluosClient cliente = new AvaluosClient();
-        DataSet ds = cliente.GetCuentasDuplicadas(fechaInicio, fechaFin, region, manzana, lote, unidad, registroPerito, false);
-        CargarGridView(ds);
+        //Descomentar
+        //DataSet ds = cliente.GetCuentasDuplicadas(fechaInicio, fechaFin, region, manzana, lote, unidad, registroPerito, false);
+        //CargarGridView(ds);
     }
 
     #endregion
@@ -462,18 +463,19 @@ public partial class CuentasDuplicadas : PageBaseAvaluos
             Microsoft.Reporting.WebForms.Warning[] warnings;
             string[] streams;
             string mimeType, encoding, fileNameExtension, reportType = ddlDowanload.SelectedItem.Text;
-            DataSet ds = cliente.GetCuentasDuplicadas(fechaInicio, fechaFin, region, manzana, lote, unidad, registroPerito, true);
+            //Descomentar
+            //DataSet ds = cliente.GetCuentasDuplicadas(fechaInicio, fechaFin, region, manzana, lote, unidad, registroPerito, true);
             //Creamos el origen de datos
             LocalReport rpvCuentas = new LocalReport();
 
             //Seleccionamos la dirección del reporte y el origen de los datos
             rpvCuentas.ReportPath = @"ReportDesign\CtasDuplicadas.rdlc";
-            ReportDataSource rdsDataCtas = new ReportDataSource("DataSet1", ds.Tables[0]);
+            //ReportDataSource rdsDataCtas = new ReportDataSource("DataSet1", ds.Tables[0]);
 
             //Añadimos la validacion si es reporte de cuenta Empadronadas o NO empadornadas
 
             //Añadimos el reportDataSource al reportViewer
-            rpvCuentas.DataSources.Add(rdsDataCtas);
+            //rpvCuentas.DataSources.Add(rdsDataCtas);
 
             //Creamos el render
             byte[] renderedBytes = rpvCuentas.Render( reportType, null, out mimeType, out encoding, out fileNameExtension, out streams, out warnings);

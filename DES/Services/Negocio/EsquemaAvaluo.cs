@@ -24961,528 +24961,537 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Esquema
 
         private DescripcionDelInmuebleTiposDeConstruccionVidaUtilRemanente vidaUtilRemanenteField;
 
-        private DescripcionDelInmuebleTiposDeConstruccionClaveConservacion claveConservacionField;
+        //JACM Se da de baja el campo 2021-02-11
+        //private DescripcionDelInmuebleTiposDeConstruccionClaveConservacion claveConservacionField;
 
-        private SUBSuperficie superficieField;
+            private SUBSuperficie superficieField;
 
-        private string idField;
+            private string idField;
 
-        public DescripcionDelInmuebleTiposDeConstruccion()
-        {
-            this.idField = "e.2";
-        }
+            public DescripcionDelInmuebleTiposDeConstruccion()
+            {
+                this.idField = "e.2";
+            }
+
+            /// <comentarios/>
+            public SUBDescripcion Descripcion
+            {
+                get
+                {
+                    return this.descripcionField;
+                }
+                set
+                {
+                    this.descripcionField = value;
+                }
+            }
+
+            /// <comentarios/>
+            public SUBClaveUso ClaveUso
+            {
+                get
+                {
+                    return this.claveUsoField;
+                }
+                set
+                {
+                    this.claveUsoField = value;
+                }
+            }
+
+            /// <comentarios/>
+            public DescripcionDelInmuebleTiposDeConstruccionNumeroDeNivelesDelTipo NumeroDeNivelesDelTipo
+            {
+                get
+                {
+                    return this.numeroDeNivelesDelTipoField;
+                }
+                set
+                {
+                    this.numeroDeNivelesDelTipoField = value;
+                }
+            }
+
+            /// <comentarios/>
+            public SUBClaveRangoDeNiveles ClaveRangoDeNiveles
+            {
+                get
+                {
+                    return this.claveRangoDeNivelesField;
+                }
+                set
+                {
+                    this.claveRangoDeNivelesField = value;
+                }
+            }
+
+            /// <comentarios/>
+            public DescripcionDelInmuebleTiposDeConstruccionPuntajeDeClasificacion PuntajeDeClasificacion
+            {
+                get
+                {
+                    return this.puntajeDeClasificacionField;
+                }
+                set
+                {
+                    this.puntajeDeClasificacionField = value;
+                }
+            }
+
+            /// <comentarios/>
+            public SUBClaveClase ClaveClase
+            {
+                get
+                {
+                    return this.claveClaseField;
+                }
+                set
+                {
+                    this.claveClaseField = value;
+                }
+            }
+
+            /// <comentarios/>
+            public DescripcionDelInmuebleTiposDeConstruccionEdad Edad
+            {
+                get
+                {
+                    return this.edadField;
+                }
+                set
+                {
+                    this.edadField = value;
+                }
+            }
+
+            /// <comentarios/>
+            public DescripcionDelInmuebleTiposDeConstruccionVidaUtilTotalDelTipo VidaUtilTotalDelTipo
+            {
+                get
+                {
+                    return this.vidaUtilTotalDelTipoField;
+                }
+                set
+                {
+                    this.vidaUtilTotalDelTipoField = value;
+                }
+            }
+
+            /// <comentarios/>
+            public DescripcionDelInmuebleTiposDeConstruccionVidaUtilRemanente VidaUtilRemanente
+            {
+                get
+                {
+                    return this.vidaUtilRemanenteField;
+                }
+                set
+                {
+                    this.vidaUtilRemanenteField = value;
+                }
+            }
 
         /// <comentarios/>
-        public SUBDescripcion Descripcion
-        {
-            get
-            {
-                return this.descripcionField;
+        //JACM Se da de baja el campo 2021-02-11
+        /*
+                public DescripcionDelInmuebleTiposDeConstruccionClaveConservacion ClaveConservacion
+                {
+                    get
+                    {
+                        return this.claveConservacionField;
+                    }
+                    set
+                    {
+                        this.claveConservacionField = value;
+                    }
+                }*/
+
+                /// <comentarios/>
+                public SUBSuperficie Superficie
+                {
+                    get
+                    {
+                        return this.superficieField;
+                    }
+                    set
+                    {
+                        this.superficieField = value;
+                    }
+                }
+
+                /// <comentarios/>
+                [System.Xml.Serialization.XmlAttributeAttribute()]
+                public string id
+                {
+                    get
+                    {
+                        return this.idField;
+                    }
+                    set
+                    {
+                        this.idField = value;
+                    }
+                }
             }
-            set
+
+            /// <comentarios/>
+            [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.42")]
+            [System.SerializableAttribute()]
+            [System.Diagnostics.DebuggerStepThroughAttribute()]
+            [System.ComponentModel.DesignerCategoryAttribute("code")]
+            [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+            public partial class DescripcionDelInmuebleTiposDeConstruccionNumeroDeNivelesDelTipo
             {
-                this.descripcionField = value;
+
+                private string idField;
+
+                private decimal valueField;
+
+                public DescripcionDelInmuebleTiposDeConstruccionNumeroDeNivelesDelTipo()
+                {
+                    this.idField = "e.2.1.n.3";
+                }
+
+                /// <comentarios/>
+                [System.Xml.Serialization.XmlAttributeAttribute()]
+                public string id
+                {
+                    get
+                    {
+                        return this.idField;
+                    }
+                    set
+                    {
+                        this.idField = value;
+                    }
+                }
+
+                /// <comentarios/>
+                [System.Xml.Serialization.XmlTextAttribute()]
+                public decimal Value
+                {
+                    get
+                    {
+                        return this.valueField;
+                    }
+                    set
+                    {
+                        this.valueField = value;
+                    }
+                }
             }
-        }
+
+            /// <comentarios/>
+            [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.42")]
+            [System.SerializableAttribute()]
+            [System.Diagnostics.DebuggerStepThroughAttribute()]
+            [System.ComponentModel.DesignerCategoryAttribute("code")]
+            [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+            public partial class DescripcionDelInmuebleTiposDeConstruccionPuntajeDeClasificacion
+            {
+
+                private string idField;
+
+                private decimal valueField;
+
+                public DescripcionDelInmuebleTiposDeConstruccionPuntajeDeClasificacion()
+                {
+                    this.idField = "e.2.1.n.5";
+                }
+
+                /// <comentarios/>
+                [System.Xml.Serialization.XmlAttributeAttribute()]
+                public string id
+                {
+                    get
+                    {
+                        return this.idField;
+                    }
+                    set
+                    {
+                        this.idField = value;
+                    }
+                }
+
+                /// <comentarios/>
+                [System.Xml.Serialization.XmlTextAttribute()]
+                public decimal Value
+                {
+                    get
+                    {
+                        return this.valueField;
+                    }
+                    set
+                    {
+                        this.valueField = value;
+                    }
+                }
+            }
+
+            /// <comentarios/>
+            [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.42")]
+            [System.SerializableAttribute()]
+            [System.Diagnostics.DebuggerStepThroughAttribute()]
+            [System.ComponentModel.DesignerCategoryAttribute("code")]
+            [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+            public partial class DescripcionDelInmuebleTiposDeConstruccionEdad
+            {
+
+                private string idField;
+
+                private decimal valueField;
+
+                public DescripcionDelInmuebleTiposDeConstruccionEdad()
+                {
+                    this.idField = "e.2.1.n.7";
+                    //this.idField = "e.2.n.7";
+                }
+
+                /// <comentarios/>
+                [System.Xml.Serialization.XmlAttributeAttribute()]
+                public string id
+                {
+                    get
+                    {
+                        return this.idField;
+                    }
+                    set
+                    {
+                        this.idField = value;
+                    }
+                }
+
+                /// <comentarios/>
+                [System.Xml.Serialization.XmlTextAttribute()]
+                public decimal Value
+                {
+                    get
+                    {
+                        return this.valueField;
+                    }
+                    set
+                    {
+                        this.valueField = value;
+                    }
+                }
+            }
+
+            /// <comentarios/>
+            [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.42")]
+            [System.SerializableAttribute()]
+            [System.Diagnostics.DebuggerStepThroughAttribute()]
+            [System.ComponentModel.DesignerCategoryAttribute("code")]
+            [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+            public partial class DescripcionDelInmuebleTiposDeConstruccionVidaUtilTotalDelTipo
+            {
+
+                private string idField;
+
+                private CatClasesYVidasTotales valueField;
+
+                public DescripcionDelInmuebleTiposDeConstruccionVidaUtilTotalDelTipo()
+                {
+                    this.idField = "e.2.1.n.8";
+                }
+
+                /// <comentarios/>
+                [System.Xml.Serialization.XmlAttributeAttribute()]
+                public string id
+                {
+                    get
+                    {
+                        return this.idField;
+                    }
+                    set
+                    {
+                        this.idField = value;
+                    }
+                }
+
+                /// <comentarios/>
+                [System.Xml.Serialization.XmlTextAttribute()]
+                public CatClasesYVidasTotales Value
+                {
+                    get
+                    {
+                        return this.valueField;
+                    }
+                    set
+                    {
+                        this.valueField = value;
+                    }
+                }
+            }
+
+            /// <comentarios/>
+            [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.42")]
+            [System.SerializableAttribute()]
+            [System.Xml.Serialization.XmlTypeAttribute(TypeName = "Cat-ClasesYVidasTotales")]
+            public enum CatClasesYVidasTotales
+            {
+
+                /// <comentarios/>
+                [System.Xml.Serialization.XmlEnumAttribute("1")]
+                Item1,
+
+                /// <comentarios/>
+                [System.Xml.Serialization.XmlEnumAttribute("2")]
+                Item2,
+
+                /// <comentarios/>
+                [System.Xml.Serialization.XmlEnumAttribute("3")]
+                Item3,
+
+                /// <comentarios/>
+                [System.Xml.Serialization.XmlEnumAttribute("4")]
+                Item4,
+
+                /// <comentarios/>
+                [System.Xml.Serialization.XmlEnumAttribute("5")]
+                Item5,
+
+                /// <comentarios/>
+                [System.Xml.Serialization.XmlEnumAttribute("6")]
+                Item6,
+
+                /// <comentarios/>
+                [System.Xml.Serialization.XmlEnumAttribute("7")]
+                Item7,
+
+                /// <comentarios/>
+                [System.Xml.Serialization.XmlEnumAttribute("8")]
+                Item8,
+
+                /// <comentarios/>
+                [System.Xml.Serialization.XmlEnumAttribute("9")]
+                Item9,
+
+                /// <comentarios/>
+                [System.Xml.Serialization.XmlEnumAttribute("10")]
+                Item10,
+
+                /// <comentarios/>
+                [System.Xml.Serialization.XmlEnumAttribute("11")]
+                Item11,
+
+                /// <comentarios/>
+                [System.Xml.Serialization.XmlEnumAttribute("12")]
+                Item12,
+
+                /// <comentarios/>
+                [System.Xml.Serialization.XmlEnumAttribute("13")]
+                Item13,
+
+                /// <comentarios/>
+                [System.Xml.Serialization.XmlEnumAttribute("14")]
+                Item14,
+
+                /// <comentarios/>
+                [System.Xml.Serialization.XmlEnumAttribute("15")]
+                Item15,
+            }
+
+            /// <comentarios/>
+            [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.42")]
+            [System.SerializableAttribute()]
+            [System.Diagnostics.DebuggerStepThroughAttribute()]
+            [System.ComponentModel.DesignerCategoryAttribute("code")]
+            [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+            public partial class DescripcionDelInmuebleTiposDeConstruccionVidaUtilRemanente
+            {
+
+                private string idField;
+
+                private decimal valueField;
+
+                public DescripcionDelInmuebleTiposDeConstruccionVidaUtilRemanente()
+                {
+                    this.idField = "e.2.1.n.9";
+                }
+
+                /// <comentarios/>
+                [System.Xml.Serialization.XmlAttributeAttribute()]
+                public string id
+                {
+                    get
+                    {
+                        return this.idField;
+                    }
+                    set
+                    {
+                        this.idField = value;
+                    }
+                }
+
+                /// <comentarios/>
+                [System.Xml.Serialization.XmlTextAttribute()]
+                public decimal Value
+                {
+                    get
+                    {
+                        return this.valueField;
+                    }
+                    set
+                    {
+                        this.valueField = value;
+                    }
+                }
+            }
+
+
+            //JACM Se da de baja el campo 2021-02-11
+            /*
+            /// <comentarios/>
+            [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.42")]
+            [System.SerializableAttribute()]
+            [System.Diagnostics.DebuggerStepThroughAttribute()]
+            [System.ComponentModel.DesignerCategoryAttribute("code")]
+            [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+
+
+            public partial class DescripcionDelInmuebleTiposDeConstruccionClaveConservacion
+            {
+
+                private string idField;
+
+                private CatEstadoConservacion valueField;
+
+                public DescripcionDelInmuebleTiposDeConstruccionClaveConservacion()
+                {
+                    this.idField = "e.2.1.n.10";
+                }
+
+                /// <comentarios/>
+                [System.Xml.Serialization.XmlAttributeAttribute()]
+                public string id
+                {
+                    get
+                    {
+                        return this.idField;
+                    }
+                    set
+                    {
+                        this.idField = value;
+                    }
+                }
+
+                /// <comentarios/>
+                [System.Xml.Serialization.XmlTextAttribute()]
+                public CatEstadoConservacion Value
+                {
+                    get
+                    {
+                        return this.valueField;
+                    }
+                    set
+                    {
+                        this.valueField = value;
+                    }
+                }
+            }
+            */
 
         /// <comentarios/>
-        public SUBClaveUso ClaveUso
-        {
-            get
-            {
-                return this.claveUsoField;
-            }
-            set
-            {
-                this.claveUsoField = value;
-            }
-        }
-
-        /// <comentarios/>
-        public DescripcionDelInmuebleTiposDeConstruccionNumeroDeNivelesDelTipo NumeroDeNivelesDelTipo
-        {
-            get
-            {
-                return this.numeroDeNivelesDelTipoField;
-            }
-            set
-            {
-                this.numeroDeNivelesDelTipoField = value;
-            }
-        }
-
-        /// <comentarios/>
-        public SUBClaveRangoDeNiveles ClaveRangoDeNiveles
-        {
-            get
-            {
-                return this.claveRangoDeNivelesField;
-            }
-            set
-            {
-                this.claveRangoDeNivelesField = value;
-            }
-        }
-
-        /// <comentarios/>
-        public DescripcionDelInmuebleTiposDeConstruccionPuntajeDeClasificacion PuntajeDeClasificacion
-        {
-            get
-            {
-                return this.puntajeDeClasificacionField;
-            }
-            set
-            {
-                this.puntajeDeClasificacionField = value;
-            }
-        }
-
-        /// <comentarios/>
-        public SUBClaveClase ClaveClase
-        {
-            get
-            {
-                return this.claveClaseField;
-            }
-            set
-            {
-                this.claveClaseField = value;
-            }
-        }
-
-        /// <comentarios/>
-        public DescripcionDelInmuebleTiposDeConstruccionEdad Edad
-        {
-            get
-            {
-                return this.edadField;
-            }
-            set
-            {
-                this.edadField = value;
-            }
-        }
-
-        /// <comentarios/>
-        public DescripcionDelInmuebleTiposDeConstruccionVidaUtilTotalDelTipo VidaUtilTotalDelTipo
-        {
-            get
-            {
-                return this.vidaUtilTotalDelTipoField;
-            }
-            set
-            {
-                this.vidaUtilTotalDelTipoField = value;
-            }
-        }
-
-        /// <comentarios/>
-        public DescripcionDelInmuebleTiposDeConstruccionVidaUtilRemanente VidaUtilRemanente
-        {
-            get
-            {
-                return this.vidaUtilRemanenteField;
-            }
-            set
-            {
-                this.vidaUtilRemanenteField = value;
-            }
-        }
-
-        /// <comentarios/>
-        public DescripcionDelInmuebleTiposDeConstruccionClaveConservacion ClaveConservacion
-        {
-            get
-            {
-                return this.claveConservacionField;
-            }
-            set
-            {
-                this.claveConservacionField = value;
-            }
-        }
-
-        /// <comentarios/>
-        public SUBSuperficie Superficie
-        {
-            get
-            {
-                return this.superficieField;
-            }
-            set
-            {
-                this.superficieField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string id
-        {
-            get
-            {
-                return this.idField;
-            }
-            set
-            {
-                this.idField = value;
-            }
-        }
-    }
-
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.42")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    public partial class DescripcionDelInmuebleTiposDeConstruccionNumeroDeNivelesDelTipo
-    {
-
-        private string idField;
-
-        private decimal valueField;
-
-        public DescripcionDelInmuebleTiposDeConstruccionNumeroDeNivelesDelTipo()
-        {
-            this.idField = "e.2.1.n.3";
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string id
-        {
-            get
-            {
-                return this.idField;
-            }
-            set
-            {
-                this.idField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public decimal Value
-        {
-            get
-            {
-                return this.valueField;
-            }
-            set
-            {
-                this.valueField = value;
-            }
-        }
-    }
-
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.42")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    public partial class DescripcionDelInmuebleTiposDeConstruccionPuntajeDeClasificacion
-    {
-
-        private string idField;
-
-        private decimal valueField;
-
-        public DescripcionDelInmuebleTiposDeConstruccionPuntajeDeClasificacion()
-        {
-            this.idField = "e.2.1.n.5";
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string id
-        {
-            get
-            {
-                return this.idField;
-            }
-            set
-            {
-                this.idField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public decimal Value
-        {
-            get
-            {
-                return this.valueField;
-            }
-            set
-            {
-                this.valueField = value;
-            }
-        }
-    }
-
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.42")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    public partial class DescripcionDelInmuebleTiposDeConstruccionEdad
-    {
-
-        private string idField;
-
-        private decimal valueField;
-
-        public DescripcionDelInmuebleTiposDeConstruccionEdad()
-        {
-            this.idField = "e.2.1.n.7";
-            //this.idField = "e.2.n.7";
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string id
-        {
-            get
-            {
-                return this.idField;
-            }
-            set
-            {
-                this.idField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public decimal Value
-        {
-            get
-            {
-                return this.valueField;
-            }
-            set
-            {
-                this.valueField = value;
-            }
-        }
-    }
-
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.42")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    public partial class DescripcionDelInmuebleTiposDeConstruccionVidaUtilTotalDelTipo
-    {
-
-        private string idField;
-
-        private CatClasesYVidasTotales valueField;
-
-        public DescripcionDelInmuebleTiposDeConstruccionVidaUtilTotalDelTipo()
-        {
-            this.idField = "e.2.1.n.8";
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string id
-        {
-            get
-            {
-                return this.idField;
-            }
-            set
-            {
-                this.idField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public CatClasesYVidasTotales Value
-        {
-            get
-            {
-                return this.valueField;
-            }
-            set
-            {
-                this.valueField = value;
-            }
-        }
-    }
-
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.42")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName = "Cat-ClasesYVidasTotales")]
-    public enum CatClasesYVidasTotales
-    {
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlEnumAttribute("1")]
-        Item1,
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlEnumAttribute("2")]
-        Item2,
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlEnumAttribute("3")]
-        Item3,
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlEnumAttribute("4")]
-        Item4,
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlEnumAttribute("5")]
-        Item5,
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlEnumAttribute("6")]
-        Item6,
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlEnumAttribute("7")]
-        Item7,
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlEnumAttribute("8")]
-        Item8,
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlEnumAttribute("9")]
-        Item9,
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlEnumAttribute("10")]
-        Item10,
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlEnumAttribute("11")]
-        Item11,
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlEnumAttribute("12")]
-        Item12,
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlEnumAttribute("13")]
-        Item13,
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlEnumAttribute("14")]
-        Item14,
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlEnumAttribute("15")]
-        Item15,
-    }
-
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.42")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    public partial class DescripcionDelInmuebleTiposDeConstruccionVidaUtilRemanente
-    {
-
-        private string idField;
-
-        private decimal valueField;
-
-        public DescripcionDelInmuebleTiposDeConstruccionVidaUtilRemanente()
-        {
-            this.idField = "e.2.1.n.9";
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string id
-        {
-            get
-            {
-                return this.idField;
-            }
-            set
-            {
-                this.idField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public decimal Value
-        {
-            get
-            {
-                return this.valueField;
-            }
-            set
-            {
-                this.valueField = value;
-            }
-        }
-    }
-
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.42")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    public partial class DescripcionDelInmuebleTiposDeConstruccionClaveConservacion
-    {
-
-        private string idField;
-
-        private CatEstadoConservacion valueField;
-
-        /*public DescripcionDelInmuebleTiposDeConstruccionClaveConservacion()
-        {
-            this.idField = "e.2.1.n.10";
-        }*/
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string id
-        {
-            get
-            {
-                return this.idField;
-            }
-            set
-            {
-                this.idField = value;
-            }
-        }
-
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public CatEstadoConservacion Value
-        {
-            get
-            {
-                return this.valueField;
-            }
-            set
-            {
-                this.valueField = value;
-            }
-        }
-    }
-
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.42")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.42")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]

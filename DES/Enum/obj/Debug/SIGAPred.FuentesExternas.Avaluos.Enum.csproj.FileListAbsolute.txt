@@ -13,7 +13,13 @@ C:\Users\MarioDaniel\Desktop\SIGAPred\Avaluos\DES\Enum\obj\Debug\SIGAPred.Fuente
 C:\Users\EdgarAntunezMartinez\Documents\Avaluos\DES\Enum\bin\Debug\SIGAPred.FuentesExternas.Avaluos.Enum.XML
 C:\Users\EdgarAntunezMartinez\Documents\Avaluos\DES\Enum\bin\Debug\SIGAPred.FuentesExternas.Avaluos.Enum.dll
 C:\Users\EdgarAntunezMartinez\Documents\Avaluos\DES\Enum\bin\Debug\SIGAPred.FuentesExternas.Avaluos.Enum.pdb
-C:\Users\EdgarAntunezMartinez\Documents\Avaluos\DES\Enum\obj\Debug\SIGAPred.FuentesExternas.Avaluos.Enum.csprojAssemblyReference.cache
 C:\Users\EdgarAntunezMartinez\Documents\Avaluos\DES\Enum\obj\Debug\SIGAPred.FuentesExternas.Avaluos.Enum.csproj.CoreCompileInputs.cache
 C:\Users\EdgarAntunezMartinez\Documents\Avaluos\DES\Enum\obj\Debug\SIGAPred.FuentesExternas.Avaluos.Enum.dll
 C:\Users\EdgarAntunezMartinez\Documents\Avaluos\DES\Enum\obj\Debug\SIGAPred.FuentesExternas.Avaluos.Enum.pdb
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\Enum\bin\Debug\SIGAPred.FuentesExternas.Avaluos.Enum.XML
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\Enum\bin\Debug\SIGAPred.FuentesExternas.Avaluos.Enum.dll
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\Enum\bin\Debug\SIGAPred.FuentesExternas.Avaluos.Enum.pdb
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\Enum\obj\Debug\SIGAPred.FuentesExternas.Avaluos.Enum.csprojAssemblyReference.cache
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\Enum\obj\Debug\SIGAPred.FuentesExternas.Avaluos.Enum.csproj.CoreCompileInputs.cache
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\Enum\obj\Debug\SIGAPred.FuentesExternas.Avaluos.Enum.dll
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\Enum\obj\Debug\SIGAPred.FuentesExternas.Avaluos.Enum.pdb

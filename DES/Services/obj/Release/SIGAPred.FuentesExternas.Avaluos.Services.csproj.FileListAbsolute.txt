@@ -1,0 +1,4 @@
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos\DES\Services\obj\Release\SIGAPred.FuentesExternas.Avaluos.Services.csprojAssemblyReference.cache
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos\DES\Services\obj\Release\SIGAPred.FuentesExternas.Avaluos.Services.Properties.Resources.resources
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos\DES\Services\obj\Release\SIGAPred.FuentesExternas.Avaluos.Services.csproj.GenerateResource.cache
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos\DES\Services\obj\Release\SIGAPred.FuentesExternas.Avaluos.Services.csproj.CoreCompileInputs.cache

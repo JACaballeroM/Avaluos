@@ -74,7 +74,7 @@ public partial class UserControlsCommon_ModalAvaluoError : UserControlBase
         catch (Exception ex)
         {
             ExceptionPolicyWrapper.HandleException(ex);
-            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ex.Message;
+            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ex.Message + Environment.NewLine + ex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
         }
     }
@@ -145,6 +145,8 @@ public partial class UserControlsCommon_ModalAvaluoError : UserControlBase
 
     private void MostrarMensajeInfoExcepcion(string mensaje)
     {
+        System.IO.File.AppendAllText(AppDomain.CurrentDomain.BaseDirectory + "\\Avaluos.log", "\n\r" + DateTime.Now.ToString() + " MostrarMensajeInfoExcepcion : Exception: " + mensaje + "\n\r" );
+
         errorTareas.TextoBasicoMostrar = Constantes.MSJ_ERROR_APLICACION;
         errorTareas.TextoAvanzadoMostrar = mensaje;
         mpeErrorTareas.Show();

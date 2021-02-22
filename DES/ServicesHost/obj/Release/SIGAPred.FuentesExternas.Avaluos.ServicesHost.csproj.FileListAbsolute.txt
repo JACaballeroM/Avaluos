@@ -1,0 +1,2 @@
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos\DES\ServicesHost\obj\Release\SIGAPred.FuentesExternas.Avaluos.ServicesHost.csprojAssemblyReference.cache
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos\DES\ServicesHost\obj\Release\SIGAPred.FuentesExternas.Avaluos.ServicesHost.csproj.CoreCompileInputs.cache

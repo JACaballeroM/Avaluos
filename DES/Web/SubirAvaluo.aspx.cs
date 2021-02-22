@@ -58,18 +58,18 @@ public partial class SubirAvaluo : PageBaseAvaluos
         }
         catch (FaultException<ServiceAvaluos.AvaluosException> cex)
         {
-            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
+            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion + Environment.NewLine + cex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
         }
         catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
         {
-            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
+            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion + Environment.NewLine + ciex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
         }
         catch (Exception ex)
         {
             ExceptionPolicyWrapper.HandleException(ex);
-            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ex.Message;
+            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ex.Message + Environment.NewLine + ex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
         }
     }
@@ -88,7 +88,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
         catch (Exception ex)
         {
             ExceptionPolicyWrapper.HandleException(ex);
-            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ex.Message;
+            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ex.Message + Environment.NewLine + ex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
         }
     }
@@ -101,6 +101,8 @@ public partial class SubirAvaluo : PageBaseAvaluos
     /// <param name="mensaje">El mensaje que se quiere mostrar.</param>
     private void MostrarMensajeInfoExcepcion(string mensaje)
     {
+        System.IO.File.AppendAllText(AppDomain.CurrentDomain.BaseDirectory + "\\Avaluos.log", "\n\r" + DateTime.Now.ToString() + " MostrarMensajeInfoExcepcion : Exception: " + mensaje + "\n\r");
+
         errorTareas.TextoBasicoMostrar = Constantes.MSJ_ERROR_APLICACION;
         errorTareas.TextoAvanzadoMostrar = mensaje;
         mpeErrorTareas.Show();
@@ -368,7 +370,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                     }
                                     catch (ArgumentException ex)
                                     {
-                                        string mensaje = ex.Message;
+                                        string mensaje = ex.Message + Environment.NewLine + ex.StackTrace;
                                         MostrarMensajeInfoExcepcion(Constantes.MSJ_REGISTRAR_INTENTOFALLIDO + Constantes.SIMBOLO_DOSPUNTOS + mensaje);
                                     }
                                 }
@@ -528,26 +530,26 @@ public partial class SubirAvaluo : PageBaseAvaluos
         catch (FaultException<ServiceAvaluos.AvaluosException> cex)
         {
             LimpiarViewStateDocumentoXML();
-            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
+            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion + Environment.NewLine + cex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
         }
         catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
         {
             LimpiarViewStateDocumentoXML();
-            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
+            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion + Environment.NewLine + ciex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
         }
         catch (FileUploadExtension.FileUploadExtensionException fuex)
         {
             LimpiarViewStateDocumentoXML();
-            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + fuex.Message;
+            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + fuex.Message + Environment.NewLine + fuex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
         }
         catch (Exception ex)
         {
             LimpiarViewStateDocumentoXML();
             ExceptionPolicyWrapper.HandleException(ex);
-            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ex.Message;
+            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ex.Message + Environment.NewLine + ex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
         }
     }
@@ -567,7 +569,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
         catch (Exception ex)
         {
             ExceptionPolicyWrapper.HandleException(ex);
-            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ex.Message;
+            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ex.Message + Environment.NewLine + ex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
         }
     }
@@ -586,7 +588,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
         catch (Exception ex)
         {
             ExceptionPolicyWrapper.HandleException(ex);
-            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ex.Message;
+            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ex.Message + Environment.NewLine + ex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
         }
     }
@@ -605,7 +607,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
         catch (Exception ex)
         {
             ExceptionPolicyWrapper.HandleException(ex);
-            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ex.Message;
+            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ex.Message + Environment.NewLine + ex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
         }
     }
@@ -624,7 +626,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
         catch (Exception ex)
         {
             ExceptionPolicyWrapper.HandleException(ex);
-            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ex.Message;
+            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ex.Message + Environment.NewLine + ex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
         }
     }
@@ -656,20 +658,20 @@ public partial class SubirAvaluo : PageBaseAvaluos
         catch (FaultException<ServiceAvaluos.AvaluosException> cex)
         {
             LimpiarViewStateDocumentoXML();
-            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
+            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion + Environment.NewLine + cex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
         }
         catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
         {
             LimpiarViewStateDocumentoXML();
-            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
+            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion + Environment.NewLine + ciex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
         }
         catch (Exception ex)
         {
             LimpiarViewStateDocumentoXML();
             ExceptionPolicyWrapper.HandleException(ex);
-            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ex.Message;
+            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ex.Message + Environment.NewLine + ex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
         }
     }
