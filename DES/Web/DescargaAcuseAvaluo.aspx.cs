@@ -27,14 +27,20 @@ public partial class DescargaAcuseAvaluo : PageBaseAvaluos
         {
             if (!IsPostBack)
             {
-            XmlDocument xmlAvaluo = GetXmlAvaluo(Convert.ToInt32(SIGAPred.Common.Web.WebUtils.QueryString(Constantes.PAR_IDAVALUO)));
+                System.IO.File.AppendAllText(AppDomain.CurrentDomain.BaseDirectory + "\\Avaluos.log", "\n\r" 
+                    + DateTime.Now.ToString() + " " + "DescargarAcuseAvaluo Page_Load : Constantes.PAR_IDAVALUO: " + Constantes.PAR_IDAVALUO + "\n\r");
+
+                XmlDocument xmlAvaluo = GetXmlAvaluo(Convert.ToInt32(SIGAPred.Common.Web.WebUtils.QueryString(Constantes.PAR_IDAVALUO)));
                //your code here  
                     DataSetAcuseAva DSAcuseAva = new DataSetAcuseAva();
                     string numUnico = (SIGAPred.Common.Web.WebUtils.QueryString(Constantes.PAR_NUMUNIAVALUO)).ToString();
 
-                    //Cargar el DataSet con los valores del xml
-                    #region [ Identificacion ]
-                    DataSetAcuseAva.IdentificacionRow drId = DSAcuseAva.Identificacion.NewIdentificacionRow();
+                System.IO.File.AppendAllText(AppDomain.CurrentDomain.BaseDirectory + "\\Avaluos.log", "\n\r"
+                    + DateTime.Now.ToString() + " " + "DescargarAcuseAvaluo Page_Load : numUnico : " + numUnico + "\n\r");
+
+                //Cargar el DataSet con los valores del xml
+                #region [ Identificacion ]
+                DataSetAcuseAva.IdentificacionRow drId = DSAcuseAva.Identificacion.NewIdentificacionRow();
                     drId.NumUnico = numUnico;
                     DSAcuseAva.Identificacion.AddIdentificacionRow(drId);
                     #endregion
@@ -66,7 +72,7 @@ public partial class DescargaAcuseAvaluo : PageBaseAvaluos
 
                     #region colonia delegacion Prop.
                     drProp.Colonia = xmlAvaluo.SelectSingleNode(Constantes.RUTA_PROP + "Colonia").InnerText;
-                    drProp.Delegacion = ObtenerNombreDelegacionPorClave(xmlAvaluo.SelectSingleNode(Constantes.RUTA_PROP + "Delegacion").InnerText);
+                    drProp.Delegacion = ObtenerNombreDelegacionPorClave(xmlAvaluo.SelectSingleNode(Constantes.RUTA_PROP + "Alcaldia").InnerText);
                     #endregion
 
                     #region Código postal Prop.
@@ -105,7 +111,7 @@ public partial class DescargaAcuseAvaluo : PageBaseAvaluos
                     #endregion
 
                     drInm.Colonia = xmlAvaluo.SelectSingleNode(Constantes.RUTA_INM + "Colonia").InnerText;
-                    drInm.Delegacion = ObtenerNombreDelegacionPorClave(xmlAvaluo.SelectSingleNode(Constantes.RUTA_INM + "Delegacion").InnerText);
+                    drInm.Delegacion = ObtenerNombreDelegacionPorClave(xmlAvaluo.SelectSingleNode(Constantes.RUTA_INM + "Alcaldia").InnerText);
 
                     drInm.CodigoPostal = (xmlAvaluo.SelectSingleNode(Constantes.RUTA_INM + "CodigoPostal")).InnerText;
                     DSAcuseAva.InmuebleQueSeValua.AddInmuebleQueSeValuaRow(drInm);
@@ -210,22 +216,26 @@ public partial class DescargaAcuseAvaluo : PageBaseAvaluos
                 #endregion
 
                 rpvAvaluo.DataBind();
+            }else
+            {
+                System.IO.File.AppendAllText(AppDomain.CurrentDomain.BaseDirectory + "\\Avaluos.log", "\n\r"
+                   + DateTime.Now.ToString() + " " + "DescargarAcuseAvaluo Page_Load :  POSTBACK \n\r");
             }
         }
         catch (FaultException<ServiceAvaluos.AvaluosException> cex)
         {
-            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
+            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion + Environment.NewLine + cex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
         }
         catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
         {
-            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
+            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion + Environment.NewLine + ciex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
         }
         catch (Exception ex)
         {
             ExceptionPolicyWrapper.HandleException(ex);
-            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ex.Message;
+            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ex.Message + Environment.NewLine + ex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
         }
     }
@@ -240,13 +250,15 @@ public partial class DescargaAcuseAvaluo : PageBaseAvaluos
     {
         try
         {
+            System.IO.File.AppendAllText(AppDomain.CurrentDomain.BaseDirectory + "\\Avaluos.log", "\n\r"
+                    + DateTime.Now.ToString() + " " + "DescargarAcuseAvaluo Page_Prerender :  \n\r");
             //Se establece el botón de cancelar para los modalpopupextenders
             mpeErrorTareas.CancelControlID = errorTareas.ClientIdCancelacion;
         }
         catch (Exception ex)
         {
             ExceptionPolicyWrapper.HandleException(ex);
-            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ex.Message;
+            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ex.Message + Environment.NewLine + ex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
         }
     }
@@ -259,6 +271,8 @@ public partial class DescargaAcuseAvaluo : PageBaseAvaluos
     /// <param name="mensaje">El mensaje que se quiere mostrar.</param>
     private void MostrarMensajeInfoExcepcion(string mensaje)
     {
+        System.IO.File.AppendAllText(AppDomain.CurrentDomain.BaseDirectory + "\\Avaluos.log", "\n\r" + DateTime.Now.ToString() + " " 
+            + "MostrarMensajeInfoExcepcion : Exception: " + mensaje + "\n\r");
         errorTareas.TextoBasicoMostrar = Constantes.MSJ_ERROR_APLICACION;
         errorTareas.TextoAvanzadoMostrar = mensaje;
         mpeErrorTareas.Show();
@@ -331,7 +345,8 @@ public partial class DescargaAcuseAvaluo : PageBaseAvaluos
             nuevoElemento.InnerText = idAvaluo.ToString();
           
             //El xml puede ser Catastral o comercial
-            if (xmlAvaluo.SelectSingleNode(Constantes.NODO_RAIZ).FirstChild.Name.Equals(Constantes.PAR_XML_AV_CATASTRAL) || xmlAvaluo.SelectSingleNode(Constantes.NODO_RAIZ).FirstChild.Name.Equals(Constantes.PAR_XML_AV__COMERCIAL))
+            if (xmlAvaluo.SelectSingleNode(Constantes.NODO_RAIZ).FirstChild.Name.Equals(Constantes.PAR_XML_AV_CATASTRAL) || 
+                xmlAvaluo.SelectSingleNode(Constantes.NODO_RAIZ).FirstChild.Name.Equals(Constantes.PAR_XML_AV__COMERCIAL))
             {
                 xmlAvaluo.SelectSingleNode(Constantes.RUTA_IDENTIF).AppendChild(nuevoElemento);
             }
@@ -342,18 +357,18 @@ public partial class DescargaAcuseAvaluo : PageBaseAvaluos
         }
         catch (FaultException<ServiceAvaluos.AvaluosException> cex)
         {
-            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
+            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion + Environment.NewLine + cex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
         }
         catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
         {
-            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
+            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion + Environment.NewLine + ciex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
         }
         catch (Exception ex)
         {
             ExceptionPolicyWrapper.HandleException(ex);
-            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ex.Message;
+            string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ex.Message + Environment.NewLine + ex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
         }
         return xmlAvaluo;

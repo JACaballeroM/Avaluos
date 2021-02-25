@@ -110,7 +110,7 @@
             </Style>
           </Paragraph>
         </Paragraphs>
-        <Top>0.75cm</Top>
+        <Top>0.76687cm</Top>
         <Left>6cm</Left>
         <Height>0.5cm</Height>
         <Width>13cm</Width>
@@ -575,7 +575,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Delegación:</Value>
+                    <Value>Alcaldía:</Value>
                     <Style>
                       <FontSize>7pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -762,7 +762,7 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>4.65652cm</Top>
+            <Top>4.66534cm</Top>
             <Left>8.07056cm</Left>
             <Height>0.5cm</Height>
             <Width>10.87652cm</Width>
@@ -920,7 +920,7 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>2.1557cm</Top>
+            <Top>2.19215cm</Top>
             <Left>8.07056cm</Left>
             <Height>0.5cm</Height>
             <Width>10.94402cm</Width>
@@ -1458,7 +1458,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!NOMBRE.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONAS") &amp;" "&amp; First(Fields!APELLIDOPATERNO.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONAS") &amp;" "&amp; First(Fields!APELLIDOMATERNO.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONAS")</Value>
+                <Value>=First(Fields!NOMBRE.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONASSOL") &amp;" "&amp; First(Fields!APELLIDOPATERNO.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONAS") &amp;" "&amp; First(Fields!APELLIDOMATERNO.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONASSOL")</Value>
                 <Style>
                   <FontSize>7pt</FontSize>
                 </Style>
@@ -1709,7 +1709,7 @@
             </Style>
           </Paragraph>
         </Paragraphs>
-        <Top>27.93917cm</Top>
+        <Top>27.9039cm</Top>
         <Left>7.75cm</Left>
         <Height>1cm</Height>
         <Width>11cm</Width>
@@ -2063,7 +2063,7 @@
             </Style>
           </Paragraph>
         </Paragraphs>
-        <Top>31.37167cm</Top>
+        <Top>31.3364cm</Top>
         <Left>8cm</Left>
         <Height>0.5cm</Height>
         <Width>10.75cm</Width>
@@ -2123,7 +2123,7 @@
             </Style>
           </Paragraph>
         </Paragraphs>
-        <Top>32.65389cm</Top>
+        <Top>32.68917cm</Top>
         <Left>8cm</Left>
         <Height>0.5cm</Height>
         <Width>10.75cm</Width>
@@ -2538,8 +2538,8 @@
             </Style>
           </Paragraph>
         </Paragraphs>
-        <Top>36.21834cm</Top>
-        <Left>8.02646cm</Left>
+        <Top>36.28889cm</Top>
+        <Left>8cm</Left>
         <Height>0.5cm</Height>
         <Width>10.75cm</Width>
         <ZIndex>65</ZIndex>
@@ -3635,7 +3635,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>="Calle: " + First(Fields!CALLE.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONAS")</Value>
+                <Value>="Calle: " + First(Fields!CALLE.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONASSOL")</Value>
                 <Style>
                   <FontSize>7pt</FontSize>
                 </Style>
@@ -3665,7 +3665,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>= "Colonia: " + First(Fields!DescColonia.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONAS")</Value>
+                <Value>= "Colonia: " + First(Fields!DescColonia.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONASSOL")</Value>
                 <Style>
                   <FontSize>7pt</FontSize>
                 </Style>
@@ -3695,7 +3695,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>= "Delegación: " &amp; First(Fields!DescDeleg.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONAS")</Value>
+                <Value>= "Alcaldía: " &amp; First(Fields!DescDeleg.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONASSOL")</Value>
                 <Style>
                   <FontSize>7pt</FontSize>
                 </Style>
@@ -3906,7 +3906,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>= "Nº Exterior: " &amp; First(Fields!NUMEROEXTERIOR.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONAS")</Value>
+                <Value>= "Nº Exterior: " &amp; First(Fields!NUMEROEXTERIOR.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONASSOL")</Value>
                 <Style>
                   <FontSize>7pt</FontSize>
                 </Style>
@@ -3966,7 +3966,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>= "Delegación: " + First(Fields!DescDeleg.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONASSOL")</Value>
+                <Value>= "Alcaldía: " + First(Fields!Delegacion.Value, "DataSet2")</Value>
                 <Style>
                   <FontSize>7pt</FontSize>
                 </Style>
@@ -3996,7 +3996,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>= "CP : " + First(Fields!CODIGOPOSTAL.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONAS")</Value>
+                <Value>= "CP : " + First(Fields!CODIGOPOSTAL.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONASSOL")</Value>
                 <Style>
                   <FontSize>7pt</FontSize>
                 </Style>
@@ -4026,7 +4026,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>= "Nº Interior: " &amp; First(Fields!NUMEROINTERIOR.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONAS")</Value>
+                <Value>= "Nº Interior: " &amp; First(Fields!NUMEROINTERIOR.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONASSOL")</Value>
                 <Style>
                   <FontSize>7pt</FontSize>
                 </Style>
@@ -4146,7 +4146,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>="Tipo persona: " + IIF(First(Fields!TipoPersona.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONAS")="M","Moral", "")+ IIF(First(Fields!TipoPersona.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONAS")="F","Física", "") + IIF(First(Fields!TipoPersona.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONAS")="m","Moral", "")+ IIF(First(Fields!TipoPersona.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONAS")="f","Física", "")</Value>
+                <Value>="Tipo persona: " + IIF(First(Fields!TipoPersona.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONASSOL")="M","Moral", "")+ IIF(First(Fields!TipoPersona.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONASSOL")="F","Física", "") + IIF(First(Fields!TipoPersona.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONASSOL")="m","Moral", "")+ IIF(First(Fields!TipoPersona.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONASSOL")="f","Física", "")</Value>
                 <Style>
                   <FontSize>7pt</FontSize>
                 </Style>
@@ -4157,7 +4157,7 @@
             </Style>
           </Paragraph>
         </Paragraphs>
-        <Top>8.73431cm</Top>
+        <Top>8.76959cm</Top>
         <Left>6cm</Left>
         <Height>0.5cm</Height>
         <Width>12.92368cm</Width>
@@ -4169,69 +4169,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="textbox140">
-        <CanGrow>true</CanGrow>
-        <CanShrink>true</CanShrink>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Microsoft.VisualBasic.Interaction.iif(First(Fields!TIPOCODOMINIO.Value, "DataSet1") &gt; 0, "TIPO DE CONDOMINIO:", "")</Value>
-                <Style>
-                  <FontSize>7pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <Top>7.82808cm</Top>
-        <Left>0.25cm</Left>
-        <Height>0.5cm</Height>
-        <Width>4.5cm</Width>
-        <ZIndex>120</ZIndex>
-        <Style>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="textbox141">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Microsoft.VisualBasic.Interaction.iif(First(Fields!TIPOCODOMINIO.Value, "DataSet1") = 1, "Horizontal", Microsoft.VisualBasic.Interaction.iif(First(Fields!TIPOCODOMINIO.Value, "DataSet1") = 2, "Vertical", ""))</Value>
-                <Style>
-                  <FontSize>7pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <Top>7.86336cm</Top>
-        <Left>6cm</Left>
-        <Height>0.5cm</Height>
-        <Width>13cm</Width>
-        <ZIndex>121</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
+      
     </ReportItems>
     <Height>49.91701cm</Height>
     <Style />
@@ -4263,88 +4201,15 @@
       </ConnectionProperties>
       <rd:DataSourceID>cfb50518-e941-41e5-b110-1749ac2e7ab5</rd:DataSourceID>
     </DataSource>
+    <DataSource Name="DataSetAcuseAva">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>307045dd-3096-49c6-8d48-d2c9e87e9ec5</rd:DataSourceID>
+    </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DseAvaluoMantInf_FEXAVA_DATOSPERSONAS">
-      <Query>
-        <DataSourceName>DummyDataSource</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="IDDATOSPERSONAS">
-          <DataField>IDDATOSPERSONAS</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="NOMBRE">
-          <DataField>NOMBRE</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="APELLIDOMATERNO">
-          <DataField>APELLIDOMATERNO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="APELLIDOPATERNO">
-          <DataField>APELLIDOPATERNO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CALLE">
-          <DataField>CALLE</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="NUMEROINTERIOR">
-          <DataField>NUMEROINTERIOR</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="NUMEROEXTERIOR">
-          <DataField>NUMEROEXTERIOR</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="IDCOLONIA">
-          <DataField>IDCOLONIA</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="IDDELEGACION">
-          <DataField>IDDELEGACION</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="CODTIPOFUNCION">
-          <DataField>CODTIPOFUNCION</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CODIGOPOSTAL">
-          <DataField>CODIGOPOSTAL</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="IDAVALUO">
-          <DataField>IDAVALUO</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="ROL">
-          <DataField>ROL</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DescColonia">
-          <DataField>DescColonia</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DescDeleg">
-          <DataField>DescDeleg</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="TipoPersona">
-          <DataField>TipoPersona</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DseAvaluoMantInf</rd:DataSetName>
-        <rd:SchemaPath>u:\Mis documentos\Visual Studio 2010\WebSites\WebSite1\DseAvaluoMantInf.xsd</rd:SchemaPath>
-        <rd:TableName>FEXAVA_DATOSPERSONAS</rd:TableName>
-        <rd:TableAdapterFillMethod />
-        <rd:TableAdapterGetDataMethod />
-        <rd:TableAdapterName />
-      </rd:DataSetInfo>
-    </DataSet>
     <DataSet Name="DseAvaluoMantInf_FEXAVA_DATOSPERSONASSOL">
       <Query>
         <DataSourceName>DummyDataSource</DataSourceName>
@@ -4684,6 +4549,70 @@
         <rd:DataSetName>dsAvaComercial_I</rd:DataSetName>
         <rd:SchemaPath>C:\tfs\Avaluos\DES\Web\App_Code\dsAvaComercial_I.xsd</rd:SchemaPath>
         <rd:TableName>FEXAVA_AVALUO</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSet2">
+      <Query>
+        <DataSourceName>DataSetAcuseAva</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Calle">
+          <DataField>Calle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Manzana">
+          <DataField>Manzana</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Lote">
+          <DataField>Lote</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NInterior">
+          <DataField>NInterior</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NExterior">
+          <DataField>NExterior</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Colonia">
+          <DataField>Colonia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Delegacion">
+          <DataField>Delegacion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPostal">
+          <DataField>CodigoPostal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Ca_GeoCodigo">
+          <DataField>Ca_GeoCodigo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Ca_Toma">
+          <DataField>Ca_Toma</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Ca_Deriv">
+          <DataField>Ca_Deriv</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Ca_DV">
+          <DataField>Ca_DV</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DataSetAcuseAva</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\Web\App_Code\DataSetAcuseAva.xsd</rd:SchemaPath>
+        <rd:TableName>InmuebleQueSeValua</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />

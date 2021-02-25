@@ -200,7 +200,8 @@ public static class Constantes
     /// <summary>
     /// URL PÁGINA 'INFORME AVALÚO'
     /// </summary>
-    public const string URL_AVALUOS_INFORME = "InformeAvaluo.aspx";
+    public const string URL_AVALUOS_INFORME = "http://ovica.linesolutions.tech/avaluosNew_backend/public/reimprime";
+        //"InformeAvaluo.aspx";
 
 
     #endregion
@@ -691,6 +692,8 @@ public static class Constantes
     /// PARÁMETRO NÚMERO ÚNICO
     /// </summary>
     public const string PAR_NUMUNIAVALUO = "numeroUnico";
+
+    public const string PAR_NUMUNIAVALUO_INF = "no_unico";
     /// <summary>
     /// PARÁMETRO IDENTIFICADOR AVALÚO PRÓXIMO
     /// </summary>

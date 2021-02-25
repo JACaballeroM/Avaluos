@@ -575,7 +575,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Delegación:</Value>
+                    <Value>Alcaldía:</Value>
                     <Style>
                       <FontSize>7pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -3728,7 +3728,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>= "Delegación: " &amp; First(Fields!DescDeleg.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONAS")</Value>
+                <Value>= "Alcaldía: " &amp; First(Fields!DescDeleg.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONAS")</Value>
                 <Style>
                   <FontSize>7pt</FontSize>
                 </Style>
@@ -3999,7 +3999,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>= "Delegación: " + First(Fields!DescDeleg.Value, "DseAvaluoMantInf_FEXAVA_DATOSPERSONASSOL")</Value>
+                <Value>= "Alcaldía: " + First(Fields!Delegacion.Value, "DataSet2")</Value>
                 <Style>
                   <FontSize>7pt</FontSize>
                 </Style>
@@ -4312,6 +4312,13 @@
       </ConnectionProperties>
       <rd:DataSourceID>2314ebc8-8d49-4e04-b7ef-9364b4cf2165</rd:DataSourceID>
     </DataSource>
+    <DataSource Name="DataSetAcuseAva">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>6c48c3fb-3bac-4060-a77f-8fc7efc6931d</rd:DataSourceID>
+    </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="DseAvaluoMantInf_FEXAVA_DATOSPERSONAS">
@@ -4319,72 +4326,6 @@
         <DataSourceName>DummyDataSource</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
-      <Fields>
-        <Field Name="IDDATOSPERSONAS">
-          <DataField>IDDATOSPERSONAS</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="NOMBRE">
-          <DataField>NOMBRE</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="APELLIDOMATERNO">
-          <DataField>APELLIDOMATERNO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="APELLIDOPATERNO">
-          <DataField>APELLIDOPATERNO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CALLE">
-          <DataField>CALLE</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="NUMEROINTERIOR">
-          <DataField>NUMEROINTERIOR</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="NUMEROEXTERIOR">
-          <DataField>NUMEROEXTERIOR</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="IDCOLONIA">
-          <DataField>IDCOLONIA</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="IDDELEGACION">
-          <DataField>IDDELEGACION</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="CODTIPOFUNCION">
-          <DataField>CODTIPOFUNCION</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CODIGOPOSTAL">
-          <DataField>CODIGOPOSTAL</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="IDAVALUO">
-          <DataField>IDAVALUO</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="ROL">
-          <DataField>ROL</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DescColonia">
-          <DataField>DescColonia</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DescDeleg">
-          <DataField>DescDeleg</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="TipoPersona">
-          <DataField>TipoPersona</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DseAvaluoMantInf</rd:DataSetName>
         <rd:SchemaPath>u:\Mis documentos\Visual Studio 2010\WebSites\WebSite1\DseAvaluoMantInf.xsd</rd:SchemaPath>
@@ -4399,72 +4340,6 @@
         <DataSourceName>DummyDataSource</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
-      <Fields>
-        <Field Name="IDDATOSPERSONAS">
-          <DataField>IDDATOSPERSONAS</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="NOMBRE">
-          <DataField>NOMBRE</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="APELLIDOMATERNO">
-          <DataField>APELLIDOMATERNO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="APELLIDOPATERNO">
-          <DataField>APELLIDOPATERNO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CALLE">
-          <DataField>CALLE</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="NUMEROINTERIOR">
-          <DataField>NUMEROINTERIOR</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="NUMEROEXTERIOR">
-          <DataField>NUMEROEXTERIOR</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="IDCOLONIA">
-          <DataField>IDCOLONIA</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="IDDELEGACION">
-          <DataField>IDDELEGACION</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="CODTIPOFUNCION">
-          <DataField>CODTIPOFUNCION</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CODIGOPOSTAL">
-          <DataField>CODIGOPOSTAL</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="IDAVALUO">
-          <DataField>IDAVALUO</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="ROL">
-          <DataField>ROL</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DescColonia">
-          <DataField>DescColonia</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DescDeleg">
-          <DataField>DescDeleg</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="TipoPersona">
-          <DataField>TipoPersona</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DseAvaluoMantInf</rd:DataSetName>
         <rd:SchemaPath>u:\Mis documentos\Visual Studio 2010\WebSites\WebSite1\DseAvaluoMantInf.xsd</rd:SchemaPath>
@@ -4479,260 +4354,74 @@
         <DataSourceName>dsAvaComercial_I</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
-      <Fields>
-        <Field Name="REGTDF_SOCIEDAD">
-          <DataField>REGTDF_SOCIEDAD</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="REGTDF_PERITO">
-          <DataField>REGTDF_PERITO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="FECHAAVALUO">
-          <DataField>FECHAAVALUO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="REGION">
-          <DataField>REGION</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="LOTE_CC">
-          <DataField>LOTE_CC</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DIGITOVERIFICADOR">
-          <DataField>DIGITOVERIFICADOR</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MANZANA">
-          <DataField>MANZANA</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="UNIDADPRIVATIVA">
-          <DataField>UNIDADPRIVATIVA</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DESC_REGIMENPROPIEDAD">
-          <DataField>DESC_REGIMENPROPIEDAD</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="OBJETO">
-          <DataField>OBJETO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PROPOSITO">
-          <DataField>PROPOSITO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CALLE">
-          <DataField>CALLE</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="EXT">
-          <DataField>EXT</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="INT">
-          <DataField>INT</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="COLONIA">
-          <DataField>COLONIA</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CP">
-          <DataField>CP</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DELEGACION">
-          <DataField>DELEGACION</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="EDIFICIO">
-          <DataField>EDIFICIO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="LOTE">
-          <DataField>LOTE</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CUENTAAGUA">
-          <DataField>CUENTAAGUA</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DESC_CLASIFICACIONZONA">
-          <DataField>DESC_CLASIFICACIONZONA</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CUINDICESATURACIONZONA">
-          <DataField>CUINDICESATURACIONZONA</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="DESC_CLASECONST">
-          <DataField>DESC_CLASECONST</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DESC_DENSIDAD">
-          <DataField>DESC_DENSIDAD</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DESC_NIVELSOCIOEC">
-          <DataField>DESC_NIVELSOCIOEC</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CUCONTAMINACIONAMBIENTALZONA">
-          <DataField>CUCONTAMINACIONAMBIENTALZONA</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CUUSO">
-          <DataField>CUUSO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CUAREALIBREOBLIGATORIO">
-          <DataField>CUAREALIBREOBLIGATORIO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="VIASDEACCESO">
-          <DataField>VIASDEACCESO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DESC_AGUAPOTABLE">
-          <DataField>DESC_AGUAPOTABLE</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DESC_RECOLECAGUAS">
-          <DataField>DESC_RECOLECAGUAS</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DESC_DRENAJEPLUVCALLE">
-          <DataField>DESC_DRENAJEPLUVCALLE</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DESC_DRENAJEPLUVZONA">
-          <DataField>DESC_DRENAJEPLUVZONA</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DESC_SISTEMAMIXTO">
-          <DataField>DESC_SISTEMAMIXTO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DESC_SUMELECTRICO">
-          <DataField>DESC_SUMELECTRICO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DESC_ACOMETIDAIM">
-          <DataField>DESC_ACOMETIDAIM</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DESC_ALUMBRADOPUBL">
-          <DataField>DESC_ALUMBRADOPUBL</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DESCVIALIDADES">
-          <DataField>DESCVIALIDADES</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DESC_BANQUETAS">
-          <DataField>DESC_BANQUETAS</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DESC_GUARNICIONES">
-          <DataField>DESC_GUARNICIONES</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CUPORCENTAJEINFRAESTRUCTURA">
-          <DataField>CUPORCENTAJEINFRAESTRUCTURA</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="DESC_GASNATURAL">
-          <DataField>DESC_GASNATURAL</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DESC_SUMINISTROTEL">
-          <DataField>DESC_SUMINISTROTEL</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DESC_SENALIZACIONVIAS">
-          <DataField>DESC_SENALIZACIONVIAS</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DESC_ACOMETIDAIMTEL">
-          <DataField>DESC_ACOMETIDAIMTEL</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CUDISTANCIATRANSPORTEURBANO">
-          <DataField>CUDISTANCIATRANSPORTEURBANO</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="CUFRECUENCIATRANSPORTEURBANO">
-          <DataField>CUFRECUENCIATRANSPORTEURBANO</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="CUDISTANCIATRANSPORTESUBURB">
-          <DataField>CUDISTANCIATRANSPORTESUBURB</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="CUFRECUENCIATRANSPORTESUBURB">
-          <DataField>CUFRECUENCIATRANSPORTESUBURB</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="DESC_VIGILANCIA">
-          <DataField>DESC_VIGILANCIA</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DESC_RECBASURA">
-          <DataField>DESC_RECBASURA</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CUEXISTEIGLESIA">
-          <DataField>CUEXISTEIGLESIA</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CUEXISTEMERCADOS">
-          <DataField>CUEXISTEMERCADOS</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CUEXISTEPLAZASPUBLICOS">
-          <DataField>CUEXISTEPLAZASPUBLICOS</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CUEXISTEPARQUESJARDINES">
-          <DataField>CUEXISTEPARQUESJARDINES</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CUEXISTEESCUELAS">
-          <DataField>CUEXISTEESCUELAS</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CUEXISTEHOSPITALES">
-          <DataField>CUEXISTEHOSPITALES</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CUEXISTEBANCOS">
-          <DataField>CUEXISTEBANCOS</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CUEXISTEESTACIONTRANSPORTE">
-          <DataField>CUEXISTEESTACIONTRANSPORTE</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="NIVELEQUIPAMIENTOURBANO">
-          <DataField>NIVELEQUIPAMIENTOURBANO</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="DESC_NOMECLATURACALLES">
-          <DataField>DESC_NOMECLATURACALLES</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="TIPOCODOMINIO">
-          <DataField>TIPOCODOMINIO</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-      </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>dsAvaComercial_I</rd:DataSetName>
         <rd:SchemaPath>C:\tfs\Avaluos\DES\Web\App_Code\dsAvaComercial_I.xsd</rd:SchemaPath>
         <rd:TableName>FEXAVA_AVALUO</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSet2">
+      <Query>
+        <DataSourceName>DataSetAcuseAva</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Calle">
+          <DataField>Calle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Manzana">
+          <DataField>Manzana</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Lote">
+          <DataField>Lote</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NInterior">
+          <DataField>NInterior</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NExterior">
+          <DataField>NExterior</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Colonia">
+          <DataField>Colonia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Delegacion">
+          <DataField>Delegacion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPostal">
+          <DataField>CodigoPostal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Ca_GeoCodigo">
+          <DataField>Ca_GeoCodigo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Ca_Toma">
+          <DataField>Ca_Toma</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Ca_Deriv">
+          <DataField>Ca_Deriv</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Ca_DV">
+          <DataField>Ca_DV</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DataSetAcuseAva</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\Web\App_Code\DataSetAcuseAva.xsd</rd:SchemaPath>
+        <rd:TableName>InmuebleQueSeValua</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />

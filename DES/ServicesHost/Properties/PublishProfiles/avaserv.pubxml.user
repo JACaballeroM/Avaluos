@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo se usa en el proceso de publicación y empaquetado del proyecto web. Para personalizar el comportamiento de este proceso,
+edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 para obtener más información. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Publicaciones\FuentesExternas\Servicios\Avaluos</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Avaluos.svc">
+      <publishTime>06/18/2015 14:39:10</publishTime>
+    </File>
+    <File Include="bin/BouncyCastle.Crypto.dll">
+      <publishTime>06/18/2015 13:45:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.EnterpriseLibrary.Common.dll">
+      <publishTime>06/18/2015 14:39:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll">
+      <publishTime>06/18/2015 14:39:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll">
+      <publishTime>06/18/2015 14:39:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.EnterpriseLibrary.Logging.dll">
+      <publishTime>06/18/2015 14:39:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.ObjectBuilder2.dll">
+      <publishTime>06/18/2015 14:39:38</publishTime>
+    </File>
+    <File Include="bin/MyExtentions.dll">
+      <publishTime>11/27/2018 20:49:24</publishTime>
+    </File>
+    <File Include="bin/Oracle.DataAccess.dll">
+      <publishTime>06/18/2015 14:39:38</publishTime>
+    </File>
+    <File Include="bin/SecurityCore.dll">
+      <publishTime>06/18/2015 14:49:32</publishTime>
+    </File>
+    <File Include="bin/SevenZipSharp.dll">
+      <publishTime>06/18/2015 14:39:38</publishTime>
+    </File>
+    <File Include="bin/SIGAPred.Common.Compresion.dll">
+      <publishTime>06/18/2015 14:39:40</publishTime>
+    </File>
+    <File Include="bin/SIGAPred.Common.DataAccess.dll">
+      <publishTime>06/18/2015 14:39:40</publishTime>
+    </File>
+    <File Include="bin/SIGAPred.Common.dll">
+      <publishTime>06/18/2015 14:39:40</publishTime>
+    </File>
+    <File Include="bin/SIGAPred.Documental.Services.dll">
+      <publishTime>06/18/2015 14:39:40</publishTime>
+    </File>
+    <File Include="bin/SIGAPred.Excepciones.ClaseExcepcion.dll">
+      <publishTime>11/27/2018 21:04:00</publishTime>
+    </File>
+    <File Include="bin/SIGAPred.FuentesExternas.Avaluos.Enum.dll">
+      <publishTime>02/24/2021 12:27:44</publishTime>
+    </File>
+    <File Include="bin/SIGAPred.FuentesExternas.Avaluos.Enum.pdb">
+      <publishTime>02/24/2021 12:27:44</publishTime>
+    </File>
+    <File Include="bin/SIGAPred.FuentesExternas.Avaluos.Services.dll">
+      <publishTime>02/24/2021 12:27:49</publishTime>
+    </File>
+    <File Include="bin/SIGAPred.FuentesExternas.Avaluos.Services.dll.config">
+      <publishTime>02/23/2021 17:28:04</publishTime>
+    </File>
+    <File Include="bin/SIGAPred.FuentesExternas.Avaluos.Services.pdb">
+      <publishTime>02/24/2021 12:27:49</publishTime>
+    </File>
+    <File Include="bin/SIGAPred.FuentesExternas.Avaluos.ServicesHost.dll">
+      <publishTime>02/24/2021 12:27:52</publishTime>
+    </File>
+    <File Include="bin/SIGAPred.FuentesExternas.Avaluos.ServicesHost.pdb">
+      <publishTime>02/24/2021 12:27:52</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>02/25/2021 14:41:32</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>06/18/2015 14:39:10</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -18,21 +18,22 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:3448/Avaluos.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://10.0.8.2/PRO/FuentesExternas/Avaluos/Avaluos.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="DseAvaluoMantInf.xsd" MetadataType="Schema" ID="49d143e1-2de7-434f-80e8-b2cad3cce873" SourceId="1" SourceUrl="http://localhost:3448/Avaluos.svc?xsd=xsd9" />
-    <MetadataFile FileName="Avaluos.wsdl" MetadataType="Wsdl" ID="9fd3a30f-f92e-4eb8-a335-ecb60d11b2d8" SourceId="1" SourceUrl="http://localhost:3448/Avaluos.svc?wsdl" />
-    <MetadataFile FileName="DseNotarios.xsd" MetadataType="Schema" ID="f8a81491-c116-4543-9e2b-32dabde6f027" SourceId="1" SourceUrl="http://localhost:3448/Avaluos.svc?xsd=xsd8" />
-    <MetadataFile FileName="Avaluos.disco" MetadataType="Disco" ID="6055efa5-25cc-4495-92fe-540a81a41da5" SourceId="1" SourceUrl="http://localhost:3448/Avaluos.svc?disco" />
-    <MetadataFile FileName="DseAvaluosCatConsulta.xsd" MetadataType="Schema" ID="ea9bdbb9-8a73-442b-b5b1-eda85bf8eca2" SourceId="1" SourceUrl="http://localhost:3448/Avaluos.svc?xsd=xsd5" />
-    <MetadataFile FileName="Avaluos.xsd" MetadataType="Schema" ID="1c8df88f-3069-40b7-ba41-7135eca013a3" SourceId="1" SourceUrl="http://localhost:3448/Avaluos.svc?xsd=xsd4" />
-    <MetadataFile FileName="Avaluos1.xsd" MetadataType="Schema" ID="675da441-709d-45f5-bbdf-643264125d84" SourceId="1" SourceUrl="http://localhost:3448/Avaluos.svc?xsd=xsd7" />
-    <MetadataFile FileName="DseAvaluoConsultaFis.xsd" MetadataType="Schema" ID="6ac2600c-4859-4b51-a092-165d0b17cdc5" SourceId="1" SourceUrl="http://localhost:3448/Avaluos.svc?xsd=xsd6" />
-    <MetadataFile FileName="Avaluos2.xsd" MetadataType="Schema" ID="bc0aa456-0cc3-456f-a09a-c898f226915b" SourceId="1" SourceUrl="http://localhost:3448/Avaluos.svc?xsd=xsd1" />
-    <MetadataFile FileName="Avaluos3.xsd" MetadataType="Schema" ID="2585d32b-d792-4df2-a825-e06ca5c5cb9b" SourceId="1" SourceUrl="http://localhost:3448/Avaluos.svc?xsd=xsd0" />
-    <MetadataFile FileName="Avaluos4.xsd" MetadataType="Schema" ID="bbb496a4-fcd6-48c4-8fdc-8b4decc2b5cb" SourceId="1" SourceUrl="http://localhost:3448/Avaluos.svc?xsd=xsd3" />
-    <MetadataFile FileName="DseAvaluoConsulta.xsd" MetadataType="Schema" ID="767c0b94-a256-42d4-9414-c237ae8e663d" SourceId="1" SourceUrl="http://localhost:3448/Avaluos.svc?xsd=xsd2" />
+    <MetadataFile FileName="DseNotarios1.xsd" MetadataType="Schema" ID="8b9eae73-7e45-4f39-be75-45e701dfb37f" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd8" />
+    <MetadataFile FileName="Avaluos5.xsd" MetadataType="Schema" ID="cd7beec4-9520-4994-a655-6255aaac6650" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd4" />
+    <MetadataFile FileName="DseAvaluoConsulta1.xsd" MetadataType="Schema" ID="b7ef398b-3b2d-4518-9e82-c20bae3a8aa4" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd2" />
+    <MetadataFile FileName="Avaluos52.xsd" MetadataType="Schema" ID="666e7aa2-bd38-4b89-b5b9-c7bbd3068df5" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd1" />
+    <MetadataFile FileName="Avaluos53.xsd" MetadataType="Schema" ID="8417b935-a792-4b6b-b174-4192a1049c40" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd7" />
+    <MetadataFile FileName="Avaluos1.disco" MetadataType="Disco" ID="cf41ad2c-1ef5-4708-925a-cde4fdb9c3c0" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos/Avaluos.svc?disco" />
+    <MetadataFile FileName="DseAvaluosCatConsulta1.xsd" MetadataType="Schema" ID="0d0906ee-0aae-4c3c-a016-80891d4db3ff" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd5" />
+    <MetadataFile FileName="Avaluos54.xsd" MetadataType="Schema" ID="2c513c16-b702-43a5-9a4c-0bb65f8723cb" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd9" />
+    <MetadataFile FileName="DseAvaluoMantInf1.xsd" MetadataType="Schema" ID="773839d0-326b-4dfe-92d8-1c6059f3c467" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd10" />
+    <MetadataFile FileName="Avaluos55.xsd" MetadataType="Schema" ID="28f38291-095e-40bc-80a0-6ea8301869b3" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd0" />
+    <MetadataFile FileName="Avaluos56.xsd" MetadataType="Schema" ID="16096d7a-977f-44b9-9c72-7080fc53b787" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd3" />
+    <MetadataFile FileName="DseAvaluoConsultaFis1.xsd" MetadataType="Schema" ID="4bd7ddf0-ee60-4094-8bfe-8cef6d61397b" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd6" />
+    <MetadataFile FileName="Avaluos1.wsdl" MetadataType="Wsdl" ID="6d45dce5-5edc-414c-a2bd-9c649a8030ab" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos/Avaluos.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

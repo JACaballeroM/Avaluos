@@ -1114,7 +1114,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                         if (queryn.IsFull())
                             SuperficieRow.FRE = XmlUtils.ToDecimalXElementAv(queryn);
                     }
-                    else { SuperficieRow.FRE = 0; }
+                    else { SuperficieRow.FRE = 0M; }
                     queryn = XmlUtils.XmlSearchById(cursor, "d.5.n.11");
                     if (queryn.IsFull())
                         SuperficieRow.VALORFRACCION = XmlUtils.ToDecimalXElementAv(queryn);
@@ -2226,10 +2226,16 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
 
                     }
 
-                    queryn = XmlUtils.XmlSearchById(cursor, "e.2.1.n.9");
-                    if (queryn.IsFull())
-                        construccionesRow.VIDAUTILREMANENTE = XmlUtils.ToDecimalXElementAv(queryn);
-
+                    if (esComercial)
+                    {
+                        queryn = XmlUtils.XmlSearchById(cursor, "e.2.1.n.9");
+                        if (queryn.IsFull())
+                            construccionesRow.VIDAUTILREMANENTE = XmlUtils.ToDecimalXElementAv(queryn);
+                    }
+                    else
+                    {
+                        construccionesRow.VIDAUTILREMANENTE = 1M;
+                    }
                     //queryn = XmlUtils.XmlSearchById(cursor, "e.2.1.n.10");
                     //if (queryn.IsFull())
                     //    construccionesRow.CODESTADOCONSERVACION = XmlUtils.ToDecimalXElementAv(queryn);
@@ -2238,10 +2244,11 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     log("GuardarAvaluoDescripcionImueble CODESTADOCONSERVACION ", "codUso : ", codUso);
 
                   
-                    if (codUso.ToString() != "P" &&
+                    if (codUso.ToString() != "P"  &&
                         codUso.ToString() != "PE" &&
                         codUso.ToString() != "PC" &&
-                        codUso.ToString() != "J")
+                        codUso.ToString() != "J"  && 
+                        codUso.ToString() != "H")
                     {
                         construccionesRow.CODESTADOCONSERVACION = 2M;
                     }
@@ -2261,7 +2268,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     if (queryn.IsFull())
                         construccionesRow.FED = XmlUtils.ToDecimalXElementAv(queryn);
                     }
-                    else { construccionesRow.FED = 0; }
+                    else { construccionesRow.FED = 0M; }
                     //queryn = XmlUtils.XmlSearchById(cursor, "e.2.1.n.14");
                     //if (queryn.IsFull())
                     //    construccionesRow.FRE = XmlUtils.ToDecimalXElementAv(queryn);
@@ -2279,7 +2286,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     if (queryn.IsFull())
                         construccionesRow.DEPRECIACIONEDAD = XmlUtils.ToDecimalXElementAv(queryn);
                     }
-                    else { construccionesRow.DEPRECIACIONEDAD = 1; }
+                    else { construccionesRow.DEPRECIACIONEDAD = 1M; }
 
                     construccionesRow.CODTIPO = Constantes.CODTIPOCONSTRUCCION_PRIVATIVA;
 
@@ -2353,7 +2360,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                         if (queryn.IsFull())
                             construccionesRow.EDAD = XmlUtils.ToDecimalXElementAv(queryn);
                     }
-                    else { construccionesRow.EDAD = 1; }
+                    else { construccionesRow.EDAD = 1M; }
 
 
                     queryn = XmlUtils.XmlSearchById(cursor, "e.2.5.n.8");
@@ -2385,10 +2392,11 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     log("GuardarAvaluoDescripcionImueble CODESTADOCONSERVACION ", "codUso : ", codUso);
 
 
-                    if (codUso.ToString() != "P" &&
+                    if (codUso.ToString() != "P"  &&
                         codUso.ToString() != "PE" &&
                         codUso.ToString() != "PC" &&
-                        codUso.ToString() != "J")
+                        codUso.ToString() != "J"  && 
+                        codUso.ToString() != "H")
                     {
                         construccionesRow.CODESTADOCONSERVACION = 2M;
                     }
@@ -2426,7 +2434,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     }
                     else
                     {
-                        construccionesRow.DEPRECIACIONEDAD = 1;
+                        construccionesRow.DEPRECIACIONEDAD = 1M;
                     }
                     queryn = XmlUtils.XmlSearchById(cursor, "e.2.5.n.18");
                     if (queryn.IsFull())
@@ -2615,7 +2623,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     }
                     else
                     {
-                        datosTerrenosRow.FRE = 0;
+                        datosTerrenosRow.FRE = 0M;
                     }
 
                     queryn = XmlUtils.XmlSearchById(cursor, "h.1.1.n.16");

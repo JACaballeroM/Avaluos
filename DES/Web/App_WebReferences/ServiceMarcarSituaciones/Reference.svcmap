@@ -18,22 +18,22 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://10.1.253.88/PRE/Fiscal/Marcajes/Marcajes.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://10.0.8.2/PRO/Fiscal/Marcajes/Marcajes.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="DSMarcarClasificadas1.xsd" MetadataType="Schema" ID="df3d5be2-6e89-4997-9341-7b8227fd341d" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd7" />
-    <MetadataFile FileName="Marcajes7.xsd" MetadataType="Schema" ID="0b0068fb-b080-4ce3-bcef-334a251a6e9f" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd0" />
-    <MetadataFile FileName="DSMarcarSituaciones1.xsd" MetadataType="Schema" ID="46a3a2c1-e49b-4208-8f68-1625ea9fb0b0" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd10" />
-    <MetadataFile FileName="Marcajes72.xsd" MetadataType="Schema" ID="430ca5a3-44ed-405b-9354-99ec93b5530c" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd3" />
-    <MetadataFile FileName="Marcajes73.xsd" MetadataType="Schema" ID="35d1973a-e35f-4d62-9dbd-ffcf07c7a548" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd9" />
-    <MetadataFile FileName="Marcajes74.xsd" MetadataType="Schema" ID="15699a77-afe0-46ee-8707-4f4811d0c421" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd6" />
-    <MetadataFile FileName="Marcajes1.disco" MetadataType="Disco" ID="8fa2f2cb-a504-4900-b6cf-4b99c77e2c5f" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?disco" />
-    <MetadataFile FileName="Marcajes1.wsdl" MetadataType="Wsdl" ID="ab360311-b2b1-440f-9a6f-27182bab6227" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?wsdl" />
-    <MetadataFile FileName="Marcajes75.xsd" MetadataType="Schema" ID="a14f633a-3061-4561-942a-0423e46ae621" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd4" />
-    <MetadataFile FileName="DSMarcarLotes1.xsd" MetadataType="Schema" ID="a60a3957-afe0-48ff-95f2-0ed7c740a236" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd5" />
-    <MetadataFile FileName="Marcajes76.xsd" MetadataType="Schema" ID="29cf460f-0511-4d97-8ab3-510fcc0bd480" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd2" />
-    <MetadataFile FileName="DseCatalogosMarcajes1.xsd" MetadataType="Schema" ID="18603a32-99cc-4c6e-9284-e467b70b1be6" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd8" />
-    <MetadataFile FileName="Marcajes77.xsd" MetadataType="Schema" ID="aad765ca-cee2-4800-b271-b6e05d78316f" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Marcajes/Marcajes.svc?xsd=xsd1" />
+    <MetadataFile FileName="DSMarcarSituaciones.xsd" MetadataType="Schema" ID="93623502-12d4-4490-a258-10a22c7c200b" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/Fiscal/Marcajes/Marcajes.svc?xsd=xsd10" />
+    <MetadataFile FileName="Marcajes.xsd" MetadataType="Schema" ID="e99da464-5478-49d4-af74-853faf221ddd" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/Fiscal/Marcajes/Marcajes.svc?xsd=xsd1" />
+    <MetadataFile FileName="Marcajes2.xsd" MetadataType="Schema" ID="057e5f1c-11ec-4b3e-85b7-7425a7dbf7d8" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/Fiscal/Marcajes/Marcajes.svc?xsd=xsd0" />
+    <MetadataFile FileName="Marcajes3.xsd" MetadataType="Schema" ID="e4368dab-c996-45e0-89da-d6a54d4b85d5" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/Fiscal/Marcajes/Marcajes.svc?xsd=xsd3" />
+    <MetadataFile FileName="Marcajes4.xsd" MetadataType="Schema" ID="74b3cd64-3018-4b86-ba72-ca3b2fa02fb5" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/Fiscal/Marcajes/Marcajes.svc?xsd=xsd2" />
+    <MetadataFile FileName="DSMarcarLotes.xsd" MetadataType="Schema" ID="8fb34720-e9d5-4c15-970d-8b087622a3e9" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/Fiscal/Marcajes/Marcajes.svc?xsd=xsd5" />
+    <MetadataFile FileName="Marcajes5.xsd" MetadataType="Schema" ID="bd3612db-7f69-43dc-8252-d048a7f01a6c" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/Fiscal/Marcajes/Marcajes.svc?xsd=xsd4" />
+    <MetadataFile FileName="DSMarcarClasificadas.xsd" MetadataType="Schema" ID="ebeb034d-3ca5-4d86-85b2-9266657a21e9" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/Fiscal/Marcajes/Marcajes.svc?xsd=xsd7" />
+    <MetadataFile FileName="Marcajes6.xsd" MetadataType="Schema" ID="acb7b0d6-fb25-44bd-ab37-d9a59ec826f0" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/Fiscal/Marcajes/Marcajes.svc?xsd=xsd6" />
+    <MetadataFile FileName="Marcajes7.xsd" MetadataType="Schema" ID="8f3f9797-5591-486e-b7ce-cae7a47b2713" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/Fiscal/Marcajes/Marcajes.svc?xsd=xsd9" />
+    <MetadataFile FileName="DseCatalogosMarcajes.xsd" MetadataType="Schema" ID="ddb84383-f76c-4ebd-9e6c-a2ad77260954" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/Fiscal/Marcajes/Marcajes.svc?xsd=xsd8" />
+    <MetadataFile FileName="Marcajes.disco" MetadataType="Disco" ID="f0a015d7-d9d7-4537-82d9-e4bab1a45739" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/Fiscal/Marcajes/Marcajes.svc?disco" />
+    <MetadataFile FileName="Marcajes.wsdl" MetadataType="Wsdl" ID="b37a3289-3f19-451b-9d2f-86dd17b17745" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/Fiscal/Marcajes/Marcajes.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

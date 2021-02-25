@@ -1,2 +1,31 @@
 C:\Users\EdgarAntunezMartinez\Documents\Avaluos\DES\ServicesHost\obj\Release\SIGAPred.FuentesExternas.Avaluos.ServicesHost.csprojAssemblyReference.cache
 C:\Users\EdgarAntunezMartinez\Documents\Avaluos\DES\ServicesHost\obj\Release\SIGAPred.FuentesExternas.Avaluos.ServicesHost.csproj.CoreCompileInputs.cache
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\obj\Release\SIGAPred.FuentesExternas.Avaluos.ServicesHost.csprojAssemblyReference.cache
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\obj\Release\SIGAPred.FuentesExternas.Avaluos.ServicesHost.csproj.CoreCompileInputs.cache
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.ServicesHost.dll.config
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.ServicesHost.dll
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.ServicesHost.pdb
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\bin\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\bin\Microsoft.Practices.ObjectBuilder2.dll
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\bin\SevenZipSharp.dll
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\bin\SIGAPred.Common.Compresion.dll
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\bin\SIGAPred.Common.DataAccess.dll
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\bin\SIGAPred.Common.dll
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\bin\SIGAPred.Documental.Services.dll
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.Enum.dll
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.Services.dll
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\bin\Oracle.DataAccess.dll
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\bin\SecurityCore.dll
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\bin\MyExtentions.dll
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\bin\BouncyCastle.Crypto.dll
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.Enum.pdb
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.Enum.xml
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.Services.pdb
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.Services.xml
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.Services.dll.config
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\obj\Release\SIGAPred.FuentesExternas.Avaluos.ServicesHost.csproj.CopyComplete
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\obj\Release\SIGAPred.FuentesExternas.Avaluos.ServicesHost.dll
+C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\ServicesHost\obj\Release\SIGAPred.FuentesExternas.Avaluos.ServicesHost.pdb

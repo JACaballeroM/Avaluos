@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="KhqgxUXyVMovCX8qVHuyHoo6Dy0=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="XyapQxo+ZZ/cljNYtCNtiZjBUju/krOHdQcvzqbty40=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="wsHttpBinding" name="DocumentosDigitales">
       <properties>
@@ -103,7 +103,7 @@
           <serializedValue>TransportSelected</serializedValue>
         </property>
         <property path="/security/transport/extendedProtectionPolicy/customServiceNames" isComplexType="true" isExplicitlyDefined="false" clrType="System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>(Collection)</serializedValue>
+          <serializedValue>(Colección)</serializedValue>
         </property>
         <property path="/security/transport/realm" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -127,10 +127,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="DocumentosDigitales" contract="ServiceDocumental.IDocumentosDigitales" bindingType="wsHttpBinding" address="http://psur-prbs-sbs01.promocapre.int/PRE/Documental/DocumentosDigitales.svc" bindingConfiguration="DocumentosDigitales">
+    <endpoint name="DocumentosDigitales1" contract="ServiceDocumental.IDocumentosDigitales" bindingType="wsHttpBinding" address="http://ni-prod-bpm2.promoca.int/PRO/Documental/DocumentosDigitales.svc" bindingConfiguration="DocumentosDigitales">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://psur-prbs-sbs01.promocapre.int/PRE/Documental/DocumentosDigitales.svc</serializedValue>
+          <serializedValue>http://ni-prod-bpm2.promoca.int/PRO/Documental/DocumentosDigitales.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -202,7 +202,7 @@
           <serializedValue>False</serializedValue>
         </property>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>DocumentosDigitales</serializedValue>
+          <serializedValue>DocumentosDigitales1</serializedValue>
         </property>
         <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

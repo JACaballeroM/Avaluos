@@ -169,7 +169,10 @@ public static class ValidarCamposCalculados
     {
         try
         {
-            return ValidarCamposCalculados.aplicaDepreciacion(uso) ? valorCalculado.ToRound2() == Math.Max(Convert.ToDecimal(0.6), (0.1M * e_2_1_n_8 + 0.9M * (e_2_1_n_8 - e_2_1_n_7)) / e_2_1_n_8).ToRound2() : valorCalculado == 1M;
+            return ValidarCamposCalculados.aplicaDepreciacion(uso) ? 
+                valorCalculado.ToRound2() == Math.Max(Convert.ToDecimal(0.6), 
+                (0.1M * e_2_1_n_8 + 0.9M * (e_2_1_n_8 - e_2_1_n_7)) / e_2_1_n_8).ToRound2() : 
+                valorCalculado == 1M;
         }
         catch (Exception ex)
         {
@@ -257,6 +260,7 @@ public static class ValidarCamposCalculados
             //return valorCalculado.ToRound2() == ((100M - Math.Min(40M, e_2_1_n_7 * num)) / 100M).ToRound2();
             if (e_2_1_n_7 > 50M) //Se topa el valor de e_2_1_n_7 a 50
                 e_2_1_n_7 = 50M;
+
             return valorCalculado.ToRound2() == ((100M - (e_2_1_n_7 * num)) / 100M).ToRound2();
         }
         catch (Exception ex)
@@ -351,16 +355,24 @@ public static class ValidarCamposCalculados
 
     public static bool ValidarCampoCalculado_e_2_5_n_15(
       Decimal valorCalculado,
+      Decimal e_2_5_n_11,
       Decimal e_2_5_n_12,
-      Decimal e_2_5_n_14,
-      Decimal e_5_n_11)
+      Decimal e_2_5_n_13)
     {
         try
         {
-            return valorCalculado.ToRound2() == (e_2_5_n_12 * e_2_5_n_14 * e_5_n_11).ToRound2();
+            log("ValidarCampoCalculado_e_2_5_n_15 ", "Datos: ", valorCalculado.ToRound2().ToString() + " | "
+                + valorCalculado.ToString()
+                + " | " + e_2_5_n_11.ToString()
+                + " | " + e_2_5_n_12.ToString()
+                + " | " + e_2_5_n_13.ToString()
+                + " | " + (e_2_5_n_11 * e_2_5_n_12 * e_2_5_n_13).ToRound2()
+                );
+            return valorCalculado.ToRound2() == (e_2_5_n_11 * e_2_5_n_12 * e_2_5_n_13).ToRound2();
         }
         catch (Exception ex)
         {
+            log("ValidarCampoCalculado_e_2_5_n_15 ", ex.Message, ex.StackTrace);
             return false;
         }
     }
@@ -373,10 +385,17 @@ public static class ValidarCamposCalculados
     {
         try
         {
+            log("ValidarCampoCalculado_e_2_5_n_15_Cat ","Datos: ",valorCalculado.ToRound2().ToString()+" | "
+                + e_2_5_n_11.ToString()
+                + " | " + e_2_5_n_16.ToString()
+                + " | " + e_2_5_n_17.ToString()
+                + " | " + (e_2_5_n_16 * e_2_5_n_17 * e_2_5_n_11).ToRound2()
+                );
             return valorCalculado.ToRound2() == (e_2_5_n_16 * e_2_5_n_17 * e_2_5_n_11).ToRound2();
         }
         catch (Exception ex)
         {
+            log("ValidarCampoCalculado_e_2_5_n_15_Cat ", ex.Message, ex.StackTrace);
             return false;
         }
     }
@@ -1133,7 +1152,8 @@ public static class ValidarCamposCalculados
       "PE",
       "PC",
       "P",
-      "J"
+      "J"//,
+      //"H"
         };
         bool flag = true;
         if (((IEnumerable<string>)strArray).Contains<string>(coduso))
