@@ -224,7 +224,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                 #region e - Descripcion del inmueble.
                 query = XmlUtils.XmlSearchById(data, "e");
                 if (query.IsFull())
-                    GuardarAvaluoDescripcionImueble(query.First(), ref dseAvaluo);
+                    GuardarAvaluoDescripcionImueble(query.First(), ref dseAvaluo, esComercial);
                 #endregion
 
                 #region f - Elementos de la construccion.
@@ -843,7 +843,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
         /// </summary>
         /// <param name="terreno">Elemento xml con los datos del terreno.</param>
         /// <param name="dseAvaluo">[in,out] DataSet de avaluos en el que se insertan los datos del xml.</param>
-        private void GuardarAvaluoTerrenoAI(XElement terreno, ref DseAvaluoMantInf dseAvaluo)
+        private void GuardarAvaluoTerrenoAI(XElement terreno, ref DseAvaluoMantInf dseAvaluo, bool esComercial)
         {
             List<decimal> listaIdFicheros = new List<decimal>();
             IEnumerable<XElement> query = null;
@@ -1108,11 +1108,13 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     if (queryn.IsFull())
                         SuperficieRow.CLAVE = queryn.ToStringXElement();
 
-
-                    queryn = XmlUtils.XmlSearchById(cursor, "d.5.n.10");
-                    if (queryn.IsFull())
-                        SuperficieRow.FRE = XmlUtils.ToDecimalXElementAv(queryn);
-
+                    if (esComercial)
+                    {
+                        queryn = XmlUtils.XmlSearchById(cursor, "d.5.n.10");
+                        if (queryn.IsFull())
+                            SuperficieRow.FRE = XmlUtils.ToDecimalXElementAv(queryn);
+                    }
+                    else { SuperficieRow.FRE = 0M; }
                     queryn = XmlUtils.XmlSearchById(cursor, "d.5.n.11");
                     if (queryn.IsFull())
                         SuperficieRow.VALORFRACCION = XmlUtils.ToDecimalXElementAv(queryn);
@@ -2102,7 +2104,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
         /// </summary>
         /// <param name="descripcionInmueble">Elemento xml con los datos de la descripción del inmueble.</param>
         /// <param name="dseAvaluo">[in,out] DataSet de avaluos en el que se insertan los datos del xml.</param>   
-        private void GuardarAvaluoDescripcionImuebleAI(XElement descripcionInmueble, ref DseAvaluoMantInf dseAvaluo)
+        private void GuardarAvaluoDescripcionImuebleAI(XElement descripcionInmueble, ref DseAvaluoMantInf dseAvaluo, bool esComercial)
         {
             DateTime fechaAvaluo = Convert.ToDateTime(dseAvaluo.FEXAVA_AVALUO[0].FECHAAVALUO);
             IEnumerable<XElement> query = null;
@@ -2224,14 +2226,35 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
 
                     }
 
-                    queryn = XmlUtils.XmlSearchById(cursor, "e.2.1.n.9");
-                    if (queryn.IsFull())
-                        construccionesRow.VIDAUTILREMANENTE = XmlUtils.ToDecimalXElementAv(queryn);
-
+                    if (esComercial)
+                    {
+                        queryn = XmlUtils.XmlSearchById(cursor, "e.2.1.n.9");
+                        if (queryn.IsFull())
+                            construccionesRow.VIDAUTILREMANENTE = XmlUtils.ToDecimalXElementAv(queryn);
+                    }
+                    else
+                    {
+                        construccionesRow.VIDAUTILREMANENTE = 1M;
+                    }
                     //queryn = XmlUtils.XmlSearchById(cursor, "e.2.1.n.10");
                     //if (queryn.IsFull())
                     //    construccionesRow.CODESTADOCONSERVACION = XmlUtils.ToDecimalXElementAv(queryn);
 
+                    //string stringXelement = xelements3.ToStringXElement();
+                    log("GuardarAvaluoDescripcionImueble CODESTADOCONSERVACION ", "codUso : ", codUso);
+
+                  
+                    if (codUso.ToString() != "P"  &&
+                        codUso.ToString() != "PE" &&
+                        codUso.ToString() != "PC" &&
+                        codUso.ToString() != "J"  && 
+                        codUso.ToString() != "H")
+                    {
+                        construccionesRow.CODESTADOCONSERVACION = 2M;
+                    }
+                    else { construccionesRow.CODESTADOCONSERVACION = 3M; }
+
+                  
                     queryn = XmlUtils.XmlSearchById(cursor, "e.2.1.n.11");
                     if (queryn.IsFull())
                         construccionesRow.SUPERFICIE = XmlUtils.ToDecimalXElementAv(queryn);
@@ -2240,10 +2263,12 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     if (queryn.IsFull())
                         construccionesRow.VALORUNITARIOREPOSICIONNUEVO = XmlUtils.ToDecimalXElementAv(queryn);
 
+                    if (esComercial) { 
                     queryn = XmlUtils.XmlSearchById(cursor, "e.2.1.n.13");
                     if (queryn.IsFull())
                         construccionesRow.FED = XmlUtils.ToDecimalXElementAv(queryn);
-
+                    }
+                    else { construccionesRow.FED = 0M; }
                     //queryn = XmlUtils.XmlSearchById(cursor, "e.2.1.n.14");
                     //if (queryn.IsFull())
                     //    construccionesRow.FRE = XmlUtils.ToDecimalXElementAv(queryn);
@@ -2256,9 +2281,12 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     if (queryn.IsFull())
                         construccionesRow.VALORUNITARIOCAT = XmlUtils.ToDecimalXElementAv(queryn);
 
+                    if (!esComercial) { 
                     queryn = XmlUtils.XmlSearchById(cursor, "e.2.1.n.17");
                     if (queryn.IsFull())
                         construccionesRow.DEPRECIACIONEDAD = XmlUtils.ToDecimalXElementAv(queryn);
+                    }
+                    else { construccionesRow.DEPRECIACIONEDAD = 1M; }
 
                     construccionesRow.CODTIPO = Constantes.CODTIPOCONSTRUCCION_PRIVATIVA;
 
@@ -2321,9 +2349,19 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                         construccionesRow.CODCLASESCONSTRUCCION = idClaseEjercicio;
                     }
 
-                    queryn = XmlUtils.XmlSearchById(cursor, "e.2.5.n.7");
-                    if (queryn.IsFull())
-                        construccionesRow.EDAD = XmlUtils.ToDecimalXElementAv(queryn);
+
+                    //JACM Se da de baja el campo 2021-02-15
+                    //queryn = XmlUtils.XmlSearchById(cursor, "e.2.5.n.7");
+                    //if (queryn.IsFull())
+                    //    construccionesRow.EDAD = XmlUtils.ToDecimalXElementAv(queryn);
+                    if (!esComercial)
+                    {
+                        queryn = XmlUtils.XmlSearchById(cursor, "e.2.5.n.7");
+                        if (queryn.IsFull())
+                            construccionesRow.EDAD = XmlUtils.ToDecimalXElementAv(queryn);
+                    }
+                    else { construccionesRow.EDAD = 1M; }
+
 
                     queryn = XmlUtils.XmlSearchById(cursor, "e.2.5.n.8");
                     if (queryn.IsFull())
@@ -2349,6 +2387,20 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     //queryn = XmlUtils.XmlSearchById(cursor, "e.2.5.n.10");
                     //if (queryn.IsFull())
                     //    construccionesRow.CODESTADOCONSERVACION = XmlUtils.ToDecimalXElementAv(queryn);
+                    //construccionesRow.CODESTADOCONSERVACION = 0M;
+
+                    log("GuardarAvaluoDescripcionImueble CODESTADOCONSERVACION ", "codUso : ", codUso);
+
+
+                    if (codUso.ToString() != "P"  &&
+                        codUso.ToString() != "PE" &&
+                        codUso.ToString() != "PC" &&
+                        codUso.ToString() != "J"  && 
+                        codUso.ToString() != "H")
+                    {
+                        construccionesRow.CODESTADOCONSERVACION = 2M;
+                    }
+                    else { construccionesRow.CODESTADOCONSERVACION = 3M; }
 
                     queryn = XmlUtils.XmlSearchById(cursor, "e.2.5.n.11");
                     if (queryn.IsFull())
@@ -2358,9 +2410,9 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     if (queryn.IsFull())
                         construccionesRow.VALORUNITARIOREPOSICIONNUEVO = XmlUtils.ToDecimalXElementAv(queryn);
 
-                    queryn = XmlUtils.XmlSearchById(cursor, "e.2.5.n.13");
-                    if (queryn.IsFull())
-                        construccionesRow.FED = XmlUtils.ToDecimalXElementAv(queryn);
+                    //queryn = XmlUtils.XmlSearchById(cursor, "e.2.5.n.13");
+                    //if (queryn.IsFull())
+                        //construccionesRow.FED = XmlUtils.ToDecimalXElementAv(queryn);
 
                     // JACM Se da de baja el campo 2021-02-04
                     /*queryn = XmlUtils.XmlSearchById(cursor, "e.2.5.n.14");
@@ -2375,10 +2427,15 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     if (queryn.IsFull())
                         construccionesRow.VALORUNITARIOCAT = XmlUtils.ToDecimalXElementAv(queryn);
 
+                    if (!esComercial) { 
                     queryn = XmlUtils.XmlSearchById(cursor, "e.2.5.n.17");
                     if (queryn.IsFull())
                         construccionesRow.DEPRECIACIONEDAD = XmlUtils.ToDecimalXElementAv(queryn);
-
+                    }
+                    else
+                    {
+                        construccionesRow.DEPRECIACIONEDAD = 1M;
+                    }
                     queryn = XmlUtils.XmlSearchById(cursor, "e.2.5.n.18");
                     if (queryn.IsFull())
                         construccionesRow.DataColumn1 = string.Format("{0}", XmlUtils.ToDecimalXElementAv(queryn));
@@ -2525,23 +2582,23 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     if (queryn.IsFull())
                         datosTerrenosRow.SUPERFICIE = XmlUtils.ToDecimalXElementAv(queryn);
 
-                    queryn = XmlUtils.XmlSearchById(cursor, "h.1.1.n.10");
+                    queryn = XmlUtils.XmlSearchById(cursor, "h.1.1.n.10.2");
                     if (queryn.IsFull())
                         datosTerrenosRow.FZO = XmlUtils.ToDecimalXElementAv(queryn);
 
-                    queryn = XmlUtils.XmlSearchById(cursor, "h.1.1.n.11");
+                    queryn = XmlUtils.XmlSearchById(cursor, "h.1.1.n.11.2");
                     if (queryn.IsFull())
                         datosTerrenosRow.FUB = XmlUtils.ToDecimalXElementAv(queryn);
 
-                    queryn = XmlUtils.XmlSearchById(cursor, "h.1.1.n.12");
+                    queryn = XmlUtils.XmlSearchById(cursor, "h.1.1.n.12.2");
                     if (queryn.IsFull())
                         datosTerrenosRow.FFR = XmlUtils.ToDecimalXElementAv(queryn);
 
-                    queryn = XmlUtils.XmlSearchById(cursor, "h.1.1.n.13");
+                    queryn = XmlUtils.XmlSearchById(cursor, "h.1.1.n.13.2");
                     if (queryn.IsFull())
                         datosTerrenosRow.FFO = XmlUtils.ToDecimalXElementAv(queryn);
 
-                    queryn = XmlUtils.XmlSearchById(cursor, "h.1.1.n.14");
+                    queryn = XmlUtils.XmlSearchById(cursor, "h.1.1.n.14.2");
                     if (queryn.IsFull())
                         datosTerrenosRow.FSU = XmlUtils.ToDecimalXElementAv(queryn);
 
@@ -2558,9 +2615,16 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     if (queryn.IsFull())
                         datosTerrenosRow.PRECIOSOLICITADO = XmlUtils.ToDecimalXElementAv(queryn);
 
-                    queryn = XmlUtils.XmlSearchById(cursor, "h.1.1.n.17");
-                    if (queryn.IsFull())
-                        datosTerrenosRow.FRE = XmlUtils.ToDecimalXElementAv(queryn);
+                    if (cursor.Descendants((XName)"Comercial").Count<XElement>() > 0)
+                    {
+                        queryn = XmlUtils.XmlSearchById(cursor, "h.1.1.n.17");
+                        if (queryn.IsFull())
+                            datosTerrenosRow.FRE = XmlUtils.ToDecimalXElementAv(queryn);
+                    }
+                    else
+                    {
+                        datosTerrenosRow.FRE = 0M;
+                    }
 
                     queryn = XmlUtils.XmlSearchById(cursor, "h.1.1.n.16");
                     if (queryn.IsFull())

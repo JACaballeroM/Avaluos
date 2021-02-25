@@ -7527,9 +7527,6 @@
         <member name="P:SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Esquema.DescripcionDelInmuebleTiposDeConstruccion.VidaUtilRemanente">
             <comentarios/>
         </member>
-        <member name="P:SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Esquema.DescripcionDelInmuebleTiposDeConstruccion.ClaveConservacion">
-            <comentarios/>
-        </member>
         <member name="P:SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Esquema.DescripcionDelInmuebleTiposDeConstruccion.Superficie">
             <comentarios/>
         </member>
@@ -7627,15 +7624,6 @@
             <comentarios/>
         </member>
         <member name="P:SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Esquema.DescripcionDelInmuebleTiposDeConstruccionVidaUtilRemanente.Value">
-            <comentarios/>
-        </member>
-        <member name="T:SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Esquema.DescripcionDelInmuebleTiposDeConstruccionClaveConservacion">
-            <comentarios/>
-        </member>
-        <member name="P:SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Esquema.DescripcionDelInmuebleTiposDeConstruccionClaveConservacion.id">
-            <comentarios/>
-        </member>
-        <member name="P:SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Esquema.DescripcionDelInmuebleTiposDeConstruccionClaveConservacion.Value">
             <comentarios/>
         </member>
         <member name="T:SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Esquema.DescripcionDelInmuebleVidaUtilTotalPonderadaDelInmueble">
@@ -9693,7 +9681,7 @@
             <param name="caracteristicasUrbanas">Elemento xml con los datos de caracteristicas urbanas.</param>
             <param name="dseAvaluo">[in,out] DataSet de avaluos en el que se insertan los datos del xml.</param>
         </member>
-        <member name="M:SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Avaluos.GuardarAvaluoTerrenoAI(System.Xml.Linq.XElement,SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos.DseAvaluoMantInf@)">
+        <member name="M:SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Avaluos.GuardarAvaluoTerrenoAI(System.Xml.Linq.XElement,SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos.DseAvaluoMantInf@,System.Boolean)">
             <summary>
             Inserta los datos referentes al terreno en el dseAvaluos desde el elemento xml.
             </summary>
@@ -9709,7 +9697,7 @@
             construccion.</param>
             <param name="dseAvaluo">[in,out] DataSet de avaluos en el que se insertan los datos del xml.</param>
         </member>
-        <member name="M:SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Avaluos.GuardarAvaluoDescripcionImuebleAI(System.Xml.Linq.XElement,SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos.DseAvaluoMantInf@)">
+        <member name="M:SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Avaluos.GuardarAvaluoDescripcionImuebleAI(System.Xml.Linq.XElement,SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos.DseAvaluoMantInf@,System.Boolean)">
             <summary>
             Inserta los datos referentes a la descricpión del inmueble en el dseAvaluos desde el elemento
             xml.
@@ -14144,12 +14132,12 @@
         </member>
         <member name="F:Constantes.PAR_ERROR_VALORCAL_F_12">
             <summary>
-            PARÁMETRO ERROR VALOR CALCULADO F.12 - IMPORTE TOTAL INSTALACIONES ESPECIALES, OBRAS COMPLEMENTARIAS Y ELEMENTOS ACCESORIOS PRIVATIVAS
+            PARÁMETRO ERROR VALOR CALCULADO F.12 - Sumatoria Total Instalaciones Especiales Obras Complementarias Y Elementos Accesorios PRIVATIVAS
             </summary>
         </member>
         <member name="F:Constantes.PAR_ERROR_VALORCAL_F_13">
             <summary>
-            PARÁMETRO ERROR VALOR CALCULADO F.13 - IMPORTE TOTAL INSTALACIONES ESPECIALES, OBRAS COMPLEMENTARIAS Y ELEMENTOS ACCESORIOS COMUNES
+            PARÁMETRO ERROR VALOR CALCULADO F.13 - Sumatoria Total Instalaciones Especiales Obras Complementarias Y Elementos Accesorios COMUNES
             </summary>
         </member>
         <member name="F:Constantes.PAR_ERROR_VALORCAL_F_14">

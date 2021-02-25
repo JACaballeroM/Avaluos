@@ -1766,6 +1766,17 @@
           </xs:simpleContent>
         </xs:complexType>
       </xs:element>
+
+		<xs:element name="VidaMinimaRemanente">
+			<xs:complexType>
+				<xs:simpleContent>
+					<xs:extension base="xs:decimal">
+						<xs:attribute default="e.3" name="id" type="xs:string" />
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+		</xs:element>
+		
       <xs:element name="EdadPonderadaDelInmueble">
         <xs:complexType>
           <xs:simpleContent>

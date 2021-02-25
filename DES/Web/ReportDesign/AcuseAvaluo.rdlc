@@ -1,312 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
-  <DataSources>
-    <DataSource Name="DummyDataSource">
-      <ConnectionProperties>
-        <DataProvider>SQL</DataProvider>
-        <ConnectString />
-      </ConnectionProperties>
-      <rd:DataSourceID>37f45ccc-ea28-4a04-8d6a-443bc71e6682</rd:DataSourceID>
-    </DataSource>
-  </DataSources>
-  <DataSets>
-    <DataSet Name="DataSetAcuseAva_CuentaCatastral">
-      <Fields>
-        <Field Name="Region">
-          <DataField>Region</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Manzana">
-          <DataField>Manzana</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Lote">
-          <DataField>Lote</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Localidad">
-          <DataField>Localidad</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DigitoVerificador">
-          <DataField>DigitoVerificador</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>DummyDataSource</DataSourceName>
-        <CommandText />
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSetAcuseAva</rd:DataSetName>
-        <rd:TableName>CuentaCatastral</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-    <DataSet Name="DataSetAcuseAva_Propietario">
-      <Fields>
-        <Field Name="Nombre">
-          <DataField>Nombre</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="APaterno">
-          <DataField>APaterno</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="AMaterno">
-          <DataField>AMaterno</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Calle">
-          <DataField>Calle</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="NInterior">
-          <DataField>NInterior</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="NExterior">
-          <DataField>NExterior</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Colonia">
-          <DataField>Colonia</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Delegacion">
-          <DataField>Delegacion</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CodigoPostal">
-          <DataField>CodigoPostal</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>DummyDataSource</DataSourceName>
-        <CommandText />
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSetAcuseAva</rd:DataSetName>
-        <rd:TableName>Propietario</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-    <DataSet Name="DataSetAcuseAva_DatosDeLaEscritura">
-      <Fields>
-        <Field Name="NumEscritura">
-          <DataField>NumEscritura</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="NumVolumen">
-          <DataField>NumVolumen</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="FechaEscritura">
-          <DataField>FechaEscritura</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="NumNotaria">
-          <DataField>NumNotaria</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="NombreNotario">
-          <DataField>NombreNotario</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DistritoJudicialNotario">
-          <DataField>DistritoJudicialNotario</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>DummyDataSource</DataSourceName>
-        <CommandText />
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSetAcuseAva</rd:DataSetName>
-        <rd:TableName>DatosDeLaEscritura</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-    <DataSet Name="DataSetAcuseAva_Sentencia_">
-      <Fields>
-        <Field Name="Fecha">
-          <DataField>Fecha</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="Juzgado">
-          <DataField>Juzgado</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="NumExpediente">
-          <DataField>NumExpediente</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>DummyDataSource</DataSourceName>
-        <CommandText />
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSetAcuseAva</rd:DataSetName>
-        <rd:TableName>Sentencia </rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-    <DataSet Name="DataSetAcuseAva_ContratoPrivado">
-      <Fields>
-        <Field Name="Fecha">
-          <DataField>Fecha</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="NombreAdquiriente">
-          <DataField>NombreAdquiriente</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Apellido1Adquiriente">
-          <DataField>Apellido1Adquiriente</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Apellido2Adquiriente">
-          <DataField>Apellido2Adquiriente</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="NombreEnajenante">
-          <DataField>NombreEnajenante</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Apellido1Enajenante">
-          <DataField>Apellido1Enajenante</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Apellido2Enajenante">
-          <DataField>Apellido2Enajenante</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>DummyDataSource</DataSourceName>
-        <CommandText />
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSetAcuseAva</rd:DataSetName>
-        <rd:TableName>ContratoPrivado</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-    <DataSet Name="DataSetAcuseAva_AliniamientoYNumeroOficial">
-      <Fields>
-        <Field Name="Fecha">
-          <DataField>Fecha</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="NumFolio">
-          <DataField>NumFolio</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>DummyDataSource</DataSourceName>
-        <CommandText />
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSetAcuseAva</rd:DataSetName>
-        <rd:TableName>AliniamientoYNumeroOficial</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-    <DataSet Name="DataSetAcuseAva_Identificacion">
-      <Fields>
-        <Field Name="NumUnico">
-          <DataField>NumUnico</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>DummyDataSource</DataSourceName>
-        <CommandText />
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSetAcuseAva</rd:DataSetName>
-        <rd:TableName>Identificacion</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-    <DataSet Name="DataSetAcuseAva_InmuebleQueSeValua">
-      <Fields>
-        <Field Name="Calle">
-          <DataField>Calle</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Manzana">
-          <DataField>Manzana</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Lote">
-          <DataField>Lote</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="NInterior">
-          <DataField>NInterior</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="NExterior">
-          <DataField>NExterior</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Colonia">
-          <DataField>Colonia</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Delegacion">
-          <DataField>Delegacion</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CodigoPostal">
-          <DataField>CodigoPostal</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Ca_GeoCodigo">
-          <DataField>Ca_GeoCodigo</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Ca_Toma">
-          <DataField>Ca_Toma</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Ca_Deriv">
-          <DataField>Ca_Deriv</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Ca_DV">
-          <DataField>Ca_DV</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>DummyDataSource</DataSourceName>
-        <CommandText />
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSetAcuseAva</rd:DataSetName>
-        <rd:TableName>InmuebleQueSeValua</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
       <Tablix Name="list1">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>7.48031in</Width>
+              <Width>18.99999cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.39839in</Height>
+              <Height>1.01191cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -511,12 +216,12 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>7.48031in</Width>
+              <Width>18.99999cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.7874in</Height>
+              <Height>2cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -780,12 +485,12 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>7.48031in</Width>
+              <Width>18.99999cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.98894in</Height>
+              <Height>2.51191cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -1518,7 +1223,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Delegación o Municipio</Value>
+                    <Value>Alcaldía o Municipio</Value>
                     <Style>
                       <FontSize>9pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -2090,7 +1795,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Delegación</Value>
+                    <Value>Alcaldía</Value>
                     <Style>
                       <FontSize>9pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -2257,12 +1962,12 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>7.48031in</Width>
+              <Width>18.99999cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.39839in</Height>
+              <Height>1.01191cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -2470,24 +2175,24 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.01939in</Width>
+                  <Width>2.58925cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.02528in</Width>
+                  <Width>2.60421cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.01939in</Width>
+                  <Width>2.58925cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.01939in</Width>
+                  <Width>2.58925cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.93624in</Width>
+                  <Width>2.37805cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.19685in</Height>
+                  <Height>0.5cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -2910,21 +2615,21 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>2.75591in</Width>
+                  <Width>7.00001cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.68898in</Width>
+                  <Width>1.75001cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.68898in</Width>
+                  <Width>1.75001cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.88583in</Width>
+                  <Width>2.25001cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.19685in</Height>
+                  <Height>0.5cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -3049,7 +2754,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.24997in</Height>
+                  <Height>0.63492cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -3289,6 +2994,302 @@ Secretaría de Finanzas
     <ColumnSpacing>1cm</ColumnSpacing>
     <Style />
   </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:DataSourceID>37f45ccc-ea28-4a04-8d6a-443bc71e6682</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSetAcuseAva_CuentaCatastral">
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="Region">
+          <DataField>Region</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Manzana">
+          <DataField>Manzana</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Lote">
+          <DataField>Lote</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Localidad">
+          <DataField>Localidad</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DigitoVerificador">
+          <DataField>DigitoVerificador</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DataSetAcuseAva</rd:DataSetName>
+        <rd:TableName>CuentaCatastral</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSetAcuseAva_Propietario">
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="Nombre">
+          <DataField>Nombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="APaterno">
+          <DataField>APaterno</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AMaterno">
+          <DataField>AMaterno</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calle">
+          <DataField>Calle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NInterior">
+          <DataField>NInterior</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NExterior">
+          <DataField>NExterior</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Colonia">
+          <DataField>Colonia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Delegacion">
+          <DataField>Delegacion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPostal">
+          <DataField>CodigoPostal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DataSetAcuseAva</rd:DataSetName>
+        <rd:TableName>Propietario</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSetAcuseAva_DatosDeLaEscritura">
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="NumEscritura">
+          <DataField>NumEscritura</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NumVolumen">
+          <DataField>NumVolumen</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FechaEscritura">
+          <DataField>FechaEscritura</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="NumNotaria">
+          <DataField>NumNotaria</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NombreNotario">
+          <DataField>NombreNotario</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DistritoJudicialNotario">
+          <DataField>DistritoJudicialNotario</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DataSetAcuseAva</rd:DataSetName>
+        <rd:TableName>DatosDeLaEscritura</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSetAcuseAva_Sentencia_">
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="Fecha">
+          <DataField>Fecha</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Juzgado">
+          <DataField>Juzgado</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NumExpediente">
+          <DataField>NumExpediente</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DataSetAcuseAva</rd:DataSetName>
+        <rd:TableName>Sentencia </rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSetAcuseAva_ContratoPrivado">
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="Fecha">
+          <DataField>Fecha</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="NombreAdquiriente">
+          <DataField>NombreAdquiriente</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Apellido1Adquiriente">
+          <DataField>Apellido1Adquiriente</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Apellido2Adquiriente">
+          <DataField>Apellido2Adquiriente</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NombreEnajenante">
+          <DataField>NombreEnajenante</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Apellido1Enajenante">
+          <DataField>Apellido1Enajenante</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Apellido2Enajenante">
+          <DataField>Apellido2Enajenante</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DataSetAcuseAva</rd:DataSetName>
+        <rd:TableName>ContratoPrivado</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSetAcuseAva_AliniamientoYNumeroOficial">
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="Fecha">
+          <DataField>Fecha</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="NumFolio">
+          <DataField>NumFolio</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DataSetAcuseAva</rd:DataSetName>
+        <rd:TableName>AliniamientoYNumeroOficial</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSetAcuseAva_Identificacion">
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="NumUnico">
+          <DataField>NumUnico</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DataSetAcuseAva</rd:DataSetName>
+        <rd:TableName>Identificacion</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSetAcuseAva_InmuebleQueSeValua">
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="Calle">
+          <DataField>Calle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Manzana">
+          <DataField>Manzana</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Lote">
+          <DataField>Lote</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NInterior">
+          <DataField>NInterior</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NExterior">
+          <DataField>NExterior</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Colonia">
+          <DataField>Colonia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Delegacion">
+          <DataField>Delegacion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPostal">
+          <DataField>CodigoPostal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Ca_GeoCodigo">
+          <DataField>Ca_GeoCodigo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Ca_Toma">
+          <DataField>Ca_Toma</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Ca_Deriv">
+          <DataField>Ca_Deriv</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Ca_DV">
+          <DataField>Ca_DV</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DataSetAcuseAva</rd:DataSetName>
+        <rd:TableName>InmuebleQueSeValua</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
   <EmbeddedImages>
     <EmbeddedImage Name="logo_cdm">
       <MIMEType>image/gif</MIMEType>
@@ -3414,6 +3415,6 @@ TOtcNpgAsCCyLAvmebb5kvcdGXQNOofivcc0TXa79LczJQwmRO3qsVdRnUsHE6X3p6zripTSy84TDrX2
   </EmbeddedImages>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
-  <rd:ReportID>cc5f0b93-67de-4a5e-9775-294e181d548c</rd:ReportID>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>cc5f0b93-67de-4a5e-9775-294e181d548c</rd:ReportID>
 </Report>

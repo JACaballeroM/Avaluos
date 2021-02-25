@@ -579,8 +579,9 @@ public partial class BandejaEntrada : PageBaseAvaluos
     private void ActualizarUrlInfome()
     {
         RedirectUtil.BaseURL = Constantes.URL_AVALUOS_INFORME;
-        RedirectUtil.AddParameter(Constantes.PAR_IDAVALUO, (HiddenIdAvaluo.Value).Trim());
-        RedirectUtil.AddParameter(Constantes.PAR_PAGINAORIGEN, Constantes.URL_BANDEJAENTRADA);
+        RedirectUtil.AddParameter(Constantes.PAR_NUMUNIAVALUO_INF, (HiddenNumUnico.Value).Trim());
+        //RedirectUtil.AddParameter(Constantes.PAR_IDAVALUO, (HiddenIdAvaluo.Value).Trim());
+        //RedirectUtil.AddParameter(Constantes.PAR_PAGINAORIGEN, Constantes.URL_BANDEJAENTRADA);
         HlinkInforme.NavigateUrl = RedirectUtil.ToString();
     }
 
@@ -592,6 +593,12 @@ public partial class BandejaEntrada : PageBaseAvaluos
         RedirectUtil.BaseURL = Constantes.URL_DESCARGA_ACUSE_AVALUO;
         RedirectUtil.AddParameter(Constantes.PAR_IDAVALUO, (HiddenIdAvaluo.Value).Trim());
         RedirectUtil.AddParameter(Constantes.PAR_NUMUNIAVALUO, (HiddenNumUnico.Value).Trim());
+        System.IO.File.AppendAllText(AppDomain.CurrentDomain.BaseDirectory + "\\Avaluos.log", "\n\r"
+                   + DateTime.Now.ToString() + " " + "BandejaEntrada ActualizarUrlAcuse : URL_DESCARGA_ACUSE_AVALUO: " + Constantes.URL_DESCARGA_ACUSE_AVALUO + 
+                   " | " + (HiddenIdAvaluo.Value).Trim() +
+                   " | " + (HiddenNumUnico.Value).Trim() +
+                   " | " + RedirectUtil.ToString() +
+                   "\n\r");
         HlinkGenerarAcuse.NavigateUrl = RedirectUtil.ToString();
     }
 

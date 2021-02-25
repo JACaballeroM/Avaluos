@@ -18,19 +18,19 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://10.1.253.88/PRE/Documental/DocumentosDigitales.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://10.0.8.2/PRO/Documental/DocumentosDigitales.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="DocumentosDigitales7.xsd" MetadataType="Schema" ID="574b4f5b-72a7-45a1-bb55-a712b4d2b574" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Documental/DocumentosDigitales.svc?xsd=xsd2" />
-    <MetadataFile FileName="DocumentosDigitales72.xsd" MetadataType="Schema" ID="944d3997-d060-44dd-9948-c1131b973785" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Documental/DocumentosDigitales.svc?xsd=xsd3" />
-    <MetadataFile FileName="dseDocumentosDigitales1.xsd" MetadataType="Schema" ID="b304cfbf-be69-4759-b25e-ca7d1f52a6b6" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Documental/DocumentosDigitales.svc?xsd=xsd5" />
-    <MetadataFile FileName="DocumentosDigitales1.disco" MetadataType="Disco" ID="8a62c1b0-e0f5-40c1-a923-6c6f6c160278" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Documental/DocumentosDigitales.svc?disco" />
-    <MetadataFile FileName="DocumentosDigitales74.xsd" MetadataType="Schema" ID="894dfbff-c9b5-4a08-88a8-79e2893581ca" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Documental/DocumentosDigitales.svc?xsd=xsd4" />
-    <MetadataFile FileName="DocumentosDigitales1.wsdl" MetadataType="Wsdl" ID="056b700e-3ccc-455f-bd8a-3201b3dd8d66" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Documental/DocumentosDigitales.svc?wsdl" />
-    <MetadataFile FileName="DocumentosDigitales75.xsd" MetadataType="Schema" ID="92849e34-0eb0-46b5-9d2f-7bd07bb9ae4f" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Documental/DocumentosDigitales.svc?xsd=xsd6" />
-    <MetadataFile FileName="DocumentosDigitales76.xsd" MetadataType="Schema" ID="64372f1f-0654-43b3-b28c-116c353b5cbd" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Documental/DocumentosDigitales.svc?xsd=xsd7" />
-    <MetadataFile FileName="DocumentosDigitales77.xsd" MetadataType="Schema" ID="5647fa2a-e973-4966-9509-eb7d046ab822" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Documental/DocumentosDigitales.svc?xsd=xsd0" />
-    <MetadataFile FileName="DocumentosDigitales73.xsd" MetadataType="Schema" ID="e9afc88b-cce2-49c9-b29a-040381a4fde9" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/Documental/DocumentosDigitales.svc?xsd=xsd1" />
+    <MetadataFile FileName="DocumentosDigitales.xsd" MetadataType="Schema" ID="97ed96eb-46c3-4447-84f7-ab8a9be637c1" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/Documental/DocumentosDigitales.svc?xsd=xsd7" />
+    <MetadataFile FileName="DocumentosDigitales2.xsd" MetadataType="Schema" ID="a61fd482-cda7-499b-8e8a-0b3ce9be772d" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/Documental/DocumentosDigitales.svc?xsd=xsd6" />
+    <MetadataFile FileName="DocumentosDigitales3.xsd" MetadataType="Schema" ID="3a6f2cad-ce82-406b-ab52-8995746c1d6d" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/Documental/DocumentosDigitales.svc?xsd=xsd1" />
+    <MetadataFile FileName="DocumentosDigitales4.xsd" MetadataType="Schema" ID="4c169970-14e9-4010-b670-80ccb655a184" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/Documental/DocumentosDigitales.svc?xsd=xsd4" />
+    <MetadataFile FileName="DocumentosDigitales.disco" MetadataType="Disco" ID="3c91518a-8bdf-47ce-92db-75151dd45630" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/Documental/DocumentosDigitales.svc?disco" />
+    <MetadataFile FileName="dseDocumentosDigitales.xsd" MetadataType="Schema" ID="d2658f31-71a7-43e7-a2be-e4ce21670370" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/Documental/DocumentosDigitales.svc?xsd=xsd5" />
+    <MetadataFile FileName="DocumentosDigitales.wsdl" MetadataType="Wsdl" ID="162c4670-0bd1-4b86-a897-5efcce012fb3" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/Documental/DocumentosDigitales.svc?wsdl" />
+    <MetadataFile FileName="DocumentosDigitales5.xsd" MetadataType="Schema" ID="c8fbd0bb-19b8-4e18-8da6-2e458fe00f19" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/Documental/DocumentosDigitales.svc?xsd=xsd3" />
+    <MetadataFile FileName="DocumentosDigitales6.xsd" MetadataType="Schema" ID="cc48abc9-d4f6-4c6e-820c-c9a22a18111c" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/Documental/DocumentosDigitales.svc?xsd=xsd0" />
+    <MetadataFile FileName="DocumentosDigitales7.xsd" MetadataType="Schema" ID="4cc44b06-3d37-4f89-9877-a9d53ba46c64" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/Documental/DocumentosDigitales.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

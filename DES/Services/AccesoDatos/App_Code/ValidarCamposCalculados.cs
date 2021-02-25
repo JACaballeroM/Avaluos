@@ -30,19 +30,22 @@ public static class ValidarCamposCalculados
 
     public static bool ValidarCampoCalculado_d_5_n_10(
       Decimal valorCalculado,
-      Decimal d_5_n_3,
-      Decimal d_5_n_4,
-      Decimal d_5_n_5,
-      Decimal d_5_n_6,
-      Decimal d_5_n_7,
-      Decimal d_5_n_9)
+      Decimal d_5_n_3_2,
+      Decimal d_5_n_4_2,
+      Decimal d_5_n_5_2,
+      Decimal d_5_n_6_2,
+      Decimal d_5_n_7_2
+      //  ,Decimal d_5_n_9
+      )
     {
         try
         {
-            return valorCalculado.ToRound2() == Math.Max(0.6M, (d_5_n_3 * d_5_n_4 * d_5_n_5 * d_5_n_6 * d_5_n_7 * d_5_n_9).ToRound2());
+            //return valorCalculado.ToRound2() == Math.Max(0.6M, (d_5_n_3 * d_5_n_4 * d_5_n_5 * d_5_n_6 * d_5_n_7 * d_5_n_9).ToRound2());
+            return valorCalculado.ToRound2() ==  (d_5_n_3_2 * d_5_n_4_2 * d_5_n_5_2 * d_5_n_6_2 * d_5_n_7_2 ).ToRound2();
         }
         catch (Exception ex)
         {
+            log("ValidarCampoCalculado_d_5_n_10", ex.Message, ex.StackTrace);
             return false;
         }
     }
@@ -145,7 +148,8 @@ public static class ValidarCamposCalculados
         }
     }
 
-    public static bool ValidarClaveConservacion(string ClaveConservacion, string uso)
+    //JACM Se da de baja el campo 2021-02-11
+    /*public static bool ValidarClaveConservacion(string ClaveConservacion, string uso)
     {
         try
         {
@@ -155,7 +159,7 @@ public static class ValidarCamposCalculados
         {
             return false;
         }
-    }
+    }*/
 
     public static bool ValidarCampoCalculado_e_2_1_n_13(
       Decimal valorCalculado,
@@ -165,7 +169,10 @@ public static class ValidarCamposCalculados
     {
         try
         {
-            return ValidarCamposCalculados.aplicaDepreciacion(uso) ? valorCalculado.ToRound2() == Math.Max(Convert.ToDecimal(0.6), (0.1M * e_2_1_n_8 + 0.9M * (e_2_1_n_8 - e_2_1_n_7)) / e_2_1_n_8).ToRound2() : valorCalculado == 1M;
+            return ValidarCamposCalculados.aplicaDepreciacion(uso) ? 
+                valorCalculado.ToRound2() == Math.Max(Convert.ToDecimal(0.6), 
+                (0.1M * e_2_1_n_8 + 0.9M * (e_2_1_n_8 - e_2_1_n_7)) / e_2_1_n_8).ToRound2() : 
+                valorCalculado == 1M;
         }
         catch (Exception ex)
         {
@@ -208,14 +215,15 @@ public static class ValidarCamposCalculados
       Decimal valorCalculado,
       Decimal e_2_1_n_11,
       Decimal e_2_1_n_12,
-      Decimal e_2_1_n_14)
+      Decimal e_2_1_n_13)
     {
         try
         {
-            return valorCalculado.ToRound2() == (e_2_1_n_11 * e_2_1_n_12 * e_2_1_n_14).ToRound2();
+            return valorCalculado.ToRound2() == (e_2_1_n_11 * e_2_1_n_12 * e_2_1_n_13).ToRound2();
         }
         catch (Exception ex)
         {
+            log("ValidarCampoCalculado_e_2_1_n_15", ex.Message, ex.StackTrace);
             return false;
         }
     }
@@ -228,10 +236,11 @@ public static class ValidarCamposCalculados
     {
         try
         {
-            return valorCalculado.ToRound2() == (e_2_1_n_16 * e_2_1_n_17 * e_2_1_n_11).ToRound2();
+            return valorCalculado.ToRound2() == ((e_2_1_n_16 * e_2_1_n_17) * e_2_1_n_11).ToRound2();
         }
         catch (Exception ex)
         {
+            log("ValidarCampoCalculado_e_2_1_n_15_Cat", ex.Message, ex.StackTrace);
             return false;
         }
     }
@@ -248,10 +257,15 @@ public static class ValidarCamposCalculados
             Decimal num = 0M;
             foreach (DemeritoSectionElement demeritoSectionElement in section.HashKeys.Cast<DemeritoSectionElement>().Where<DemeritoSectionElement>((Func<DemeritoSectionElement, bool>)(item => fechaAvaluo >= item.FechaInicio && fechaAvaluo <= item.FechaFin)))
                 num = (Decimal)demeritoSectionElement.Valor;
-            return valorCalculado.ToRound2() == ((100M - Math.Min(40M, e_2_1_n_7 * num)) / 100M).ToRound2();
+            //return valorCalculado.ToRound2() == ((100M - Math.Min(40M, e_2_1_n_7 * num)) / 100M).ToRound2();
+            if (e_2_1_n_7 > 50M) //Se topa el valor de e_2_1_n_7 a 50
+                e_2_1_n_7 = 50M;
+
+            return valorCalculado.ToRound2() == ((100M - (e_2_1_n_7 * num)) / 100M).ToRound2();
         }
         catch (Exception ex)
         {
+            log("ValidarCampoCalculado_e_2_1_n_17", ex.Message, ex.StackTrace);
             return false;
         }
     }
@@ -292,7 +306,7 @@ public static class ValidarCamposCalculados
         return valorCalculado.ToRound2() == (e_2_3 * d_6).ToRound2();
     }
 
-    public static bool ValidarCampoCalculado_e_2_5_n_9(
+    /*public static bool ValidarCampoCalculado_e_2_5_n_9(
       Decimal valorCalculado,
       Decimal e_2_5_n_8,
       Decimal e_2_5_n_7)
@@ -321,7 +335,7 @@ public static class ValidarCamposCalculados
         {
             return false;
         }
-    }
+    }*/
 
     public static bool ValidarCampoCalculado_e_2_5_n_14(
       Decimal valorCalculado,
@@ -341,16 +355,24 @@ public static class ValidarCamposCalculados
 
     public static bool ValidarCampoCalculado_e_2_5_n_15(
       Decimal valorCalculado,
+      Decimal e_2_5_n_11,
       Decimal e_2_5_n_12,
-      Decimal e_2_5_n_14,
-      Decimal e_5_n_11)
+      Decimal e_2_5_n_13)
     {
         try
         {
-            return valorCalculado.ToRound2() == (e_2_5_n_12 * e_2_5_n_14 * e_5_n_11).ToRound2();
+            log("ValidarCampoCalculado_e_2_5_n_15 ", "Datos: ", valorCalculado.ToRound2().ToString() + " | "
+                + valorCalculado.ToString()
+                + " | " + e_2_5_n_11.ToString()
+                + " | " + e_2_5_n_12.ToString()
+                + " | " + e_2_5_n_13.ToString()
+                + " | " + (e_2_5_n_11 * e_2_5_n_12 * e_2_5_n_13).ToRound2()
+                );
+            return valorCalculado.ToRound2() == (e_2_5_n_11 * e_2_5_n_12 * e_2_5_n_13).ToRound2();
         }
         catch (Exception ex)
         {
+            log("ValidarCampoCalculado_e_2_5_n_15 ", ex.Message, ex.StackTrace);
             return false;
         }
     }
@@ -363,10 +385,17 @@ public static class ValidarCamposCalculados
     {
         try
         {
+            log("ValidarCampoCalculado_e_2_5_n_15_Cat ","Datos: ",valorCalculado.ToRound2().ToString()+" | "
+                + e_2_5_n_11.ToString()
+                + " | " + e_2_5_n_16.ToString()
+                + " | " + e_2_5_n_17.ToString()
+                + " | " + (e_2_5_n_16 * e_2_5_n_17 * e_2_5_n_11).ToRound2()
+                );
             return valorCalculado.ToRound2() == (e_2_5_n_16 * e_2_5_n_17 * e_2_5_n_11).ToRound2();
         }
         catch (Exception ex)
         {
+            log("ValidarCampoCalculado_e_2_5_n_15_Cat ", ex.Message, ex.StackTrace);
             return false;
         }
     }
@@ -383,10 +412,14 @@ public static class ValidarCamposCalculados
             Decimal num = 0M;
             foreach (DemeritoSectionElement demeritoSectionElement in section.HashKeys.Cast<DemeritoSectionElement>().Where<DemeritoSectionElement>((Func<DemeritoSectionElement, bool>)(item => fechaAvaluo >= item.FechaInicio && fechaAvaluo <= item.FechaFin)))
                 num = (Decimal)demeritoSectionElement.Valor;
-            return valorCalculado.ToRound2() == ((100M - Math.Min(40M, e_2_5_n_7 * num)) / 100M).ToRound2();
+            //return valorCalculado.ToRound2() == ((100M - Math.Min(40M, e_2_5_n_7 * num)) / 100M).ToRound2();
+            if (e_2_5_n_7 > 50M) //Se topa el valor de e_2_1_n_7 a 50
+                e_2_5_n_7 = 50M;
+            return valorCalculado.ToRound2() == ((100M - (e_2_5_n_7 * num)) / 100M).ToRound2();
         }
         catch (Exception ex)
         {
+            log("ValidarCampoCalculado_e_2_5_n_17 ", ex.Message,ex.StackTrace);
             return false;
         }
     }
@@ -544,15 +577,26 @@ public static class ValidarCamposCalculados
         try
         {
             Decimal val1 = 0.6M;
-            return valorCalculado.ToRound2() == Math.Max(val1, 1M - f_10_2_n_5 / f_10_2_n_6).ToRound2();
+
+            System.IO.File.AppendAllText(AppDomain.CurrentDomain.BaseDirectory + "\\Avaluos.log", "\n\r" + DateTime.Now.ToString()
+                + " ValidarCampoCalculado_f_10_2_n_8 "
+                + f_10_2_n_5.ToString() + "\n\r"
+                + f_10_2_n_6.ToRound2().ToString() + "\n\r"
+                + valorCalculado.ToRound2().ToString() + "\n\r"
+                + Math.Max(val1, 1M - (f_10_2_n_5 / f_10_2_n_6)).ToRound2().ToString() + "\n\r"
+                + "\n\r");
+
+            return valorCalculado.ToRound2() == Math.Max(val1, 1M - (f_10_2_n_5 / f_10_2_n_6)).ToRound2();
+
         }
         catch (Exception ex)
         {
+            log("ValidarCampoCalculado_f_10_2_n_8 ", ex.Message, ex.StackTrace);
             return false;
         }
     }
-
-    public static bool ValidarCampoCalculado_f_11_1_n_8(
+    //JACM se da de baja la validación
+    /*public static bool ValidarCampoCalculado_f_11_1_n_8(
       Decimal valorCalculado,
       Decimal f_11_1_n_5,
       Decimal f_11_1_n_6,
@@ -590,7 +634,7 @@ public static class ValidarCamposCalculados
         {
             return false;
         }
-    }
+    }*/
 
     public static bool ValidarCampoCalculado_f_9_1_n_9(
       Decimal valorCalculado,
@@ -894,20 +938,34 @@ public static class ValidarCamposCalculados
 
     public static bool ValidarCampoCalculado_h_1_1_n_17(
       Decimal fre,
-      Decimal fzo,
-      Decimal fub,
-      Decimal ffr,
-      Decimal ffo,
-      Decimal fsu,
-      Decimal fotro)
+      Decimal h_1_1_n_10_2,
+      Decimal h_1_1_n_11_2,
+      Decimal h_1_1_n_12_2,
+      Decimal h_1_1_n_13_2,
+      Decimal h_1_1_n_14_2)
     {
         try
         {
-            Decimal val1 = 0.6M;
-            return fre.ToRound2() == Math.Max(val1, 1M / (fzo * fub * ffr * ffo * fsu * fotro)).ToRound2();
+            //Decimal val1 = 0.6M;
+            System.IO.File.AppendAllText(AppDomain.CurrentDomain.BaseDirectory + "\\Avaluos.log", "\n\r" + DateTime.Now.ToString() 
+                + " ValidarCampoCalculado_h_1_1_n_17 "
+                + fre.ToString() + "\n\r"
+                + h_1_1_n_10_2.ToString() + "\n\r"
+                + h_1_1_n_11_2.ToString() + "\n\r"
+                + h_1_1_n_12_2.ToString() + "\n\r"
+                + h_1_1_n_13_2.ToString() + "\n\r"
+                + h_1_1_n_14_2.ToString() + "\n\r"
+                + fre.ToRound2().ToString() + "\n\r"
+                + (1M / (h_1_1_n_10_2 * h_1_1_n_11_2 * h_1_1_n_12_2 * h_1_1_n_13_2 * h_1_1_n_14_2)).ToRound2().ToString() + "\n\r"
+                + "\n\r");
+
+            return fre.ToRound2() == //Math.Max(val1, 
+                (1M / (h_1_1_n_10_2 * h_1_1_n_11_2 * h_1_1_n_12_2 * h_1_1_n_13_2 * h_1_1_n_14_2)).ToRound2();
+
         }
         catch (Exception ex)
         {
+            log("ValidarCampoCalculado_h_1_1_n_17", ex.Message, ex.StackTrace);
             return false;
         }
     }
@@ -1094,7 +1152,8 @@ public static class ValidarCamposCalculados
       "PE",
       "PC",
       "P",
-      "J"
+      "J"//,
+      //"H"
         };
         bool flag = true;
         if (((IEnumerable<string>)strArray).Contains<string>(coduso))
@@ -1109,4 +1168,12 @@ public static class ValidarCamposCalculados
     "3",
     "4"
     }).Contains<string>(clave);
+
+    private static void log(string origen, string mensaje, string trace)
+    {
+
+        System.IO.File.AppendAllText(AppDomain.CurrentDomain.BaseDirectory + "\\Avaluos.log", "\n\r" + DateTime.Now.ToString() + " " + origen + ": Exception: " + mensaje + "\n\r" + trace + "\n\r");
+
+    }
+
 }

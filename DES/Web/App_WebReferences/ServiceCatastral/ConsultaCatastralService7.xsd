@@ -1,18 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="DseDelegacionColonia.DelegacionDataTable" nillable="true">
-    <xs:complexType>
-      <xs:annotation>
-        <xs:appinfo>
-          <ActualType Name="DseDelegacionColonia.DelegacionDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
-        </xs:appinfo>
-      </xs:annotation>
-      <xs:sequence>
-        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
-        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
-      </xs:sequence>
-      <xs:attribute fixed="http://tempuri.org/DseDelegacionColonia.xsd" name="namespace" />
-      <xs:attribute fixed="DelegacionDataTable" name="tableTypeName" />
-    </xs:complexType>
-  </xs:element>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.Negocio" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.Negocio" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="InfoBaja">
+    <xs:sequence>
+      <xs:element name="IdInmueble" type="xs:decimal" />
+      <xs:element name="IsDeleted" type="xs:boolean" />
+      <xs:element name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InfoBaja" nillable="true" type="tns:InfoBaja" />
+  <xs:complexType name="ArrayOfDelegacionManzana">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DelegacionManzana" nillable="true" type="tns:DelegacionManzana" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDelegacionManzana" nillable="true" type="tns:ArrayOfDelegacionManzana" />
+  <xs:complexType name="DelegacionManzana">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClaveDelegacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdManzana" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DelegacionManzana" nillable="true" type="tns:DelegacionManzana" />
+  <xs:complexType name="ArrayOfCartaDelegacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CartaDelegacion" nillable="true" type="tns:CartaDelegacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCartaDelegacion" nillable="true" type="tns:ArrayOfCartaDelegacion" />
+  <xs:complexType name="CartaDelegacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClaveDelegacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreCarta" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CartaDelegacion" nillable="true" type="tns:CartaDelegacion" />
 </xs:schema>

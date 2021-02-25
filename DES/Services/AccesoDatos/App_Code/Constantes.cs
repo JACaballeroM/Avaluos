@@ -393,7 +393,7 @@ public static class Constantes
     /// <summary>
     /// PARÁMETRO ERROR VALOR CALCULADO E.2.1.N.13 - FACTOR DE EDAD
     /// </summary>
-    public const string PAR_ERROR_VALORCAL_E_2_1_N_13 = "e.2.1.n.13 - Factor de edad.";
+    public const string PAR_ERROR_VALORCAL_E_2_1_N_13 = "e.2.1.n.13 - Indice del costo remanente.";
     /// <summary>
     /// PARÁMETRO ERROR VALOR CALCULADO E.2.1.N.14 - FACTOR RESULTANTE
     /// </summary>
@@ -414,7 +414,7 @@ public static class Constantes
     /// <summary>
     /// PARÁMETRO ERROR VALOR CALCULADO E.2.5.N.13 - FACTOR DE EDAD
     /// </summary>
-    public const string PAR_ERROR_VALORCAL_E_2_5_N_13 = "e.2.5.n.13 - Factor de edad.";
+    public const string PAR_ERROR_VALORCAL_E_2_5_N_13 = "e.2.5.n.13 - Indice del costo remanente.";
     /// <summary>
     /// PARÁMETRO ERROR VALOR CALCULADO E.2.5.N.14 - FACTOR RESULTANTE
     /// </summary>
@@ -548,13 +548,13 @@ public static class Constantes
     /// </summary>
     public const string PAR_ERROR_VALORCAL_F_11_4 = "f.11.4 - Importe total obras complementarias COMUNES.";
     /// <summary>
-    /// PARÁMETRO ERROR VALOR CALCULADO F.12 - IMPORTE TOTAL INSTALACIONES ESPECIALES, OBRAS COMPLEMENTARIAS Y ELEMENTOS ACCESORIOS PRIVATIVAS
+    /// PARÁMETRO ERROR VALOR CALCULADO F.12 - Sumatoria Total Instalaciones Especiales Obras Complementarias Y Elementos Accesorios PRIVATIVAS
     /// </summary>
-    public const string PAR_ERROR_VALORCAL_F_12 = "f.12 - Importe total instalaciones especiales, obras complementarias y elementos accesorios PRIVATIVAS.";
+    public const string PAR_ERROR_VALORCAL_F_12 = "f.12 - Sumatoria Total Instalaciones Especiales Obras Complementarias Y Elementos Accesorios PRIVATIVAS.";
     /// <summary>
-    /// PARÁMETRO ERROR VALOR CALCULADO F.13 - IMPORTE TOTAL INSTALACIONES ESPECIALES, OBRAS COMPLEMENTARIAS Y ELEMENTOS ACCESORIOS COMUNES
+    /// PARÁMETRO ERROR VALOR CALCULADO F.13 - Sumatoria Total Instalaciones Especiales Obras Complementarias Y Elementos Accesorios COMUNES
     /// </summary>
-    public const string PAR_ERROR_VALORCAL_F_13 = "f.13 - Importe total instalaciones especiales, obras complementarias y elementos accesorios COMUNES.";
+    public const string PAR_ERROR_VALORCAL_F_13 = "f.13 - Sumatoria Total Instalaciones Especiales Obras Complementarias Y Elementos Accesorios COMUNES.";
     /// <summary>
     /// PARÁMETRO ERROR VALOR CALCULADO F.14 - IMPORTE INDIVISO INSTALACIONES ESPECIALES, OBRAS COMPLEMENTARIAS Y ELEMENTOS ACCESORIOS COMUNES
     /// </summary>

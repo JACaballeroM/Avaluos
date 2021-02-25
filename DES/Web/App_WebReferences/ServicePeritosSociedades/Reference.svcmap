@@ -18,17 +18,17 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://10.1.253.88/PRE/RegistroContribuyentes/PeritosSociedadesService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://10.0.8.2/PRO/RegistroContribuyentes/PeritosSociedadesService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="PeritosSociedadesService1.disco" MetadataType="Disco" ID="d9d20a47-023e-4847-b021-afde946c7961" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/PeritosSociedadesService.svc?disco" />
-    <MetadataFile FileName="DsePeritosSociedades1.xsd" MetadataType="Schema" ID="ebf771f8-64b8-4d1f-9059-8f56dfcebfbd" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/PeritosSociedadesService.svc?xsd=xsd2" />
-    <MetadataFile FileName="PeritosSociedadesService5.xsd" MetadataType="Schema" ID="54a32682-fc6f-495e-baac-8db473152e2e" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/PeritosSociedadesService.svc?xsd=xsd3" />
-    <MetadataFile FileName="PeritosSociedadesService52.xsd" MetadataType="Schema" ID="98f8af16-281a-427b-8a52-464d335eceb2" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/PeritosSociedadesService.svc?xsd=xsd0" />
-    <MetadataFile FileName="PeritosSociedadesService53.xsd" MetadataType="Schema" ID="c7e63aef-21c4-4219-8c43-736761bd0a3d" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/PeritosSociedadesService.svc?xsd=xsd1" />
-    <MetadataFile FileName="PeritosSociedadesService1.wsdl" MetadataType="Wsdl" ID="a3bd46f8-fb10-4816-9006-07b4a5a4f66c" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/PeritosSociedadesService.svc?wsdl" />
-    <MetadataFile FileName="PeritosSociedadesService54.xsd" MetadataType="Schema" ID="b3cdecd2-ce13-468f-9c54-6b6f3aa55f33" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/PeritosSociedadesService.svc?xsd=xsd4" />
-    <MetadataFile FileName="PeritosSociedadesService55.xsd" MetadataType="Schema" ID="b630f6ca-e614-4f9a-9a48-81d1fe649f53" SourceId="1" SourceUrl="http://psur-prbs-sbs01.promocapre.int/PRE/RegistroContribuyentes/PeritosSociedadesService.svc?xsd=xsd5" />
+    <MetadataFile FileName="PeritosSociedadesService.xsd" MetadataType="Schema" ID="40a6f607-8b74-4f59-9d8f-7a6beea59582" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/RegistroContribuyentes/PeritosSociedadesService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PeritosSociedadesService2.xsd" MetadataType="Schema" ID="103ac7f1-bfb1-4ba8-8233-4a42a13f3336" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/RegistroContribuyentes/PeritosSociedadesService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PeritosSociedadesService.disco" MetadataType="Disco" ID="35be5675-97ec-4801-bf80-421d8a34301f" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/RegistroContribuyentes/PeritosSociedadesService.svc?disco" />
+    <MetadataFile FileName="DsePeritosSociedades.xsd" MetadataType="Schema" ID="dbdbe235-dec9-4e43-bf44-d489a4b98924" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/RegistroContribuyentes/PeritosSociedadesService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PeritosSociedadesService3.xsd" MetadataType="Schema" ID="5bdd57db-e5e6-440e-bf30-cceb57f3a96d" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/RegistroContribuyentes/PeritosSociedadesService.svc?xsd=xsd5" />
+    <MetadataFile FileName="PeritosSociedadesService.wsdl" MetadataType="Wsdl" ID="0e20a6d6-1172-4f51-9833-93aab6f248c7" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/RegistroContribuyentes/PeritosSociedadesService.svc?wsdl" />
+    <MetadataFile FileName="PeritosSociedadesService4.xsd" MetadataType="Schema" ID="77d3bdf6-a90b-415c-973e-6c27d67eb1d6" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/RegistroContribuyentes/PeritosSociedadesService.svc?xsd=xsd4" />
+    <MetadataFile FileName="PeritosSociedadesService5.xsd" MetadataType="Schema" ID="5f0c4f95-ed1f-45d6-b44c-c65f929bdff8" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/RegistroContribuyentes/PeritosSociedadesService.svc?xsd=xsd3" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

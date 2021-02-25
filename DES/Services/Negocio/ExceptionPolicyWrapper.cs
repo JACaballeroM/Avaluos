@@ -17,6 +17,8 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
         /// <param name="ex"></param>
         public static void HandleException(Exception ex)
         {
+            System.IO.File.AppendAllText(AppDomain.CurrentDomain.BaseDirectory + "\\Avaluos.log", "\n\r" + DateTime.Now.ToString() + " HandleException: " + ex.Message + "\n\r" + ex.StackTrace + "\n\r");
+
             string exceptionPolicy = System.Configuration.ConfigurationManager.AppSettings["SIGAPred.FuentesExternas.Avaluos.ExceptionPolicy"];
             ExceptionPolicy.HandleException(ex, exceptionPolicy);
         }
