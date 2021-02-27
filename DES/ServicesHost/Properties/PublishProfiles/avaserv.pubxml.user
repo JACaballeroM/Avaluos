@@ -72,13 +72,13 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>02/24/2021 12:27:49</publishTime>
     </File>
     <File Include="bin/SIGAPred.FuentesExternas.Avaluos.ServicesHost.dll">
-      <publishTime>02/24/2021 12:27:52</publishTime>
+      <publishTime>02/26/2021 22:44:42</publishTime>
     </File>
     <File Include="bin/SIGAPred.FuentesExternas.Avaluos.ServicesHost.pdb">
-      <publishTime>02/24/2021 12:27:52</publishTime>
+      <publishTime>02/26/2021 22:44:42</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>02/25/2021 14:41:32</publishTime>
+      <publishTime>02/26/2021 22:44:51</publishTime>
     </File>
     <File Include="web.config">
       <publishTime>06/18/2015 14:39:10</publishTime>

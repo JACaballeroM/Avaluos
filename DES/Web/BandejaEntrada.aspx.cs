@@ -591,8 +591,11 @@ public partial class BandejaEntrada : PageBaseAvaluos
     private void ActualizarUrlAcuse()
     {
         RedirectUtil.BaseURL = Constantes.URL_DESCARGA_ACUSE_AVALUO;
-        RedirectUtil.AddParameter(Constantes.PAR_IDAVALUO, (HiddenIdAvaluo.Value).Trim());
-        RedirectUtil.AddParameter(Constantes.PAR_NUMUNIAVALUO, (HiddenNumUnico.Value).Trim());
+        //RedirectUtil.AddParameter(Constantes.PAR_IDAVALUO, (HiddenIdAvaluo.Value).Trim());
+        //RedirectUtil.AddParameter(Constantes.PAR_NUMUNIAVALUO, (HiddenNumUnico.Value).Trim());
+
+        RedirectUtil.AddParameter(Constantes.PAR_NUMUNIAVALUO_INF, (HiddenNumUnico.Value).Trim());
+
         System.IO.File.AppendAllText(AppDomain.CurrentDomain.BaseDirectory + "\\Avaluos.log", "\n\r"
                    + DateTime.Now.ToString() + " " + "BandejaEntrada ActualizarUrlAcuse : URL_DESCARGA_ACUSE_AVALUO: " + Constantes.URL_DESCARGA_ACUSE_AVALUO + 
                    " | " + (HiddenIdAvaluo.Value).Trim() +

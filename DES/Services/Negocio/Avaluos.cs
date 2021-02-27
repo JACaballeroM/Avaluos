@@ -4166,19 +4166,15 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                             string str = "e.2.1.n.16 Campo obligatorio";
                             stringBuilder.AppendLine(str);
                         }
-                        if (!XmlUtils.XmlSearchById(xelement, "e.2.1.n.17").IsFull() && !esComercial)
+                        if (!esComercial)
                         {
-                            flag1 = false;
-                            if (stringXelement != "P"  && 
-                                stringXelement != "PE" && 
-                                stringXelement != "PC" && 
-                                stringXelement != "J"  //&& 
-                                //stringXelement != "H"
-                                )
+                            if (!XmlUtils.XmlSearchById(xelement, "e.2.1.n.17").IsFull()) //&& !esComercial)
                             {
-                                string str = //stringXelement == "W" ? "e.2.1.n.17 Campo obligatorio para el uso baldio" : 
-                                "e.2.1.n.17 Campo obligatorio";
-                                stringBuilder.AppendLine(str);
+                                flag1 = false;
+                                
+                                    string str = //stringXelement == "W" ? "e.2.1.n.17 Campo obligatorio para el uso baldio" : 
+                                    "e.2.1.n.17 Campo obligatorio";
+                                    stringBuilder.AppendLine(str);
                             }
                         }
                     }
@@ -4302,17 +4298,14 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                             string str = "e.2.5.n.16 Campo obligatorio";
                             stringBuilder.AppendLine(str);
                         }
-                        if (!XmlUtils.XmlSearchById(rootN, "e.2.5.n.17").IsFull() && !esComercial)
+                        if (!esComercial)
                         {
-                            flag1 = false;
-                            string str = (stringXelement != "P"  && 
-                                          stringXelement != "PE" && 
-                                          stringXelement != "PC" && 
-                                          stringXelement != "J"  //&& 
-                                          //stringXelement != "H"
-                                          ) ? 
-                                "e.2.5.n.17 Campo obligatorio para el uso baldio" : "e.2.5.n.17 Campo obligatorio";
-                            stringBuilder.AppendLine(str);
+                            if (!XmlUtils.XmlSearchById(rootN, "e.2.5.n.17").IsFull()) // && !esComercial)
+                            {
+                                flag1 = false;
+                                string str =  "e.2.5.n.17 Campo obligatorio";
+                                stringBuilder.AppendLine(str);
+                            }
                         }
                     }
                 }
@@ -5423,39 +5416,50 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                 }
                 foreach (XElement root2 in XmlUtils.XmlSearchById(root1, "e.2.1"))
                 {
-                    string stringXelement = XmlUtils.XmlSearchById(root2, "e.2.1.n.2").ToStringXElement();
-                    //if (this.aplicaDepreciacion(stringXelement) && stringXelement != "W")
-                    log("ValidarValoresCalculados","Valor de Uso: ", stringXelement);
-                    if(stringXelement != "P"  && 
-                       stringXelement != "PE" && 
-                       stringXelement != "PC" && 
-                       stringXelement != "J"  //&& 
-                       //stringXelement != "H"
-                       )
+                    string uso = XmlUtils.XmlSearchById(root2, "e.2.1.n.2").ToStringXElement();
+                    string clase = XmlUtils.XmlSearchById(root2, "e.2.1.n.6").ToStringXElement();
+
+                    log("ValidarValoresCalculados e21n17 ", uso + " | " + clase, "");
+                    
+                    if (!esComercial)//Se elimina este campo de Comercial
                     {
-                        if (!esComercial)//Se elimina este campo de Comercial
-                        { 
-                            IEnumerable<XElement> xelements3 = XmlUtils.XmlSearchById(root2, "e.2.1.n.17");
-                            if (xelements3.IsFull() && XmlUtils.EsDecimalXmlValido(xelements3))
+                        IEnumerable<XElement> depreciacion = XmlUtils.XmlSearchById(root2, "e.2.1.n.17");
+                        if (depreciacion.IsFull() && XmlUtils.EsDecimalXmlValido(depreciacion))
+                        {
+                            bool flag3 = XmlUtils.EsDecimalXmlValido(XmlUtils.XmlSearchById(root2, "e.2.1.n.7")) && XmlUtils.EsDecimalXmlValido(XmlUtils.XmlSearchById(root2, "e.2.1.n.8"));
+                            List<IEnumerable<XElement>> listElement = new List<IEnumerable<XElement>>();
+                            listElement.Add(XmlUtils.XmlSearchById(root2, "e.2.1.n.7"));
+                            listElement.Add(XmlUtils.XmlSearchById(root2, "e.2.1.n.8"));
+                            if (!XmlUtils.IsListEmpty(listElement) && flag3)
                             {
-                                bool flag3 = XmlUtils.EsDecimalXmlValido(XmlUtils.XmlSearchById(root2, "e.2.1.n.7")) 
-                                    && XmlUtils.EsDecimalXmlValido(XmlUtils.XmlSearchById(root2, "e.2.1.n.8"));
-                                List<IEnumerable<XElement>> listElement = new List<IEnumerable<XElement>>();
-                                listElement.Add(XmlUtils.XmlSearchById(root2, "e.2.1.n.7"));
-                                listElement.Add(XmlUtils.XmlSearchById(root2, "e.2.1.n.8"));
-                                if (!XmlUtils.IsListEmpty(listElement) && flag3)
-                                {
-                                    Decimal decimalXelement = xelements3.ToDecimalXElement();
-                                    List<Decimal> listDecimal = XmlUtils.ConvetListElementToListDecimal(listElement);
-                                    log("ValidarValoresCalculados", "ValidarCampoCalculado_e_2_1_n_17 Parametros: ", 
-                                          stringXelement+ " || " 
-                                        + decimalXelement.ToString() + " || " 
-                                        + listDecimal[0].ToString() + " || " 
+                                Decimal decimalXelement = depreciacion.ToDecimalXElement();
+                                List<Decimal> listDecimal = XmlUtils.ConvetListElementToListDecimal(listElement);
+
+                                log("ValidarValoresCalculados e.2.1.n.17 ", "Valor de Uso: " + uso + " Clase: " + clase,
+
+                                          decimalXelement.ToString() + " || "
+                                        + listDecimal[0].ToString() + " || "
                                         + listDecimal[1].ToString());
-                                    if (!ValidarCamposCalculados.ValidarCampoCalculado_e_2_1_n_17(decimalXelement, listDecimal[0], listDecimal[1], source2.First<XElement>().Value.To<DateTime>()))
-                                        stringBuilder.AppendLine("e.2.1.n.17 - Depreciación por edad." + str);
+
+                                if ((uso == "P" || uso == "PE" || uso == "PC" || uso == "J") && clase == "U")
+                                {
+                                    if (decimalXelement != 1M)
+                                    {
+                                        stringBuilder.AppendLine("e.2.1.n.17 Error de restricción Los usos descubiertos, no se pueden depreciar, valor esperado: 1" + str);
+                                        log("ValidarValoresCalculados e21n17 ", "e.2.1.n.17 Error de restricción Los usos descubiertos, no se pueden depreciar, valor esperado: 1", str);
+                                    }
                                 }
+                                else
+                                {
+                                    if (!ValidarCamposCalculados.ValidarCampoCalculado_e_2_1_n_17(decimalXelement, listDecimal[0], listDecimal[1], source2.First<XElement>().Value.To<DateTime>()))
+                                    {
+                                        stringBuilder.AppendLine("e.2.1.n.17 - Depreciación por edad." + str);
+                                        log("ValidarValoresCalculados e21n17 ", "e.2.1.n.17 - Depreciación por edad.", str);
+                                    }
+                                }
+
                             }
+
                         }
                     }
                 }

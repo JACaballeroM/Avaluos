@@ -195,7 +195,7 @@ public static class ValidarCamposCalculados
         }
     }
 
-    public static bool ValidarCampoCalculado_e_2_1_n_15_Com(
+    /*public static bool ValidarCampoCalculado_e_2_1_n_15_Com(
       Decimal valorCalculado,
       Decimal e_2_1_n_12,
       Decimal e_2_1_n_14,
@@ -209,7 +209,7 @@ public static class ValidarCamposCalculados
         {
             return false;
         }
-    }
+    }*/
 
     public static bool ValidarCampoCalculado_e_2_1_n_15(
       Decimal valorCalculado,
@@ -219,6 +219,13 @@ public static class ValidarCamposCalculados
     {
         try
         {
+		log("ValidarCampoCalculado_e_2_1_n_15 ", "Datos: ", valorCalculado.ToRound2().ToString() + " | "
+                + valorCalculado.ToString()
+                + " | " + e_2_1_n_11.ToString()
+                + " | " + e_2_1_n_12.ToString()
+                + " | " + e_2_1_n_13.ToString()
+                + " | " + (e_2_1_n_11 * e_2_1_n_12 * e_2_1_n_13).ToRound2()
+                );										
             return valorCalculado.ToRound2() == (e_2_1_n_11 * e_2_1_n_12 * e_2_1_n_13).ToRound2();
         }
         catch (Exception ex)
@@ -236,7 +243,14 @@ public static class ValidarCamposCalculados
     {
         try
         {
-            return valorCalculado.ToRound2() == ((e_2_1_n_16 * e_2_1_n_17) * e_2_1_n_11).ToRound2();
+            log("ValidarCampoCalculado_e_2_1_n_15_Cat ", "Datos: ", valorCalculado.ToRound2().ToString() + " | "
+                + valorCalculado.ToString()
+                + " | " + e_2_1_n_11.ToString()
+                + " | " + e_2_1_n_16.ToString()
+                + " | " + e_2_1_n_17.ToString()
+                + " | " + (e_2_1_n_11 * e_2_1_n_16 * e_2_1_n_17).ToRound2()
+                );
+            return valorCalculado.ToRound2() == (e_2_1_n_11 * e_2_1_n_16 * e_2_1_n_17).ToRound2();	  
         }
         catch (Exception ex)
         {
@@ -1095,12 +1109,15 @@ public static class ValidarCamposCalculados
     {
         try
         {
-            Decimal round2 = (k_3 / k_4).ToRound2();
+			log("ValidarCampoCalculado_k_5 ", "ValorCalculado: " + valorCalculado.ToRound2().ToString() + " | k_3: " + k_3.ToString() + " | K_4: " + k_4.ToString(),
+                " Resultado: " + (k_3 / (k_4 / 100M)).ToRound2().ToString());
+            Decimal round2 = (k_3 / (k_4 / 100M)).ToRound2();
             return valorCalculado.ToRound2() == round2;
         }
         catch (Exception ex)
         {
-            return false;
+		log("ValidarCampoCalculado_k_5 ", ex.Message, ex.StackTrace);
+		            return false;
         }
     }
 

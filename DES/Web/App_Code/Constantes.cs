@@ -184,7 +184,9 @@ public static class Constantes
     /// <summary>
     /// URL PÁGINA 'DESCARGAR ACUSE AVALÚO'
     /// </summary>
-    public const string URL_DESCARGA_ACUSE_AVALUO = "~/DescargaAcuseAvaluo.aspx";
+    //public const string URL_DESCARGA_ACUSE_AVALUO = "~/DescargaAcuseAvaluo.aspx";
+
+    public const string URL_DESCARGA_ACUSE_AVALUO = "http://ovica.linesolutions.tech/avaluosNew_backend/public/acuse";
     /// <summary>
     /// URL PÁGINA 'DESCARGAR AVALÚO'
     /// </summary>
@@ -201,7 +203,7 @@ public static class Constantes
     /// URL PÁGINA 'INFORME AVALÚO'
     /// </summary>
     public const string URL_AVALUOS_INFORME = "http://ovica.linesolutions.tech/avaluosNew_backend/public/reimprime";
-        //"InformeAvaluo.aspx";
+    //"InformeAvaluo.aspx";
 
 
     #endregion
