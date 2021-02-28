@@ -3972,9 +3972,9 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
             try
             {
                 bool flag = true;
-                int num = Convert.ToInt32(ConfigurationManager.AppSettings.Get("MaxLengthUploadFile")) * 1024;
+                /*int num = Convert.ToInt32(ConfigurationManager.AppSettings.Get("MaxLengthUploadFile")) * 1024;
                 if (bytesXmlAvaluo > num || (Decimal)bytesXmlAvaluo == 0M)
-                    flag = false;
+                    flag = false;*/
                 return flag;
             }
             catch (Exception ex)
@@ -4044,6 +4044,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
             IEnumerable<XElement> rootN = XmlUtils.XmlSearchById(data, "e.2");
             IEnumerable<XElement> elementos1 = XmlUtils.XmlSearchById(rootN, "e.2.1");
             bool flag1 = true;
+            
             bool esComercial = (Decimal)data.Descendants((XName)"Comercial").Count<XElement>() > 0M;
             if (elementos1.IsFull())
             {
@@ -4175,6 +4176,22 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                                     string str = //stringXelement == "W" ? "e.2.1.n.17 Campo obligatorio para el uso baldio" : 
                                     "e.2.1.n.17 Campo obligatorio";
                                     stringBuilder.AppendLine(str);
+                            }
+                            else
+                            {
+
+                                string uso = XmlUtils.XmlSearchById(xelement, "e.2.1.n.2").ToStringXElement();
+                                string clase = XmlUtils.XmlSearchById(xelement, "e.2.1.n.6").ToStringXElement();
+                                string depreciacion = XmlUtils.XmlSearchById(xelement, "e.2.1.n.17").ToStringXElement();
+
+                                log("ValidaXML e21n17 USO:", uso + " | CLASE:" + clase, " | Dep. : "+depreciacion);
+
+                                if((uso=="P" || uso == "PE" || uso == "PC" || uso == "J" ) && clase=="U" && depreciacion != "1")
+                                {
+                                    stringBuilder.AppendLine(               "e.2.1.n.17 Error de restricción Los usos descubiertos, no se pueden depreciar, valor esperado: 1" );
+                                    log("ValidarValoresCalculados e21n17 ", "e.2.1.n.17 Error de restricción Los usos descubiertos, no se pueden depreciar, valor esperado: 1", "");
+
+                                }
                             }
                         }
                     }
@@ -4391,6 +4408,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
         {
             bool flag1 = true;
             bool flag2 = true;
+            bool flag7 = true;
             IEnumerable<XElement> xelements1 = XmlUtils.XmlSearchById(data, "b.1");
             IEnumerable<XElement> xelements2 = XmlUtils.XmlSearchById(data, "b.2");
             StringBuilder stringBuilder = new StringBuilder();
@@ -4470,8 +4488,16 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     }
                 }
             }
-            if (!flag2 || !flag1)
+            IEnumerable<XElement> xelements7 = XmlUtils.XmlSearchById(data, "b.7");
+            if (string.IsNullOrEmpty(xelements7.ToStringXElement()))
+            {
+                flag7 = false;
+                stringBuilder.AppendLine("  b.7 - El contenido del elemento Anteedentes está incompleto. Lista esperada de elementos posibles: 'Tipo de inmueble'.");
+            }
+
+            if (!flag1 || !flag2 || !flag7)
                 throw new FaultException<AvaluosInfoException>(new AvaluosInfoException(stringBuilder.ToString()));
+
         }
 
         private bool ValidarResolucionFoto(Image Img)
@@ -5443,6 +5469,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
 
                                 if ((uso == "P" || uso == "PE" || uso == "PC" || uso == "J") && clase == "U")
                                 {
+                                    log("ValidarValoresCalculados e.2.1.n.17 ", "Valor de Uso: " + uso , " Clase: " + clase);
                                     if (decimalXelement != 1M)
                                     {
                                         stringBuilder.AppendLine("e.2.1.n.17 Error de restricción Los usos descubiertos, no se pueden depreciar, valor esperado: 1" + str);

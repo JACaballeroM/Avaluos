@@ -6203,7 +6203,7 @@
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
-									<xs:element name="ValorUnitarioDeTierraHomologadoPromedio">
+									<xs:element name="ValorUnitarioHomologadoPromedio">
 										<xs:complexType>
 											<xs:simpleContent>
 												<xs:extension base="DecimalPositivo">

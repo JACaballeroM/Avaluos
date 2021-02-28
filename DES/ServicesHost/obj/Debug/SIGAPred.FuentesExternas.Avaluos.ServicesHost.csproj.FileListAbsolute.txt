@@ -141,7 +141,6 @@ C:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_Acu
 C:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_AcuseAva - copia\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.Services.pdb
 C:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_AcuseAva - copia\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.Services.xml
 C:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_AcuseAva - copia\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.Services.dll.config
-C:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_AcuseAva - copia\DES\ServicesHost\obj\Debug\SIGAPred.FuentesExternas.Avaluos.ServicesHost.csprojAssemblyReference.cache
 C:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_AcuseAva - copia\DES\ServicesHost\obj\Debug\SIGAPred.FuentesExternas.Avaluos.ServicesHost.csproj.CoreCompileInputs.cache
 C:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_AcuseAva - copia\DES\ServicesHost\obj\Debug\SIGAPred.FuentesExternas.Avaluos.ServicesHost.csproj.CopyComplete
 C:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_AcuseAva - copia\DES\ServicesHost\obj\Debug\SIGAPred.FuentesExternas.Avaluos.ServicesHost.dll

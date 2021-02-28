@@ -32,7 +32,8 @@ public partial class UserControls_MenuLocal : System.Web.UI.UserControl
             if (!IsPostBack)
             {
                 GestorVisibilidadControles.ValidarControl(this.Controls, this.ID);
-                //MostarReportes();
+                MostarReportes();
+                MostarVinculoAvaluosAnteriores();
             }
         }
         catch (Exception ex)
@@ -40,6 +41,7 @@ public partial class UserControls_MenuLocal : System.Web.UI.UserControl
             ExceptionPolicyWrapper.HandleException(ex);
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ex.Message;
             MostrarMensajeInfoExcepcion(msj);
+           
         }
 }
 
@@ -61,6 +63,20 @@ public partial class UserControls_MenuLocal : System.Web.UI.UserControl
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ex.Message;
             MostrarMensajeInfoExcepcion(msj);
         }
+    }
+
+    private void MostarVinculoAvaluosAnteriores()
+    {
+
+        
+            
+            TreeNode nodoLink = new TreeNode("Avalúos Anteriores");
+            nodoLink.Value = "Avalúos Anteriores";
+            nodoLink.NavigateUrl = "http://10.0.8.1/PRO/FuentesExternas/Avaluos_anteriores/BandejaEntrada.aspx";
+            
+            MenuLocal.Nodes.Add(nodoLink);
+
+       
     }
 
     private void MostarReportes()

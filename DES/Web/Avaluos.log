@@ -1,0 +1,102 @@
+
+27/02/2021 12:26:08 p. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+Can not load 7-zip library or internal COM error! Message: DLL file does not exist.
+   en SevenZip.SevenZipLibraryManager.LoadLibrary(Object user, Enum format)
+   en SevenZip.SevenZipCompressor.CompressStream(Stream inStream, Stream outStream, String password)
+   en SevenZip.SevenZipCompressor.CompressStream(Stream inStream, Stream outStream)
+   en SIGAPred.Common.Compresion.Compresion.Comprimir(Byte[] fichero, TipoFichero tipoFichero)
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_AcuseAva - copia\DES\Web\SubirAvaluo.aspx.cs:línea 279
+
+27/02/2021 12:26:27 p. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+Can not load 7-zip library or internal COM error! Message: DLL file does not exist.
+   en SevenZip.SevenZipLibraryManager.LoadLibrary(Object user, Enum format)
+   en SevenZip.SevenZipCompressor.CompressStream(Stream inStream, Stream outStream, String password)
+   en SevenZip.SevenZipCompressor.CompressStream(Stream inStream, Stream outStream)
+   en SIGAPred.Common.Compresion.Compresion.Comprimir(Byte[] fichero, TipoFichero tipoFichero)
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_AcuseAva - copia\DES\Web\SubirAvaluo.aspx.cs:línea 279
+
+27/02/2021 12:29:09 p. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+Can not load 7-zip library or internal COM error! Message: DLL file does not exist.
+   en SevenZip.SevenZipLibraryManager.LoadLibrary(Object user, Enum format)
+   en SevenZip.SevenZipCompressor.CompressStream(Stream inStream, Stream outStream, String password)
+   en SevenZip.SevenZipCompressor.CompressStream(Stream inStream, Stream outStream)
+   en SIGAPred.Common.Compresion.Compresion.Comprimir(Byte[] fichero, TipoFichero tipoFichero)
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_AcuseAva - copia\DES\Web\SubirAvaluo.aspx.cs:línea 279
+
+27/02/2021 12:31:23 p. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+Can not load 7-zip library or internal COM error! Message: DLL file does not exist.
+   en SevenZip.SevenZipLibraryManager.LoadLibrary(Object user, Enum format)
+   en SevenZip.SevenZipCompressor.CompressStream(Stream inStream, Stream outStream, String password)
+   en SevenZip.SevenZipCompressor.CompressStream(Stream inStream, Stream outStream)
+   en SIGAPred.Common.Compresion.Compresion.Comprimir(Byte[] fichero, TipoFichero tipoFichero)
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_AcuseAva - copia\DES\Web\SubirAvaluo.aspx.cs:línea 279
+
+27/02/2021 01:52:49 p. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+Referencia a objeto no establecida como instancia de un objeto.
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_AcuseAva - copia\DES\Web\SubirAvaluo.aspx.cs:línea 336
+
+27/02/2021 02:57:55 p. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+Esta fila ya pertenece a esta tabla.
+   en System.Data.DataTable.InsertRow(DataRow row, Int64 proposedID, Int32 pos, Boolean fireEvent)
+   en System.Data.DataRowCollection.Add(DataRow row)
+   en ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUODataTable.AddERROR_VALIDACION_AVALUORow(ERROR_VALIDACION_AVALUORow row) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\b1ea079d\241e95c1\App_WebReferences.nimz-pdp.0.cs:línea 1979
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_AcuseAva - copia\DES\Web\SubirAvaluo.aspx.cs:línea 341
+
+27/02/2021 02:59:58 p. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+Esta fila ya pertenece a esta tabla.
+   en System.Data.DataTable.InsertRow(DataRow row, Int64 proposedID, Int32 pos, Boolean fireEvent)
+   en System.Data.DataRowCollection.Add(DataRow row)
+   en ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUODataTable.AddERROR_VALIDACION_AVALUORow(ERROR_VALIDACION_AVALUORow row) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\b1ea079d\241e95c1\App_WebReferences.nimz-pdp.0.cs:línea 1979
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_AcuseAva - copia\DES\Web\SubirAvaluo.aspx.cs:línea 343
+
+27/02/2021 03:02:18 p. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+Esta fila ya pertenece a esta tabla.
+   en System.Data.DataTable.InsertRow(DataRow row, Int64 proposedID, Int32 pos, Boolean fireEvent)
+   en System.Data.DataRowCollection.Add(DataRow row)
+   en ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUODataTable.AddERROR_VALIDACION_AVALUORow(ERROR_VALIDACION_AVALUORow row) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\b1ea079d\241e95c1\App_WebReferences.nimz-pdp.0.cs:línea 1979
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_AcuseAva - copia\DES\Web\SubirAvaluo.aspx.cs:línea 345
+
+27/02/2021 03:33:44 p. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+Esta fila ya pertenece a esta tabla.
+   en System.Data.DataTable.InsertRow(DataRow row, Int64 proposedID, Int32 pos, Boolean fireEvent)
+   en System.Data.DataRowCollection.Add(DataRow row)
+   en ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUODataTable.AddERROR_VALIDACION_AVALUORow(ERROR_VALIDACION_AVALUORow row) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\b1ea079d\241e95c1\App_WebReferences.nimz-pdp.0.cs:línea 1979
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_AcuseAva - copia\DES\Web\SubirAvaluo.aspx.cs:línea 369
+
+27/02/2021 03:47:08 p. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+Esta fila ya pertenece a esta tabla.
+   en System.Data.DataTable.InsertRow(DataRow row, Int64 proposedID, Int32 pos, Boolean fireEvent)
+   en System.Data.DataRowCollection.Add(DataRow row)
+   en ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUODataTable.AddERROR_VALIDACION_AVALUORow(ERROR_VALIDACION_AVALUORow row) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\b1ea079d\241e95c1\App_WebReferences.nimz-pdp.0.cs:línea 1979
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_AcuseAva - copia\DES\Web\SubirAvaluo.aspx.cs:línea 367
+
+27/02/2021 03:49:58 p. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+Esta fila ya pertenece a esta tabla.
+   en System.Data.DataTable.InsertRow(DataRow row, Int64 proposedID, Int32 pos, Boolean fireEvent)
+   en System.Data.DataRowCollection.Add(DataRow row)
+   en ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUODataTable.AddERROR_VALIDACION_AVALUORow(ERROR_VALIDACION_AVALUORow row) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\b1ea079d\241e95c1\App_WebReferences.nimz-pdp.0.cs:línea 1979
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_AcuseAva - copia\DES\Web\SubirAvaluo.aspx.cs:línea 367
+
+27/02/2021 04:33:05 p. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+Referencia a objeto no establecida como instancia de un objeto.
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_AcuseAva - copia\DES\Web\SubirAvaluo.aspx.cs:línea 318
+
+27/02/2021 04:53:00 p. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+La secuencia no contiene elementos
+   en System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   en SIGAPred.Common.Extensions.XElementUtils.ToStringXElement(IEnumerable`1 elemento)
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_AcuseAva - copia\DES\Web\SubirAvaluo.aspx.cs:línea 353
+
