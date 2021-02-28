@@ -99,4 +99,34 @@ La secuencia no contiene elementos
    en System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
    en SIGAPred.Common.Extensions.XElementUtils.ToStringXElement(IEnumerable`1 elemento)
    en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_AcuseAva - copia\DES\Web\SubirAvaluo.aspx.cs:línea 353
+
+28/02/2021 05:10:40 a. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+El canal de solicitud agotó el tiempo de espera mientras esperaba una respuesta después de 00:00:59.7589661. Aumente el valor de tiempo de espera pasado a la llamada a Request, o bien aumente el valor de SendTimeout en el enlace. El tiempo asignado a esta operación puede haber sido una parte de un tiempo de espera mayor.
+
+Server stack trace: 
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en ServiceAvaluosAnterior.IAvaluos.EsValidoAvaluo(EsValidoAvaluoRequest request)
+   en ServiceAvaluosAnterior.AvaluosClient.ServiceAvaluosAnterior.IAvaluos.EsValidoAvaluo(EsValidoAvaluoRequest request) en c:\Users\thexc\AppData\Local\Temp\Temporary ASP.NET Files\root\1cb12bc2\810f2b29\App_WebReferences.sp9ylowk.1.cs:línea 49670
+   en ServiceAvaluosAnterior.AvaluosClient.EsValidoAvaluo(Byte[] xmlAvaluoByte, Int32 idPersona, Boolean esPerito) en c:\Users\thexc\AppData\Local\Temp\Temporary ASP.NET Files\root\1cb12bc2\810f2b29\App_WebReferences.sp9ylowk.1.cs:línea 49678
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en e:\SIGAPred\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 730
+
+28/02/2021 05:14:48 a. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+Referencia a objeto no establecida como instancia de un objeto.
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en e:\SIGAPred\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 794
+
+28/02/2021 05:19:33 a. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+Referencia a objeto no establecida como instancia de un objeto.
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en e:\SIGAPred\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 794
 
