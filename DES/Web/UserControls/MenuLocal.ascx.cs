@@ -33,7 +33,7 @@ public partial class UserControls_MenuLocal : System.Web.UI.UserControl
             {
                 GestorVisibilidadControles.ValidarControl(this.Controls, this.ID);
                 MostarReportes();
-                MostarVinculoAvaluosAnteriores();
+                //MostarVinculoAvaluosAnteriores();
             }
         }
         catch (Exception ex)

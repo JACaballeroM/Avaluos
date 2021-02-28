@@ -129,4 +129,170 @@ Referencia a objeto no establecida como instancia de un objeto.
 
 Referencia a objeto no establecida como instancia de un objeto.
    en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en e:\SIGAPred\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 794
+
+28/02/2021 06:01:40 a. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+Can not load 7-zip library or internal COM error! Message: DLL file does not exist.
+   en SevenZip.SevenZipLibraryManager.LoadLibrary(Object user, Enum format)
+   en SevenZip.SevenZipCompressor.CompressStream(Stream inStream, Stream outStream, String password)
+   en SevenZip.SevenZipCompressor.CompressStream(Stream inStream, Stream outStream)
+   en SIGAPred.Common.Compresion.Compresion.Comprimir(Byte[] fichero, TipoFichero tipoFichero)
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 279
+
+28/02/2021 06:06:51 a. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+TransactionHelper: La transacción es null.
+
+Server stack trace: 
+   en System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en ServiceAvaluos.IAvaluos.RegistrarAvaluo(RegistrarAvaluoRequest request)
+   en ServiceAvaluos.AvaluosClient.ServiceAvaluos.IAvaluos.RegistrarAvaluo(RegistrarAvaluoRequest request) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.t4ge9fqp.0.cs:línea 49994
+   en ServiceAvaluos.AvaluosClient.RegistrarAvaluo(Byte[] xmlBytes, String idPersona) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.t4ge9fqp.0.cs:línea 50001
+   en SubirAvaluo.RealizarRegistroAvaluo(Byte[] documentoXML) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 1156
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 696
+
+28/02/2021 06:08:21 a. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+El creador de este error no especificó una razón.
+
+Server stack trace: 
+   en System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en ServiceAvaluosAnterior.IAvaluos.RegistrarIntentoFallido(RegistrarIntentoFallidoRequest request)
+   en ServiceAvaluosAnterior.AvaluosClient.ServiceAvaluosAnterior.IAvaluos.RegistrarIntentoFallido(RegistrarIntentoFallidoRequest request) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.t4ge9fqp.1.cs:línea 49863
+   en ServiceAvaluosAnterior.AvaluosClient.RegistrarIntentoFallido(FEXAVA_INTENTOFALLIDO_PDataTable par_intentoFallidoDT) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.t4ge9fqp.1.cs:línea 49869
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 818
+
+28/02/2021 06:10:03 a. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+Error al recibir la respuesta HTTP a http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos_anterior/Avaluos.svc. Puede deberse a que el enlace del extremo de servicio no usa el protocolo HTTP. También puede deberse a que el servidor anula un contexto de solicitud HTTP (posiblemente por el cierre del servicio). Consulte los registros del servidor para obtener más información.
+
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   en System.ServiceModel.Channels.HttpChannelFactory.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en ServiceAvaluosAnterior.IAvaluos.RegistrarIntentoFallido(RegistrarIntentoFallidoRequest request)
+   en ServiceAvaluosAnterior.AvaluosClient.ServiceAvaluosAnterior.IAvaluos.RegistrarIntentoFallido(RegistrarIntentoFallidoRequest request) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.t4ge9fqp.1.cs:línea 49863
+   en ServiceAvaluosAnterior.AvaluosClient.RegistrarIntentoFallido(FEXAVA_INTENTOFALLIDO_PDataTable par_intentoFallidoDT) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.t4ge9fqp.1.cs:línea 49869
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 818
+
+28/02/2021 06:13:44 a. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+El creador de este error no especificó una razón.
+
+Server stack trace: 
+   en System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en ServiceAvaluosAnterior.IAvaluos.RegistrarIntentoFallido(RegistrarIntentoFallidoRequest request)
+   en ServiceAvaluosAnterior.AvaluosClient.ServiceAvaluosAnterior.IAvaluos.RegistrarIntentoFallido(RegistrarIntentoFallidoRequest request) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.t4ge9fqp.1.cs:línea 49863
+   en ServiceAvaluosAnterior.AvaluosClient.RegistrarIntentoFallido(FEXAVA_INTENTOFALLIDO_PDataTable par_intentoFallidoDT) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.t4ge9fqp.1.cs:línea 49869
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 818
+
+28/02/2021 06:16:26 a. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+El creador de este error no especificó una razón.
+
+Server stack trace: 
+   en System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en ServiceAvaluosAnterior.IAvaluos.RegistrarIntentoFallido(RegistrarIntentoFallidoRequest request)
+   en ServiceAvaluosAnterior.AvaluosClient.ServiceAvaluosAnterior.IAvaluos.RegistrarIntentoFallido(RegistrarIntentoFallidoRequest request) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.t4ge9fqp.1.cs:línea 49863
+   en ServiceAvaluosAnterior.AvaluosClient.RegistrarIntentoFallido(FEXAVA_INTENTOFALLIDO_PDataTable par_intentoFallidoDT) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.t4ge9fqp.1.cs:línea 49869
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 818
+
+28/02/2021 06:20:06 a. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+El creador de este error no especificó una razón.
+
+Server stack trace: 
+   en System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en ServiceAvaluosAnterior.IAvaluos.RegistrarIntentoFallido(RegistrarIntentoFallidoRequest request)
+   en ServiceAvaluosAnterior.AvaluosClient.ServiceAvaluosAnterior.IAvaluos.RegistrarIntentoFallido(RegistrarIntentoFallidoRequest request) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.t4ge9fqp.1.cs:línea 49863
+   en ServiceAvaluosAnterior.AvaluosClient.RegistrarIntentoFallido(FEXAVA_INTENTOFALLIDO_PDataTable par_intentoFallidoDT) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.t4ge9fqp.1.cs:línea 49869
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 818
+
+28/02/2021 06:24:31 a. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+El creador de este error no especificó una razón.
+
+Server stack trace: 
+   en System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en ServiceAvaluosAnterior.IAvaluos.RegistrarIntentoFallido(RegistrarIntentoFallidoRequest request)
+   en ServiceAvaluosAnterior.AvaluosClient.ServiceAvaluosAnterior.IAvaluos.RegistrarIntentoFallido(RegistrarIntentoFallidoRequest request) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.t4ge9fqp.1.cs:línea 49863
+   en ServiceAvaluosAnterior.AvaluosClient.RegistrarIntentoFallido(FEXAVA_INTENTOFALLIDO_PDataTable par_intentoFallidoDT) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.t4ge9fqp.1.cs:línea 49869
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 818
+
+28/02/2021 09:57:18 a. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+Referencia a objeto no establecida como instancia de un objeto.
+
+Server stack trace: 
+   en System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en ServiceAvaluos.IAvaluos.RegistrarAvaluo(RegistrarAvaluoRequest request)
+   en ServiceAvaluos.AvaluosClient.ServiceAvaluos.IAvaluos.RegistrarAvaluo(RegistrarAvaluoRequest request) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.t4ge9fqp.0.cs:línea 49994
+   en ServiceAvaluos.AvaluosClient.RegistrarAvaluo(Byte[] xmlBytes, String idPersona) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.t4ge9fqp.0.cs:línea 50001
+   en SubirAvaluo.RealizarRegistroAvaluo(Byte[] documentoXML) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 1238
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 766
 

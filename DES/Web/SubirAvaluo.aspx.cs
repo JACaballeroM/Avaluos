@@ -327,145 +327,268 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                     }
                                     catch (Exception exe)
                                     {
-                                        /*checkb7 = true;
-                                        var rowVALb7 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
-                                        rowVALb7["IDERROR"] = 7;
-                                        rowVALb7["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
-                                        rowVALb7["DESCRIPCION"] = "b.7 - El contenido del elemento 'Antecedentes' está incompleto. Lista esperada de elementos posibles: 'TipoDeInmueble'.";
-                                        erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALb7);*/
+                                        
                                     }
 
-                                    //var rowVAL = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
                                     try { string b7 = XmlSearchById(xmlVAL, "b.7").ToStringXElement(); }
                                     catch (Exception ex)
                                     {
-                                        /* if (!checkb7)
-                                         {*/
+                                       
                                         var rowVALb7 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
                                         rowVALb7["IDERROR"] = 122;
                                         rowVALb7["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
                                         rowVALb7["DESCRIPCION"] = "b.7 - El contenido del elemento 'Antecedentes' está incompleto. Lista esperada de elementos posibles: 'TipoDeInmueble'.";
                                         erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALb7);
-                                        //}
-
+                                     
                                     }
 
+                                    if (esComercial)
+                                    {
+                                        Boolean g111 = false;
+                                        try
+                                        {
+                                            var rowVAL = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%Lista esperada de elementos posibles: ''Consideraciones%'").FirstOrDefault();
+                                            rowVAL["DESCRIPCION"] = "g.1.1 - El contenido del elemento 'ConsideracionesPreviasAlAvaluo' está incompleto. Lista esperada de elementos posibles: 'Consideraciones'.";
+                                            g111 = true;
+                                        }
 
+                                        catch (Exception exe)
+                                        {
+
+                                        }
+                                        try { string g111ele = XmlSearchById(xmlVAL, "g.1.1").ToStringXElement(); }
+                                        catch (Exception ex)
+                                        {
+                                            if (!g111)
+                                            {
+                                                var rowVALg11 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                                rowVALg11["IDERROR"] = 111;
+                                                rowVALg11["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                                rowVALg11["DESCRIPCION"] = "g.1.1 - El contenido del elemento 'ConsideracionesPreviasAlAvaluo' está incompleto. Lista esperada de elementos posibles: 'Consideraciones'.";
+                                                erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALg11);
+                                            }
+                                            g111 = false;
+                                        }
+                                    }
 
 
                                     if (esComercial)
                                     {
                                         try
                                         {
-
-                                            try
-                                            {
-                                                var rowVAL222 = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%h.2.2.2%'").FirstOrDefault();
-                                                rowVAL222.Delete();
-                                                var rowVAL422 = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%h.4.2.2%'").FirstOrDefault();
-                                                rowVAL422.Delete();
-                                            }
-                                            catch (Exception ex) { }
-
-                                            string h122 = "";
-                                            string h1352 = "";
-                                            string h222 = "";
-                                            string h422 = "";
-
-                                            try { h122 = XmlSearchById(xmlVAL, "h.1.2.2").FirstOrDefault().Name.ToString(); }
-                                            catch (Exception ex)
-                                            {
-                                                var rowVAL122 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
-                                                rowVAL122["IDERROR"] = 122;
-                                                rowVAL122["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
-                                                rowVAL122["DESCRIPCION"] = "h.1.2.2 - El elemento 'ConclusionesHomologacionConstruccionesEnVenta' está incompleto. Lista esperada de elementos posibles: 'ValorUnitarioDeTierraHomologadoPromedio'.";
-                                                erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL122);
-                                            }
-
-                                            try
-                                            {
-                                                h1352 = XmlSearchById(xmlVAL, "h.1.3.5.2").FirstOrDefault().Name.ToString();
-                                            }
-                                            catch (Exception ex)
-                                            {
-                                                var rowVAL1352 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
-                                                rowVAL1352["IDERROR"] = 122;
-                                                rowVAL1352["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
-                                                rowVAL1352["DESCRIPCION"] = "h.1.3.5.2 - El elemento 'ConclusionesHomologacionConstruccionesEnVenta' está incompleto. Lista esperada de elementos posibles: 'ValorUnitarioHomologadoPromedio'.";
-                                                erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL1352);
-                                            }
-                                            try
-                                            {
-                                                h222 = XmlSearchById(xmlVAL, "h.2.2.2").FirstOrDefault().Name.ToString();
-                                            }
-                                            catch (Exception ex)
-                                            {
-                                                var rowVAL222 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
-                                                rowVAL222["IDERROR"] = 122;
-                                                rowVAL222["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
-                                                rowVAL222["DESCRIPCION"] = "h.2.2.2 - El elemento 'ConclusionesHomologacionConstruccionesEnVenta' está incompleto. Lista esperada de elementos posibles: 'ValorUnitarioHomologadoPromedio'.";
-                                                erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL222);
-                                            }
-                                            try
-                                            {
-                                                h422 = XmlSearchById(xmlVAL, "h.4.2.2").FirstOrDefault().Name.ToString();
-                                            }
-                                            catch (Exception ex)
-                                            {
-                                                var rowVAL422 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
-                                                rowVAL422["IDERROR"] = 122;
-                                                rowVAL422["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
-                                                rowVAL422["DESCRIPCION"] = "h.4.2.2 - El elemento 'ConclusionesHomologacionConstruccionesEnVenta' está incompleto. Lista esperada de elementos posibles: 'ValorUnitarioHomologadoPromedio'.";
-                                                erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL422);
-                                            }
-
-
-
-                                            if (!h122.Equals("ValorUnitarioDeTierraHomologadoPromedio"))
-                                            {
-                                                var rowVAL122 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
-                                                rowVAL122["IDERROR"] = 122;
-                                                rowVAL122["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
-                                                rowVAL122["DESCRIPCION"] = "h.1.2.2 - El elemento 'ConclusionesHomologacionConstruccionesEnVenta' tiene un elemento secundario '" + h122
-                                                    + "' no válido. Lista esperada de elementos posibles: 'ValorUnitarioDeTierraHomologadoPromedio'.";
-                                                erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL122);
-                                            }
-
-                                            if (!h1352.Equals("ValorUnitarioHomologadoPromedio"))
-                                            {
-                                                var rowVAL1352 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
-                                                rowVAL1352["IDERROR"] = 123;
-                                                rowVAL1352["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
-                                                rowVAL1352["DESCRIPCION"] = "h.1.3.5.2 - El elemento 'ConclusionesHomologacionConstruccionesEnVenta' tiene un elemento secundario '" + h1352
-                                                    + "' no válido. Lista esperada de elementos posibles: 'ValorUnitarioHomologadoPromedio'.";
-                                                erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL1352);
-                                            }
-
-                                            if (!h222.Equals("ValorUnitarioHomologadoPromedio"))
-                                            {
-                                                var rowVAL222 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
-                                                rowVAL222["IDERROR"] = 124;
-                                                rowVAL222["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
-                                                rowVAL222["DESCRIPCION"] = "h.2.2.2 - El elemento 'ConclusionesHomologacionConstruccionesEnVenta' tiene un elemento secundario '" + h222
-                                                    + "' no válido. Lista esperada de elementos posibles: 'ValorUnitarioHomologadoPromedio'.";
-                                                erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL222);
-                                            }
-
-                                            if (!h422.Equals("ValorUnitarioHomologadoPromedio"))
-                                            {
-                                                var rowVAL422 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
-                                                rowVAL422["IDERROR"] = 125;
-                                                rowVAL422["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
-                                                rowVAL422["DESCRIPCION"] = "h.4.2.2 - El elemento 'ConclusionesHomologacionConstruccionesEnVenta' tiene un elemento secundario '" + h422
-                                                    + "' no válido. Lista esperada de elementos posibles: 'ValorUnitarioHomologadoPromedio'.";
-                                                erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL422);
-                                            }
-
-
+                                            var rowVAL222 = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%h.2.2.2%'").FirstOrDefault();
+                                            rowVAL222.Delete();
+                                            var rowVAL422 = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%h.4.2.2%'").FirstOrDefault();
+                                            rowVAL422.Delete();
                                         }
                                         catch (Exception ex) { }
 
+                                        string h122 = "";
+                                        string h1352 = "";
+                                        string h222 = "";
+                                        string h422 = "";
+
+                                        try {
+
+                                            
+
+                                            var terrenos = XmlSearchById(xmlVAL, "h.1");
+                                            foreach (XElement terreno in terrenos)
+                                            {
+                                                var tipoterreno = XmlSearchById(terreno, "h.1.1").FirstOrDefault().Name.ToString();
+                                                if (tipoterreno == "TerrenosResiduales")
+                                                {
+                                                    try
+                                                    {
+                                                        var rowVAL122del = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%h.1.2.2%'").FirstOrDefault();
+                                                        rowVAL122del.Delete();
+                                                        var rowVAL1352del = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%h.1.3.5.2%'").FirstOrDefault();
+                                                        rowVAL1352del.Delete();
+                                                    }
+                                                    catch (Exception ex) { }
+
+                                                    try { h122 = XmlSearchById(terreno, "h.1.2.2").FirstOrDefault().Name.ToString(); }
+                                                    catch (Exception ex)
+                                                    {
+                                                        var rowVAL122 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                                        rowVAL122["IDERROR"] = 122;
+                                                        rowVAL122["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                                        rowVAL122["DESCRIPCION"] = "h.1.2.2 - El elemento 'ConclusionesHomologacionConstruccionesEnVenta' está incompleto. Lista esperada de elementos posibles: 'ValorUnitarioDeTierraHomologadoPromedio'.";
+                                                        erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL122);
+                                                    }
+
+                                                    try
+                                                    {
+                                                        h1352 = XmlSearchById(terreno, "h.1.3.5.2").FirstOrDefault().Name.ToString();
+                                                    }
+                                                    catch (Exception ex)
+                                                    {
+                                                        var rowVAL1352 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                                        rowVAL1352["IDERROR"] = 122;
+                                                        rowVAL1352["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                                        rowVAL1352["DESCRIPCION"] = "h.1.3.5.2 - El elemento 'ConclusionesHomologacionConstruccionesEnVenta' está incompleto. Lista esperada de elementos posibles: 'ValorUnitarioHomologadoPromedio'.";
+                                                        erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL1352);
+                                                    }
+
+                                                    if (!h122.Equals("ValorUnitarioDeTierraHomologadoPromedio"))
+                                                    {
+                                                        var rowVAL122 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                                        rowVAL122["IDERROR"] = 122;
+                                                        rowVAL122["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                                        rowVAL122["DESCRIPCION"] = "h.1.2.2 - El elemento 'ConclusionesHomologacionConstruccionesEnVenta' tiene un elemento secundario '" + h122
+                                                            + "' no válido. Lista esperada de elementos posibles: 'ValorUnitarioDeTierraHomologadoPromedio'.";
+                                                        erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL122);
+                                                    }
+
+                                                    if (!h1352.Equals("ValorUnitarioHomologadoPromedio"))
+                                                    {
+                                                        var rowVAL1352 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                                        rowVAL1352["IDERROR"] = 123;
+                                                        rowVAL1352["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                                        rowVAL1352["DESCRIPCION"] = "h.1.3.5.2 - El elemento 'ConclusionesHomologacionConstruccionesEnVenta' tiene un elemento secundario '" + h1352
+                                                            + "' no válido. Lista esperada de elementos posibles: 'ValorUnitarioHomologadoPromedio'.";
+                                                        erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL1352);
+                                                    }
+
+                                                }
+                                            }
+                                                try
+                                                {
+                                                int id = 222;
+                                                var terrenosh = XmlSearchById(xmlVAL, "h.2");
+                                                foreach (XElement terreno in terrenosh)
+                                                {
+                                                    try
+                                                    {
+                                                        h222 = XmlSearchById(terreno, "h.2.2.2").FirstOrDefault().Name.ToString();
+                                                    }
+                                                    catch (Exception ex)
+                                                    {
+                                                        var rowVAL222 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                                        rowVAL222["IDERROR"] = id;
+                                                        rowVAL222["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                                        rowVAL222["DESCRIPCION"] = "h.2.2.2 - El elemento 'ConclusionesHomologacionConstruccionesEnVenta' está incompleto. Lista esperada de elementos posibles: 'ValorUnitarioHomologadoPromedio'.";
+                                                        erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL222);
+                                                        id++;
+                                                    }
+                                                }
+                                                var terrenosh4 = XmlSearchById(xmlVAL, "h.4");
+                                                foreach (XElement terreno in terrenosh4)
+                                                {
+                                                    try
+                                                    {
+                                                        h422 = XmlSearchById(terreno, "h.4.2.2").FirstOrDefault().Name.ToString();
+                                                    }
+                                                    catch (Exception ex)
+                                                    {
+                                                        var rowVAL422 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                                        rowVAL422["IDERROR"] = id;
+                                                        rowVAL422["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                                        rowVAL422["DESCRIPCION"] = "h.4.2.2 - El elemento 'ConclusionesHomologacionConstruccionesEnVenta' está incompleto. Lista esperada de elementos posibles: 'ValorUnitarioHomologadoPromedio'.";
+                                                        erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL422);
+                                                        id++;
+                                                    }
+
+
+
+
+                                                    if (!h222.Equals("ValorUnitarioHomologadoPromedio"))
+                                                    {
+                                                        var rowVAL222 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                                        rowVAL222["IDERROR"] = 124;
+                                                        rowVAL222["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                                        rowVAL222["DESCRIPCION"] = "h.2.2.2 - El elemento 'ConclusionesHomologacionConstruccionesEnVenta' tiene un elemento secundario '" + h222
+                                                            + "' no válido. Lista esperada de elementos posibles: 'ValorUnitarioHomologadoPromedio'.";
+                                                        erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL222);
+                                                    }
+
+                                                    if (!h422.Equals("ValorUnitarioHomologadoPromedio"))
+                                                    {
+                                                        var rowVAL422 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                                        rowVAL422["IDERROR"] = 125;
+                                                        rowVAL422["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                                        rowVAL422["DESCRIPCION"] = "h.4.2.2 - El elemento 'ConclusionesHomologacionConstruccionesEnVenta' tiene un elemento secundario '" + h422
+                                                            + "' no válido. Lista esperada de elementos posibles: 'ValorUnitarioHomologadoPromedio'.";
+                                                        erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL422);
+                                                    }
+                                                }
+
+                                        }
+                                        catch (Exception ex) { }
+                                               
+
+
+                                            
+                                        }
+                                        catch (Exception ex)
+                                        {
+
+                                        }
+
                                     }
+
+
+
+                                    try
+                                    {
+
+
+                                        if (!esComercial)
+                                        {
+
+                                            try
+                                            {
+                                                var rowVAL17del = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%e.2.1.n.17%'").FirstOrDefault();
+                                                rowVAL17del.Delete();
+                                                var rowVAL517del = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%e.2.5.n.17%'").FirstOrDefault();
+                                                rowVAL517del.Delete();
+                                            }
+                                            catch (Exception ex) { }
+
+
+                                            var rowVAL517 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+
+                                            var e2 = XmlSearchById(xmlVAL, "e.2.5");
+                                            int id = 2517;
+                                            foreach (XElement element in e2)
+                                            {
+                                                //IEnumerable<XElement> xmlCuentaCat = null;
+                                                string uso = XmlSearchById(element, "e.2.5.n.2").ToStringXElement();
+                                                string clase = XmlSearchById(element, "e.2.5.n.6").ToStringXElement();
+                                                string dep = XmlSearchById(element, "e.2.5.n.17").ToStringXElement();
+
+                                                if ((uso == "P" || uso == "PE" || uso == "PC" || uso == "J") && clase == "U" && dep != "1")
+                                                {
+                                                    rowVAL517["IDERROR"] = id;
+                                                    rowVAL517["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                                    rowVAL517["DESCRIPCION"] = "e.2.5.n.17 Error de restricción Los usos descubiertos, no se pueden depreciar, valor esperado: 1";
+                                                    erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL517);
+                                                    id++;
+                                                }
+                                                else
+                                                {
+
+                                                    decimal e_2_5_n_7 = XmlSearchById(element, "e.2.5.n.17").ToDecimalXElement();
+
+                                                    if (e_2_5_n_7 > 50M) //Se topa el valor de e_2_1_n_7 a 50
+                                                        e_2_5_n_7 = 50M;
+
+                                                    if (!(dep.ToDecimal().ToRound2() == ((100M - (e_2_5_n_7 * 0.8M)) / 100M).ToRound2()))
+                                                    {
+                                                        var rowVAL18 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                                        rowVAL18["IDERROR"] = id;
+                                                        rowVAL18["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                                        rowVAL18["DESCRIPCION"] = "e.2.5.n.17 Error de calculo.";
+                                                        erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL18);
+                                                        id++;
+                                                    }
+                                                }
+
+                                            }
+                                        }
+                                    }
+                                    catch (Exception ex) { }
+
 
                                     try
                                     {
@@ -477,27 +600,22 @@ public partial class SubirAvaluo : PageBaseAvaluos
 
                                             var e2 = XmlSearchById(xmlVAL, "e.2.1");
 
+                                            int id = 2117;
+
                                             foreach (XElement element in e2)
                                             {
                                                 //IEnumerable<XElement> xmlCuentaCat = null;
                                                 string uso = XmlSearchById(element, "e.2.1.n.2").ToStringXElement();
                                                 string clase = XmlSearchById(element, "e.2.1.n.6").ToStringXElement();
                                                 string dep = XmlSearchById(element, "e.2.1.n.17").ToStringXElement();
-
-                                                //AvaluosClient clienteAvaluosVal = new AvaluosClient();
-                                                //DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow rowErrorVAL= new DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow();
-
-
-
-                                                if ((uso == "P" || uso == "P" || uso == "P" || uso == "P") && clase == "U" && dep != "1")
+                                                
+                                                if ((uso == "P" || uso == "PE" || uso == "PC" || uso == "J") && clase == "U" && dep != "1")
                                                 {
-                                                    rowVAL17["IDERROR"] = 2;
+                                                    rowVAL17["IDERROR"] = id;
                                                     rowVAL17["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
                                                     rowVAL17["DESCRIPCION"] = "e.2.1.n.17 Error de restricción Los usos descubiertos, no se pueden depreciar, valor esperado: 1";
                                                     erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL17);
-                                                    //MostrarMensajeInformativo(string.Format("{0}: <br> {1} <br><br> Error: <br> {2}", "e.2.1.n.17",//Constantes.MSJ_XML_ERROR, 
-                                                    //    " Error de restricción Los usos descubiertos, no se pueden depreciar, valor esperado: 1"), true);
-
+                                                    id++;
                                                 }
                                                 else
                                                 {
@@ -510,10 +628,11 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                                     if (!(dep.ToDecimal().ToRound2() == ((100M - (e_2_1_n_7 * 0.8M)) / 100M).ToRound2()))
                                                     {
                                                         var rowVAL18 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
-                                                        rowVAL18["IDERROR"] = 2;
+                                                        rowVAL18["IDERROR"] = id;
                                                         rowVAL18["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
                                                         rowVAL18["DESCRIPCION"] = "e.2.1.n.17 Error de calculo.";
                                                         erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL18);
+                                                        id++;
                                                     }
                                                 }
 
@@ -521,6 +640,8 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                         }
                                     }
                                     catch (Exception ex) { }
+
+
 
                                     if (erroresValidacion.Any())
                                     {
