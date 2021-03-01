@@ -315,4 +315,204 @@ Exception rethrown at [0]:
    en ServiceAvaluos.AvaluosClient.RegistrarAvaluo(Byte[] xmlBytes, String idPersona) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.rszk5os7.0.cs:línea 50001
    en SubirAvaluo.RealizarRegistroAvaluo(Byte[] documentoXML) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 1421
    en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 949
+
+28/02/2021 10:29:07 p. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+Referencia a objeto no establecida como instancia de un objeto.
+
+Server stack trace: 
+   en System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en ServiceAvaluos.IAvaluos.RegistrarAvaluo(RegistrarAvaluoRequest request)
+   en ServiceAvaluos.AvaluosClient.ServiceAvaluos.IAvaluos.RegistrarAvaluo(RegistrarAvaluoRequest request) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.mufw2yjh.0.cs:línea 49994
+   en ServiceAvaluos.AvaluosClient.RegistrarAvaluo(Byte[] xmlBytes, String idPersona) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.mufw2yjh.0.cs:línea 50001
+   en SubirAvaluo.RealizarRegistroAvaluo(Byte[] documentoXML) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 1481
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 1009
+
+28/02/2021 10:30:47 p. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+Referencia a objeto no establecida como instancia de un objeto.
+
+Server stack trace: 
+   en System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en ServiceAvaluos.IAvaluos.RegistrarAvaluo(RegistrarAvaluoRequest request)
+   en ServiceAvaluos.AvaluosClient.ServiceAvaluos.IAvaluos.RegistrarAvaluo(RegistrarAvaluoRequest request) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.mufw2yjh.0.cs:línea 49994
+   en ServiceAvaluos.AvaluosClient.RegistrarAvaluo(Byte[] xmlBytes, String idPersona) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.mufw2yjh.0.cs:línea 50001
+   en SubirAvaluo.RealizarRegistroAvaluo(Byte[] documentoXML) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 1481
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 1009
+
+28/02/2021 11:48:53 p. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+Referencia a objeto no establecida como instancia de un objeto.
+
+Server stack trace: 
+   en System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en ServiceAvaluos.IAvaluos.RegistrarAvaluo(RegistrarAvaluoRequest request)
+   en ServiceAvaluos.AvaluosClient.ServiceAvaluos.IAvaluos.RegistrarAvaluo(RegistrarAvaluoRequest request) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.mufw2yjh.0.cs:línea 49994
+   en ServiceAvaluos.AvaluosClient.RegistrarAvaluo(Byte[] xmlBytes, String idPersona) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.mufw2yjh.0.cs:línea 50001
+   en SubirAvaluo.RealizarRegistroAvaluo(Byte[] documentoXML) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 1481
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 1009
+
+28/02/2021 11:57:05 p. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+Referencia a objeto no establecida como instancia de un objeto.
+
+Server stack trace: 
+   en System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en ServiceAvaluos.IAvaluos.RegistrarAvaluo(RegistrarAvaluoRequest request)
+   en ServiceAvaluos.AvaluosClient.ServiceAvaluos.IAvaluos.RegistrarAvaluo(RegistrarAvaluoRequest request) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.mufw2yjh.0.cs:línea 49994
+   en ServiceAvaluos.AvaluosClient.RegistrarAvaluo(Byte[] xmlBytes, String idPersona) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.mufw2yjh.0.cs:línea 50001
+   en SubirAvaluo.RealizarRegistroAvaluo(Byte[] documentoXML) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 1481
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 1009
+
+01/03/2021 09:33:37 a. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+Referencia a objeto no establecida como instancia de un objeto.
+
+Server stack trace: 
+   en System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en ServiceAvaluos.IAvaluos.RegistrarAvaluo(RegistrarAvaluoRequest request)
+   en ServiceAvaluos.AvaluosClient.ServiceAvaluos.IAvaluos.RegistrarAvaluo(RegistrarAvaluoRequest request) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.mufw2yjh.0.cs:línea 49994
+   en ServiceAvaluos.AvaluosClient.RegistrarAvaluo(Byte[] xmlBytes, String idPersona) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.mufw2yjh.0.cs:línea 50001
+   en SubirAvaluo.RealizarRegistroAvaluo(Byte[] documentoXML) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 1481
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 1009
+
+01/03/2021 09:37:25 a. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+Referencia a objeto no establecida como instancia de un objeto.
+
+Server stack trace: 
+   en System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en ServiceAvaluos.IAvaluos.RegistrarAvaluo(RegistrarAvaluoRequest request)
+   en ServiceAvaluos.AvaluosClient.ServiceAvaluos.IAvaluos.RegistrarAvaluo(RegistrarAvaluoRequest request) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.mufw2yjh.0.cs:línea 49994
+   en ServiceAvaluos.AvaluosClient.RegistrarAvaluo(Byte[] xmlBytes, String idPersona) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.mufw2yjh.0.cs:línea 50001
+   en SubirAvaluo.RealizarRegistroAvaluo(Byte[] documentoXML) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 1481
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 1009
+
+01/03/2021 09:41:24 a. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+Referencia a objeto no establecida como instancia de un objeto.
+
+Server stack trace: 
+   en System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en ServiceAvaluos.IAvaluos.RegistrarAvaluo(RegistrarAvaluoRequest request)
+   en ServiceAvaluos.AvaluosClient.ServiceAvaluos.IAvaluos.RegistrarAvaluo(RegistrarAvaluoRequest request) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.mufw2yjh.0.cs:línea 49994
+   en ServiceAvaluos.AvaluosClient.RegistrarAvaluo(Byte[] xmlBytes, String idPersona) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.mufw2yjh.0.cs:línea 50001
+   en SubirAvaluo.RealizarRegistroAvaluo(Byte[] documentoXML) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 1481
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 1009
+
+01/03/2021 12:31:17 p. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+Referencia a objeto no establecida como instancia de un objeto.
+
+Server stack trace: 
+   en System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en ServiceAvaluos.IAvaluos.RegistrarAvaluo(RegistrarAvaluoRequest request)
+   en ServiceAvaluos.AvaluosClient.ServiceAvaluos.IAvaluos.RegistrarAvaluo(RegistrarAvaluoRequest request) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.dhpocrli.0.cs:línea 49994
+   en ServiceAvaluos.AvaluosClient.RegistrarAvaluo(Byte[] xmlBytes, String idPersona) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.dhpocrli.0.cs:línea 50001
+   en SubirAvaluo.RealizarRegistroAvaluo(Byte[] documentoXML) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 1482
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 1010
+
+01/03/2021 12:33:34 p. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+Referencia a objeto no establecida como instancia de un objeto.
+
+Server stack trace: 
+   en System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en ServiceAvaluos.IAvaluos.RegistrarAvaluo(RegistrarAvaluoRequest request)
+   en ServiceAvaluos.AvaluosClient.ServiceAvaluos.IAvaluos.RegistrarAvaluo(RegistrarAvaluoRequest request) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.dhpocrli.0.cs:línea 49994
+   en ServiceAvaluos.AvaluosClient.RegistrarAvaluo(Byte[] xmlBytes, String idPersona) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.dhpocrli.0.cs:línea 50001
+   en SubirAvaluo.RealizarRegistroAvaluo(Byte[] documentoXML) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 1482
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 1010
+
+01/03/2021 12:36:48 p. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+Referencia a objeto no establecida como instancia de un objeto.
+
+Server stack trace: 
+   en System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en ServiceAvaluos.IAvaluos.RegistrarAvaluo(RegistrarAvaluoRequest request)
+   en ServiceAvaluos.AvaluosClient.ServiceAvaluos.IAvaluos.RegistrarAvaluo(RegistrarAvaluoRequest request) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.dhpocrli.0.cs:línea 49994
+   en ServiceAvaluos.AvaluosClient.RegistrarAvaluo(Byte[] xmlBytes, String idPersona) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.dhpocrli.0.cs:línea 50001
+   en SubirAvaluo.RealizarRegistroAvaluo(Byte[] documentoXML) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 1482
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 1010
 

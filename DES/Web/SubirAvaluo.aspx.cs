@@ -314,6 +314,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                     }
 
 
+                                    int id = 1000;
 
                                     //JACM Se agrega validacion e21n17
 
@@ -330,7 +331,67 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                         
                                     }
 
-                                    int id = 1000;
+
+                                    try
+                                    {
+                                        var rowVALe5del = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%e.5 %'").FirstOrDefault();
+                                        rowVALe5del.Delete();
+                                    }
+                                    catch (Exception exe) { }
+
+                                    try
+                                    {
+                                        var rowVALe5ndel = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%VidaUtilRemanentePonderadaDelInmueble%'").FirstOrDefault();
+                                        rowVALe5ndel.Delete();
+                                    }
+                                    catch (Exception exe) { }
+
+                                    string vidas = "";
+                                    // VidaMinimaRemanentePonderadaDelInmueble
+                                    try
+                                    {
+                                        vidas = XmlSearchById(xmlVAL, "e.5").FirstOrDefault().Name.ToString();
+
+                                        if (!vidas.Equals("VidaMinimaRemanentePonderadaDelInmueble"))
+                                        {
+                                            var rowVALe5 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                            rowVALe5["IDERROR"] = id;
+                                            rowVALe5["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                            rowVALe5["DESCRIPCION"] = "e.5 - El elemento 'VidaMinimaRemanentePonderadaDelInmueble' está incompleto. Lista esperada de elementos posibles: 'VidaMinimaRemanentePonderadaDelInmueble'.";
+                                            erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALe5);
+                                            id++;
+                                        }
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        var rowVALe5 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                        rowVALe5["IDERROR"] = id;
+                                        rowVALe5["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                        rowVALe5["DESCRIPCION"] = "e.6 - El elemento 'PorcentSuperfUltimNivelRespectoAnterior' contiene un elemento no válido '"+vidas+ "'. Lista esperada de elementos posibles: 'PorcentSuperfUltimNivelRespectoAnterior'.";
+                                        erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALe5);
+                                        id++;
+                                    }
+                                       
+
+
+
+                                    try
+                                    {
+                                        if (XmlSearchById(xmlVAL, "e.2.4").IsFull())
+                                        {
+
+                                            var rowVALe24 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                            rowVALe24["IDERROR"] = id;
+                                            rowVALe24["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                            rowVALe24["DESCRIPCION"] = "e.2.4 - El contenido del elemento 'ValorTotalDeLasConstruccionesProIndiviso' es inválido. Lista esperada de elementos posibles: 'ConstruccionesComunes'.";
+                                            erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALe24);
+                                            id++;
+                                        }
+                                    }
+                                    catch (Exception ex) { }
+
+
+
 
                                     try { string b7 = XmlSearchById(xmlVAL, "b.7").ToStringXElement(); }
                                     catch (Exception ex)
