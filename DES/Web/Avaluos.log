@@ -295,4 +295,24 @@ Exception rethrown at [0]:
    en ServiceAvaluos.AvaluosClient.RegistrarAvaluo(Byte[] xmlBytes, String idPersona) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.t4ge9fqp.0.cs:línea 50001
    en SubirAvaluo.RealizarRegistroAvaluo(Byte[] documentoXML) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 1238
    en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 766
+
+28/02/2021 05:46:55 p. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+Referencia a objeto no establecida como instancia de un objeto.
+
+Server stack trace: 
+   en System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en ServiceAvaluos.IAvaluos.RegistrarAvaluo(RegistrarAvaluoRequest request)
+   en ServiceAvaluos.AvaluosClient.ServiceAvaluos.IAvaluos.RegistrarAvaluo(RegistrarAvaluoRequest request) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.rszk5os7.0.cs:línea 49994
+   en ServiceAvaluos.AvaluosClient.RegistrarAvaluo(Byte[] xmlBytes, String idPersona) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.rszk5os7.0.cs:línea 50001
+   en SubirAvaluo.RealizarRegistroAvaluo(Byte[] documentoXML) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 1421
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 949
 
