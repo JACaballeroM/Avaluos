@@ -142,9 +142,7 @@
       <DependentUpon>DseAvaluoMant.xsd</DependentUpon>
     </Compile>
     <Compile Include="AccesoDatos\DseAvaluoMant.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DseAvaluoMant.xsd</DependentUpon>
+      <DependentUpon>DseAvaluoMant.cs</DependentUpon>
     </Compile>
     <Compile Include="AccesoDatos\Settings.cs" />
     <Compile Include="Negocio\DemeritoSection.cs" />
@@ -257,11 +255,10 @@
     <None Include="AccesoDatos\DseAvaluoMant.xsc">
       <DependentUpon>DseAvaluoMant.xsd</DependentUpon>
     </None>
-    <None Include="AccesoDatos\DseAvaluoMant.xsd">
+    <Content Include="AccesoDatos\DseAvaluoMant.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DseAvaluoMant.Designer.cs</LastGenOutput>
-    </None>
+    </Content>
     <None Include="AccesoDatos\DseAvaluoMant.xss">
       <DependentUpon>DseAvaluoMant.xsd</DependentUpon>
     </None>

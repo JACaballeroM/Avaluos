@@ -70,12 +70,12 @@ public partial class DescargarAvaluo : PageBaseAvaluos
             ExceptionPolicyWrapper.HandleException(ex);
             MostrarMensajeInformacion(ex.Message);
         } 
-        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInformacion(msj);
@@ -125,12 +125,12 @@ public partial class DescargarAvaluo : PageBaseAvaluos
             else
                 extenderPnlInfoTokenModal.Show();
         }
-        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -217,13 +217,13 @@ public partial class DescargarAvaluo : PageBaseAvaluos
             ExceptionPolicyWrapper.HandleException(ex);
             MostrarMensajeInformacion(ex.Detail.Descripcion);
         } 
-        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
         {
             ExceptionPolicyWrapper.HandleException(cex);
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
         {
             ExceptionPolicyWrapper.HandleException(ciex);
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;

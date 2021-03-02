@@ -18162,7 +18162,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos.DseAvaluoMantTab
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::Oracle.DataAccess.Client.OracleCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "FEXAVA.FEXAVA_AVALUOS_PKG.FEXAVA_INSERT_AVALUOSAUX_P";
+            this._adapter.InsertCommand.CommandText = "FEXAVA.FEXAVA_AVALUOS_PKG.FEXAVA_INSERT_AVALUOSAUX_P_NEW";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
             param = new global::Oracle.DataAccess.Client.OracleParameter();
             param.ParameterName = "PAR_NUMEROAVALUO";

@@ -87,12 +87,12 @@ public partial class AvaluosProximos : PageBaseAvaluos
                 } 
             }
         }
-        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -139,12 +139,12 @@ public partial class AvaluosProximos : PageBaseAvaluos
         {   
             gridViewAvaluos_verinforme(null, null);
         }
-        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -169,12 +169,12 @@ public partial class AvaluosProximos : PageBaseAvaluos
             SortExpression = e.SortExpression;
             SortDirectionP = e.SortDirection.ToString();
         }
-        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -255,12 +255,12 @@ public partial class AvaluosProximos : PageBaseAvaluos
                 checkboxVIG.Enabled = false;
             }
         }
-        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -341,12 +341,12 @@ public partial class AvaluosProximos : PageBaseAvaluos
             else
                 extenderPnlInfoTokenModal.Show();
         }
-        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -374,12 +374,12 @@ public partial class AvaluosProximos : PageBaseAvaluos
             RedirectUtil.AddParameter(Constantes.REQUEST_SORTDIR, SortDirectionP);
             RedirectUtil.Go();
         }
-        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
