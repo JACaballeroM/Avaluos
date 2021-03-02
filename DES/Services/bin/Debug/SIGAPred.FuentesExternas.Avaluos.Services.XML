@@ -41,6 +41,11 @@
             <param name="myCommandText">script de Consulta</param>
             <returns>DataSet resultado de la consulta</returns>
         </member>
+        <member name="T:SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos.DataSet1">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
         <member name="T:SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos.DseAvaluosCatConsulta">
              <summary>
             Represents a strongly typed in-memory cache of data.

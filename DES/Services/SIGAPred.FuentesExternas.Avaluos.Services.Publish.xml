@@ -1,106 +1,294 @@
 <publishData>
   <publishTarget publishUrl="C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Publicaciones\FuentesExternas\Servicios\Avaluos\">
-    <file relUrl="AccesoDatos/DseAvaluoMant.Designer.cs" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="Negocio\Exceptions/AvaluosException.cs" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="bin/Oracle.DataAccess.dll" publishTime="06/18/2015 14:39:38" />
-    <file relUrl="AccesoDatos/DseAvaluoCatConsulta.cs" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="AccesoDatos/DseAvaluoConsultaFis.Designer.cs" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="AccesoDatos\App_Code\Diagramas/ValidarCamposCalculados.cd" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="Negocio/EsquemaAvaluo.cs" publishTime="02/11/2021 20:52:40" />
-    <file relUrl="AccesoDatos/DseNotarios.xsd" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="AccesoDatos\App_Code\Diagramas/ApplicationCache.cd" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="bin/SIGAPred.Common.DataAccess.dll" publishTime="06/18/2015 14:39:40" />
-    <file relUrl="bin/SecurityCore.dll" publishTime="06/18/2015 14:49:32" />
-    <file relUrl="bin/SIGAPred.Common.dll" publishTime="06/18/2015 14:39:40" />
-    <file relUrl="AccesoDatos/DseNotarios.xsc" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="Web.config" publishTime="02/23/2021 17:28:04" />
-    <file relUrl="AccesoDatos/DseNotarios.cs" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="AccesoDatos\App_Code/ValidarCamposCalculados.cs" publishTime="02/26/2021 18:29:10" />
-    <file relUrl="Negocio/Avaluos.cs" publishTime="02/27/2021 11:02:01" />
-    <file relUrl="bin/Microsoft.Practices.ObjectBuilder2.dll" publishTime="06/18/2015 14:39:38" />
-    <file relUrl="AccesoDatos/DseNotarios.xss" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="AccesoDatos\App_Code/CatastralUtils.cs" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="AccesoDatos/DseAvaluoConsulta.xsc" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceDocumental/Reference.cs" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServicePeritosSociedades/PeritosSociedadesService51.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/DseNumerosExteriores1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceAnalisisValores/Reference.cs" publishTime="06/18/2015 14:39:06" />
     <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Logging.dll" publishTime="06/18/2015 14:39:38" />
-    <file relUrl="bin/SIGAPred.Common.Compresion.dll" publishTime="06/18/2015 14:39:40" />
-    <file relUrl="AccesoDatos/DseAvaluoConsulta.xsd" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="Negocio\Interfaces/Cedula.cs" publishTime="02/04/2021 13:53:56" />
-    <file relUrl="Properties/AssemblyInfo.cs" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Services.pdb" publishTime="02/27/2021 11:13:58" />
-    <file relUrl="AccesoDatos/DseAvaluoConsulta.xss" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Services.dll" publishTime="02/27/2021 11:13:58" />
-    <file relUrl="Negocio\Diagramas/AvaluosInforme.cd" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="Negocio/DemeritoSectionCollection.cs" publishTime="02/04/2021 13:56:29" />
-    <file relUrl="Negocio/AvaluosInforme.cs" publishTime="02/23/2021 14:59:11" />
-    <file relUrl="AccesoDatos\App_Code/FiscalUtils.cs" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="AccesoDatos/DseAvaluoConsultaFis.xsd" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="AccesoDatos/DseAvaluoMant.cs" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="bin/BouncyCastle.Crypto.dll" publishTime="06/18/2015 13:45:02" />
-    <file relUrl="Negocio\Diagramas/Avaluos.cd" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll" publishTime="06/18/2015 14:39:38" />
-    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll" publishTime="06/18/2015 14:39:38" />
-    <file relUrl="Negocio\Exceptions/ExceptionBase.cs" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="AccesoDatos/DseAvaluoMantInf.xss" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="AccesoDatos/Settings.cs" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Enum.xml" publishTime="02/24/2021 12:27:44" />
-    <file relUrl="AccesoDatos/DseAvaluoMantInf.cs" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Services.XML" publishTime="02/27/2021 11:13:56" />
-    <file relUrl="AccesoDatos\App_Code/AvaluosUtils.cs" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="Negocio\Diagramas/Exceptions.cd" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="AccesoDatos\App_Code/XmlUtils.cs" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="Negocio/DemeritoSection.cs" publishTime="02/04/2021 13:55:46" />
-    <file relUrl="Negocio\Exceptions/PeritosException.cs" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="AccesoDatos\App_Code/CatastralUtils.cs" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseCondominio.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceRCON/RegistroContribuyentesService63.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceRCON/SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseInfoContribuyente.datasource" publishTime="06/18/2015 14:39:10" />
+    <file relUrl="AccesoDatos/DseNotarios.xss" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceRCON/Reference.cs" publishTime="06/18/2015 14:39:08" />
     <file relUrl="Properties/Resources.resx" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="AccesoDatos/DseNotarios.Designer.cs" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="bin/SIGAPred.Documental.Services.dll" publishTime="06/18/2015 14:39:40" />
-    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Services.dll.config" publishTime="02/23/2021 17:28:04" />
-    <file relUrl="Negocio/DemeritoSectionElement.cs" publishTime="02/04/2021 13:56:50" />
+    <file relUrl="bin/SIGAPred.Common.Compresion.dll" publishTime="06/18/2015 14:39:40" />
+    <file relUrl="Service References\ServiceRCON/SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseInfoDirecciones.datasource" publishTime="06/18/2015 14:39:10" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DelegacionManzana.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll" publishTime="06/18/2015 14:39:38" />
+    <file relUrl="Service References\ServiceFiscal/Administracion2.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseVectores.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceRCON/SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseInmuebleDireccion.datasource" publishTime="06/18/2015 14:39:10" />
+    <file relUrl="AccesoDatos\App_Code/ValidarCamposCalculados.cs" publishTime="02/26/2021 18:29:10" />
+    <file relUrl="AccesoDatos/DseAvaluoMant.Designer.cs" publishTime="03/02/2021 13:33:08" />
+    <file relUrl="Service References\ServiceCatastral/DseUnidadesGrupoCondominal1.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseManzanas.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceFiscal/Administracion.disco" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceFiscal/Administracion.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceAnalisisValores/AnalisisValoresInmobiliario5.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Services.XML" publishTime="03/02/2021 13:41:46" />
     <file relUrl="Negocio/ExceptionPolicyWrapper.cs" publishTime="02/21/2021 20:20:51" />
+    <file relUrl="Service References\ServiceRCON/RegistroContribuyentesService65.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceRCON/configuration91.svcinfo" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/DseManzanaDetalle1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceCatastral/DseInmuebleUnidad1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceAnalisisValores/Reference.svcmap" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceCatastral/DseDelegacionAreaValor1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceAnalisisValores/configuration91.svcinfo" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Services.dll" publishTime="03/02/2021 13:41:48" />
+    <file relUrl="bin/Microsoft.Practices.ObjectBuilder2.dll" publishTime="06/18/2015 14:39:38" />
+    <file relUrl="Service References\ServiceCatastral/Reference.cs" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceRCON/SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseCatalogos.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Negocio\Exceptions/AvaluosInfoException.cs" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseDatosBasicos.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Negocio/DemeritoSection.cs" publishTime="02/04/2021 13:55:46" />
+    <file relUrl="Service References\ServiceCatastral/DseManzanaColonia1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceRCON/SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseDatosRepresentacion.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseTomaAgua.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceRCON/DseMunicipios1.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServicePeritosSociedades/Reference.svcmap" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceAnalisisValores/AnalisisValoresInmobiliario53.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceDocumental/Reference.svcmap" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="bin/BouncyCastle.Crypto.dll" publishTime="06/18/2015 13:45:02" />
+    <file relUrl="Service References\ServiceRCON/DseAsentamientos1.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceRCON/DseHistorico1.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="bin/MyExtentions.dll" publishTime="11/27/2018 20:49:24" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseIndiceCartografico.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/DseTomaAgua1.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll" publishTime="06/18/2015 14:39:38" />
+    <file relUrl="Service References\ServiceCatastral/DseHistoricoInmueblePredio1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceRCON/DseInfoDirecciones1.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="AccesoDatos\App_Code\Diagramas/Utils.cd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceRCON/Reference.svcmap" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseConstruccion.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceDocumentosDigitales/configuration91.svcinfo" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseRegion.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/DseDelegacionCorredorValor1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceRCON/SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseAsentamientos.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceRCON/DseInmuebleDireccion1.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseTiposSitios.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="AccesoDatos/DataSet1.xsd" publishTime="03/02/2021 12:37:19" />
+    <file relUrl="Service References\ServiceCatastral/DseFotosExpediente1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="AccesoDatos/DataSet1.xsc" publishTime="03/02/2021 12:37:20" />
+    <file relUrl="Negocio\Exceptions/ExceptionBase.cs" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceCatastral/DsePredios1.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/ConsultaCatastralService7.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceCatastral/DseOficinasTesoreria1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceAnalisisValores/AnalisisValoresInmobiliario51.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Negocio\Diagramas/AvaluosInforme.cd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="AccesoDatos/DseAvaluoConsultaFis.xss" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceRCON/RegistroContribuyentesService64.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceFiscal/DseInmueble.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Negocio\Diagramas/Avaluos.cd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Enum.pdb" publishTime="02/24/2021 12:27:44" />
+    <file relUrl="Service References\ServiceCatastral/DseRegion1.xsd" publishTime="06/18/2015 14:39:08" />
     <file relUrl="AccesoDatos/DseAvaluoMantInf.xsc" publishTime="06/18/2015 14:39:06" />
     <file relUrl="AccesoDatos/DseAvaluoMantInf.xsd" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="AccesoDatos/DseAvaluoConsultaFis.xss" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="SIGAPred.FuentesExternas.Avaluos.Services.csproj.user" publishTime="02/23/2021 17:37:13" />
-    <file relUrl="AccesoDatos/DseAvaluoConsulta.cs" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Enum.dll" publishTime="02/24/2021 12:27:44" />
-    <file relUrl="AccesoDatos\App_Code/ConstantesTraduccion.cs" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="AccesoDatos/DseAvaluoConsulta.Designer.cs" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="AccesoDatos/DseAvaluoMant.xsc" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="Properties/Settings.Designer.cs" publishTime="02/23/2021 19:50:11" />
-    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Enum.pdb" publishTime="02/24/2021 12:27:44" />
-    <file relUrl="AccesoDatos/DseAvaluoMant.xsd" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="Negocio\Interfaces/IAvaluos.cs" publishTime="02/04/2021 14:09:36" />
-    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Common.dll" publishTime="06/18/2015 14:39:38" />
-    <file relUrl="bin/SevenZipSharp.dll" publishTime="06/18/2015 14:39:38" />
-    <file relUrl="AccesoDatos\App_Code\Diagramas/Utils.cd" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="bin/MyExtentions.dll" publishTime="11/27/2018 20:49:24" />
-    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll" publishTime="06/18/2015 14:39:38" />
-    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll" publishTime="06/18/2015 14:39:38" />
-    <file relUrl="Properties/Resources.Designer.cs" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="AccesoDatos/DseAvaluoMant.xss" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="AccesoDatos\App_Code/ApplicationCache.cs" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="AccesoDatos/DseAvaluoConsultaFis.cs" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="AccesoDatos/DseAvaluoCatConsulta.Designer.cs" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="Negocio\Exceptions/AvaluosInfoException.cs" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Avaluos.svc" publishTime="02/27/2021 11:14:12" />
-    <file relUrl="SIGAPred.FuentesExternas.Avaluos.Services.csproj" publishTime="02/17/2021 21:43:29" />
-    <file relUrl="Resources/EsquemaAvaluo.xsd" publishTime="02/26/2021 19:49:45" />
-    <file relUrl="AccesoDatos/DseAvaluoCatConsulta.xss" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="AccesoDatos\App_Code/Constantes.cs" publishTime="02/16/2021 15:22:51" />
-    <file relUrl="Properties/Settings.settings" publishTime="02/23/2021 19:50:11" />
-    <file relUrl="AccesoDatos/DseAvaluoConsultaFis.xsc" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="AccesoDatos/DseAvaluoCatConsulta.xsd" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="bin/SIGAPred.Excepciones.ClaseExcepcion.dll" publishTime="11/27/2018 21:04:00" />
-    <file relUrl="AccesoDatos/DseAvaluoMantInf.Designer.cs" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="AccesoDatos/DseAvaluoCatConsulta.xsc" publishTime="06/18/2015 14:39:06" />
-    <file relUrl="AccesoDatos\App_Code\Helpers/TransactionHelper.cs" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseFotosExpediente.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/DseCondominio1.xsd" publishTime="06/18/2015 14:39:06" />
     <file relUrl="App.config" publishTime="02/23/2021 17:28:04" />
-    <file relUrl="Negocio\Exceptions/PeritosInfoException.cs" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="AccesoDatos/DseAvaluoConsultaFis.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceFiscal/Reference.cs" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="AccesoDatos/DseAvaluoConsultaFis.xsc" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseViaColonia.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseManzanaDetalle.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceRCON/RegistroContribuyentesService1.wsdl" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="bin/SIGAPred.Documental.Services.dll" publishTime="06/18/2015 14:39:40" />
+    <file relUrl="AccesoDatos/DseAvaluoMantInf.xss" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceCatastral/DseTiposSitios1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseCondominioPredio.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="AccesoDatos/DseAvaluoConsulta.xsc" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.InfoBaja.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceRCON/SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseColoniaAsentamiento.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="AccesoDatos/DseAvaluoConsulta.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="bin/SIGAPred.Excepciones.ClaseExcepcion.dll" publishTime="11/27/2018 21:04:00" />
+    <file relUrl="AccesoDatos\App_Code/XmlUtils.cs" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceRCON/SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseInfoNotarios.datasource" publishTime="06/18/2015 14:39:10" />
+    <file relUrl="Service References\ServiceCatastral/ConsultaCatastralService73.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServicePeritosSociedades/PeritosSociedadesService1.disco" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/DseSitios1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="AccesoDatos/DseAvaluoConsulta.xss" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceRCON/SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseMunicipios.datasource" publishTime="06/18/2015 14:39:10" />
     <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Data.dll" publishTime="06/18/2015 14:39:38" />
+    <file relUrl="AccesoDatos/DseAvaluoConsultaFis.Designer.cs" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceFiscal/Administracion.wsdl" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Web.config" publishTime="02/23/2021 17:28:04" />
+    <file relUrl="Service References\ServiceCatastral/ConsultaCatastralService76.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServicePeritosSociedades/Reference.cs" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/DseConstruccion1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Properties/Resources.Designer.cs" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceCatastral/configuration.svcinfo" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceFiscal/configuration.svcinfo" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="AccesoDatos/DseAvaluoMantInf.cs" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceRCON/DseEstados1.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseInmuebleFiltro.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="AccesoDatos/DseNotarios.Designer.cs" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceRCON/DseColoniaAsentamiento1.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceAnalisisValores/configuration.svcinfo" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceAnalisisValores/AnalisisValoresInmobiliario1.wsdl" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="AccesoDatos/DseAvaluoCatConsulta.Designer.cs" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="AccesoDatos\App_Code\Helpers/TransactionHelper.cs" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceFiscal/Administracion5.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceAnalisisValores/AnalisisValoresInmobiliario52.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceCatastral/ConsultaCatastralService71.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceDocumentosDigitales/SIGAPred.FuentesExternas.Avaluos.Services.ServiceDocumentosDigitales.Foto.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/DseInmueble1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceDocumentosDigitales/Reference.svcmap" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="AccesoDatos\App_Code/AvaluosUtils.cs" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Negocio\Exceptions/PeritosException.cs" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="bin/Avaluos.log" publishTime="02/27/2021 12:06:36" />
+    <file relUrl="Service References\ServiceCatastral/configuration91.svcinfo" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceCatastral/DseManzanas1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceFiscal/Administracion6.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceAnalisisValores/AnalisisValoresInmobiliario54.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll" publishTime="06/18/2015 14:39:38" />
+    <file relUrl="Service References\ServiceCatastral/ConsultaCatastralService74.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceCatastral/DseInmueblePredio1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServicePeritosSociedades/configuration.svcinfo" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseHistoricoInmueblePredio.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceRCON/SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseHistorico.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServicePeritosSociedades/PeritosSociedadesService54.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Properties/Settings.Designer.cs" publishTime="02/23/2021 19:50:11" />
+    <file relUrl="SIGAPred.FuentesExternas.Avaluos.Services.csproj.user" publishTime="03/02/2021 10:13:09" />
+    <file relUrl="AccesoDatos/DataSet1.xss" publishTime="03/02/2021 12:37:32" />
+    <file relUrl="Service References\ServiceRCON/configuration.svcinfo" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseEnclaveValor.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="AccesoDatos/DataSet1.Designer.cs" publishTime="03/02/2021 13:33:30" />
+    <file relUrl="bin/SIGAPred.Common.DataAccess.dll" publishTime="06/18/2015 14:39:40" />
+    <file relUrl="Negocio\Exceptions/PeritosInfoException.cs" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceCatastral/DseIndiceCartografico1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceCatastral/DseViaColonia1.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceRCON/DseInfoContribuyente1.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseDelegacionColonia.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceFiscal/Administracion1.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceDocumentosDigitales/configuration.svcinfo" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Negocio\Diagramas/Exceptions.cd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceRCON/DseContribuyentes1.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceAnalisisValores/dsAnalisisValoresInmobiliario1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceCatastral/DseInmuebleF4BA1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceCatastral/DseBienesInmueble1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceCatastral/ConsultaCatastralService72.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseViaVector.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/DseAdministracionTributaria1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceRCON/DseCiudades1.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="AccesoDatos\App_Code/Constantes.cs" publishTime="02/16/2021 15:22:51" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseConjuntoCondominal.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseInmueble.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/DseCondominioPredio1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseInmuebleF4BA.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="AccesoDatos/DseAvaluoCatConsulta.cs" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceFiscal/configuration91.svcinfo" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceRCON/SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseCiudades.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/DseFotos1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Negocio\Interfaces/IAvaluos.cs" publishTime="02/04/2021 14:09:36" />
+    <file relUrl="Service References\ServiceCatastral/DseConjuntoCondominal1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Services.pdb" publishTime="03/02/2021 13:41:48" />
+    <file relUrl="Service References\ServiceCatastral/DseDelegacionColonia1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceCatastral/DseViaVector1.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/ConsultaCatastralService1.disco" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseDelegacionCorredorValor.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseUnidadesGrupoCondominal.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="AccesoDatos\App_Code\Diagramas/ValidarCamposCalculados.cd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServicePeritosSociedades/DsePeritosSociedades1.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServicePeritosSociedades/PeritosSociedadesService5.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/DseInmuebleSIIP1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceRCON/DseNotarios1.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceRCON/SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseEstados.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceFiscal/Reference.svcmap" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceDocumental/configuration91.svcinfo" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll" publishTime="06/18/2015 14:39:38" />
+    <file relUrl="AccesoDatos/DseAvaluoConsulta.cs" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="AccesoDatos/DseAvaluoCatConsulta.xss" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceAnalisisValores/AnalisisValoresInmobiliario1.disco" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="AccesoDatos/DseAvaluoMant.xsc" publishTime="03/02/2021 13:33:08" />
+    <file relUrl="AccesoDatos/DseNotarios.cs" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="AccesoDatos/DseAvaluoMant.xsd" publishTime="03/02/2021 13:33:08" />
+    <file relUrl="Service References\ServiceRCON/SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DsePersonasSimilares.datasource" publishTime="06/18/2015 14:39:10" />
+    <file relUrl="AccesoDatos/DseAvaluoCatConsulta.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceFiscal/SIGAPred.FuentesExternas.Avaluos.Services.ServiceFiscal.DseInmueble.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="AccesoDatos/DseAvaluoConsulta.Designer.cs" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseInmueblePredio.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="AccesoDatos/DseAvaluoCatConsulta.xsc" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceDocumentosDigitales/Reference.cs" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/DseInmuebleFiltro1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="AccesoDatos/DseAvaluoMant.xss" publishTime="03/02/2021 13:33:08" />
+    <file relUrl="Negocio/DemeritoSectionElement.cs" publishTime="02/04/2021 13:56:50" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseInmuebleUnidad.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="AccesoDatos\App_Code\Diagramas/ApplicationCache.cd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="bin/SIGAPred.Common.dll" publishTime="06/18/2015 14:39:40" />
+    <file relUrl="Negocio/DemeritoSectionCollection.cs" publishTime="02/04/2021 13:56:29" />
+    <file relUrl="Service References\ServiceCatastral/DseVectores1.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServicePeritosSociedades/PeritosSociedadesService52.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseNumerosExteriores.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Properties/AssemblyInfo.cs" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="bin/SecurityCore.dll" publishTime="06/18/2015 14:49:32" />
+    <file relUrl="Negocio/AvaluosInforme.cs" publishTime="02/23/2021 14:59:11" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseSitios.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceFiscal/SIGAPred.FuentesExternas.Avaluos.Services.ServiceFiscal.DseAdministracion.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="SIGAPred.FuentesExternas.Avaluos.Services.csproj" publishTime="03/02/2021 13:33:37" />
+    <file relUrl="Service References\ServiceDocumental/configuration.svcinfo" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Common.dll" publishTime="06/18/2015 14:39:38" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DsePredios.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/ConsultaCatastralService75.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Negocio\Exceptions/AvaluosException.cs" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseBienesInmueble.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceRCON/DseInfoNotarios1.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="bin/Oracle.DataAccess.dll" publishTime="06/18/2015 14:39:38" />
+    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Services.dll.config" publishTime="03/02/2021 12:26:47" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseOficinasTesoreria.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceRCON/DseDireccionesInmueble1.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Negocio/EsquemaAvaluo.cs" publishTime="02/11/2021 20:52:40" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseDelegacionAreaValor.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceRCON/SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseNotarios.datasource" publishTime="06/18/2015 14:39:10" />
+    <file relUrl="AccesoDatos/Settings.cs" publishTime="03/02/2021 10:50:34" />
+    <file relUrl="Service References\ServicePeritosSociedades/configuration91.svcinfo" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/DseCatalogos1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseManzanaColonia.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseInmuebleSIIP.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceRCON/RegistroContribuyentesService1.disco" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Properties/Settings.settings" publishTime="02/23/2021 19:50:11" />
+    <file relUrl="Service References\ServiceRCON/DsePersonasSimilares1.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceRCON/DseDatosRepresentacion1.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceFiscal/Administracion3.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseCatalogos.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="AccesoDatos/DseAvaluoMantInf.Designer.cs" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="AccesoDatos/DseAvaluoConsultaFis.cs" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Negocio/Avaluos.cs" publishTime="03/02/2021 13:33:08" />
+    <file relUrl="Service References\ServiceRCON/RegistroContribuyentesService62.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Enum.dll" publishTime="02/24/2021 12:27:44" />
+    <file relUrl="Service References\ServiceRCON/SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseDireccionesInmueble.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.CartaDelegacion.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="AccesoDatos\App_Code/ApplicationCache.cs" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Resources/EsquemaAvaluo.xsd" publishTime="02/28/2021 16:13:28" />
+    <file relUrl="AccesoDatos\App_Code/ConstantesTraduccion.cs" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceFiscal/Administracion4.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Avaluos.svc" publishTime="03/02/2021 13:41:52" />
+    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Enum.xml" publishTime="02/24/2021 12:27:44" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseFotos.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Negocio\Interfaces/Cedula.cs" publishTime="02/04/2021 13:53:56" />
+    <file relUrl="Service References\ServiceRCON/RegistroContribuyentesService61.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="AccesoDatos/DseAvaluoMant.cs" publishTime="03/02/2021 13:33:08" />
+    <file relUrl="Service References\ServiceRCON/RegistroContribuyentesService6.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/ConsultaCatastralService1.wsdl" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="bin/SevenZipSharp.dll" publishTime="06/18/2015 14:39:38" />
+    <file relUrl="AccesoDatos\App_Code/FiscalUtils.cs" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServiceCatastral/Reference.svcmap" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceRCON/SIGAPred.FuentesExternas.Avaluos.Services.ServiceRCON.DseContribuyentes.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/SIGAPred.FuentesExternas.Avaluos.Services.ServiceCatastral.DseAdministracionTributaria.datasource" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/DseDatosBasicos1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServicePeritosSociedades/PeritosSociedadesService1.wsdl" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="AccesoDatos/DseNotarios.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="Service References\ServicePeritosSociedades/PeritosSociedadesService53.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceFiscal/DseAdministracion.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceRCON/DseCatalogos1.xsd" publishTime="06/18/2015 14:39:08" />
+    <file relUrl="Service References\ServiceCatastral/DseEnclaveValor1.xsd" publishTime="06/18/2015 14:39:06" />
+    <file relUrl="AccesoDatos/DseNotarios.xsc" publishTime="06/18/2015 14:39:06" />
   </publishTarget>
   <publishTarget publishUrl="C:\Users\MarioDaniel\Desktop\Avaluos\">
     <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Data.dll" publishTime="06/18/2015 14:39:38" />
     <file relUrl="bin/MyExtentions.dll" publishTime="11/27/2018 20:49:24" />
     <file relUrl="SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Avaluos.svc" publishTime="04/24/2020 13:36:40" />
+    <file relUrl="bin/SIGAPred.Common.DataAccess.dll" publishTime="06/18/2015 14:39:40" />
     <file relUrl="bin/BouncyCastle.Crypto.dll" publishTime="06/18/2015 13:45:02" />
     <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll" publishTime="06/18/2015 14:39:38" />
     <file relUrl="bin/SIGAPred.Common.dll" publishTime="06/18/2015 14:39:40" />
@@ -121,10 +309,9 @@
     <file relUrl="bin/SIGAPred.Excepciones.ClaseExcepcion.dll" publishTime="11/27/2018 21:04:00" />
     <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Enum.pdb" publishTime="04/24/2020 13:35:30" />
     <file relUrl="bin/Oracle.DataAccess.dll" publishTime="06/18/2015 14:39:38" />
-    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Services.dll" publishTime="04/24/2020 13:35:37" />
     <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Services.XML" publishTime="04/24/2020 13:35:35" />
     <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll" publishTime="06/18/2015 14:39:38" />
-    <file relUrl="bin/SIGAPred.Common.DataAccess.dll" publishTime="06/18/2015 14:39:40" />
+    <file relUrl="bin/SIGAPred.FuentesExternas.Avaluos.Services.dll" publishTime="04/24/2020 13:35:37" />
     <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Logging.dll" publishTime="06/18/2015 14:39:38" />
   </publishTarget>
 </publishData>

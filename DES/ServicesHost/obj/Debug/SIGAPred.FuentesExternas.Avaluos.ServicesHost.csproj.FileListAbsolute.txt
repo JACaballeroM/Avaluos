@@ -145,6 +145,7 @@ C:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_Acu
 C:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_AcuseAva - copia\DES\ServicesHost\obj\Debug\SIGAPred.FuentesExternas.Avaluos.ServicesHost.csproj.CopyComplete
 C:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_AcuseAva - copia\DES\ServicesHost\obj\Debug\SIGAPred.FuentesExternas.Avaluos.ServicesHost.dll
 C:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_AcuseAva - copia\DES\ServicesHost\obj\Debug\SIGAPred.FuentesExternas.Avaluos.ServicesHost.pdb
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\ServicesHost\bin\Oracle.DataAccess.dll
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.ServicesHost.dll.config
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.ServicesHost.dll
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.ServicesHost.pdb
@@ -160,7 +161,6 @@ C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\D
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\ServicesHost\bin\SIGAPred.Documental.Services.dll
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.Enum.dll
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.Services.dll
-C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\ServicesHost\bin\Oracle.DataAccess.dll
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\ServicesHost\bin\SecurityCore.dll
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\ServicesHost\bin\MyExtentions.dll
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\ServicesHost\bin\BouncyCastle.Crypto.dll
@@ -169,6 +169,7 @@ C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\D
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.Services.pdb
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.Services.xml
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.Services.dll.config
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\ServicesHost\obj\Debug\SIGAPred.FuentesExternas.Avaluos.ServicesHost.csprojAssemblyReference.cache
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\ServicesHost\obj\Debug\SIGAPred.FuentesExternas.Avaluos.ServicesHost.csproj.CoreCompileInputs.cache
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\ServicesHost\obj\Debug\SIGAPred.FuentesExternas.Avaluos.ServicesHost.csproj.CopyComplete
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\ServicesHost\obj\Debug\SIGAPred.FuentesExternas.Avaluos.ServicesHost.dll

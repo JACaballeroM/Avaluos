@@ -30,3 +30,31 @@ C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\Services\bin\Release
 C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\Services\obj\Release\SIGAPred.FuentesExternas.Avaluos.Services.csproj.CopyComplete
 C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\Services\obj\Release\SIGAPred.FuentesExternas.Avaluos.Services.dll
 C:\Users\EdgarAntunezMartinez\Documents\Avaluos - copia\DES\Services\obj\Release\SIGAPred.FuentesExternas.Avaluos.Services.pdb
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\bin\Release\SIGAPred.FuentesExternas.Avaluos.Services.dll.config
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\bin\Release\SIGAPred.FuentesExternas.Avaluos.Services.XML
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\bin\Release\SIGAPred.FuentesExternas.Avaluos.Services.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\bin\Release\SIGAPred.FuentesExternas.Avaluos.Services.pdb
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\bin\Release\Microsoft.Practices.ObjectBuilder2.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\bin\Release\Oracle.DataAccess.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\bin\Release\SevenZipSharp.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\bin\Release\SIGAPred.Common.Compresion.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\bin\Release\SIGAPred.Common.DataAccess.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\bin\Release\SIGAPred.Common.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\bin\Release\SIGAPred.Documental.Services.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\bin\Release\SIGAPred.FuentesExternas.Avaluos.Enum.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\bin\Release\SIGAPred.FuentesExternas.Avaluos.Enum.pdb
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\bin\Release\SIGAPred.FuentesExternas.Avaluos.Enum.xml
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\obj\Release\SIGAPred.FuentesExternas.Avaluos.Services.csprojAssemblyReference.cache
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\obj\Release\SIGAPred.FuentesExternas.Avaluos.Services.Properties.Resources.resources
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\obj\Release\SIGAPred.FuentesExternas.Avaluos.Services.csproj.GenerateResource.cache
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\obj\Release\SIGAPred.FuentesExternas.Avaluos.Services.csproj.CoreCompileInputs.cache
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\obj\Release\SIGAPred.FuentesExternas.Avaluos.Services.csproj.CopyComplete
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\obj\Release\SIGAPred.FuentesExternas.Avaluos.Services.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\obj\Release\SIGAPred.FuentesExternas.Avaluos.Services.pdb

@@ -1786,10 +1786,14 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
         {
             DseAvaluoMant dseAvaluoMant = new DseAvaluoMant();
             List<Decimal> listaFicheros = new List<Decimal>();
+
+            log("GuardarAvaluo","InicioMetodo","");
             using (SIGAPred.Common.DataAccess.OracleDataAccess.TransactionHelper transactionHelper = new SIGAPred.Common.DataAccess.OracleDataAccess.TransactionHelper(Settings.Default.ConnectionString))
             {
                 try
                 {
+
+                    
                     AltasDocumentosTran altasDocumentosTran = new AltasDocumentosTran();
                     transactionHelper.BeginTransaction();
                     XElement root = XDocument.Parse(xmlAvaluo.InnerXml).Root;

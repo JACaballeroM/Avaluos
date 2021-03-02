@@ -25679,7 +25679,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos.DseAvaluoMantTab
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::Oracle.DataAccess.Client.OracleCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "FEXAVA.FEXAVA_DATOSESTADISTICOS_PKG.FEXAVA_INSERT_SUPERFICIEAUX_P";
+            this._adapter.InsertCommand.CommandText = "FEXAVA.FEXAVA_DATOSESTADISTICOS_PKG.FEXAVA_INSERT_SUPERFICIEAUX_PN";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
             global::Oracle.DataAccess.Client.OracleParameter param = new global::Oracle.DataAccess.Client.OracleParameter();
             param.ParameterName = "PAR_IDENTIFICADORFRACCION";

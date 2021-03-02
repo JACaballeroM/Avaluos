@@ -1,0 +1,17 @@
+
+02/03/2021 12:03:05 p. m. EsValidoAvaluo ValidarEsquema FaultException : Exception: El creador de este error no especificó una razón.
+   en SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Avaluos.ValidarEsquema(XmlDocument xmlAvaluo) en C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\Negocio\Avaluos.cs:línea 4038
+   en SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Avaluos.EsValidoAvaluo(Byte[] xmlAvaluoByteComprimido, Int32 idPersona, Boolean esPerito) en C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\Negocio\Avaluos.cs:línea 3863
+
+02/03/2021 12:03:15 p. m. RegistrarAvaluo Exception Paso 3 | : Exception: Se produjo una excepción en el inicializador de tipo de 'Oracle.DataAccess.Client.OracleConnection'.
+   en Oracle.DataAccess.Client.OracleConnection..ctor(String connectionString)
+   en SIGAPred.Common.DataAccess.OracleDataAccess.TransactionHelper..ctor(String connectionString)
+   en SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Avaluos.GuardarAvaluo(XmlDocument xmlAvaluo, String idpersona) en C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\Negocio\Avaluos.cs:línea 1789
+   en SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Avaluos.RegistrarAvaluo(Byte[] xmlBytesComprimido, String idpersona) en C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\Negocio\Avaluos.cs:línea 408
+
+02/03/2021 12:03:15 p. m. HandleException: Se produjo una excepción en el inicializador de tipo de 'Oracle.DataAccess.Client.OracleConnection'.
+   en Oracle.DataAccess.Client.OracleConnection..ctor(String connectionString)
+   en SIGAPred.Common.DataAccess.OracleDataAccess.TransactionHelper..ctor(String connectionString)
+   en SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Avaluos.GuardarAvaluo(XmlDocument xmlAvaluo, String idpersona) en C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\Negocio\Avaluos.cs:línea 1789
+   en SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Avaluos.RegistrarAvaluo(Byte[] xmlBytesComprimido, String idpersona) en C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\Negocio\Avaluos.cs:línea 408
+

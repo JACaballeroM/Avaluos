@@ -105,7 +105,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\SIGAPredFront\REFERENCE\SIGAPred.Excepciones.ClaseExcepcion.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.configuration" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -133,6 +135,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDatos\App_Code\Helpers\TransactionHelper.cs" />
+    <Compile Include="AccesoDatos\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="AccesoDatos\DseAvaluoCatConsulta.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -252,6 +259,17 @@
     </Compile>
     <Compile Include="Negocio\ExceptionPolicyWrapper.cs" />
     <Compile Include="AccesoDatos\App_Code\FiscalUtils.cs" />
+    <None Include="AccesoDatos\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AccesoDatos\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="AccesoDatos\DseAvaluoMant.xsc">
       <DependentUpon>DseAvaluoMant.xsd</DependentUpon>
     </None>
