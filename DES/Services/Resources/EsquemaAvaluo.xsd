@@ -424,7 +424,6 @@
 
 	<xs:simpleType name="Cat-Alcaldia">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="001" />
 			<xs:enumeration value="002" />
 			<xs:enumeration value="003" />
 			<xs:enumeration value="004" />
@@ -1730,7 +1729,7 @@
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
-									<xs:element name="ValorUnitarioHomologado">
+									<xs:element name="ValorUnitarioHomologadoPromedio">
 										<xs:complexType>
 											<xs:simpleContent>
 												<xs:extension base="DecimalPositivo">
@@ -4308,7 +4307,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>-->
-			<xs:element name="VidaUtilRemanentePonderadaDelInmueble">
+			<xs:element name="VidaMinimaRemanentePonderadaDelInmueble">
 				<xs:complexType>
 					<xs:simpleContent>
 						<xs:extension base="NullableDecimalPositivo">
@@ -4428,7 +4427,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="VidaUtilRemanentePonderadaDelInmueble">
+			<xs:element name="VidaMinimaRemanentePonderadaDelInmueble">
 				<xs:complexType>
 					<xs:simpleContent>
 						<xs:extension base="NullableDecimalPositivo">
@@ -4545,7 +4544,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="VidaUtilRemanentePromedioDelInmueble">
+			<xs:element name="VidaMinimaRemanentePonderadaDelInmueble">
 				<xs:complexType>
 					<xs:simpleContent>
 						<xs:extension base="NullableDecimalPositivo">
@@ -6204,7 +6203,7 @@
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
-									<xs:element name="ValorUnitarioHomologado">
+									<xs:element name="ValorUnitarioHomologadoPromedio">
 										<xs:complexType>
 											<xs:simpleContent>
 												<xs:extension base="DecimalPositivo">
@@ -6429,7 +6428,7 @@
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
-									<xs:element name="ValorUnitarioHomologado">
+									<xs:element name="ValorUnitarioHomologadoPromedio">
 										<xs:complexType>
 											<xs:simpleContent>
 												<xs:extension base="DecimalPositivo">

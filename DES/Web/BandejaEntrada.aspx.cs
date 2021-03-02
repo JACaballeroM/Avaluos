@@ -167,12 +167,12 @@ public partial class BandejaEntrada : PageBaseAvaluos
             ExceptionPolicyWrapper.HandleException(ex);
             MostrarMensajeInfo(ex.Message, true);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -215,12 +215,12 @@ public partial class BandejaEntrada : PageBaseAvaluos
             //else
             //    SeleccionarEstadoEnviadoNotario();
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -544,12 +544,12 @@ public partial class BandejaEntrada : PageBaseAvaluos
             ExceptionPolicyWrapper.HandleException(ex);
             MostrarMensajeInfo(ex.Message, true);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -591,8 +591,11 @@ public partial class BandejaEntrada : PageBaseAvaluos
     private void ActualizarUrlAcuse()
     {
         RedirectUtil.BaseURL = Constantes.URL_DESCARGA_ACUSE_AVALUO;
-        RedirectUtil.AddParameter(Constantes.PAR_IDAVALUO, (HiddenIdAvaluo.Value).Trim());
-        RedirectUtil.AddParameter(Constantes.PAR_NUMUNIAVALUO, (HiddenNumUnico.Value).Trim());
+        //RedirectUtil.AddParameter(Constantes.PAR_IDAVALUO, (HiddenIdAvaluo.Value).Trim());
+        //RedirectUtil.AddParameter(Constantes.PAR_NUMUNIAVALUO, (HiddenNumUnico.Value).Trim());
+
+        RedirectUtil.AddParameter(Constantes.PAR_NUMUNIAVALUO_INF, (HiddenNumUnico.Value).Trim());
+
         System.IO.File.AppendAllText(AppDomain.CurrentDomain.BaseDirectory + "\\Avaluos.log", "\n\r"
                    + DateTime.Now.ToString() + " " + "BandejaEntrada ActualizarUrlAcuse : URL_DESCARGA_ACUSE_AVALUO: " + Constantes.URL_DESCARGA_ACUSE_AVALUO + 
                    " | " + (HiddenIdAvaluo.Value).Trim() +
@@ -945,12 +948,12 @@ public partial class BandejaEntrada : PageBaseAvaluos
                     break;
             }
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -1053,12 +1056,12 @@ public partial class BandejaEntrada : PageBaseAvaluos
             ExceptionPolicyWrapper.HandleException(ex);
             MostrarMensajeInfo(ex.Message, true);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -1156,12 +1159,12 @@ public partial class BandejaEntrada : PageBaseAvaluos
                 lblCount.Text = string.Empty;
             }
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -1224,12 +1227,12 @@ public partial class BandejaEntrada : PageBaseAvaluos
             ActualizarUrlAcuse();
             ActualizarUrlInfome();
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -1255,12 +1258,12 @@ public partial class BandejaEntrada : PageBaseAvaluos
 
             EnabledButton(false, true);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -1457,12 +1460,12 @@ public partial class BandejaEntrada : PageBaseAvaluos
                 }
             }
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -1622,12 +1625,12 @@ public partial class BandejaEntrada : PageBaseAvaluos
             RedirectUtil.AddParameter(Constantes.REQUEST_SORTDIR, SortDirectionP.ToString());
             RedirectUtil.Go();
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -1676,12 +1679,12 @@ public partial class BandejaEntrada : PageBaseAvaluos
             RealizarBusqueda();
             UpdatePanelFiltro.Update();
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -1707,12 +1710,12 @@ public partial class BandejaEntrada : PageBaseAvaluos
             RealizarBusqueda();
             ActualizarFiltroBusqueda();
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -1758,12 +1761,12 @@ public partial class BandejaEntrada : PageBaseAvaluos
                 desactivarBtnCambiarEstado();
             }
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -1966,12 +1969,12 @@ public partial class BandejaEntrada : PageBaseAvaluos
                 }
             }
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -2012,12 +2015,12 @@ public partial class BandejaEntrada : PageBaseAvaluos
                 extenderPnlInfoTokenModal.Show();
             }
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -2131,12 +2134,12 @@ public partial class BandejaEntrada : PageBaseAvaluos
             ddlEstado.SelectedValue = FBusqueda.CodEstado;
             AsignarValoresBusqueda();
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);

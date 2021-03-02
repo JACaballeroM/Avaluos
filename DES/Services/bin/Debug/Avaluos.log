@@ -1,0 +1,17 @@
+
+27/02/2021 12:06:36 p. m. HandleException: OracleConnection.ConnectionString no es válido
+   en Oracle.DataAccess.Client.OracleConnection.Open()
+   en Oracle.DataAccess.Client.OracleCommand.ExecuteReader(Boolean requery, Boolean fillRequest, CommandBehavior behavior)
+   en Oracle.DataAccess.Client.OracleDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   en System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   en SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos.DseAvaluosCatConsultaTableAdapters.FEXAVA_CATTOPOGRAFIATableAdapter.Fill(FEXAVA_CATTOPOGRAFIADataTable dataTable, Object& C_CATTOPOGRAFIA) en C:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_AcuseAva - copia\DES\Services\AccesoDatos\DseAvaluoCatConsulta.Designer.cs:línea 22710
+   en ApplicationCache.ObtenerCatalogos() en C:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_AcuseAva - copia\DES\Services\AccesoDatos\App_Code\ApplicationCache.cs:línea 574
+
+27/02/2021 12:06:36 p. m. HandleException: OracleConnection.ConnectionString no es válido
+   en Oracle.DataAccess.Client.OracleConnection.Open()
+   en Oracle.DataAccess.Client.OracleCommand.ExecuteReader(Boolean requery, Boolean fillRequest, CommandBehavior behavior)
+   en Oracle.DataAccess.Client.OracleDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   en System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   en SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos.DseAvaluoConsultaTableAdapters.FEXAVA_AVALUO_VTableAdapter.FillByFecha_Perito_Vigencia_Estado(FEXAVA_AVALUO_VDataTable dataTable, Nullable`1 PAR_FECHAAVALUOINICIAL, Nullable`1 PAR_FECHAAVALUOFINAL, Nullable`1 PAR_IDPERSONAPERITO, String PAR_ESTAVIGENTE, Nullable`1 PAR_CODESTADO, Nullable`1 PAGE_SIZE, Nullable`1 PAGE, String SORTEXPRESSION, Object& C_AVALUOS) en C:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_AcuseAva - copia\DES\Services\AccesoDatos\DseAvaluoConsulta.Designer.cs:línea 6794
+   en SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Avaluos.ObtenerAvaluosPorFechaPeritoVigenciaEstado(Nullable`1 fechaInicio, Nullable`1 fechaFin, Int32 idPerito, String vigente, Int32 codestado, Int32 pageSize, Int32 indice, Int32& rowsTotal, String SortExpression) en C:\Users\EdgarAntunezMartinez\Documents\Avaluos_2021FEB24_Validaciones_Carga_AcuseAva - copia\DES\Services\Negocio\Avaluos.cs:línea 782
+

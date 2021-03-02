@@ -156,12 +156,12 @@ public partial class CuentasDuplicadas : PageBaseAvaluos
             ExceptionPolicyWrapper.HandleException(ex);
             MostrarMensajeInfo(ex.Message, true);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -285,12 +285,12 @@ public partial class CuentasDuplicadas : PageBaseAvaluos
             ExceptionPolicyWrapper.HandleException(ex);
             MostrarMensajeInfo(ex.Message, true);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -505,12 +505,12 @@ public partial class CuentasDuplicadas : PageBaseAvaluos
             ExceptionPolicyWrapper.HandleException(ex);
             MostrarMensajeInfo(ex.Message, true);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -562,12 +562,12 @@ public partial class CuentasDuplicadas : PageBaseAvaluos
             ExceptionPolicyWrapper.HandleException(ex);
             MostrarMensajeInfo(ex.Message, true);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -623,12 +623,12 @@ public partial class CuentasDuplicadas : PageBaseAvaluos
         {
            
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -676,12 +676,12 @@ public partial class CuentasDuplicadas : PageBaseAvaluos
             string codTipoTramite = gridViewAvaluos.SelectedDataKey[Constantes.COL_CODTIPOTRAMITE].ToString().Trim();
             //Validar si el avalúo seleccionado tiene alamacenado el xml del avalúo
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -710,12 +710,12 @@ public partial class CuentasDuplicadas : PageBaseAvaluos
 
 
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -862,12 +862,12 @@ public partial class CuentasDuplicadas : PageBaseAvaluos
             ClearPage();
             UpdatePanelFiltro.Update();
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -957,12 +957,12 @@ public partial class CuentasDuplicadas : PageBaseAvaluos
             //AsignarValoresBusqueda();
             //ActualizarFiltroBusqueda();
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -988,12 +988,12 @@ public partial class CuentasDuplicadas : PageBaseAvaluos
             {
             }
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
@@ -1036,12 +1036,12 @@ public partial class CuentasDuplicadas : PageBaseAvaluos
                 extenderPnlInfoTokenModal.Show();
             }
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion;
             MostrarMensajeInfoExcepcion(msj);

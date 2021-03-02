@@ -222,12 +222,12 @@ public partial class DescargaAcuseAvaluo : PageBaseAvaluos
                    + DateTime.Now.ToString() + " " + "DescargarAcuseAvaluo Page_Load :  POSTBACK \n\r");
             }
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion + Environment.NewLine + cex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion + Environment.NewLine + ciex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
@@ -355,12 +355,12 @@ public partial class DescargaAcuseAvaluo : PageBaseAvaluos
                 xmlAvaluo.SelectSingleNode(Constantes.RUTA_IDENTIF).AppendChild(nuevoElemento);
             }
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion + Environment.NewLine + cex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion + Environment.NewLine + ciex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
