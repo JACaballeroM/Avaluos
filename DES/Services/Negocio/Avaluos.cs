@@ -2842,8 +2842,8 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     {
                         if (row7 == null)
                             row7 = dseAvaluo.FEXAVA_ELEMENTOSEXTRA.NewFEXAVA_ELEMENTOSEXTRARow();
-                        Decimal codinstespeciales = CatastralUtils.ObtenerInstEspecialByClave(xelements1.ToStringXElement()).CODINSTESPECIALES;
-                        row7.CODINSTALACIONESESPECIALES = codinstespeciales;
+                        //Decimal codinstespeciales = CatastralUtils.ObtenerInstEspecialByClave(xelements1.ToStringXElement()).CODINSTESPECIALES;
+                        row7.CODINSTALACIONESESPECIALES = 0M; //codinstespeciales;
                     }
                     IEnumerable<XElement> xelements2 = XmlUtils.XmlSearchById(root, "f.9.1.n.3");
                     if (xelements2.IsFull())
@@ -2892,8 +2892,8 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     {
                         if (row7 == null)
                             row7 = dseAvaluo.FEXAVA_ELEMENTOSEXTRA.NewFEXAVA_ELEMENTOSEXTRARow();
-                        Decimal codinstespeciales = CatastralUtils.ObtenerInstEspecialByClave(xelements1.ToStringXElement()).CODINSTESPECIALES;
-                        row7.CODINSTALACIONESESPECIALES = codinstespeciales;
+                        //Decimal codinstespeciales = CatastralUtils.ObtenerInstEspecialByClave(xelements1.ToStringXElement()).CODINSTESPECIALES;
+                        row7.CODINSTALACIONESESPECIALES = 0M; //codinstespeciales;
                     }
                     IEnumerable<XElement> xelements2 = XmlUtils.XmlSearchById(root, "f.9.2.n.3");
                     if (xelements2.IsFull())
@@ -2928,7 +2928,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     {
                         if (row7 == null)
                             row7 = dseAvaluo.FEXAVA_ELEMENTOSEXTRA.NewFEXAVA_ELEMENTOSEXTRARow();
-                        row7.TEINDIVISO = xelements6.ToDecimalXElement();
+                        row7.TEINDIVISO = 0M;//xelements6.ToDecimalXElement();
                     }
                     if (row7 != null)
                     {
@@ -2949,8 +2949,8 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     {
                         if (row7 == null)
                             row7 = dseAvaluo.FEXAVA_ELEMENTOSEXTRA.NewFEXAVA_ELEMENTOSEXTRARow();
-                        Decimal codinstespeciales = CatastralUtils.ObtenerInstEspecialByClave(xelements1.ToStringXElement()).CODINSTESPECIALES;
-                        row7.CODINSTALACIONESESPECIALES = codinstespeciales;
+                        //Decimal codinstespeciales = CatastralUtils.ObtenerInstEspecialByClave(xelements1.ToStringXElement()).CODINSTESPECIALES;
+                        row7.CODINSTALACIONESESPECIALES= 0M;//= codinstespeciales;
                     }
                     IEnumerable<XElement> xelements2 = XmlUtils.XmlSearchById(root, "f.10.1.n.4");
                     if (xelements2.IsFull())
@@ -2999,8 +2999,8 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     {
                         if (row7 == null)
                             row7 = dseAvaluo.FEXAVA_ELEMENTOSEXTRA.NewFEXAVA_ELEMENTOSEXTRARow();
-                        Decimal codinstespeciales = CatastralUtils.ObtenerInstEspecialByClave(xelements1.ToStringXElement()).CODINSTESPECIALES;
-                        row7.CODINSTALACIONESESPECIALES = codinstespeciales;
+                        //Decimal codinstespeciales = CatastralUtils.ObtenerInstEspecialByClave(xelements1.ToStringXElement()).CODINSTESPECIALES;
+                        row7.CODINSTALACIONESESPECIALES = 0M;// codinstespeciales;
                     }
                     IEnumerable<XElement> xelements2 = XmlUtils.XmlSearchById(root, "f.10.2.n.3");
                     if (xelements2.IsFull())
@@ -3056,8 +3056,8 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     {
                         if (row7 == null)
                             row7 = dseAvaluo.FEXAVA_ELEMENTOSEXTRA.NewFEXAVA_ELEMENTOSEXTRARow();
-                        Decimal codinstespeciales = CatastralUtils.ObtenerInstEspecialByClave(xelements1.ToStringXElement()).CODINSTESPECIALES;
-                        row7.CODINSTALACIONESESPECIALES = codinstespeciales;
+                        //Decimal codinstespeciales = CatastralUtils.ObtenerInstEspecialByClave(xelements1.ToStringXElement()).CODINSTESPECIALES;
+                        row7.CODINSTALACIONESESPECIALES = 0M;/// codinstespeciales;
                     }
                     IEnumerable<XElement> xelements2 = XmlUtils.XmlSearchById(root, "f.11.1.n.3");
                     if (xelements2.IsFull())
@@ -3106,8 +3106,8 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     {
                         if (row7 == null)
                             row7 = dseAvaluo.FEXAVA_ELEMENTOSEXTRA.NewFEXAVA_ELEMENTOSEXTRARow();
-                        Decimal codinstespeciales = CatastralUtils.ObtenerInstEspecialByClave(xelements1.ToStringXElement()).CODINSTESPECIALES;
-                        row7.CODINSTALACIONESESPECIALES = codinstespeciales;
+                        //Decimal codinstespeciales = CatastralUtils.ObtenerInstEspecialByClave(xelements1.ToStringXElement()).CODINSTESPECIALES;
+                        row7.CODINSTALACIONESESPECIALES = 0M;// codinstespeciales;
                     }
                     IEnumerable<XElement> xelements2 = XmlUtils.XmlSearchById(root, "f.11.2.n.4");
                     if (xelements2.IsFull())
@@ -8934,8 +8934,8 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                         if (row7 == null)
                             row7 = dseAvaluo.FEXAVA_ELEMENTOSEXTRA.NewFEXAVA_ELEMENTOSEXTRARow();
                         string stringXelement = xelements1.ToStringXElement();
-                        Decimal codinstespeciales = CatastralUtils.ObtenerInstEspecialByClave(stringXelement).CODINSTESPECIALES;
-                        row7.CODINSTALACIONESESPECIALES = codinstespeciales;
+                        //Decimal codinstespeciales = CatastralUtils.ObtenerInstEspecialByClave(stringXelement).CODINSTESPECIALES;
+                        row7.CODINSTALACIONESESPECIALES = 0M;//codinstespeciales;
                         row7.ClaveInstEsp = stringXelement;
                     }
                     IEnumerable<XElement> xelements2 = XmlUtils.XmlSearchById(root, "f.9.1.n.2");
@@ -9007,8 +9007,8 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                         if (row7 == null)
                             row7 = dseAvaluo.FEXAVA_ELEMENTOSEXTRA.NewFEXAVA_ELEMENTOSEXTRARow();
                         string stringXelement = xelements1.ToStringXElement();
-                        Decimal codinstespeciales = CatastralUtils.ObtenerInstEspecialByClave(stringXelement).CODINSTESPECIALES;
-                        row7.CODINSTALACIONESESPECIALES = codinstespeciales;
+                        //Decimal codinstespeciales = CatastralUtils.ObtenerInstEspecialByClave(stringXelement).CODINSTESPECIALES;
+                        row7.CODINSTALACIONESESPECIALES = 0M; // codinstespeciales;
                         row7.ClaveInstEsp = stringXelement;
                     }
                     IEnumerable<XElement> xelements2 = XmlUtils.XmlSearchById(root, "f.9.2.n.2");
@@ -9065,7 +9065,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     {
                         if (row7 == null)
                             row7 = dseAvaluo.FEXAVA_ELEMENTOSEXTRA.NewFEXAVA_ELEMENTOSEXTRARow();
-                        row7.UNIDAD = SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Avaluos.Truncate(xelements13.ToDecimalXElement(), 4);
+                        row7.UNIDAD = "0"; //SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Avaluos.Truncate(xelements13.ToDecimalXElement(), 4);
                     }
                     if (row7 != null)
                     {
@@ -9087,8 +9087,8 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                         if (row7 == null)
                             row7 = dseAvaluo.FEXAVA_ELEMENTOSEXTRA.NewFEXAVA_ELEMENTOSEXTRARow();
                         string stringXelement = xelements1.ToStringXElement();
-                        Decimal codinstespeciales = CatastralUtils.ObtenerInstEspecialByClave(stringXelement).CODINSTESPECIALES;
-                        row7.CODINSTALACIONESESPECIALES = codinstespeciales;
+                        //Decimal codinstespeciales = CatastralUtils.ObtenerInstEspecialByClave(stringXelement).CODINSTESPECIALES;
+                        row7.CODINSTALACIONESESPECIALES = 0M;// codinstespeciales;
                         row7.ClaveInstEsp = stringXelement;
                     }
                     IEnumerable<XElement> xelements2 = XmlUtils.XmlSearchById(root, "f.10.1.n.2");
@@ -9160,8 +9160,8 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                         if (row7 == null)
                             row7 = dseAvaluo.FEXAVA_ELEMENTOSEXTRA.NewFEXAVA_ELEMENTOSEXTRARow();
                         string stringXelement = xelements1.ToStringXElement();
-                        Decimal codinstespeciales = CatastralUtils.ObtenerInstEspecialByClave(stringXelement).CODINSTESPECIALES;
-                        row7.CODINSTALACIONESESPECIALES = codinstespeciales;
+                        //Decimal codinstespeciales = CatastralUtils.ObtenerInstEspecialByClave(stringXelement).CODINSTESPECIALES;
+                        row7.CODINSTALACIONESESPECIALES = 0M;// codinstespeciales;
                         row7.ClaveInstEsp = stringXelement;
                     }
                     IEnumerable<XElement> xelements2 = XmlUtils.XmlSearchById(root, "f.10.2.n.2");
@@ -9240,8 +9240,8 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                         if (row7 == null)
                             row7 = dseAvaluo.FEXAVA_ELEMENTOSEXTRA.NewFEXAVA_ELEMENTOSEXTRARow();
                         string stringXelement = xelements1.ToStringXElement();
-                        Decimal codinstespeciales = CatastralUtils.ObtenerInstEspecialByClave(stringXelement).CODINSTESPECIALES;
-                        row7.CODINSTALACIONESESPECIALES = codinstespeciales;
+                        //Decimal codinstespeciales = CatastralUtils.ObtenerInstEspecialByClave(stringXelement).CODINSTESPECIALES;
+                        row7.CODINSTALACIONESESPECIALES = 0M;// codinstespeciales;
                         row7.ClaveInstEsp = stringXelement;
                     }
                     IEnumerable<XElement> xelements2 = XmlUtils.XmlSearchById(root, "f.11.1.n.2");
@@ -9313,8 +9313,8 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                         if (row7 == null)
                             row7 = dseAvaluo.FEXAVA_ELEMENTOSEXTRA.NewFEXAVA_ELEMENTOSEXTRARow();
                         string stringXelement = xelements1.ToStringXElement();
-                        Decimal codinstespeciales = CatastralUtils.ObtenerInstEspecialByClave(stringXelement).CODINSTESPECIALES;
-                        row7.CODINSTALACIONESESPECIALES = codinstespeciales;
+                        //Decimal codinstespeciales = CatastralUtils.ObtenerInstEspecialByClave(stringXelement).CODINSTESPECIALES;
+                        row7.CODINSTALACIONESESPECIALES = 0M;// codinstespeciales;
                         row7.ClaveInstEsp = stringXelement;
                     }
                     IEnumerable<XElement> xelements2 = XmlUtils.XmlSearchById(root, "f.11.2.n.2");

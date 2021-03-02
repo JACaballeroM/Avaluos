@@ -8,7 +8,8 @@ using System.ServiceModel;
 using System.Web.UI;
 using System.Xml;
 using System.Xml.Linq;
-using ServiceAvaluos;
+using ServiceAvaluosNuevos;
+using ServiceAvaluosAnterior;
 using SIGAPred.Common.Extensions;
 using SIGAPred.Common.Seguridad;
 using SIGAPred.Common.WCF;
@@ -56,12 +57,12 @@ public partial class SubirAvaluo : PageBaseAvaluos
             ExceptionPolicyWrapper.HandleException(ex);
             MostrarMensajeInformativo(Constantes.MSJ_TOKEN_EXCEPTION + ex.Message, true);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion + Environment.NewLine + cex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion + Environment.NewLine + ciex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
@@ -218,7 +219,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
     {
         try
         {
-            ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUODataTable erroresValidacion = null;
+            ServiceAvaluosNuevos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUODataTable erroresValidacion = null;
             byte[] documentoXMLComprimido = null;
             byte[] documentoXML = null;
             string error = string.Empty;
@@ -228,7 +229,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
                 int tamanioFichero = fileAvaluoXML.FileBytes.Length;
                 bool validadoTamanioFichero = true;
 
-                ServiceAvaluos.AvaluosClient clienteAvaluosTamanio = new ServiceAvaluos.AvaluosClient();
+                ServiceAvaluosNuevos.AvaluosClient clienteAvaluosTamanio = new ServiceAvaluosNuevos.AvaluosClient();
 
                 try
                 {
@@ -287,7 +288,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                     //Paso 1: Todas validaciones menos VUS
                                     if (Condiciones.Web(Constantes.FUN_PERITO))
                                     {
-                                        ServiceAvaluos.AvaluosClient clienteAvaluos = new ServiceAvaluos.AvaluosClient();
+                                        ServiceAvaluosNuevos.AvaluosClient clienteAvaluos = new ServiceAvaluosNuevos.AvaluosClient();
 
                                         try
                                         {
@@ -301,7 +302,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
 
                                     if (Condiciones.Web(Constantes.FUN_SOCIEDAD))
                                     {
-                                        ServiceAvaluos.AvaluosClient clienteAvaluos = new ServiceAvaluos.AvaluosClient();
+                                        ServiceAvaluosNuevos.AvaluosClient clienteAvaluos = new ServiceAvaluosNuevos.AvaluosClient();
 
                                         try
                                         {
@@ -323,7 +324,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                     // Boolean checkb7 = false;
                                     try
                                     {
-                                        var rowVAL = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%Lista esperada de elementos posibles: ''TipoDeInmueble%'").FirstOrDefault();
+                                        var rowVAL = (ServiceAvaluosNuevos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%Lista esperada de elementos posibles: ''TipoDeInmueble%'").FirstOrDefault();
                                         rowVAL["DESCRIPCION"] = "b.7 - El contenido del elemento 'Antecedentes' está incompleto. Lista esperada de elementos posibles: 'TipoDeInmueble'.";
                                     }
                                     catch (Exception exe)
@@ -334,14 +335,14 @@ public partial class SubirAvaluo : PageBaseAvaluos
 
                                     try
                                     {
-                                        var rowVALe5del = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%e.5 %'").FirstOrDefault();
+                                        var rowVALe5del = (ServiceAvaluosNuevos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%e.5 %'").FirstOrDefault();
                                         rowVALe5del.Delete();
                                     }
                                     catch (Exception exe) { }
 
                                     try
                                     {
-                                        var rowVALe5ndel = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%VidaUtilRemanentePonderadaDelInmueble%'").FirstOrDefault();
+                                        var rowVALe5ndel = (ServiceAvaluosNuevos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%VidaUtilRemanentePonderadaDelInmueble%'").FirstOrDefault();
                                         rowVALe5ndel.Delete();
                                     }
                                     catch (Exception exe) { }
@@ -419,14 +420,14 @@ public partial class SubirAvaluo : PageBaseAvaluos
 
                                     try
                                     {
-                                        var rowVALe24del = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%e.2.4 %'").FirstOrDefault();
+                                        var rowVALe24del = (ServiceAvaluosNuevos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%e.2.4 %'").FirstOrDefault();
                                         rowVALe24del.Delete();
                                     }
                                     catch (Exception exe) {}
 
                                     try
                                     {
-                                        var rowVALe24ndel = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%ValorTotalDeLasConstruccionesProIndiviso%'").FirstOrDefault();
+                                        var rowVALe24ndel = (ServiceAvaluosNuevos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%ValorTotalDeLasConstruccionesProIndiviso%'").FirstOrDefault();
                                         rowVALe24ndel.Delete();
                                     }
                                     catch (Exception exe) { }
@@ -450,7 +451,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                         Boolean g111 = false;
                                         try
                                         {
-                                            var rowVAL = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%Lista esperada de elementos posibles: ''Consideraciones%'").FirstOrDefault();
+                                            var rowVAL = (ServiceAvaluosNuevos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%Lista esperada de elementos posibles: ''Consideraciones%'").FirstOrDefault();
                                             rowVAL["DESCRIPCION"] = "g.1.1 - El contenido del elemento 'ConsideracionesPreviasAlAvaluo' está incompleto. Lista esperada de elementos posibles: 'Consideraciones'.";
                                             g111 = true;
                                         }
@@ -477,7 +478,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                         Boolean g112 = false;
                                         try
                                         {
-                                            var rowVAL = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%Lista esperada de elementos posibles: ''MemoriaTecnicaEXPOSICIONDEMOTIVOS%'").FirstOrDefault();
+                                            var rowVAL = (ServiceAvaluosNuevos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%Lista esperada de elementos posibles: ''MemoriaTecnicaEXPOSICIONDEMOTIVOS%'").FirstOrDefault();
                                             rowVAL["DESCRIPCION"] = "g.1.2 - El contenido del elemento 'ConsideracionesPreviasAlAvaluo' está incompleto. Lista esperada de elementos posibles: 'MemoriaTecnicaEXPOSICIONDEMOTIVOS'.";
                                             g112 = true;
                                         }
@@ -504,7 +505,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                         Boolean g113 = false;
                                         try
                                         {
-                                            var rowVAL = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%Lista esperada de elementos posibles: ''MemoriaTecnicaDESGLOSEDEINFORMACION% '").FirstOrDefault();
+                                            var rowVAL = (ServiceAvaluosNuevos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%Lista esperada de elementos posibles: ''MemoriaTecnicaDESGLOSEDEINFORMACION% '").FirstOrDefault();
                                             rowVAL["DESCRIPCION"] = "g.1.3 - El contenido del elemento 'ConsideracionesPreviasAlAvaluo' está incompleto. Lista esperada de elementos posibles: 'MemoriaTecnicaDESGLOSEDEINFORMACION'.";
                                             g113 = true;
                                         }
@@ -531,7 +532,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                         Boolean g114 = false;
                                         try
                                         {
-                                            var rowVAL = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%Lista esperada de elementos posibles: ''MemoriaTecnicaDESCRIPCIONDECALCULOSREALIZADOS%'").FirstOrDefault();
+                                            var rowVAL = (ServiceAvaluosNuevos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%Lista esperada de elementos posibles: ''MemoriaTecnicaDESCRIPCIONDECALCULOSREALIZADOS%'").FirstOrDefault();
                                             rowVAL["DESCRIPCION"] = "g.1.4 - El contenido del elemento 'ConsideracionesPreviasAlAvaluo' está incompleto. Lista esperada de elementos posibles: 'MemoriaTecnicaDESCRIPCIONDECALCULOSREALIZADOS'.";
                                             g114 = true;
                                         }
@@ -558,7 +559,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                         Boolean g115 = false;
                                         try
                                         {
-                                            var rowVAL = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%Lista esperada de elementos posibles: ''MemoriaTecnicaOTROSPARASUSTENTO%'").FirstOrDefault();
+                                            var rowVAL = (ServiceAvaluosNuevos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%Lista esperada de elementos posibles: ''MemoriaTecnicaOTROSPARASUSTENTO%'").FirstOrDefault();
                                             rowVAL["DESCRIPCION"] = "g.1.5 - El contenido del elemento 'ConsideracionesPreviasAlAvaluo' está incompleto. Lista esperada de elementos posibles: 'MemoriaTecnicaOTROSPARASUSTENTO'.";
                                             g115 = true;
                                         }
@@ -590,9 +591,9 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                     {
                                         try
                                         {
-                                            var rowVAL222 = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%h.2.2.2%'").FirstOrDefault();
+                                            var rowVAL222 = (ServiceAvaluosNuevos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%h.2.2.2%'").FirstOrDefault();
                                             rowVAL222.Delete();
-                                            var rowVAL422 = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%h.4.2.2%'").FirstOrDefault();
+                                            var rowVAL422 = (ServiceAvaluosNuevos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%h.4.2.2%'").FirstOrDefault();
                                             rowVAL422.Delete();
                                         }
                                         catch (Exception ex) { }
@@ -614,9 +615,9 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                                 {
                                                     try
                                                     {
-                                                        var rowVAL122del = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%h.1.2.2%'").FirstOrDefault();
+                                                        var rowVAL122del = (ServiceAvaluosNuevos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%h.1.2.2%'").FirstOrDefault();
                                                         rowVAL122del.Delete();
-                                                        var rowVAL1352del = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%h.1.3.5.2%'").FirstOrDefault();
+                                                        var rowVAL1352del = (ServiceAvaluosNuevos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%h.1.3.5.2%'").FirstOrDefault();
                                                         rowVAL1352del.Delete();
                                                     }
                                                     catch (Exception ex) { }
@@ -757,9 +758,9 @@ public partial class SubirAvaluo : PageBaseAvaluos
 
                                             try
                                             {
-                                                var rowVAL17del = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%e.2.1.n.17%'").FirstOrDefault();
+                                                var rowVAL17del = (ServiceAvaluosNuevos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%e.2.1.n.17%'").FirstOrDefault();
                                                 rowVAL17del.Delete();
-                                                var rowVAL517del = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%e.2.5.n.17%'").FirstOrDefault();
+                                                var rowVAL517del = (ServiceAvaluosNuevos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%e.2.5.n.17%'").FirstOrDefault();
                                                 rowVAL517del.Delete();
                                             }
                                             catch (Exception ex) { }
@@ -860,8 +861,8 @@ public partial class SubirAvaluo : PageBaseAvaluos
 
                                     if (erroresValidacion.Any())
                                     {
-                                        ServiceAvaluos.DseAvaluoConsulta.FEXAVA_INTENTOFALLIDO_PDataTable newIntentoDT = new ServiceAvaluos.DseAvaluoConsulta.FEXAVA_INTENTOFALLIDO_PDataTable();
-                                        ServiceAvaluos.DseAvaluoConsulta.FEXAVA_INTENTOFALLIDO_PRow intentoFallidoRow = newIntentoDT.NewFEXAVA_INTENTOFALLIDO_PRow();
+                                        ServiceAvaluosNuevos.DseAvaluoConsulta.FEXAVA_INTENTOFALLIDO_PDataTable newIntentoDT = new ServiceAvaluosNuevos.DseAvaluoConsulta.FEXAVA_INTENTOFALLIDO_PDataTable();
+                                        ServiceAvaluosNuevos.DseAvaluoConsulta.FEXAVA_INTENTOFALLIDO_PRow intentoFallidoRow = newIntentoDT.NewFEXAVA_INTENTOFALLIDO_PRow();
 
                                         //Obtenemos los datos del Avalúo recibido
                                         IEnumerable<XElement> indentificacion = null;
@@ -895,7 +896,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                         intentoFallidoRow.FECHAINTENTOSUBIDA = System.DateTime.Now;
                                         intentoFallidoRow.ERRORES = string.Empty;
 
-                                        foreach (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow rowError in erroresValidacion)
+                                        foreach (ServiceAvaluosNuevos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow rowError in erroresValidacion)
                                         {
                                             intentoFallidoRow.ERRORES += Environment.NewLine + string.Empty + rowError.IDERROR.ToString() + "- " + rowError.TIPOERROR.ToString() + Constantes.SIMBOLO_DOSPUNTOS + rowError.DESCRIPCION.ToString();
                                         }
@@ -903,7 +904,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                         {
                                             newIntentoDT.Rows.Add(intentoFallidoRow);
 
-                                            ServiceAvaluos.AvaluosClient clienteAvaluos = new ServiceAvaluos.AvaluosClient();
+                                            ServiceAvaluosNuevosAvaluosClient clienteAvaluos = new ServiceAvaluosNuevosAvaluosClient();
 
                                             try
                                             {
@@ -968,7 +969,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                                 System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("es-MX", false);
                                                 valorUnitario = Convert.ToDecimal(valorUnitarioSuelo.ToStringXElement(), culture);
 
-                                                ServiceAvaluos.AvaluosClient clienteAvaluos = new ServiceAvaluos.AvaluosClient();
+                                                ServiceAvaluosNuevos.AvaluosClient clienteAvaluos = new ServiceAvaluosNuevos.AvaluosClient();
 
                                                 try
                                                 {
@@ -1034,7 +1035,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
 
                                     xmlCuentaCat = XmlSearchById(xml, "b.3.10");
 
-                                    ServiceAvaluos.AvaluosClient clienteAvaluos = new ServiceAvaluos.AvaluosClient();
+                                    ServiceAvaluosNuevos.AvaluosClient clienteAvaluos = new ServiceAvaluosNuevos.AvaluosClient();
 
                                     try
                                     {
@@ -1313,13 +1314,13 @@ public partial class SubirAvaluo : PageBaseAvaluos
             ExceptionPolicyWrapper.HandleException(ex);
             MostrarMensajeInformativo(Constantes.MSJ_USUARIONOEXISTE_EXECP, false);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             LimpiarViewStateDocumentoXML();
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion + Environment.NewLine + cex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             LimpiarViewStateDocumentoXML();
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion + Environment.NewLine + ciex.StackTrace;
@@ -1441,13 +1442,13 @@ public partial class SubirAvaluo : PageBaseAvaluos
                 LimpiarViewStateDocumentoXML();
             }
         }
-        catch (FaultException<ServiceAvaluos.AvaluosException> cex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosException> cex)
         {
             LimpiarViewStateDocumentoXML();
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + cex.Detail.Descripcion + Environment.NewLine + cex.StackTrace;
             MostrarMensajeInfoExcepcion(msj);
         }
-        catch (FaultException<ServiceAvaluos.AvaluosInfoException> ciex)
+        catch (FaultException<ServiceAvaluosNuevos.AvaluosInfoException> ciex)
         {
             LimpiarViewStateDocumentoXML();
             string msj = Constantes.MSJ_ERROR_OPERACION + Environment.NewLine + Environment.NewLine + ciex.Detail.Descripcion + Environment.NewLine + ciex.StackTrace;
@@ -1475,7 +1476,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
         }
 
         string numUnico;
-        ServiceAvaluos.AvaluosClient clienteAvaluos = new ServiceAvaluos.AvaluosClient();
+        ServiceAvaluosNuevos.AvaluosClient clienteAvaluos = new ServiceAvaluosNuevos.AvaluosClient();
 
         try
         {
