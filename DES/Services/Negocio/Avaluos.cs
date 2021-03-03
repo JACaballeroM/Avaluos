@@ -1960,6 +1960,8 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
             else if (dseAvaluo.FEXAVA_AVALUO[0].CODTIPOTRAMITE.Equals("1"))
                 tipo = "COM";
             dseAvaluo.FEXAVA_AVALUO[0].NUMEROUNICO = AvaluosUtils.ObtenerNumUnicoAv(tipo);
+
+            
         }
 
         private void GuardarAvaluoAntecedentes(XElement antecedentes, ref DseAvaluoMant dseAvaluo)
@@ -3871,8 +3873,8 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                 log("EsValidoAvaluo ValidarEsquema FaultException ", ex.Message, ex.StackTrace);
                 this.AnadirErrorValidacionALista(ref avaluoValidateMessage, ex.Detail.Descripcion, string.Empty);
             }
-            if ((Decimal)avaluoValidateMessage.Length == 0M)
-            {
+            //if ((Decimal)avaluoValidateMessage.Length == 0M)
+            //{
                 string stringXelement = XmlUtils.XmlSearchById(root, "a.1").ToStringXElement();
                 try
                 {
@@ -3959,7 +3961,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                         this.AnadirErrorValidacionALista(ref avaluoValidateMessage, ex.Detail.Descripcion, "@TIPO_ERROR:CAMPOS CALCULADOS");
                     }
                 }
-            }
+            //}
             
             }catch(Exception ex)
             {
@@ -4004,6 +4006,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
             }
             catch (FaultException<AvaluosInfoException> ex)
             {
+                log("ValidarEsquema ValidarTipoPersona", ex.Message,ex.StackTrace);
                 flag3 = false;
                 stringBuilder.AppendLine("@TIPO_ERROR:ESQUEMA - DOCUMENTO NO VÁLIDO");
                 stringBuilder.AppendLine(ex.Detail.Descripcion);
@@ -4014,6 +4017,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
             }
             catch (FaultException<AvaluosInfoException> ex)
             {
+                log("ValidarEsquema ValidarDelegacionesColonias", ex.Message, ex.StackTrace);
                 flag1 = false;
                 stringBuilder.AppendLine("@TIPO_ERROR:ESQUEMA - DOCUMENTO NO VÁLIDO");
                 stringBuilder.AppendLine(ex.Detail.Descripcion);
@@ -4024,6 +4028,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
             }
             catch (FaultException<AvaluosInfoException> ex)
             {
+                log("ValidarEsquema ValidarValorReferido", ex.Message, ex.StackTrace);
                 flag2 = false;
                 stringBuilder.AppendLine("@TIPO_ERROR:ESQUEMA - DOCUMENTO NO VÁLIDO");
                 stringBuilder.AppendLine(ex.Detail.Descripcion);
@@ -4034,6 +4039,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
             }
             catch (FaultException<AvaluosInfoException> ex)
             {
+                log("ValidarEsquema ValidarUsoBaldio ", ex.Message, ex.StackTrace);
                 flag4 = false;
                 stringBuilder.AppendLine("@TIPO_ERROR:ESQUEMA - DOCUMENTO NO VÁLIDO");
                 stringBuilder.AppendLine(ex.Detail.Descripcion);
@@ -4867,7 +4873,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                 throw new FaultException<AvaluosInfoException>(new AvaluosInfoException("Valor referido  (p.5 y p.1)"));
         }
 
-        private void ValidarExisteAvaluoRegistrado(
+        public void ValidarExisteAvaluoRegistrado(
           string numAvaluo,
           Decimal idPersonaSociedad,
           bool esPerito)
@@ -7349,7 +7355,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
 
         public bool ExisteClaseUsoEjercicio(Decimal? idClaseejercicio, Decimal? idUsoejercicio) => true;
 
-        private int ExisteAvaluoRegistrado(string numAvaluo, Decimal idpersona, bool esPerito)
+        public int ExisteAvaluoRegistrado(string numAvaluo, Decimal idpersona, bool esPerito)
         {
             Decimal EXISTE;
             if (esPerito)

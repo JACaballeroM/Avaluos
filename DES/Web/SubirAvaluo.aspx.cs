@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.ServiceModel;
+using System.Text.RegularExpressions;
 using System.Web.UI;
 using System.Xml;
 using System.Xml.Linq;
@@ -319,10 +320,65 @@ public partial class SubirAvaluo : PageBaseAvaluos
 
                                     XElement xmlVAL = (XElement)XDocument.Parse(xmlAvaluo.InnerXml).Root;
                                     bool esComercial = (Decimal)xmlVAL.Descendants((XName)"Comercial").Count<XElement>() > 0M;
-                                    // Boolean checkb7 = false;
+                                // Boolean checkb7 = false;
+
+
+                                string stringXelement = XmlSearchById(xmlVAL, "a.1").ToStringXElement();
+                                try
+                                {
+                                    ServiceAvaluos.AvaluosClient clienteAvaluos = new ServiceAvaluos.AvaluosClient();
+
                                     try
                                     {
-                                        var rowVAL = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%Lista esperada de elementos posibles: ''TipoDeInmueble%'").FirstOrDefault();
+                                        //clienteAvaluo  .ObtenerCedula   .ValidarExisteAvaluoRegistrado(stringXelement, Decimal.Parse(Usuarios.IdPersona.ToString()) ,);
+                                    }
+                                    finally
+                                    {
+                                        clienteAvaluos.Disconnect();
+                                    }
+                                }
+                                catch (FaultException<AvaluosInfoException> ex)
+                                {
+                                    var rowVALregex = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                    rowVALregex["IDERROR"] = id;
+                                    rowVALregex["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                    rowVALregex["DESCRIPCION"] = "a.3 - El elemento 'ClaveValuador' contiene uno o más caracteres no válidos.";
+                                    erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALregex);
+                                    id++;
+                                }
+
+                                try {
+                                    var character1 = "*";
+                                    var character2= "@";
+                                    var character3 = "#";
+                                    var character4 = "!";
+                                    var character5 = "?";
+                                    var txt= XmlSearchById(xmlVAL, "a.3").ToStringXElement();
+
+                                    Boolean m = XmlSearchById(xmlVAL, "a.3").ToStringXElement().Contains(character1) ||
+                                        XmlSearchById(xmlVAL, "a.3").ToStringXElement().Contains(character2) ||
+                                        XmlSearchById(xmlVAL, "a.3").ToStringXElement().Contains(character3) ||
+                                        XmlSearchById(xmlVAL, "a.3").ToStringXElement().Contains(character4) ||
+                                        XmlSearchById(xmlVAL, "a.3").ToStringXElement().Contains(character5) 
+                                        ;
+
+                                    if (m) {
+                                        var rowVALregex = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                        rowVALregex["IDERROR"] = id;
+                                        rowVALregex["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                        rowVALregex["DESCRIPCION"] = "a.3 - El elemento 'ClaveValuador' contiene uno o más caracteres no válidos.";
+                                        erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALregex);
+                                        id++;
+                                    }
+                                    
+                                
+                                }
+                                catch (Exception ex)
+                                {      }
+
+                                try
+                                    {
+                                        var rowVAL = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like 'b -%Lista esperada de elementos posibles: ''TipoDeInmueble%'").FirstOrDefault();
                                         rowVAL["DESCRIPCION"] = "b.7 - El contenido del elemento 'Antecedentes' está incompleto. Lista esperada de elementos posibles: 'TipoDeInmueble'.";
                                     }
                                     catch (Exception exe)
