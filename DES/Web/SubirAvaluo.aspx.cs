@@ -387,7 +387,20 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                     }
 
 
-                                    try
+
+                                try { string b7 = XmlSearchById(xmlVAL, "b.7").ToStringXElement(); }
+                                catch (Exception ex)
+                                {
+
+                                    var rowVALb7 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                    rowVALb7["IDERROR"] = id;
+                                    rowVALb7["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                    rowVALb7["DESCRIPCION"] = "b.7 - El contenido del elemento 'Antecedentes' está incompleto. Lista esperada de elementos posibles: 'TipoDeInmueble'.";
+                                    erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALb7);
+                                    id++;
+                                }
+
+                                try
                                     {
                                         var rowVALe5del = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%e.5 %'").FirstOrDefault();
                                         rowVALe5del.Delete();
@@ -428,78 +441,34 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                     }
 
 
+                                try
+                                {
+                                    var rowVALe24del = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%e.2.4 %'").FirstOrDefault();
+                                    rowVALe24del.Delete();
+                                }
+                                catch (Exception exe) { }
 
+                                try
+                                {
+                                    var rowVALe24ndel = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%ValorTotalDeLasConstruccionesProIndiviso%'").FirstOrDefault();
+                                    rowVALe24ndel.Delete();
+                                }
+                                catch (Exception exe) { }
 
-                                    try
-                                    {
-                                        if (XmlSearchById(xmlVAL, "e.2.4").IsFull())
-                                        {
-
-                                            var rowVALe24 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
-                                            rowVALe24["IDERROR"] = id;
-                                            rowVALe24["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
-                                            rowVALe24["DESCRIPCION"] = "e.2.4 - El contenido del elemento 'ValorTotalDeLasConstruccionesProIndiviso' es inválido. Lista esperada de elementos posibles: 'ConstruccionesComunes'.";
-                                            erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALe24);
-                                            id++;
-                                        }
-                                    }
-                                    catch (Exception ex) { }
-
-
-
-
-                                    try { string b7 = XmlSearchById(xmlVAL, "b.7").ToStringXElement(); }
-                                    catch (Exception ex)
+                                try
+                                {
+                                    if (XmlSearchById(xmlVAL, "e.2.4").IsFull())
                                     {
 
-                                        var rowVALb7 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
-                                        rowVALb7["IDERROR"] = id;
-                                        rowVALb7["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
-                                        rowVALb7["DESCRIPCION"] = "b.7 - El contenido del elemento 'Antecedentes' está incompleto. Lista esperada de elementos posibles: 'TipoDeInmueble'.";
-                                        erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALb7);
+                                        var rowVALe24 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                        rowVALe24["IDERROR"] = id;
+                                        rowVALe24["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                        rowVALe24["DESCRIPCION"] = "e.2.4 - El contenido del elemento 'ValorTotalDeLasConstruccionesProIndiviso' es inválido. Lista esperada de elementos posibles: 'ConstruccionesComunes'.";
+                                        erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALe24);
                                         id++;
                                     }
-
-                                    try { string b7 = XmlSearchById(xmlVAL, "b.7").ToStringXElement(); }
-                                    catch (Exception ex)
-                                    {
-
-                                        var rowVALb7 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
-                                        rowVALb7["IDERROR"] = id;
-                                        rowVALb7["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
-                                        rowVALb7["DESCRIPCION"] = "b.7 - El contenido del elemento 'Antecedentes' está incompleto. Lista esperada de elementos posibles: 'TipoDeInmueble'.";
-                                        erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALb7);
-                                        id++;
-                                    }
-
-                                    try
-                                    {
-                                        var rowVALe24del = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%e.2.4 %'").FirstOrDefault();
-                                        rowVALe24del.Delete();
-                                    }
-                                    catch (Exception exe) { }
-
-                                    try
-                                    {
-                                        var rowVALe24ndel = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%ValorTotalDeLasConstruccionesProIndiviso%'").FirstOrDefault();
-                                        rowVALe24ndel.Delete();
-                                    }
-                                    catch (Exception exe) { }
-
-                                    try
-                                    {
-                                        if (XmlSearchById(xmlVAL, "e.2.4").IsFull())
-                                        {
-
-                                            var rowVALe24 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
-                                            rowVALe24["IDERROR"] = id;
-                                            rowVALe24["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
-                                            rowVALe24["DESCRIPCION"] = "e.2.4 - El contenido del elemento 'ValorTotalDeLasConstruccionesProIndiviso' es inválido. Lista esperada de elementos posibles: 'ConstruccionesComunes'.";
-                                            erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALe24);
-                                            id++;
-                                        }
-                                    }
-                                    catch (Exception ex) { }
+                                }
+                                catch (Exception ex) { }
 
 
                                     if (esComercial)
