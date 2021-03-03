@@ -3893,28 +3893,32 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     string str = "a.2 - La fecha de el avaluo no debe ser mayor a 5 años";
                     avaluoValidateMessage.AppendLine(str);
                 }
+
+                try
+                {
+                    this.ValidarVigenciaPeritoSociedad(idPersona, xmlAvaluo, esPerito);
+                }
+                catch (FaultException<AvaluosInfoException> ex)
+                {
+                    log("EsValidoAvaluo ValidarVigenciaPeritoSociedad FaultException ", ex.Message, ex.StackTrace);
+                    avaluoValidateMessage.AppendLine("@TIPO_ERROR:PERITO Y SOCIEDAD");
+                    avaluoValidateMessage.AppendLine(ex.Detail.Descripcion);
+                    avaluoValidateMessage.AppendLine();
+                }
+                try
+                {
+                    this.ValidarCuentaCatastral(xmlAvaluo);
+                }
+                catch (FaultException<AvaluosInfoException> ex)
+                {
+                    log("EsValidoAvaluo ValidarCuentaCatastral FaultException ", ex.Message, ex.StackTrace);
+                    this.AnadirErrorValidacionALista(ref avaluoValidateMessage, ex.Detail.Descripcion, "@TIPO_ERROR:CUENTA CATASTRAL");
+                }
+
+
                 if ((Decimal)avaluoValidateMessage.Length == 0M)
                 {
-                    try
-                    {
-                        this.ValidarVigenciaPeritoSociedad(idPersona, xmlAvaluo, esPerito);
-                    }
-                    catch (FaultException<AvaluosInfoException> ex)
-                    {
-                        log("EsValidoAvaluo ValidarVigenciaPeritoSociedad FaultException ", ex.Message, ex.StackTrace);
-                        avaluoValidateMessage.AppendLine("@TIPO_ERROR:PERITO Y SOCIEDAD");
-                        avaluoValidateMessage.AppendLine(ex.Detail.Descripcion);
-                        avaluoValidateMessage.AppendLine();
-                    }
-                    try
-                    {
-                        this.ValidarCuentaCatastral(xmlAvaluo);
-                    }
-                    catch (FaultException<AvaluosInfoException> ex)
-                    {
-                        log("EsValidoAvaluo ValidarCuentaCatastral FaultException ", ex.Message, ex.StackTrace);
-                        this.AnadirErrorValidacionALista(ref avaluoValidateMessage, ex.Detail.Descripcion, "@TIPO_ERROR:CUENTA CATASTRAL");
-                    }
+                   
                     try
                     {
                         this.ValidarAnexoFotografico(xmlAvaluo);
