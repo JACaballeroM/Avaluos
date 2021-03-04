@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4efaf871-bbe2-4038-9b43-39119cf925b4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.0.8.2/PRO/FuentesExternas/Avaluos_anterior/Avaluos.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Avaluos.xsd" MetadataType="Schema" ID="f883c1ac-20e8-46e1-b93c-1fd86f1e13fe" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos_anterior/Avaluos.svc?xsd=xsd3" />
+    <MetadataFile FileName="DseAvaluoConsulta.xsd" MetadataType="Schema" ID="a5b02c1e-6b42-492c-96ae-2ca5cf16a7bd" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos_anterior/Avaluos.svc?xsd=xsd2" />
+    <MetadataFile FileName="Avaluos1.xsd" MetadataType="Schema" ID="2bcc5097-f87f-4046-a968-c822e60c84c6" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos_anterior/Avaluos.svc?xsd=xsd1" />
+    <MetadataFile FileName="Avaluos2.xsd" MetadataType="Schema" ID="a165998d-3a53-43f6-9235-7f877d804628" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos_anterior/Avaluos.svc?xsd=xsd0" />
+    <MetadataFile FileName="Avaluos3.xsd" MetadataType="Schema" ID="b58c629f-1396-439d-a3dd-ce0227c081b9" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos_anterior/Avaluos.svc?xsd=xsd7" />
+    <MetadataFile FileName="DseAvaluoConsultaFis.xsd" MetadataType="Schema" ID="254aecec-e616-4bc7-9197-590f76e12e46" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos_anterior/Avaluos.svc?xsd=xsd6" />
+    <MetadataFile FileName="DseAvaluosCatConsulta.xsd" MetadataType="Schema" ID="16a07790-b15b-49fe-a140-a6057d7ff2a7" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos_anterior/Avaluos.svc?xsd=xsd5" />
+    <MetadataFile FileName="Avaluos4.xsd" MetadataType="Schema" ID="a09694f4-d079-4fa5-bb05-11bd0773ec25" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos_anterior/Avaluos.svc?xsd=xsd4" />
+    <MetadataFile FileName="Avaluos5.xsd" MetadataType="Schema" ID="dbd46180-0eec-4c05-b099-c91b73818aa2" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos_anterior/Avaluos.svc?xsd=xsd9" />
+    <MetadataFile FileName="DseNotarios.xsd" MetadataType="Schema" ID="eb02b620-0b04-45e6-a6ed-07edf5651912" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos_anterior/Avaluos.svc?xsd=xsd8" />
+    <MetadataFile FileName="Avaluos.wsdl" MetadataType="Wsdl" ID="bc6d1630-75f5-485e-bb04-d067944d0ec9" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos_anterior/Avaluos.svc?wsdl" />
+    <MetadataFile FileName="DseAvaluoMantInf.xsd" MetadataType="Schema" ID="86090fae-f13d-4899-80ff-49cbfa90b7e6" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos_anterior/Avaluos.svc?xsd=xsd10" />
+    <MetadataFile FileName="Avaluos.disco" MetadataType="Disco" ID="a1563eb4-2f6b-42ac-bf12-eceb2f9c8e48" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos_anterior/Avaluos.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
