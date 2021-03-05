@@ -371,7 +371,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                                     var rowVALb4 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
                                                     rowVALb4["IDERROR"] = id;
                                                     rowVALb4["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
-                                                    rowVALb4["DESCRIPCION"] = "b.4.2 - El contenido del elemento 'PropositoDelAvaluo' está incompleto. Lista esperada de elementos posibles: 'Otros'.";
+                                                    rowVALb4["DESCRIPCION"] = "b.4.2 - El elemento 'Otros' no es válido. El valor '' no es válido según su tipo de datos 'Cadena' - La longitud real es menor que el valor de longitud mínima.";
                                                     erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALb4);
                                                     id++;
                                                 }
@@ -506,7 +506,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                     }
                                     catch (Exception ex) { }
 
-
+                                    /*
                                     if (esComercial)
                                     {
                                         Boolean g111 = false;
@@ -548,16 +548,16 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                         {
 
                                         }
-                                        try { string g111ele = XmlSearchById(xmlVAL, "g.1.2").ToStringXElement(); }
+                                        try { string g112ele = XmlSearchById(xmlVAL, "g.1.2").ToStringXElement(); }
                                         catch (Exception ex)
                                         {
                                             if (!g112)
                                             {
-                                                var rowVALg11 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
-                                                rowVALg11["IDERROR"] = id;
-                                                rowVALg11["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
-                                                rowVALg11["DESCRIPCION"] = "g.1.2 - El contenido del elemento 'ConsideracionesPreviasAlAvaluo' está incompleto. Lista esperada de elementos posibles: 'MemoriaTecnicaDESGLOSEDEINFORMACION'.";
-                                                erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALg11);
+                                                var rowVALg112 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                                rowVALg112["IDERROR"] = id;
+                                                rowVALg112["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                                rowVALg112["DESCRIPCION"] = "g.1.2 - El contenido del elemento 'ConsideracionesPreviasAlAvaluo' está incompleto. Lista esperada de elementos posibles: 'MemoriaTecnicaDESGLOSEDEINFORMACION'.";
+                                                erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALg112);
                                                 id++;
                                             }
                                             g112 = false;
@@ -580,11 +580,11 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                         {
                                             if (!g113)
                                             {
-                                                var rowVALg11 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
-                                                rowVALg11["IDERROR"] = id;
-                                                rowVALg11["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
-                                                rowVALg11["DESCRIPCION"] = "g.1.3 - El contenido del elemento 'ConsideracionesPreviasAlAvaluo' está incompleto. Lista esperada de elementos posibles: 'Consideraciones'.";
-                                                erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALg11);
+                                                var rowVALg113 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                                rowVALg113["IDERROR"] = id;
+                                                rowVALg113["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                                rowVALg113["DESCRIPCION"] = "g.1.3 - El contenido del elemento 'ConsideracionesPreviasAlAvaluo' está incompleto. Lista esperada de elementos posibles: 'Consideraciones'.";
+                                                erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALg113);
                                                 id++;
                                             }
                                             g113 = false;
@@ -646,7 +646,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
 
 
                                     }
-
+                                    */
 
                                     if (esComercial)
                                     {

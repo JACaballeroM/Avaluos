@@ -2094,7 +2094,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                             dseAvaluo.FEXAVA_AVALUO[0].PROPOSITO = Constantes.P3;
                             break;
                         case 4:
-                            dseAvaluo.FEXAVA_AVALUO[0].PROPOSITO = XmlUtils.XmlSearchById(xelements25, "b.4.2").ToStringXElement();
+                            dseAvaluo.FEXAVA_AVALUO[0].PROPOSITO = XmlUtils.XmlSearchById(xelements25, "b.4.2").ToStringXElement().ToUpper();
                             break;
                     }
                //}catch(Exception ex) { }
@@ -8462,7 +8462,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                             dseAvaluo.FEXAVA_AVALUO[0].PROPOSITO = Constantes.P3;
                             break;
                         case 4:
-                            dseAvaluo.FEXAVA_AVALUO[0].PROPOSITO = XmlUtils.XmlSearchById(xelements33, "b.4.2").ToStringXElement();
+                            dseAvaluo.FEXAVA_AVALUO[0].PROPOSITO = XmlUtils.XmlSearchById(xelements33, "b.4.2").ToStringXElement().ToUpper();
                             break;
                     }
                     //}catch(Exception ex) { }
