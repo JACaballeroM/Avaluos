@@ -1216,7 +1216,7 @@
               <xs:element name="PROPOSITO" msprop:Generator_ColumnVarNameInTable="columnPROPOSITO" msprop:Generator_ColumnPropNameInRow="PROPOSITO" msprop:Generator_ColumnPropNameInTable="PROPOSITOColumn" msprop:Generator_UserColumnName="PROPOSITO">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
+                    <xs:maxLength value="200" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

@@ -3819,7 +3819,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIDAVALUO}, false));
                 this.columnPROPOSITO.AllowDBNull = false;
-                this.columnPROPOSITO.MaxLength = 50;
+                this.columnPROPOSITO.MaxLength = 200;
                 this.columnOBJETO.AllowDBNull = false;
                 this.columnOBJETO.MaxLength = 50;
                 this.columnIDAVALUO.AutoIncrement = true;

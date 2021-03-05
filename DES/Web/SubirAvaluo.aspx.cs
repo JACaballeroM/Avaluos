@@ -326,36 +326,81 @@ public partial class SubirAvaluo : PageBaseAvaluos
 
 
 
-                                    try
-                                    {
-                                        var character1 = "*";
-                                        var character2 = "@";
-                                        var character3 = "#";
-                                        var character4 = "!";
-                                        var character5 = "?";
-                                        var txt = XmlSearchById(xmlVAL, "a.3").ToStringXElement();
+                                     try
+                                     {
+                                         var character1 = "*";
+                                         var character2 = "@";
+                                         var character3 = "#";
+                                         var character4 = "!";
+                                         var character5 = "?";
+                                         var txt = XmlSearchById(xmlVAL, "a.3").ToStringXElement();
 
-                                        Boolean m = XmlSearchById(xmlVAL, "a.3").ToStringXElement().Contains(character1) ||
-                                            XmlSearchById(xmlVAL, "a.3").ToStringXElement().Contains(character2) ||
-                                            XmlSearchById(xmlVAL, "a.3").ToStringXElement().Contains(character3) ||
-                                            XmlSearchById(xmlVAL, "a.3").ToStringXElement().Contains(character4) ||
-                                            XmlSearchById(xmlVAL, "a.3").ToStringXElement().Contains(character5)
-                                            ;
+                                         Boolean m = XmlSearchById(xmlVAL, "a.3").ToStringXElement().Contains(character1) ||
+                                             XmlSearchById(xmlVAL, "a.3").ToStringXElement().Contains(character2) ||
+                                             XmlSearchById(xmlVAL, "a.3").ToStringXElement().Contains(character3) ||
+                                             XmlSearchById(xmlVAL, "a.3").ToStringXElement().Contains(character4) ||
+                                             XmlSearchById(xmlVAL, "a.3").ToStringXElement().Contains(character5)
+                                             ;
 
-                                        if (m)
+                                         if (m)
+                                         {
+                                             var rowVALregex = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                             rowVALregex["IDERROR"] = id;
+                                             rowVALregex["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                             rowVALregex["DESCRIPCION"] = "a.3 - El elemento 'ClaveValuador' contiene uno o más caracteres no válidos.";
+                                             erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALregex);
+                                             id++;
+                                         }
+
+
+                                     }
+                                     catch (Exception ex)
+                                     { }
+
+
+
+                                  
+                                        try { string b4 = XmlSearchById(xmlVAL, "b.4.1").ToStringXElement();
+                                        if (b4.Equals("4"))
                                         {
-                                            var rowVALregex = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
-                                            rowVALregex["IDERROR"] = id;
-                                            rowVALregex["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
-                                            rowVALregex["DESCRIPCION"] = "a.3 - El elemento 'ClaveValuador' contiene uno o más caracteres no válidos.";
-                                            erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALregex);
+                                            try
+                                            {
+                                                string b42 = XmlSearchById(xmlVAL, "b.4.2").ToStringXElement();
+                                                if (b42.Trim().Equals(""))
+                                                {
+                                                    var rowVALb4 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                                    rowVALb4["IDERROR"] = id;
+                                                    rowVALb4["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                                    rowVALb4["DESCRIPCION"] = "b.4.2 - El contenido del elemento 'PropositoDelAvaluo' está incompleto. Lista esperada de elementos posibles: 'Otros'.";
+                                                    erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALb4);
+                                                    id++;
+                                                }
+                                            }
+                                            catch (Exception ex)
+                                            {
+
+                                                var rowVALb4 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                                rowVALb4["IDERROR"] = id;
+                                                rowVALb4["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                                rowVALb4["DESCRIPCION"] = "b.4.2 - El contenido del elemento 'PropositoDelAvaluo' está incompleto. Lista esperada de elementos posibles: 'Otros'.";
+                                                erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALb4);
+                                                id++;
+                                            }
+                                        }
+                                    }
+                                        catch (Exception ex)
+                                        {
+
+                                            var rowVALb7 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                            rowVALb7["IDERROR"] = id;
+                                            rowVALb7["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                            rowVALb7["DESCRIPCION"] = "b.4.1 - El contenido del elemento 'PropositoDelAvaluo' está incompleto. Lista esperada de elementos posibles: 'ClavePropositoAvaluo'.";
+                                            erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALb7);
                                             id++;
                                         }
+                                    
 
 
-                                    }
-                                    catch (Exception ex)
-                                    { }
 
                                     bool existeB7 = false;
                                     try
@@ -387,44 +432,6 @@ public partial class SubirAvaluo : PageBaseAvaluos
 
 
 
-                                    /*
-                                     * 
-                                    B4
-                                     
-                                    bool existeB4 = false;
-                                    try
-                                    {
-                                        var rowVAL = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like 'b.4.%'").FirstOrDefault();
-                                        existeB4 = true;
-                                    }
-                                    catch (Exception exe)
-                                    {
-
-                                    }
-
-
-                                    if (!existeB4)
-                                    {
-                                        try { 
-                                            string b4 = XmlSearchById(xmlVAL, "b.4.1").ToStringXElement();
-                                            if (b4.Equals("1"))
-                                            {
-                                                xmlVAL.Element()
-
-                                                XmlSearchById(xmlVAL, "b.4.1").
-                                            }
-                                        }
-                                        catch (Exception ex)
-                                        {
-
-                                            var rowVALb7 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
-                                            rowVALb7["IDERROR"] = id;
-                                            rowVALb7["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
-                                            rowVALb7["DESCRIPCION"] = "b.4.1 - El contenido del elemento 'PropositoDelAvaluo' está incompleto. Lista esperada de elementos posibles: 'ClavePropositoAvaluo'.";
-                                            erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALb7);
-                                            id++;
-                                        }
-                                    }*/
 
 
 

@@ -399,6 +399,12 @@
 
 	<!-- CUENTAS CATASTRALES  -->
 
+	<xs:simpleType name="claveProposito">
+		<xs:restriction base="xs:string"  >
+			<xs:pattern value="[1|2|3|4]{1}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
 	<xs:simpleType name="region_manzana_up">
 		<xs:restriction base="xs:string"  >
 			<xs:pattern value="[0|1|2|3|4|5|6|7|8|9|A|B|C|D|E|F|H|J|K|M|N|P|Q|R|T|U|V|W|X|Y]{3}"/>
@@ -2446,7 +2452,7 @@
 						<xs:element name="ClavePropositoAvaluo">
 							<xs:complexType>
 							<xs:simpleContent>
-								<xs:extension  base="NonEmptyString1">
+								<xs:extension  base="claveProposito">
 									<xs:attribute fixed="b.4.1" name="id" type="NonEmptyString" use="required" />
 								</xs:extension>
 							</xs:simpleContent>
@@ -2849,7 +2855,7 @@
 						<xs:element name="ClavePropositoAvaluo">
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension  base="NonEmptyString1">
+									<xs:extension  base="claveProposito">
 										<xs:attribute fixed="b.4.1" name="id" type="NonEmptyString" use="required" />
 									</xs:extension>
 								</xs:simpleContent>

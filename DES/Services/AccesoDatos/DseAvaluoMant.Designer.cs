@@ -2961,7 +2961,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos {
                                 this.columnIDAVALUO}, false));
                 this.columnFECHAVALORREFERIDO.DateTimeMode = global::System.Data.DataSetDateTime.Unspecified;
                 this.columnPROPOSITO.AllowDBNull = false;
-                this.columnPROPOSITO.MaxLength = 50;
+                this.columnPROPOSITO.MaxLength = 200;
                 this.columnOBJETO.AllowDBNull = false;
                 this.columnOBJETO.MaxLength = 50;
                 this.columnIDAVALUO.AutoIncrement = true;
