@@ -901,5 +901,14 @@ public static class Constantes
     ///  PREFIJO PARA LA DESCRIPCIÓN DE LOS FICHEROS DE AVALÚO
     /// </summary>
     public const string DESC_FICHEROAV_PREFIJO = "Avaluo_";
-    #endregion 
+    #endregion
+
+
+    #region PROPSITO AVALUO
+
+    public const string P1 = "Establecer la base gravable para el pago de Impuesto sobre adquisición de inmuebles.";
+    public const string P2 = "Establecer la base gravable para el pago de Impuesto predial.";
+    public const string P3 = "Establecer la base gravable para el pago de derechos y contribuciones inmobiliarias.";
+
+    #endregion
 }

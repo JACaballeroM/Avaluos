@@ -2079,7 +2079,29 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
             }
             IEnumerable<XElement> xelements25 = XmlUtils.XmlSearchById(antecedentes, "b.4");
             if (xelements25.IsFull())
-                dseAvaluo.FEXAVA_AVALUO[0].PROPOSITO = xelements25.ToStringXElement();
+            {
+               //try
+               // {
+                    switch (XmlUtils.XmlSearchById(xelements25, "b.4.1").ToStringXElement().ToInt())
+                    {
+                        case 1:
+                            dseAvaluo.FEXAVA_AVALUO[0].PROPOSITO = Constantes.P1;
+                            break;
+                        case 2:
+                            dseAvaluo.FEXAVA_AVALUO[0].PROPOSITO = Constantes.P2;
+                            break;
+                        case 3:
+                            dseAvaluo.FEXAVA_AVALUO[0].PROPOSITO = Constantes.P3;
+                            break;
+                        case 4:
+                            dseAvaluo.FEXAVA_AVALUO[0].PROPOSITO = XmlUtils.XmlSearchById(xelements25, "b.4.2").ToStringXElement();
+                            break;
+                    }
+               //}catch(Exception ex) { }
+             //   dseAvaluo.FEXAVA_AVALUO[0].PROPOSITO = xelements25.ToStringXElement();
+            }
+
+
             IEnumerable<XElement> xelements26 = XmlUtils.XmlSearchById(antecedentes, "b.5");
             if (xelements26.IsFull())
                 dseAvaluo.FEXAVA_AVALUO[0].OBJETO = xelements26.ToStringXElement();
@@ -8420,9 +8442,33 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                 IEnumerable<XElement> xelements32 = XmlUtils.XmlSearchById(antecedentes, "b.3.11");
                 if (xelements32.IsFull())
                     dseAvaluo.FEXAVA_AVALUO[0].CUENTAAGUA = xelements32.ToStringXElement();
+                
                 IEnumerable<XElement> xelements33 = XmlUtils.XmlSearchById(antecedentes, "b.4");
+                //if (xelements33.IsFull())
+                //    dseAvaluo.FEXAVA_AVALUO[0].PROPOSITO = xelements33.ToStringXElement();
                 if (xelements33.IsFull())
-                    dseAvaluo.FEXAVA_AVALUO[0].PROPOSITO = xelements33.ToStringXElement();
+                {
+                    //try
+                    // {
+                    switch (XmlUtils.XmlSearchById(xelements33, "b.4.1").ToStringXElement().ToInt())
+                    {
+                        case 1:
+                            dseAvaluo.FEXAVA_AVALUO[0].PROPOSITO = Constantes.P1;
+                            break;
+                        case 2:
+                            dseAvaluo.FEXAVA_AVALUO[0].PROPOSITO = Constantes.P2;
+                            break;
+                        case 3:
+                            dseAvaluo.FEXAVA_AVALUO[0].PROPOSITO = Constantes.P3;
+                            break;
+                        case 4:
+                            dseAvaluo.FEXAVA_AVALUO[0].PROPOSITO = XmlUtils.XmlSearchById(xelements33, "b.4.2").ToStringXElement();
+                            break;
+                    }
+                    //}catch(Exception ex) { }
+                    //   dseAvaluo.FEXAVA_AVALUO[0].PROPOSITO = xelements25.ToStringXElement();
+                }
+
                 IEnumerable<XElement> xelements34 = XmlUtils.XmlSearchById(antecedentes, "b.5");
                 if (xelements34.IsFull())
                     dseAvaluo.FEXAVA_AVALUO[0].OBJETO = xelements34.ToStringXElement();

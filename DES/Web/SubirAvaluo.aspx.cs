@@ -325,29 +325,6 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                     // Boolean checkb7 = false;
 
 
-                                    string stringXelement = XmlSearchById(xmlVAL, "a.1").ToStringXElement();
-                                    try
-                                    {
-                                        ServiceAvaluos.AvaluosClient clienteAvaluos = new ServiceAvaluos.AvaluosClient();
-
-                                        try
-                                        {
-                                            //clienteAvaluo  .ObtenerCedula   .ValidarExisteAvaluoRegistrado(stringXelement, Decimal.Parse(Usuarios.IdPersona.ToString()) ,);
-                                        }
-                                        finally
-                                        {
-                                            clienteAvaluos.Disconnect();
-                                        }
-                                    }
-                                    catch (FaultException<ServiceAvaluos.AvaluosInfoException> ex)
-                                    {
-                                        var rowVALregex = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
-                                        rowVALregex["IDERROR"] = id;
-                                        rowVALregex["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
-                                        rowVALregex["DESCRIPCION"] = "a.3 - El elemento 'ClaveValuador' contiene uno o más caracteres no válidos.";
-                                        erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALregex);
-                                        id++;
-                                    }
 
                                     try
                                     {
@@ -380,10 +357,12 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                     catch (Exception ex)
                                     { }
 
+                                    bool existeB7 = false;
                                     try
                                     {
                                         var rowVAL = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like 'b -%Lista esperada de elementos posibles: ''TipoDeInmueble%'").FirstOrDefault();
                                         rowVAL["DESCRIPCION"] = "b.7 - El contenido del elemento 'Antecedentes' está incompleto. Lista esperada de elementos posibles: 'TipoDeInmueble'.";
+                                        existeB7 = true;
                                     }
                                     catch (Exception exe)
                                     {
@@ -391,18 +370,64 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                     }
 
 
+                                    if (!existeB7)
+                                    {
+                                        try { string b7 = XmlSearchById(xmlVAL, "b.7").ToStringXElement(); }
+                                        catch (Exception ex)
+                                        {
 
-                                    try { string b7 = XmlSearchById(xmlVAL, "b.7").ToStringXElement(); }
-                                    catch (Exception ex)
+                                            var rowVALb7 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                            rowVALb7["IDERROR"] = id;
+                                            rowVALb7["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                            rowVALb7["DESCRIPCION"] = "b.7 - El contenido del elemento 'Antecedentes' está incompleto. Lista esperada de elementos posibles: 'TipoDeInmueble'.";
+                                            erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALb7);
+                                            id++;
+                                        }
+                                    }
+
+
+
+                                    /*
+                                     * 
+                                    B4
+                                     
+                                    bool existeB4 = false;
+                                    try
+                                    {
+                                        var rowVAL = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like 'b.4.%'").FirstOrDefault();
+                                        existeB4 = true;
+                                    }
+                                    catch (Exception exe)
                                     {
 
-                                        var rowVALb7 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
-                                        rowVALb7["IDERROR"] = id;
-                                        rowVALb7["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
-                                        rowVALb7["DESCRIPCION"] = "b.7 - El contenido del elemento 'Antecedentes' está incompleto. Lista esperada de elementos posibles: 'TipoDeInmueble'.";
-                                        erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALb7);
-                                        id++;
                                     }
+
+
+                                    if (!existeB4)
+                                    {
+                                        try { 
+                                            string b4 = XmlSearchById(xmlVAL, "b.4.1").ToStringXElement();
+                                            if (b4.Equals("1"))
+                                            {
+                                                xmlVAL.Element()
+
+                                                XmlSearchById(xmlVAL, "b.4.1").
+                                            }
+                                        }
+                                        catch (Exception ex)
+                                        {
+
+                                            var rowVALb7 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                            rowVALb7["IDERROR"] = id;
+                                            rowVALb7["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                            rowVALb7["DESCRIPCION"] = "b.4.1 - El contenido del elemento 'PropositoDelAvaluo' está incompleto. Lista esperada de elementos posibles: 'ClavePropositoAvaluo'.";
+                                            erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALb7);
+                                            id++;
+                                        }
+                                    }*/
+
+
+
 
                                     try
                                     {
@@ -817,7 +842,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                                 else
                                                 {
 
-                                                    decimal e_2_5_n_7 = XmlSearchById(element, "e.2.5.n.17").ToDecimalXElement();
+                                                    decimal e_2_5_n_7 = XmlSearchById(element, "e.2.5.n.7").ToDecimalXElement();
 
                                                     if (e_2_5_n_7 > 50M) //Se topa el valor de e_2_1_n_7 a 50
                                                         e_2_5_n_7 = 50M;

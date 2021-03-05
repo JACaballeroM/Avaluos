@@ -91,6 +91,13 @@
 		</xs:restriction>
 	</xs:simpleType>
 
+	<!--String200: Cadenas de texto con 200 carÃ¡cteres mÃ¡ximo(acepta cadenas vacÃ­as) -->
+	<xs:simpleType name="String200">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="200" />
+		</xs:restriction>
+	</xs:simpleType>
+
 	<!--String250: Cadenas de texto con 50 carÃ¡cteres mÃ¡ximo(tambiÃ©n acepta cadenas vacÃ­as) -->
 	<xs:simpleType name="String250">
 		<xs:restriction base="xs:string">
@@ -98,6 +105,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
+	
 	<!--String500: Cadenas de texto con 500 carÃ¡cteres mÃ¡ximo(tambiÃ©n acepta cadenas vacÃ­as) -->
 	<xs:simpleType name="String500">
 		<xs:restriction base="xs:string">
@@ -198,6 +206,8 @@
 			<xs:maxLength value="100" />
 		</xs:restriction>
 	</xs:simpleType>
+
+	
 
 	<!--NonEmptyString250: Cadenas de texto con 250 carÃ¡cteres mÃ¡ximo(No acepta cadenas vacÃ­as) -->
 	<xs:simpleType name="NonEmptyString250">
@@ -2427,15 +2437,39 @@
 					<xs:attribute fixed="b.3" name="id" type="NonEmptyString" use="required" />
 				</xs:complexType>
 			</xs:element>
+
+
+
 			<xs:element name="PropositoDelAvaluo">
 				<xs:complexType>
-					<xs:simpleContent>
-						<xs:extension  base="NonEmptyString50">
-							<xs:attribute fixed="b.4" name="id" type="xs:string" use="required" />
-						</xs:extension>
-					</xs:simpleContent>
+					<xs:sequence>
+						<xs:element name="ClavePropositoAvaluo">
+							<xs:complexType>
+							<xs:simpleContent>
+								<xs:extension  base="String200">
+									<xs:attribute fixed="b.4.1" name="id" type="NonEmptyString" use="required" />
+								</xs:extension>
+							</xs:simpleContent>
+						</xs:complexType>
+						</xs:element>
+
+						<xs:element name="Otros">
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension  base="String200">
+										<xs:attribute fixed="b.4.2" name="id" type="xs:string" use="optional" />
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+						
+					</xs:sequence>
+					<xs:attribute fixed="b.4" name="id" type="NonEmptyString" use="required" />
 				</xs:complexType>
 			</xs:element>
+			
+		
+			
 			<xs:element name="ObjetoDelAvaluo">
 				<xs:complexType>
 					<xs:simpleContent>
@@ -2807,15 +2841,37 @@
 					<xs:attribute fixed="b.3" name="id" type="NonEmptyString" use="required" />
 				</xs:complexType>
 			</xs:element>
+
+
 			<xs:element name="PropositoDelAvaluo">
 				<xs:complexType>
-					<xs:simpleContent>
-						<xs:extension  base="NonEmptyString50">
-							<xs:attribute fixed="b.4" name="id" type="xs:string" use="required" />
-						</xs:extension>
-					</xs:simpleContent>
+					<xs:sequence>
+						<xs:element name="ClavePropositoAvaluo">
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension  base="String200">
+										<xs:attribute fixed="b.4.1" name="id" type="NonEmptyString" use="required" />
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+
+						<xs:element name="Otros">
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension  base="String200">
+										<xs:attribute fixed="b.4.2" name="id" type="xs:string" use="optional" />
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+
+					</xs:sequence>
+					<xs:attribute fixed="b.4" name="id" type="NonEmptyString" use="required" />
 				</xs:complexType>
 			</xs:element>
+			
+			
 			<xs:element name="ObjetoDelAvaluo">
 				<xs:complexType>
 					<xs:simpleContent>
