@@ -2446,7 +2446,7 @@
 						<xs:element name="ClavePropositoAvaluo">
 							<xs:complexType>
 							<xs:simpleContent>
-								<xs:extension  base="String200">
+								<xs:extension  base="NonEmptyString1">
 									<xs:attribute fixed="b.4.1" name="id" type="NonEmptyString" use="required" />
 								</xs:extension>
 							</xs:simpleContent>
@@ -2849,7 +2849,7 @@
 						<xs:element name="ClavePropositoAvaluo">
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension  base="String200">
+									<xs:extension  base="NonEmptyString1">
 										<xs:attribute fixed="b.4.1" name="id" type="NonEmptyString" use="required" />
 									</xs:extension>
 								</xs:simpleContent>
