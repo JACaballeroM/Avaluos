@@ -15315,10 +15315,10 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal TIPOCODOMINIO {
+            public string TIPOCODOMINIO {
                 get {
                     try {
-                        return ((decimal)(this[this.tableFEXAVA_AVALUO.TIPOCODOMINIOColumn]));
+                        return ((string)(this[this.tableFEXAVA_AVALUO.TIPOCODOMINIOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'TIPOCODOMINIO\' in table \'FEXAVA_AVALUO\' is DBNull.", e);

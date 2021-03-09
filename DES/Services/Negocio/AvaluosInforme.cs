@@ -550,9 +550,9 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                 {
                     dseAvaluo.FEXAVA_AVALUO[0].CODREGIMENPROPIEDAD = XmlUtils.ToDecimalXElementAv(query);
                     dseAvaluo.FEXAVA_AVALUO[0].REGIMEN = 0;
-                    dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = 0;
+                    dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = "0";
                 }
-                query = XmlUtils.XmlSearchById(antecedentes, "b.6.1");
+                /*query = XmlUtils.XmlSearchById(antecedentes, "b.6.1");
                 if (query.IsFull())
                 {
                     dseAvaluo.FEXAVA_AVALUO[0].CODREGIMENPROPIEDAD = XmlUtils.ToDecimalXElementAv(query);
@@ -562,7 +562,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                 query = XmlUtils.XmlSearchById(antecedentes, "b.6.2");
                 if (query.IsFull())
                     if (!query.ToStringXElement().Trim().Equals(""))
-                        dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = XmlUtils.ToDecimalXElementAv(query);
+                        dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = XmlUtils.ToDecimalXElementAv(query);*/
                 DataSet ds = GetDireccionCas(region, manzana, lote,unidad);
                 if(ds.Tables.Count >0)
                 {
