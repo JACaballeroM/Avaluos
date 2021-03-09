@@ -2527,7 +2527,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos {
                         decimal VALORUNITARIOTIERRAAVALUO, 
                         string IEYALUMBRADO, 
                         decimal REGIMEN, 
-                        decimal TIPOCODOMINIO) {
+                        string TIPOCODOMINIO) {
                 FEXAVA_AVALUORow rowFEXAVA_AVALUORow = ((FEXAVA_AVALUORow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         VALORCOMERCIAL,
@@ -2955,7 +2955,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos {
                 base.Columns.Add(this.columnIEYALUMBRADO);
                 this.columnREGIMEN = new global::System.Data.DataColumn("REGIMEN", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnREGIMEN);
-                this.columnTIPOCODOMINIO = new global::System.Data.DataColumn("TIPOCODOMINIO", typeof(decimal), null, global::System.Data.MappingType.Element);
+                this.columnTIPOCODOMINIO = new global::System.Data.DataColumn("TIPOCODOMINIO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTIPOCODOMINIO);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIDAVALUO}, false));
@@ -3048,6 +3048,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos {
                 this.columnCUIDCLASESEJERCICIO.AllowDBNull = false;
                 this.columnFECHAAVALUO.DateTimeMode = global::System.Data.DataSetDateTime.Unspecified;
                 this.columnIEYALUMBRADO.MaxLength = 250;
+                this.columnTIPOCODOMINIO.MaxLength = 200;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12332,10 +12333,10 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal TIPOCODOMINIO {
+            public string TIPOCODOMINIO {
                 get {
                     try {
-                        return ((decimal)(this[this.tableFEXAVA_AVALUO.TIPOCODOMINIOColumn]));
+                        return ((string)(this[this.tableFEXAVA_AVALUO.TIPOCODOMINIOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'TIPOCODOMINIO\' in table \'FEXAVA_AVALUO\' is DBNull.", e);
@@ -18867,8 +18868,8 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos.DseAvaluoMantTab
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::Oracle.DataAccess.Client.OracleParameter();
             param.ParameterName = "PAR_TIPOCONDOMINIO";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.OracleDbTypeEx = global::Oracle.DataAccess.Client.OracleDbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.DataAccess.Client.OracleDbType.Varchar2;
+			param.Size = 32768;
             param.IsNullable = true;
             param.SourceColumn = "TIPOCODOMINIO";
             this._adapter.InsertCommand.Parameters.Add(param);
@@ -19794,7 +19795,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos.DseAvaluoMantTab
                     global::System.Nullable<decimal> PAR_VALORTOTALPRIVATIVAS, 
                     string PAR_IEALUMBRADO, 
                     global::System.Nullable<decimal> PAR_REGIMEN, 
-                    global::System.Nullable<decimal> PAR_TIPOCONDOMINIO) {
+                    string PAR_TIPOCONDOMINIO) {
             if ((PAR_NUMEROAVALUO == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -20377,12 +20378,18 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos.DseAvaluoMantTab
             else {
                 this.Adapter.InsertCommand.Parameters[97].Value = global::System.DBNull.Value;
             }
-            if ((PAR_TIPOCONDOMINIO.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[98].Value = ((decimal)(PAR_TIPOCONDOMINIO.Value));
-            }
-            else {
+
+
+            if ((PAR_TIPOCONDOMINIO == null))
+            {
                 this.Adapter.InsertCommand.Parameters[98].Value = global::System.DBNull.Value;
             }
+            else
+            {
+                this.Adapter.InsertCommand.Parameters[98].Value = ((string)(PAR_TIPOCONDOMINIO));
+            }
+
+
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

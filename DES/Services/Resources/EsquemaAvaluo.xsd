@@ -2494,7 +2494,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="TipoDeInmueble">
+			<!--<xs:element name="TipoDeInmueble">
 				<xs:complexType>
 					<xs:simpleContent>
 						<xs:extension base="Cat-TipoDeInmueble">
@@ -2502,7 +2502,37 @@
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
+			</xs:element>-->
+		
+		
+			<xs:element name="TipoDeInmueble">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ClaveTipoInmueble">
+							<xs:complexType>
+							<xs:simpleContent>
+								<xs:extension  base="Cat-TipoDeInmueble">
+									<xs:attribute fixed="b.7.1" name="id" type="NonEmptyString" use="required" />
+								</xs:extension>
+							</xs:simpleContent>
+						</xs:complexType>
+						</xs:element>
+
+						<xs:element name="Otros">
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension  base="String200">
+										<xs:attribute fixed="b.7.2" name="id" type="xs:string" use="optional" />
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+						
+					</xs:sequence>
+					<xs:attribute fixed="b.7" name="id" type="NonEmptyString" use="required" />
+				</xs:complexType>
 			</xs:element>
+									
 		</xs:sequence>
 		<xs:attribute fixed="b" name="id" type="NonEmptyString" use="required" />
 	</xs:complexType>
@@ -2898,11 +2928,29 @@
 			</xs:element>
 			<xs:element name="TipoDeInmueble">
 				<xs:complexType>
-					<xs:simpleContent>
-						<xs:extension base="Cat-TipoDeInmueble">
-							<xs:attribute fixed="b.7" name="id" type="xs:string" use="required" />
-						</xs:extension>
-					</xs:simpleContent>
+					<xs:sequence>
+						<xs:element name="ClaveTipoInmueble">
+							<xs:complexType>
+							<xs:simpleContent>
+								<xs:extension  base="Cat-TipoDeInmueble">
+									<xs:attribute fixed="b.7.1" name="id" type="NonEmptyString" use="required" />
+								</xs:extension>
+							</xs:simpleContent>
+						</xs:complexType>
+						</xs:element>
+
+						<xs:element name="Otros">
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension  base="String200">
+										<xs:attribute fixed="b.7.2" name="id" type="xs:string" use="optional" />
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+						
+					</xs:sequence>
+					<xs:attribute fixed="b.7" name="id" type="NonEmptyString" use="required" />
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>

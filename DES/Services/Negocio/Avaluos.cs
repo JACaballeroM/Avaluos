@@ -2112,6 +2112,74 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
             row2.CODTIPOFUNCION = "P";
             dseAvaluo.FEXAVA_DATOSPERSONAS.AddFEXAVA_DATOSPERSONASRow(row1);
             dseAvaluo.FEXAVA_DATOSPERSONAS.AddFEXAVA_DATOSPERSONASRow(row2);
+
+            IEnumerable<XElement> xelements28 = XmlUtils.XmlSearchById(antecedentes, "b.7");
+            if (xelements28.IsFull())
+            {
+                switch (XmlUtils.XmlSearchById(xelements28, "b.7.1").ToStringXElement().ToInt())
+                {
+                    case 1:
+                        dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP1;
+                        break;
+                    case 2:
+                        dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP2;
+                        break;
+                    case 3:
+                        dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP3;
+                        break;
+                    case 4:
+                        dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP4;
+                        break;
+                    case 5:
+                        dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP5;
+                        break;
+                    case 6:
+                        dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP6;
+                        break;
+                    case 7:
+                        dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP7;
+                        break;
+                    case 8:
+                        dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP8;
+                        break;
+                    case 9:
+                        dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP9;
+                        break;
+                    case 10:
+                        dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP10;
+                        break;
+                    case 11:
+                        dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP11;
+                        break;
+                    case 12:
+                        dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP12;
+                        break;
+                    case 13:
+                        dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP13;
+                        break;
+                    case 14:
+                        dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP14;
+                        break;
+                    case 15:
+                        dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP15;
+                        break;
+                    case 16:
+                        dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP16;
+                        break;
+                    case 17:
+                        dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP17;
+                        break;
+                    case 18:
+                        dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP18;
+                        break;
+                    case 19:
+                        dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = XmlUtils.XmlSearchById(xelements28, "b.7.2").ToStringXElement().ToUpper();
+                        break;
+                }
+                //}catch(Exception ex) { }
+                //   dseAvaluo.FEXAVA_AVALUO[0].PROPOSITO = xelements25.ToStringXElement();
+            }
+
         }
 
         private void GuardarAvaluoCaracteristicasUrbanas(
@@ -4524,14 +4592,15 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     }
                 }
             }
-            IEnumerable<XElement> xelements7 = XmlUtils.XmlSearchById(data, "b.7");
+
+            /*IEnumerable<XElement> xelements7 = XmlUtils.XmlSearchById(data, "b.7");
             if (string.IsNullOrEmpty(xelements7.ToStringXElement()))
             {
                 flag7 = false;
                 stringBuilder.AppendLine("  b.7 - El contenido del elemento Anteedentes está incompleto. Lista esperada de elementos posibles: 'Tipo de inmueble'.");
-            }
+            }*/
 
-            if (!flag1 || !flag2 || !flag7)
+            if (!flag1 || !flag2 )//|| !flag7)
                 throw new FaultException<AvaluosInfoException>(new AvaluosInfoException(stringBuilder.ToString()));
 
         }
@@ -8477,6 +8546,75 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     dseAvaluo.FEXAVA_AVALUO[0].CODREGIMENPROPIEDAD = XmlUtils.ToDecimalXElementAv(xelements35);
                 dseAvaluo.FEXAVA_DATOSPERSONAS.AddFEXAVA_DATOSPERSONASRow(row1);
                 dseAvaluo.FEXAVA_DATOSPERSONAS.AddFEXAVA_DATOSPERSONASRow(row2);
+
+
+                IEnumerable<XElement> xelements36 = XmlUtils.XmlSearchById(antecedentes, "b.7");
+                if (xelements36.IsFull())
+                {
+                    switch (XmlUtils.XmlSearchById(xelements36, "b.7.1").ToStringXElement().ToInt())
+                    {
+                        case 1:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP1;
+                            break;
+                        case 2:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP2;
+                            break;
+                        case 3:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP3;
+                            break;
+                        case 4:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP4;
+                            break;
+                        case 5:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP5;
+                            break;
+                        case 6:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP6;
+                            break;
+                        case 7:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP7;
+                            break;
+                        case 8:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP8;
+                            break;
+                        case 9:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP9;
+                            break;
+                        case 10:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP10;
+                            break;
+                        case 11:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP11;
+                            break;
+                        case 12:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP12;
+                            break;
+                        case 13:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP13;
+                            break;
+                        case 14:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP14;
+                            break;
+                        case 15:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP15;
+                            break;
+                        case 16:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP16;
+                            break;
+                        case 17:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP17;
+                            break;
+                        case 18:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP18;
+                            break;
+                        case 19:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = XmlUtils.XmlSearchById(xelements36, "b.7.2").ToStringXElement().ToUpper();
+                            break;
+                    }
+                    //}catch(Exception ex) { }
+                    //   dseAvaluo.FEXAVA_AVALUO[0].PROPOSITO = xelements25.ToStringXElement();
+                }
+
             }
             catch (Exception ex)
             {

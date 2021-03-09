@@ -391,17 +391,17 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                         catch (Exception ex)
                                         {
 
-                                            var rowVALb7 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
-                                            rowVALb7["IDERROR"] = id;
-                                            rowVALb7["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
-                                            rowVALb7["DESCRIPCION"] = "b.4.1 - El contenido del elemento 'PropositoDelAvaluo' está incompleto. Lista esperada de elementos posibles: 'ClavePropositoAvaluo'.";
-                                            erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALb7);
+                                            var rowVALb4 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                            rowVALb4["IDERROR"] = id;
+                                            rowVALb4["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                            rowVALb4["DESCRIPCION"] = "b.4.1 - El contenido del elemento 'PropositoDelAvaluo' está incompleto. Lista esperada de elementos posibles: 'ClavePropositoAvaluo'.";
+                                            erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALb4);
                                             id++;
                                         }
                                     
 
 
-
+                                    /*
                                     bool existeB7 = false;
                                     try
                                     {
@@ -429,7 +429,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                             id++;
                                         }
                                     }
-
+                                    */
 
 
 

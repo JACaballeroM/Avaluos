@@ -904,11 +904,33 @@ public static class Constantes
     #endregion
 
 
-    #region PROPSITO AVALUO
+    #region PROPOSITO AVALUO
 
     public const string P1 = "Establecer la base gravable para el pago de Impuesto sobre adquisición de inmuebles.";
     public const string P2 = "Establecer la base gravable para el pago de Impuesto predial.";
     public const string P3 = "Establecer la base gravable para el pago de derechos y contribuciones inmobiliarias.";
-
     #endregion
+
+    #region TIPO INMUEBLE
+
+    public const string TP1  = "BODEGA";
+    public const string TP2  = "CAJON DE ESTACIONAMIENTO";
+    public const string TP3  = "CASA HABITACION";
+    public const string TP4  = "CASA HABITACION EN CONDOMINIO";
+    public const string TP5  = "CENTRO COMERCIAL";
+    public const string TP6  = "DEPARTAMENTO EN CONDOMINIO";
+    public const string TP7  = "EDIFICIO DE DEPARTAMENTOS";
+    public const string TP8  = "EDIFICIO DE ESTACIONAMIENTO";
+    public const string TP9  = "EDIFICIO DE PRODUCTOS";
+    public const string TP10 = "ESCUELA";
+    public const string TP11 = "HOSPITAL";
+    public const string TP12 = "HOTEL";
+    public const string TP13 = "LOCAL COMERCIAL";
+    public const string TP14 = "NAVE INDUSTRIAL";
+    public const string TP15 = "OFICINA AISLADA";
+    public const string TP16 = "OFICINA EN CONDOMINIO";
+    public const string TP17 = "TERRENO CON USO COMERCIAL";
+    public const string TP18 = "TERRENO HABITACIONAL";
+    public const string TP19 = "";
+    #endregion 
 }
