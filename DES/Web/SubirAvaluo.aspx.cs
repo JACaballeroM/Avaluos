@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.ServiceModel;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Web.UI;
 using System.Xml;
@@ -223,6 +226,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
             ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUODataTable erroresValidacion = null;
             byte[] documentoXMLComprimido = null;
             byte[] documentoXML = null;
+            byte[] documentoXML1 = null;
             string error = string.Empty;
 
             if (fileAvaluoXML.HasFile)
@@ -250,6 +254,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
                     if (fileAvaluoXML.FileName.EndsWith(Constantes.XML_FILE_EXTENSION))
                     {
                         documentoXML = fileAvaluoXML.FileBytes;
+                        documentoXML1= fileAvaluoXML.FileBytes;
                     }
                     else
                     {
@@ -935,19 +940,19 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                                 //Paso 3: Si se han pasado todas las validaciones registrar el avalúo 
                                                 else //No hay errores de validación 
                                                 {
-                                                    RealizarRegistroAvaluo(documentoXMLComprimido);
+                                                    RealizarRegistroAvaluo(documentoXMLComprimido, documentoXML1);
                                                     MostrarMensajeAvRegistrado();
                                                 }
                                             }
                                             else //No hay errores de validación 
                                             {
-                                                RealizarRegistroAvaluo(documentoXMLComprimido);
+                                                RealizarRegistroAvaluo(documentoXMLComprimido, documentoXML1);
                                                 MostrarMensajeAvRegistrado();
                                             }
                                         }
                                         else //No hay errores de validación 
                                         {
-                                            RealizarRegistroAvaluo(documentoXMLComprimido);
+                                            RealizarRegistroAvaluo(documentoXMLComprimido, documentoXML1);
                                             MostrarMensajeAvRegistrado();
                                         }
                                     }
@@ -1169,19 +1174,19 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                                 //Paso 3: Si se han pasado todas las validaciones registrar el avalúo 
                                                 else //No hay errores de validación 
                                                 {
-                                                    RealizarRegistroAvaluoAnterior(documentoXMLComprimido);
+                                                    RealizarRegistroAvaluoAnterior(documentoXMLComprimido,documentoXML1);
                                                     MostrarMensajeAvRegistrado();
                                                 }
                                             }
                                             else //No hay errores de validación 
                                             {
-                                                RealizarRegistroAvaluoAnterior(documentoXMLComprimido);
+                                                RealizarRegistroAvaluoAnterior(documentoXMLComprimido, documentoXML1);
                                                 MostrarMensajeAvRegistrado();
                                             }
                                         }
                                         else //No hay errores de validación 
                                         {
-                                            RealizarRegistroAvaluoAnterior(documentoXMLComprimido);
+                                            RealizarRegistroAvaluoAnterior(documentoXMLComprimido, documentoXML1);
                                             MostrarMensajeAvRegistrado();
                                         }
                                     }
@@ -1359,7 +1364,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
             if (!e.Cancel) //Sólo si se ha pulsado aceptar registrar el avalúo
             {
                 byte[] documentoXML = RecuperarViewstateDocumentoXML();
-                RealizarRegistroAvaluo(documentoXML);
+                RealizarRegistroAvaluo(documentoXML,null);
                 string numUnico = ViewState[Constantes.PAR_VIEWSTATE_NUMUNICOREGISTRADO].ToString();
                 lblTextoInformacion.Text = Constantes.MSJ_SUBIRAVALUO_NORMAL_REGISTRADOCORRECTAMENTE + Constantes.MSJ_NUM_UNICO + numUnico;
                 btnGuardar_ModalPopupExtenderRegistrado.Show();
@@ -1396,7 +1401,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
     /// Realizar registro avalúo.
     /// </summary>
     /// <param name="documentoXML">El documento XML que representa el avalúo que se quere registrar.</param>
-    private void RealizarRegistroAvaluo(byte[] documentoXML)
+    private void RealizarRegistroAvaluo(byte[] documentoXML, byte[] documentoXML1)
     {
         if (ModalConfirmacion.Visible)
         {
@@ -1415,11 +1420,46 @@ public partial class SubirAvaluo : PageBaseAvaluos
             clienteAvaluos.Disconnect();
         }
 
+        try
+        {
+            enviarXML(Usuarios.IdPersona(), documentoXML1, numUnico);
+        }
+        catch(Exception ex) { }
+
         ViewState.Add(Constantes.PAR_VIEWSTATE_NUMUNICOREGISTRADO, numUnico);
         LimpiarViewStateDocumentoXML();
     }
 
-    private void RealizarRegistroAvaluoAnterior(byte[] documentoXML)
+    private void enviarXML(string idUsuario, byte[] xml, string numeroUnico)
+    {
+
+        //var xml1= Utilidades. .Decomprimir(xml);
+        //byte[] xml1=null;
+
+       using (var wb = new WebClient())
+        {
+            var data = new NameValueCollection();
+            data["files"] = Convert.ToBase64String(xml);
+            data["idUsuario"] = idUsuario;
+            data["numeroUnico"] = numeroUnico;
+
+            string xml64 = Convert.ToBase64String(xml);
+            string url = "http://ovica.linesolutions.tech/avaluosNew_backend/public/WsSolucionIdeas/wsRecibeAvaluo";
+            var response = wb.UploadValues(url, "POST", data);
+            string responseInString = Encoding.UTF8.GetString(response);
+
+            
+
+        }
+
+        
+
+    }
+
+
+    
+
+    private void RealizarRegistroAvaluoAnterior(byte[] documentoXML, byte[] documentoXML1)
     {
         if (ModalConfirmacion.Visible)
         {
@@ -1437,6 +1477,12 @@ public partial class SubirAvaluo : PageBaseAvaluos
         {
             clienteAvaluos.Disconnect();
         }
+
+        try
+        {
+            enviarXML(Usuarios.IdPersona(), documentoXML1, numUnico);
+        }
+        catch (Exception ex) { }
 
         ViewState.Add(Constantes.PAR_VIEWSTATE_NUMUNICOREGISTRADO, numUnico);
         LimpiarViewStateDocumentoXML();
