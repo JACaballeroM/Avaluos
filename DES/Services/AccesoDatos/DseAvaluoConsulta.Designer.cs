@@ -967,7 +967,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos {
                 this.columnOBJETO.AllowDBNull = false;
                 this.columnOBJETO.MaxLength = 50;
                 this.columnPROPOSITO.AllowDBNull = false;
-                this.columnPROPOSITO.MaxLength = 50;
+                this.columnPROPOSITO.MaxLength = 200;
                 this.columnIDPERSONAPERITO.AllowDBNull = false;
                 this.columnNUMEROAVALUO.AllowDBNull = false;
                 this.columnNUMEROAVALUO.MaxLength = 50;
