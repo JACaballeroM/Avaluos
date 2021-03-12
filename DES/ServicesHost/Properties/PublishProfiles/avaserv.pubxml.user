@@ -5,7 +5,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <_PublishTargetUrl>C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Publicaciones\FuentesExternas\Servicios\Avaluos</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\EdgarAntunezMartinez\Documents\Publicaciones\FuentesExternas\Servicios\Avaluos</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="Avaluos.svc">
@@ -63,19 +63,19 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>02/24/2021 12:27:44</publishTime>
     </File>
     <File Include="bin/SIGAPred.FuentesExternas.Avaluos.Services.dll">
-      <publishTime>03/04/2021 23:56:49</publishTime>
+      <publishTime>03/11/2021 18:10:02</publishTime>
     </File>
     <File Include="bin/SIGAPred.FuentesExternas.Avaluos.Services.dll.config">
-      <publishTime>02/23/2021 17:28:04</publishTime>
+      <publishTime>03/11/2021 15:52:26</publishTime>
     </File>
     <File Include="bin/SIGAPred.FuentesExternas.Avaluos.Services.pdb">
-      <publishTime>03/04/2021 23:56:49</publishTime>
+      <publishTime>03/11/2021 18:10:02</publishTime>
     </File>
     <File Include="bin/SIGAPred.FuentesExternas.Avaluos.ServicesHost.dll">
-      <publishTime>03/04/2021 23:57:14</publishTime>
+      <publishTime>03/11/2021 18:11:16</publishTime>
     </File>
     <File Include="bin/SIGAPred.FuentesExternas.Avaluos.ServicesHost.pdb">
-      <publishTime>03/04/2021 23:57:14</publishTime>
+      <publishTime>03/11/2021 18:11:16</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
       <publishTime>03/02/2021 10:19:25</publishTime>

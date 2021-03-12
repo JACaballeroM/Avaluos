@@ -8,7 +8,7 @@
       <FlavorProperties GUID="{3D9AD99F-2412-4246-B90B-4EAA41C64699}">
         <WcfProjectProperties>
           <PublishCopyOption>ProjectFiles</PublishCopyOption>
-          <PublishTargetLocation>C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Publicaciones\FuentesExternas\Servicios\Avaluos\</PublishTargetLocation>
+          <PublishTargetLocation>C:\Users\EdgarAntunezMartinez\Documents\Publicaciones\FuentesExternas\Servicios\Avaluos\</PublishTargetLocation>
           <PublishDeleteAllFiles>True</PublishDeleteAllFiles>
         </WcfProjectProperties>
       </FlavorProperties>

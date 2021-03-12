@@ -1422,7 +1422,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
 
         try
         {
-            enviarXML(Usuarios.IdPersona(), documentoXML1, numUnico);
+           // enviarXML(Usuarios.IdPersona(), documentoXML1, numUnico);
         }
         catch(Exception ex) { }
 
@@ -1480,7 +1480,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
 
         try
         {
-            enviarXML(Usuarios.IdPersona(), documentoXML1, numUnico);
+          //  enviarXML(Usuarios.IdPersona(), documentoXML1, numUnico);
         }
         catch (Exception ex) { }
 
