@@ -259,30 +259,7 @@ public static class ValidarCamposCalculados
         }
     }
 
-    public static bool ValidarCampoCalculado_e_2_1_n_17(
-      Decimal valorCalculado,
-      Decimal e_2_1_n_7,
-      Decimal e_2_1_n_8,
-      DateTime fechaAvaluo)
-    {
-        try
-        {
-            DemeritoSection section = (DemeritoSection)ConfigurationManager.GetSection("DemeritoSection");
-            Decimal num = 0M;
-            foreach (DemeritoSectionElement demeritoSectionElement in section.HashKeys.Cast<DemeritoSectionElement>().Where<DemeritoSectionElement>((Func<DemeritoSectionElement, bool>)(item => fechaAvaluo >= item.FechaInicio && fechaAvaluo <= item.FechaFin)))
-                num = (Decimal)demeritoSectionElement.Valor;
-            //return valorCalculado.ToRound2() == ((100M - Math.Min(40M, e_2_1_n_7 * num)) / 100M).ToRound2();
-            if (e_2_1_n_7 > 50M) //Se topa el valor de e_2_1_n_7 a 50
-                e_2_1_n_7 = 50M;
-
-            return valorCalculado.ToRound2() == ((100M - (e_2_1_n_7 * num)) / 100M).ToRound2();
-        }
-        catch (Exception ex)
-        {
-            log("ValidarCampoCalculado_e_2_1_n_17", ex.Message, ex.StackTrace);
-            return false;
-        }
-    }
+   
 
     public static bool ValidarCampoCalculado_e_2_2(
       Decimal valorCalculado,
@@ -414,6 +391,33 @@ public static class ValidarCamposCalculados
         }
     }
 
+
+   /* public static bool ValidarCampoCalculado_e_2_1_n_17(
+     Decimal valorCalculado,
+     Decimal e_2_1_n_7,
+     Decimal e_2_1_n_8,
+     DateTime fechaAvaluo)
+    {
+        try
+        {
+            DemeritoSection section = (DemeritoSection)ConfigurationManager.GetSection("DemeritoSection");
+            Decimal num = 0M;
+            foreach (DemeritoSectionElement demeritoSectionElement in section.HashKeys.Cast<DemeritoSectionElement>().Where<DemeritoSectionElement>((Func<DemeritoSectionElement, bool>)(item => fechaAvaluo >= item.FechaInicio && fechaAvaluo <= item.FechaFin)))
+                num = (Decimal)demeritoSectionElement.Valor;
+            //return valorCalculado.ToRound2() == ((100M - Math.Min(40M, e_2_1_n_7 * num)) / 100M).ToRound2();
+            if (e_2_1_n_7 > 50M) //Se topa el valor de e_2_1_n_7 a 50
+                e_2_1_n_7 = 50M;
+
+            return valorCalculado.ToRound2() == ((100M - (e_2_1_n_7 * num)) / 100M).ToRound2();
+        }
+        catch (Exception ex)
+        {
+            log("ValidarCampoCalculado_e_2_1_n_17", ex.Message, ex.StackTrace);
+            return false;
+        }
+    }
+
+
     public static bool ValidarCampoCalculado_e_2_5_n_17(
       Decimal valorCalculado,
       Decimal e_2_5_n_7,
@@ -427,7 +431,7 @@ public static class ValidarCamposCalculados
             foreach (DemeritoSectionElement demeritoSectionElement in section.HashKeys.Cast<DemeritoSectionElement>().Where<DemeritoSectionElement>((Func<DemeritoSectionElement, bool>)(item => fechaAvaluo >= item.FechaInicio && fechaAvaluo <= item.FechaFin)))
                 num = (Decimal)demeritoSectionElement.Valor;
             //return valorCalculado.ToRound2() == ((100M - Math.Min(40M, e_2_5_n_7 * num)) / 100M).ToRound2();
-            if (e_2_5_n_7 > 50M) //Se topa el valor de e_2_1_n_7 a 50
+            if (e_2_5_n_7 > 50M) //Se topa el valor de e_2_5_n_7 a 50
                 e_2_5_n_7 = 50M;
             return valorCalculado.ToRound2() == ((100M - (e_2_5_n_7 * num)) / 100M).ToRound2();
         }
@@ -436,7 +440,7 @@ public static class ValidarCamposCalculados
             log("ValidarCampoCalculado_e_2_5_n_17 ", ex.Message,ex.StackTrace);
             return false;
         }
-    }
+    }*/
 
     public static bool ValidarCampoCalculado_e_2_6(Decimal valorCalculado, Decimal sumatorio_e_2_n_11)
     {

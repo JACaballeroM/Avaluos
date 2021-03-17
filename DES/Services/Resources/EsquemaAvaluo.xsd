@@ -456,7 +456,7 @@
 			<xs:enumeration value="015" />
 			<xs:enumeration value="016" />
 			<xs:enumeration value="017" />
-
+			<xs:enumeration value="018" />
 		</xs:restriction>
 	</xs:simpleType>
 
@@ -1916,7 +1916,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="Alcaldia">
+			<!--<xs:element name="Alcaldia">
 				<xs:complexType>
 					<xs:simpleContent>
 						<xs:extension base="Cat-Alcaldia">
@@ -1924,7 +1924,36 @@
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
-			</xs:element>
+			</xs:element>-->
+	
+			<xs:element name="Alcaldia">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ClaveAlcaldia">
+											<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension  base="Cat-Alcaldia">
+													<xs:attribute fixed="b.1.9.1" name="id" type="NonEmptyString" use="required" />
+												</xs:extension>
+											</xs:simpleContent>
+										</xs:complexType>
+										</xs:element>
+
+										<xs:element name="Otros">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension  base="String50">
+														<xs:attribute fixed="b.1.9.2" name="id" type="xs:string" use="optional" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+						
+									</xs:sequence>
+									<xs:attribute fixed="b.1.9" name="id" type="NonEmptyString" use="required" />
+								</xs:complexType>
+							</xs:element>
+	
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="SUB-DatosPersonasTodasProp">
@@ -1983,7 +2012,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="Alcaldia">
+			<!--<xs:element name="Alcaldia">
 				<xs:complexType>
 					<xs:simpleContent>
 						<xs:extension base="Cat-Alcaldia">
@@ -1991,7 +2020,36 @@
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
-			</xs:element>
+			</xs:element>-->
+		
+			<xs:element name="Alcaldia">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ClaveAlcaldia">
+											<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension  base="Cat-Alcaldia">
+													<xs:attribute fixed="b.2.9.1" name="id" type="NonEmptyString" use="required" />
+												</xs:extension>
+											</xs:simpleContent>
+										</xs:complexType>
+										</xs:element>
+
+										<xs:element name="Otros">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension  base="String50">
+														<xs:attribute fixed="b.2.9.2" name="id" type="xs:string" use="optional" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+						
+									</xs:sequence>
+									<xs:attribute fixed="b.2.9" name="id" type="NonEmptyString" use="required" />
+								</xs:complexType>
+							</xs:element>
+		
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="SUB-DatosMoralProp">
@@ -2182,7 +2240,7 @@
 									</xs:simpleContent>
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="Alcaldia">
+							<!--<xs:element name="Alcaldia">
 								<xs:complexType>
 									<xs:simpleContent>
 										<xs:extension base="Cat-Alcaldia">
@@ -2190,7 +2248,37 @@
 										</xs:extension>
 									</xs:simpleContent>
 								</xs:complexType>
+							</xs:element>-->
+							
+						
+							<xs:element name="Alcaldia">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ClaveAlcaldia">
+											<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension  base="Cat-Alcaldia">
+													<xs:attribute fixed="b.1.9.1" name="id" type="NonEmptyString" use="required" />
+												</xs:extension>
+											</xs:simpleContent>
+										</xs:complexType>
+										</xs:element>
+
+										<xs:element name="Otros">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension  base="String50">
+														<xs:attribute fixed="b.1.9.2" name="id" type="xs:string" use="optional" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+						
+									</xs:sequence>
+									<xs:attribute fixed="b.1.9" name="id" type="NonEmptyString" use="required" />
+								</xs:complexType>
 							</xs:element>
+							
 							<xs:element name="TipoPersona" type="SUB-TipoPersona"></xs:element>
 						</xs:sequence>
 						<!--<xs:choice minOccurs="1" maxOccurs="1">
@@ -2276,7 +2364,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="Alcaldia">
+						<!--<xs:element name="Alcaldia">
 							<xs:complexType>
 								<xs:simpleContent>
 									<xs:extension base="Cat-Alcaldia">
@@ -2284,7 +2372,36 @@
 									</xs:extension>
 								</xs:simpleContent>
 							</xs:complexType>
-						</xs:element>
+						</xs:element>-->
+						
+							<xs:element name="Alcaldia">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ClaveAlcaldia">
+											<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension  base="Cat-Alcaldia">
+													<xs:attribute fixed="b.2.9.1" name="id" type="NonEmptyString" use="required" />
+												</xs:extension>
+											</xs:simpleContent>
+										</xs:complexType>
+										</xs:element>
+
+										<xs:element name="Otros">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension  base="String50">
+														<xs:attribute fixed="b.2.9.2" name="id" type="xs:string" use="optional" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+						
+									</xs:sequence>
+									<xs:attribute fixed="b.2.9" name="id" type="NonEmptyString" use="required" />
+								</xs:complexType>
+							</xs:element>
+								
 						<xs:element name="TipoPersona" type="SUB-TipoPersonaProp"></xs:element>
 						<!--<xs:choice minOccurs="1" maxOccurs="1">
               <xs:group ref="SUB-DatosMoralProp"></xs:group>
@@ -2616,7 +2733,9 @@
 									</xs:simpleContent>
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="Alcaldia">
+							
+								
+							<!--<xs:element name="Alcaldia">
 								<xs:complexType>
 									<xs:simpleContent>
 										<xs:extension base="Cat-Alcaldia">
@@ -2624,7 +2743,36 @@
 										</xs:extension>
 									</xs:simpleContent>
 								</xs:complexType>
+							</xs:element>-->
+						
+							<xs:element name="Alcaldia">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ClaveAlcaldia">
+											<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension  base="Cat-Alcaldia">
+													<xs:attribute fixed="b.1.9.1" name="id" type="NonEmptyString" use="required" />
+												</xs:extension>
+											</xs:simpleContent>
+										</xs:complexType>
+										</xs:element>
+
+										<xs:element name="Otros">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension  base="String50">
+														<xs:attribute fixed="b.1.9.2" name="id" type="xs:string" use="optional" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+						
+									</xs:sequence>
+									<xs:attribute fixed="b.1.9" name="id" type="NonEmptyString" use="required" />
+								</xs:complexType>
 							</xs:element>
+						
 							<xs:element name="TipoPersona" type="SUB-TipoPersona"></xs:element>
 						</xs:sequence>
 						<!--<xs:choice >
@@ -2710,7 +2858,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="Alcaldia">
+						<!--<xs:element name="Alcaldia">
 							<xs:complexType>
 								<xs:simpleContent>
 									<xs:extension base="Cat-Alcaldia">
@@ -2718,7 +2866,36 @@
 									</xs:extension>
 								</xs:simpleContent>
 							</xs:complexType>
-						</xs:element>
+						</xs:element>-->
+						
+						<xs:element name="Alcaldia">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ClaveAlcaldia">
+											<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension  base="Cat-Alcaldia">
+													<xs:attribute fixed="b.2.9.1" name="id" type="NonEmptyString" use="required" />
+												</xs:extension>
+											</xs:simpleContent>
+										</xs:complexType>
+										</xs:element>
+
+										<xs:element name="Otros">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension  base="String50">
+														<xs:attribute fixed="b.2.9.2" name="id" type="xs:string" use="optional" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+						
+									</xs:sequence>
+									<xs:attribute fixed="b.2.9" name="id" type="NonEmptyString" use="required" />
+								</xs:complexType>
+							</xs:element>
+										
 						<xs:element name="TipoPersona" type="SUB-TipoPersonaProp"></xs:element>
 						<!--<xs:choice >
               <xs:group  ref="SUB-DatosMoralProp"></xs:group>

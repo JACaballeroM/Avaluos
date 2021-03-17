@@ -1991,7 +1991,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
             IEnumerable<XElement> xelements7 = XmlUtils.XmlSearchById(antecedentes, "b.1.8");
             if (xelements7.IsFull())
                 row1.CODIGOPOSTAL = xelements7.ToStringXElement();
-            IEnumerable<XElement> xelements8 = XmlUtils.XmlSearchById(antecedentes, "b.1.9");
+            /*IEnumerable<XElement> xelements8 = XmlUtils.XmlSearchById(antecedentes, "b.1.9");
             if (xelements8.IsFull())
             {
                 string stringXelement = xelements8.ToStringXElement();
@@ -2007,7 +2007,44 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                         row1.IDCOLONIA = num2;
                     row1.NOMBRECOLONIA = xelements9.ToStringXElement();
                 }
+            }*/
+
+            IEnumerable<XElement> xelements8 = XmlUtils.XmlSearchById(antecedentes, "b.1.9.1");
+            if (xelements8.IsFull())
+            {
+                string alcaldiaString = xelements8.ToStringXElement();
+                decimal alcaldiaDecimal = xelements8.ToDecimalXElement();
+                if (!alcaldiaString.Equals("018"))//Se agrega al catálogo el elemento 018 Otros (Municipios fuera de CDMX)
+                {
+                    row1.IDDELEGACION = CatastralUtils.ObtenerIdDelegacionPorClave (alcaldiaString);
+                    row1.NOMBREDELEGACION = CatastralUtils.ObtenerNombreDelegacionPorIdDeleg(alcaldiaDecimal);
+                    IEnumerable<XElement> xelements9 = XmlUtils.XmlSearchById(antecedentes, "b.1.7");
+                    if (xelements9.IsFull())
+                    {
+                        row1.IDCOLONIA = CatastralUtils.ObtenerIdColoniaPorNombreyDelegacion(xelements9.ToStringXElement(), alcaldiaString);
+                        row1.NOMBRECOLONIA = xelements9.ToStringXElement();
+                    }
+                }
+                else//Municipios fuera de CDMX
+                {
+                    row1.IDDELEGACION = xelements8.ToDecimalXElement();
+                    //Se guarda el valor que contenga Otros
+                    IEnumerable<XElement> municipio = XmlUtils.XmlSearchById(antecedentes, "b.1.9.2");
+                    if (municipio.IsFull())
+                    {
+                        row1.NOMBREDELEGACION = municipio.ToStringXElement();
+                    }
+                    //Se guaraa como Colonia lo que tenga el XML 
+                    IEnumerable<XElement> colonia = XmlUtils.XmlSearchById(antecedentes, "b.1.7");
+                    if (colonia.IsFull())
+                    {
+                        row1.NOMBRECOLONIA =  colonia.ToStringXElement();
+                        row1.IDCOLONIA = 0M;
+                    }
+                }
             }
+
+
             IEnumerable<XElement> xelements10 = XmlUtils.XmlSearchById(antecedentes, "b.1.10");
             if (xelements10.IsFull())
                 row1.TIPOPERSONA = xelements10.ToStringXElement();
@@ -2032,6 +2069,9 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
             IEnumerable<XElement> xelements17 = XmlUtils.XmlSearchById(antecedentes, "b.2.8");
             if (xelements17.IsFull())
                 row2.CODIGOPOSTAL = xelements17.ToStringXElement();
+            
+            
+            /*
             IEnumerable<XElement> xelements18 = XmlUtils.XmlSearchById(antecedentes, "b.2.9");
             if (xelements18.IsFull())
             {
@@ -2048,7 +2088,46 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                         row2.IDCOLONIA = num2;
                     row2.NOMBRECOLONIA = xelements9.ToStringXElement();
                 }
+            }*/
+
+            IEnumerable<XElement> xelements18 = XmlUtils.XmlSearchById(antecedentes, "b.2.9.1");
+            if (xelements18.IsFull())
+            {
+                string alcaldiaString = xelements18.ToStringXElement();
+                decimal alcaldiaDecimal = xelements18.ToDecimalXElement();
+                if (!alcaldiaString.Equals("018"))//Se agrega al catálogo el elemento 018 Otros (Municipios fuera de CDMX)
+                {
+                    row1.IDDELEGACION = CatastralUtils.ObtenerIdDelegacionPorClave(alcaldiaString);
+                    row1.NOMBREDELEGACION = CatastralUtils.ObtenerNombreDelegacionPorIdDeleg(alcaldiaDecimal);
+                    IEnumerable<XElement> xelements9 = XmlUtils.XmlSearchById(antecedentes, "b.2.7");
+                    if (xelements9.IsFull())
+                    {
+                        row1.IDCOLONIA = CatastralUtils.ObtenerIdColoniaPorNombreyDelegacion(xelements9.ToStringXElement(), alcaldiaString);
+                        row1.NOMBRECOLONIA = xelements9.ToStringXElement();
+                    }
+                }
+                else//Municipios fuera de CDMX
+                {
+                    row1.IDDELEGACION = xelements8.ToDecimalXElement();
+                    //Se guarda el valor que contenga Otros
+                    IEnumerable<XElement> municipio = XmlUtils.XmlSearchById(antecedentes, "b.2.9.2");
+                    if (municipio.IsFull())
+                    {
+                        row1.NOMBREDELEGACION = municipio.ToStringXElement();
+                    }
+                    //Se guaraa como Colonia lo que tenga el XML 
+                    IEnumerable<XElement> colonia = XmlUtils.XmlSearchById(antecedentes, "b.2.7");
+                    if (colonia.IsFull())
+                    {
+                        row1.NOMBRECOLONIA = colonia.ToStringXElement();
+                        row1.IDCOLONIA = 0M;
+                    }
+                }
             }
+
+
+
+
             IEnumerable<XElement> xelements19 = XmlUtils.XmlSearchById(antecedentes, "b.2.10");
             if (xelements19.IsFull())
                 row2.TIPOPERSONA = xelements19.ToStringXElement();
@@ -5512,7 +5591,8 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                 }*/
                 IEnumerable<XElement> xelements9 = XmlUtils.XmlSearchById(root1, "e.2.5");
                 IEnumerable<XElement> source2 = XmlUtils.XmlSearchById(root1, "a.2");
-                foreach (XElement root2 in xelements9)
+
+                /*foreach (XElement root2 in xelements9)
                 {
                     if (!esComercial) { 
                     IEnumerable<XElement> xelements3 = XmlUtils.XmlSearchById(root2, "e.2.5.n.17");
@@ -5594,7 +5674,8 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
 
                         }
                     }
-                }
+                }*/
+
                 IEnumerable<XElement> xelements10 = XmlUtils.XmlSearchById(XmlUtils.XmlSearchById(root1, "e.2"), "e.2.2");
                 if (xelements10.IsFull() && XmlUtils.EsDecimalXmlValido(xelements10) && (this.obligatorioPriv || !this.existeWP))
                 {
@@ -8411,17 +8492,38 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                 IEnumerable<XElement> xelements7 = XmlUtils.XmlSearchById(antecedentes, "b.1.8");
                 if (xelements7.IsFull())
                     row1.CODIGOPOSTAL = xelements7.ToStringXElement();
-                IEnumerable<XElement> xelements8 = XmlUtils.XmlSearchById(antecedentes, "b.1.9");
+
+
+                IEnumerable<XElement> xelements8 = XmlUtils.XmlSearchById(antecedentes, "b.1.9.1");
                 if (xelements8.IsFull())
                 {
                     string stringXelement = xelements8.ToStringXElement();
-                    row1.IDDELEGACION = CatastralUtils.ObtenerIdDelegacionPorClave(stringXelement);
-                    row1["DescDeleg"] = (object)xelements8.ToStringXElement();
-                    IEnumerable<XElement> xelements9 = XmlUtils.XmlSearchById(antecedentes, "b.1.7");
-                    if (xelements9.IsFull())
+                    if (!stringXelement.Equals("018"))//Se agrega al catálogo el elemento 018 Otros (Municipios fuera de CDMX)
                     {
-                        row1.IDCOLONIA = CatastralUtils.ObtenerIdColoniaPorNombreyDelegacion(xelements9.ToStringXElement(), stringXelement);
-                        row1["DescColonia"] = (object)xelements9.ToStringXElement();
+                        row1.IDDELEGACION = CatastralUtils.ObtenerIdDelegacionPorClave(stringXelement);
+                        row1["DescDeleg"] = (object)xelements8.ToStringXElement();
+                        IEnumerable<XElement> xelements9 = XmlUtils.XmlSearchById(antecedentes, "b.1.7");
+                        if (xelements9.IsFull())
+                        {
+                            row1.IDCOLONIA = CatastralUtils.ObtenerIdColoniaPorNombreyDelegacion(xelements9.ToStringXElement(), stringXelement);
+                            row1["DescColonia"] = (object)xelements9.ToStringXElement();
+                        }
+                    }
+                    else//Municipios fuera de CDMX
+                    {
+                        row1.IDDELEGACION = xelements8.ToDecimalXElement();
+                        //Se guarda el valor que contenga Otros
+                        IEnumerable<XElement> municipio = XmlUtils.XmlSearchById(antecedentes, "b.1.9.2");
+                        if (municipio.IsFull())
+                        {
+                            row1["DescDeleg"] = (object)municipio.ToStringXElement();
+                        }
+                        //Se guaraa como Colonia lo que tenga el XML 
+                        IEnumerable<XElement> colonia = XmlUtils.XmlSearchById(antecedentes, "b.1.7");
+                        if (colonia.IsFull())
+                        {
+                           row1["DescColonia"] = (object)colonia.ToStringXElement();
+                        }
                     }
                 }
                 IEnumerable<XElement> xelements10 = XmlUtils.XmlSearchById(antecedentes, "b.1.10");
@@ -8449,6 +8551,9 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                 IEnumerable<XElement> xelements17 = XmlUtils.XmlSearchById(antecedentes, "b.2.8");
                 if (xelements17.IsFull())
                     row2.CODIGOPOSTAL = xelements17.ToStringXElement();
+
+
+                /*
                 IEnumerable<XElement> xelements18 = XmlUtils.XmlSearchById(antecedentes, "b.2.9");
                 if (xelements18.IsFull())
                 {
@@ -8461,7 +8566,44 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                         row2.IDCOLONIA = CatastralUtils.ObtenerIdColoniaPorNombreyDelegacion(xelements9.ToStringXElement(), stringXelement);
                         row2["DescColonia"] = (object)xelements9.ToStringXElement();
                     }
+                }*/
+
+                IEnumerable<XElement> xelements18 = XmlUtils.XmlSearchById(antecedentes, "b.2.9.1");
+                if (xelements18.IsFull())
+                {
+                    string stringXelement = xelements18.ToStringXElement();
+                    if (!stringXelement.Equals("018"))//Se agrega al catálogo el elemento 018 Otros (Municipios fuera de CDMX)
+                    {
+                        row1.IDDELEGACION = CatastralUtils.ObtenerIdDelegacionPorClave(stringXelement);
+                        row1["DescDeleg"] = (object)xelements18.ToStringXElement();
+                        IEnumerable<XElement> xelements9 = XmlUtils.XmlSearchById(antecedentes, "b.2.7");
+                        if (xelements9.IsFull())
+                        {
+                            row1.IDCOLONIA = CatastralUtils.ObtenerIdColoniaPorNombreyDelegacion(xelements9.ToStringXElement(), stringXelement);
+                            row1["DescColonia"] = (object)xelements9.ToStringXElement();
+                        }
+                    }
+                    else//Municipios fuera de CDMX
+                    {
+                        row1.IDDELEGACION = xelements8.ToDecimalXElement();
+                        //Se guarda el valor que contenga Otros
+                        IEnumerable<XElement> municipio = XmlUtils.XmlSearchById(antecedentes, "b.2.9.2");
+                        if (municipio.IsFull())
+                        {
+                            row1["DescDeleg"] = (object)municipio.ToStringXElement();
+                        }
+                        //Se guaraa como Colonia lo que tenga el XML 
+                        IEnumerable<XElement> colonia = XmlUtils.XmlSearchById(antecedentes, "b.2.7");
+                        if (colonia.IsFull())
+                        {
+                            row1["DescColonia"] = (object)colonia.ToStringXElement();
+                        }
+                    }
                 }
+
+
+
+
                 IEnumerable<XElement> xelements19 = XmlUtils.XmlSearchById(antecedentes, "b.2.10");
                 if (xelements19.IsFull())
                     row2.TipoPersona = xelements19.ToStringXElement();

@@ -118,9 +118,9 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     dseAvaluo.FEXAVA_AVALUO[0].CODTIPOTRAMITE = Constantes.PAR_COD_TIPOTRAMITE_CATASTRAL;
                 }
 
-                query = XmlUtils.XmlSearchById(data, "b");
-                if (query.IsFull())
-                    GuardarAvaluoAntecedentesAI(query.First(), ref dseAvaluo);
+               // query = XmlUtils.XmlSearchById(data, "b");
+               // if (query.IsFull())
+                   // GuardarAvaluoAntecedentesAI(query.First(), ref dseAvaluo);
 
                 return dseAvaluo;
 

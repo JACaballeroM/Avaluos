@@ -323,7 +323,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
 
                                     int id = 1000;
 
-                                    //JACM Se agrega validacion e21n17
+                                    //JACM Se agregan validaciones 
 
                                     XElement xmlVAL = (XElement)XDocument.Parse(xmlAvaluo.InnerXml).Root;
                                     bool esComercial = (Decimal)xmlVAL.Descendants((XName)"Comercial").Count<XElement>() > 0M;
@@ -363,9 +363,120 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                      { }
 
 
+                                    try
+                                    {
+                                        var rowVAL19del = erroresValidacion.Select("DESCRIPCION like '%''Alcaldia'' no puede contener texto.%'");
+                                        int ind = 1;
+                                        foreach (var ren in rowVAL19del)
+                                        {
+                                            ren["DESCRIPCION"]="b."+ind.ToString()+
+                                                ".9 El elemento 'Alcaldia' no puede contener texto. Lista esperada de posibles elementos:'ClaveAlcaldia'";
+                                            ind++;
+                                        }
+                                       
+                                    }
+                                    catch (Exception ex) { }
 
-                                  
-                                        try { string b4 = XmlSearchById(xmlVAL, "b.4.1").ToStringXElement();
+
+                                    try
+                                    {
+                                        string b191 = XmlSearchById(xmlVAL, "b.1.9.1").ToStringXElement();
+                                        if (b191.Equals("018"))
+                                        {
+                                            try
+                                            {
+                                                string b192 = XmlSearchById(xmlVAL, "b.1.9.2").ToStringXElement();
+                                                if (b192.Trim().Equals(""))
+                                                {
+                                                    var rowVALb192 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                                    rowVALb192["IDERROR"] = id;
+                                                    rowVALb192["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                                    rowVALb192["DESCRIPCION"] = "b.1.9.2 - El elemento 'Otros' no es válido. El valor '' no es válido según su tipo de datos 'Cadena' - La longitud real es menor que el valor de longitud mínima.";
+                                                    erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALb192);
+                                                    id++;
+                                                }
+                                            }
+                                            catch (Exception ex)
+                                            {
+
+                                                var rowVALb192 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                                rowVALb192["IDERROR"] = id;
+                                                rowVALb192["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                                rowVALb192["DESCRIPCION"] = "b.1.9.2 - El contenido del elemento 'Alcaldía' está incompleto. Lista esperada de elementos posibles: 'Otros'.";
+                                                erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALb192);
+                                                id++;
+                                            }
+                                        }
+                                    }
+                                    catch (Exception ex)
+                                    {
+
+                                        var rowVALb192 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                        rowVALb192["IDERROR"] = id;
+                                        rowVALb192["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                        rowVALb192["DESCRIPCION"] = "b.1.9.1 - El contenido del elemento 'Alcaldia' está incompleto. Lista esperada de elementos posibles: 'ClaveAlcaldia'.";
+                                        erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALb192);
+                                        id++;
+                                    }
+
+
+                                    try
+                                    {
+                                        string b291 = XmlSearchById(xmlVAL, "b.2.9.1").ToStringXElement();
+                                        if (b291.Equals("018"))
+                                        {
+                                            try
+                                            {
+                                                string b192 = XmlSearchById(xmlVAL, "b.2.9.2").ToStringXElement();
+                                                if (b192.Trim().Equals(""))
+                                                {
+                                                    var rowVALb292 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                                    rowVALb292["IDERROR"] = id;
+                                                    rowVALb292["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                                    rowVALb292["DESCRIPCION"] = "b.2.9.2 - El elemento 'Otros' no es válido. El valor '' no es válido según su tipo de datos 'Cadena' - La longitud real es menor que el valor de longitud mínima.";
+                                                    erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALb292);
+                                                    id++;
+                                                }
+                                            }
+                                            catch (Exception ex)
+                                            {
+
+                                                var rowVALb292 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                                rowVALb292["IDERROR"] = id;
+                                                rowVALb292["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                                rowVALb292["DESCRIPCION"] = "b.2.9.2 - El contenido del elemento 'Alcaldía' está incompleto. Lista esperada de elementos posibles: 'Otros'.";
+                                                erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALb292);
+                                                id++;
+                                            }
+                                        }
+                                    }
+                                    catch (Exception ex)
+                                    {
+
+                                        var rowVALb292 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                        rowVALb292["IDERROR"] = id;
+                                        rowVALb292["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                        rowVALb292["DESCRIPCION"] = "b.2.9.1 - El contenido del elemento 'Alcaldia' está incompleto. Lista esperada de elementos posibles: 'ClaveAlcaldia'.";
+                                        erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALb292);
+                                        id++;
+                                    }
+
+
+
+                                    /*try
+                                    {
+                                        var rowVALb4del = erroresValidacion.Select("DESCRIPCION like '%''PropositoDelAvaluo''%'");
+                                        foreach (var ren in rowVALb4del)
+                                        {
+                                            ren.Delete();
+                                        }
+
+                                    }
+                                    catch (Exception ex) { }*/
+
+                                    try 
+                                    { 
+                                        string b4 = XmlSearchById(xmlVAL, "b.4.1").ToStringXElement();
                                         if (b4.Equals("4"))
                                         {
                                             try
@@ -429,7 +540,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                                 var rowVALb7 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
                                                 rowVALb7["IDERROR"] = id;
                                                 rowVALb7["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
-                                                rowVALb7["DESCRIPCION"] = "b.7.2 - El contenido del elemento 'PropositoDelAvaluo' está incompleto. Lista esperada de elementos posibles: 'Otros'.";
+                                                rowVALb7["DESCRIPCION"] = "b.7.2 - El contenido del elemento 'TipoDeInmueble' está incompleto. Lista esperada de elementos posibles: 'Otros'.";
                                                 erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALb7);
                                                 id++;
                                             }
@@ -441,7 +552,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                         var rowVALb7 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
                                         rowVALb7["IDERROR"] = id;
                                         rowVALb7["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
-                                        rowVALb7["DESCRIPCION"] = "b.7.1 - El contenido del elemento 'PropositoDelAvaluo' está incompleto. Lista esperada de elementos posibles: 'ClavePropositoAvaluo'.";
+                                        rowVALb7["DESCRIPCION"] = "b.7.1 - El contenido del elemento 'TipoDeInmueble' está incompleto. Lista esperada de elementos posibles: 'ClaveTipoInmueble'.";
                                         erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALb7);
                                         id++;
                                     }
@@ -680,6 +791,68 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                     }
 
 
+                                    try
+                                    {
+
+
+                                        if (!esComercial)
+                                        {
+
+                                            try
+                                            {
+                                                var rowVAL217del = //(ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)
+                                                    erroresValidacion.Select("DESCRIPCION like '%e.2.1.n.17%'");//.FirstOrDefault();
+                                                foreach (var ren in rowVAL217del)
+                                                {
+                                                    ren.Delete();
+                                                }
+                                            }
+                                            catch (Exception ex) { }
+
+
+                                            var rowVAL2117 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+
+                                            var e21 = XmlSearchById(xmlVAL, "e.2.1");
+                                            foreach (XElement element in e21)
+                                            {
+                                                //IEnumerable<XElement> xmlCuentaCat = null;
+                                                string uso = XmlSearchById(element, "e.2.1.n.2").ToStringXElement();
+                                                string clase = XmlSearchById(element, "e.2.1.n.6").ToStringXElement();
+                                                string dep = XmlSearchById(element, "e.2.1.n.17").ToStringXElement();
+
+                                                if ((uso == "P" || uso == "PE" || uso == "PC" || uso == "J") && clase == "U" && dep != "1")
+                                                {
+                                                    rowVAL2117["IDERROR"] = id;
+                                                    rowVAL2117["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                                    rowVAL2117["DESCRIPCION"] = "e.2.1.n.17 Error de restricción Los usos descubiertos, no se pueden depreciar, valor esperado: 1";
+                                                    erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL2117);
+                                                    id++;
+                                                }
+                                                else if ((uso == "P" || uso == "PE" || uso == "PC" || uso == "J") && clase == "U" && dep == "1")
+                                                { }
+                                                else { 
+
+                                                    decimal e_2_1_n_7 = XmlSearchById(element, "e.2.1.n.7").ToDecimalXElement();
+
+                                                    if (e_2_1_n_7 > 50M) //Se topa el valor de e_2_1_n_7 a 50
+                                                        e_2_1_n_7 = 50M;
+
+                                                    if (!(dep.ToDecimal().ToRound2() == ((100M - (e_2_1_n_7 * 0.8M)) / 100M).ToRound2()))
+                                                    {
+                                                        var rowVAL19 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                                        rowVAL19["IDERROR"] = id;
+                                                        rowVAL19["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                                        rowVAL19["DESCRIPCION"] = "e.2.1.n.17 Error de calculo.";
+                                                        erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL19);
+                                                        id++;
+                                                    }
+                                                }
+
+                                            }
+                                        }
+                                    }
+                                    catch (Exception ex) { }
+
 
                                     try
                                     {
@@ -690,10 +863,11 @@ public partial class SubirAvaluo : PageBaseAvaluos
 
                                             try
                                             {
-                                                var rowVAL17del = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%e.2.1.n.17%'").FirstOrDefault();
-                                                rowVAL17del.Delete();
-                                                var rowVAL517del = (ServiceAvaluos.DseAvaluoConsulta.ERROR_VALIDACION_AVALUORow)erroresValidacion.Select("DESCRIPCION like '%e.2.5.n.17%'").FirstOrDefault();
-                                                rowVAL517del.Delete();
+                                                var rowVAL517del = erroresValidacion.Select("DESCRIPCION like '%e.2.5.n.17%'");
+                                                foreach (var ren in rowVAL517del)
+                                                {
+                                                    ren.Delete();
+                                                }
                                             }
                                             catch (Exception ex) { }
 
@@ -716,6 +890,8 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                                     erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL517);
                                                     id++;
                                                 }
+                                                else if ((uso == "P" || uso == "PE" || uso == "PC" || uso == "J") && clase == "U" && dep == "1")
+                                                { }
                                                 else
                                                 {
 
@@ -741,53 +917,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                     catch (Exception ex) { }
 
 
-                                    try
-                                    {
-
-
-                                        if (!esComercial)
-                                        {
-                                            var rowVAL17 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
-                                            var e2 = XmlSearchById(xmlVAL, "e.2.1");
-
-                                            foreach (XElement element in e2)
-                                            {
-                                                //IEnumerable<XElement> xmlCuentaCat = null;
-                                                string uso = XmlSearchById(element, "e.2.1.n.2").ToStringXElement();
-                                                string clase = XmlSearchById(element, "e.2.1.n.6").ToStringXElement();
-                                                string dep = XmlSearchById(element, "e.2.1.n.17").ToStringXElement();
-
-                                                if ((uso == "P" || uso == "PE" || uso == "PC" || uso == "J") && clase == "U" && dep != "1")
-                                                {
-                                                    rowVAL17["IDERROR"] = id;
-                                                    rowVAL17["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
-                                                    rowVAL17["DESCRIPCION"] = "e.2.1.n.17 Error de restricción Los usos descubiertos, no se pueden depreciar, valor esperado: 1";
-                                                    erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL17);
-                                                    id++;
-                                                }
-                                                else
-                                                {
-
-                                                    decimal e_2_1_n_7 = XmlSearchById(element, "e.2.1.n.7").ToDecimalXElement();
-
-                                                    if (e_2_1_n_7 > 50M) //Se topa el valor de e_2_1_n_7 a 50
-                                                        e_2_1_n_7 = 50M;
-
-                                                    if (!(dep.ToDecimal().ToRound2() == ((100M - (e_2_1_n_7 * 0.8M)) / 100M).ToRound2()))
-                                                    {
-                                                        var rowVAL18 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
-                                                        rowVAL18["IDERROR"] = id;
-                                                        rowVAL18["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
-                                                        rowVAL18["DESCRIPCION"] = "e.2.1.n.17 Error de calculo.";
-                                                        erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL18);
-                                                        id++;
-                                                    }
-                                                }
-
-                                            }
-                                        }
-                                    }
-                                    catch (Exception ex) { }
+                                    
 
 
 
@@ -1422,7 +1552,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
 
         try
         {
-           // enviarXML(Usuarios.IdPersona(), documentoXML1, numUnico);
+           enviarXML(Usuarios.IdPersona(), documentoXML1, numUnico);
         }
         catch(Exception ex) { }
 
@@ -1432,9 +1562,6 @@ public partial class SubirAvaluo : PageBaseAvaluos
 
     private void enviarXML(string idUsuario, byte[] xml, string numeroUnico)
     {
-
-        //var xml1= Utilidades. .Decomprimir(xml);
-        //byte[] xml1=null;
 
        using (var wb = new WebClient())
         {
@@ -1446,9 +1573,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
             string xml64 = Convert.ToBase64String(xml);
             string url = "http://ovica.linesolutions.tech/avaluosNew_backend/public/WsSolucionIdeas/wsRecibeAvaluo";
             var response = wb.UploadValues(url, "POST", data);
-            string responseInString = Encoding.UTF8.GetString(response);
-
-            
+            string responseInString = Encoding.UTF8.GetString(response);   
 
         }
 
@@ -1480,7 +1605,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
 
         try
         {
-          //  enviarXML(Usuarios.IdPersona(), documentoXML1, numUnico);
+          enviarXML(Usuarios.IdPersona(), documentoXML1, numUnico);
         }
         catch (Exception ex) { }
 
