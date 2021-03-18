@@ -5821,7 +5821,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                         else
                             stringBuilder.AppendLine("e.2.5.n.14 - Factor resultante." + str);
                     }
-                }*/
+                }
                 if (esComercial)
                 {
                     foreach (XElement root2 in XmlUtils.XmlSearchById(root1, "e.2.5"))
@@ -5934,7 +5934,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                                 stringBuilder.AppendLine("e.2.1.n.15 - Valor de la fracción n." + str);
                         }
                     }
-                }
+                }*/
                 IEnumerable<XElement> rootN4 = XmlUtils.XmlSearchById(root1, "e.2");
                 IEnumerable<XElement> xelements14 = XmlUtils.XmlSearchById(rootN4, "e.2.6");
                 if (xelements14.IsFull() && XmlUtils.EsDecimalXmlValido(xelements14) && (this.obligatorioComun || !this.existeWC))
@@ -8299,7 +8299,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     dseAvaluo.FEXAVA_AVALUO[0].CODTIPOTRAMITE = "2";
                 IEnumerable<XElement> xelements = XmlUtils.XmlSearchById(root, "b");
                 if (xelements.IsFull())
-                    this.GuardarAvaluoAntecedentes(xelements.First<XElement>(), ref dseAvaluo);
+                    this.GuardarAvaluoAntecedentesReporte(xelements.First<XElement>(), ref dseAvaluo);
                 return dseAvaluo;
             }
             catch (Exception ex)
@@ -8764,6 +8764,338 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                 throw ex;
             }
         }
+
+
+
+        private void GuardarAvaluoAntecedentesReporte(XElement antecedentes, ref DseAvaluoMantInf dseAvaluo)
+        {
+            try
+            {
+                DseAvaluoMantInf.FEXAVA_DATOSPERSONASRow row1 = dseAvaluo.FEXAVA_DATOSPERSONAS.NewFEXAVA_DATOSPERSONASRow();
+                DseAvaluoMantInf.FEXAVA_DATOSPERSONASRow row2 = dseAvaluo.FEXAVA_DATOSPERSONAS.NewFEXAVA_DATOSPERSONASRow();
+                row1.FEXAVA_AVALUORow = dseAvaluo.FEXAVA_AVALUO[0];
+                row2.FEXAVA_AVALUORow = dseAvaluo.FEXAVA_AVALUO[0];
+                IEnumerable<XElement> xelements1 = XmlUtils.XmlSearchById(antecedentes, "b.1.1");
+                if (xelements1.IsFull())
+                    row1.APELLIDOPATERNO = xelements1.ToStringXElement();
+                IEnumerable<XElement> xelements2 = XmlUtils.XmlSearchById(antecedentes, "b.1.2");
+                if (xelements2.IsFull())
+                    row1.APELLIDOMATERNO = xelements2.ToStringXElement();
+                IEnumerable<XElement> xelements3 = XmlUtils.XmlSearchById(antecedentes, "b.1.3");
+                if (xelements3.IsFull())
+                    row1.NOMBRE = xelements3.ToStringXElement();
+                IEnumerable<XElement> xelements4 = XmlUtils.XmlSearchById(antecedentes, "b.1.4");
+                if (xelements4.IsFull())
+                    row1.CALLE = xelements4.ToStringXElement();
+                IEnumerable<XElement> xelements5 = XmlUtils.XmlSearchById(antecedentes, "b.1.5");
+                if (xelements5.IsFull())
+                    row1.NUMEROINTERIOR = xelements5.ToStringXElement();
+                IEnumerable<XElement> xelements6 = XmlUtils.XmlSearchById(antecedentes, "b.1.6");
+                if (xelements6.IsFull())
+                    row1.NUMEROEXTERIOR = xelements6.ToStringXElement();
+                IEnumerable<XElement> xelements7 = XmlUtils.XmlSearchById(antecedentes, "b.1.8");
+                if (xelements7.IsFull())
+                    row1.CODIGOPOSTAL = xelements7.ToStringXElement();
+
+
+                IEnumerable<XElement> xelements8 = XmlUtils.XmlSearchById(antecedentes, "b.1.9.1");
+                if (xelements8.IsFull())
+                {
+                    try
+                    {
+                        string stringXelement = xelements8.ToStringXElement();
+                        if (!stringXelement.Equals("018"))//Se agrega al catálogo el elemento 018 Otros (Municipios fuera de CDMX)
+                        {
+                            row1.IDDELEGACION = CatastralUtils.ObtenerIdDelegacionPorClave(stringXelement);
+                            row1["DescDeleg"] = (object)xelements8.ToStringXElement();
+                            IEnumerable<XElement> xelements9 = XmlUtils.XmlSearchById(antecedentes, "b.1.7");
+                            if (xelements9.IsFull())
+                            {
+                                row1.IDCOLONIA = CatastralUtils.ObtenerIdColoniaPorNombreyDelegacion(xelements9.ToStringXElement(), stringXelement);
+                                row1["DescColonia"] = (object)xelements9.ToStringXElement();
+                            }
+                        }
+                        else//Municipios fuera de CDMX
+                        {
+                            row1.IDDELEGACION = xelements8.ToDecimalXElement();
+                            //Se guarda el valor que contenga Otros
+                            IEnumerable<XElement> municipio = XmlUtils.XmlSearchById(antecedentes, "b.1.9.2");
+                            if (municipio.IsFull())
+                            {
+                                row1["DescDeleg"] = (object)municipio.ToStringXElement();
+                            }
+                            //Se guaraa como Colonia lo que tenga el XML 
+                            IEnumerable<XElement> colonia = XmlUtils.XmlSearchById(antecedentes, "b.1.7");
+                            if (colonia.IsFull())
+                            {
+                                row1["DescColonia"] = (object)colonia.ToStringXElement();
+                            }
+                        }
+                    }catch(Exception ex)
+                    {
+                        string stringXelement = xelements8.ToStringXElement();
+                        row1.IDDELEGACION = CatastralUtils.ObtenerIdDelegacionPorClave(stringXelement);
+                        row1["DescDeleg"] = (object)xelements8.ToStringXElement();
+                        IEnumerable<XElement> xelements9 = XmlUtils.XmlSearchById(antecedentes, "b.1.7");
+                        if (xelements9.IsFull())
+                        {
+                            row1.IDCOLONIA = CatastralUtils.ObtenerIdColoniaPorNombreyDelegacion(xelements9.ToStringXElement(), stringXelement);
+                            row1["DescColonia"] = (object)xelements9.ToStringXElement();
+                        }
+                    }
+                }
+                IEnumerable<XElement> xelements10 = XmlUtils.XmlSearchById(antecedentes, "b.1.10");
+                if (xelements10.IsFull())
+                    row1.TipoPersona = xelements10.ToStringXElement();
+                row1.ROL = "S";
+                IEnumerable<XElement> xelements11 = XmlUtils.XmlSearchById(antecedentes, "b.2.1");
+                if (xelements11.IsFull())
+                    row2.APELLIDOPATERNO = xelements11.ToStringXElement();
+                IEnumerable<XElement> xelements12 = XmlUtils.XmlSearchById(antecedentes, "b.2.2");
+                if (xelements12.IsFull())
+                    row2.APELLIDOMATERNO = xelements12.ToStringXElement();
+                IEnumerable<XElement> xelements13 = XmlUtils.XmlSearchById(antecedentes, "b.2.3");
+                if (xelements13.IsFull())
+                    row2.NOMBRE = xelements13.ToStringXElement();
+                IEnumerable<XElement> xelements14 = XmlUtils.XmlSearchById(antecedentes, "b.2.4");
+                if (xelements14.IsFull())
+                    row2.CALLE = xelements14.ToStringXElement();
+                IEnumerable<XElement> xelements15 = XmlUtils.XmlSearchById(antecedentes, "b.2.5");
+                if (xelements15.IsFull())
+                    row2.NUMEROINTERIOR = xelements15.ToStringXElement();
+                IEnumerable<XElement> xelements16 = XmlUtils.XmlSearchById(antecedentes, "b.2.6");
+                if (xelements16.IsFull())
+                    row2.NUMEROEXTERIOR = xelements16.ToStringXElement();
+                IEnumerable<XElement> xelements17 = XmlUtils.XmlSearchById(antecedentes, "b.2.8");
+                if (xelements17.IsFull())
+                    row2.CODIGOPOSTAL = xelements17.ToStringXElement();
+
+
+                /*
+                IEnumerable<XElement> xelements18 = XmlUtils.XmlSearchById(antecedentes, "b.2.9");
+                if (xelements18.IsFull())
+                {
+                    string stringXelement = xelements18.ToStringXElement();
+                    row2.IDDELEGACION = CatastralUtils.ObtenerIdDelegacionPorClave(stringXelement);
+                    row2["DescDeleg"] = (object)xelements18.ToStringXElement();
+                    IEnumerable<XElement> xelements9 = XmlUtils.XmlSearchById(antecedentes, "b.2.7");
+                    if (xelements9.IsFull())
+                    {
+                        row2.IDCOLONIA = CatastralUtils.ObtenerIdColoniaPorNombreyDelegacion(xelements9.ToStringXElement(), stringXelement);
+                        row2["DescColonia"] = (object)xelements9.ToStringXElement();
+                    }
+                }*/
+
+                IEnumerable<XElement> xelements18 = XmlUtils.XmlSearchById(antecedentes, "b.2.9.1");
+                if (xelements18.IsFull())
+                {
+                    try
+                    {
+                        string stringXelement = xelements18.ToStringXElement();
+                        if (!stringXelement.Equals("018"))//Se agrega al catálogo el elemento 018 Otros (Municipios fuera de CDMX)
+                        {
+                            row1.IDDELEGACION = CatastralUtils.ObtenerIdDelegacionPorClave(stringXelement);
+                            row1["DescDeleg"] = (object)xelements18.ToStringXElement();
+                            IEnumerable<XElement> xelements9 = XmlUtils.XmlSearchById(antecedentes, "b.2.7");
+                            if (xelements9.IsFull())
+                            {
+                                row1.IDCOLONIA = CatastralUtils.ObtenerIdColoniaPorNombreyDelegacion(xelements9.ToStringXElement(), stringXelement);
+                                row1["DescColonia"] = (object)xelements9.ToStringXElement();
+                            }
+                        }
+                        else//Municipios fuera de CDMX
+                        {
+                            row1.IDDELEGACION = xelements8.ToDecimalXElement();
+                            //Se guarda el valor que contenga Otros
+                            IEnumerable<XElement> municipio = XmlUtils.XmlSearchById(antecedentes, "b.2.9.2");
+                            if (municipio.IsFull())
+                            {
+                                row1["DescDeleg"] = (object)municipio.ToStringXElement();
+                            }
+                            //Se guaraa como Colonia lo que tenga el XML 
+                            IEnumerable<XElement> colonia = XmlUtils.XmlSearchById(antecedentes, "b.2.7");
+                            if (colonia.IsFull())
+                            {
+                                row1["DescColonia"] = (object)colonia.ToStringXElement();
+                            }
+                        }
+                    }catch(Exception ex)
+                    {
+                        string stringXelement = xelements18.ToStringXElement();
+                        row2.IDDELEGACION = CatastralUtils.ObtenerIdDelegacionPorClave(stringXelement);
+                        row2["DescDeleg"] = (object)xelements18.ToStringXElement();
+                        IEnumerable<XElement> xelements9 = XmlUtils.XmlSearchById(antecedentes, "b.2.7");
+                        if (xelements9.IsFull())
+                        {
+                            row2.IDCOLONIA = CatastralUtils.ObtenerIdColoniaPorNombreyDelegacion(xelements9.ToStringXElement(), stringXelement);
+                            row2["DescColonia"] = (object)xelements9.ToStringXElement();
+                        }
+                    }
+                }
+
+
+
+
+                IEnumerable<XElement> xelements19 = XmlUtils.XmlSearchById(antecedentes, "b.2.10");
+                if (xelements19.IsFull())
+                    row2.TipoPersona = xelements19.ToStringXElement();
+                row2.ROL = "P";
+                IEnumerable<XElement> xelements20 = XmlUtils.XmlSearchById(antecedentes, "b.3.1");
+                if (xelements20.IsFull())
+                    dseAvaluo.FEXAVA_AVALUO[0].CALLE = xelements20.ToStringXElement();
+                IEnumerable<XElement> xelements21 = XmlUtils.XmlSearchById(antecedentes, "b.3.2");
+                if (xelements21.IsFull())
+                    dseAvaluo.FEXAVA_AVALUO[0].INT = xelements21.ToStringXElement();
+                IEnumerable<XElement> xelements22 = XmlUtils.XmlSearchById(antecedentes, "b.3.3");
+                if (xelements22.IsFull())
+                    dseAvaluo.FEXAVA_AVALUO[0].EXT = xelements22.ToStringXElement();
+                IEnumerable<XElement> xelements23 = XmlUtils.XmlSearchById(antecedentes, "b.3.5");
+                if (xelements23.IsFull())
+                    dseAvaluo.FEXAVA_AVALUO[0].LOTE = xelements23.ToStringXElement();
+                IEnumerable<XElement> xelements24 = XmlUtils.XmlSearchById(antecedentes, "b.3.6");
+                if (xelements24.IsFull())
+                    dseAvaluo.FEXAVA_AVALUO[0].EDIFICIO = xelements24.ToStringXElement();
+                IEnumerable<XElement> xelements25 = XmlUtils.XmlSearchById(antecedentes, "b.3.8");
+                if (xelements25.IsFull())
+                    dseAvaluo.FEXAVA_AVALUO[0].CP = xelements25.ToStringXElement();
+                IEnumerable<XElement> xelements26 = XmlUtils.XmlSearchById(antecedentes, "b.3.9");
+                if (xelements26.IsFull())
+                {
+                    xelements26.ToStringXElement();
+                    dseAvaluo.FEXAVA_AVALUO[0].DELEGACION = xelements26.ToStringXElement();
+                    IEnumerable<XElement> xelements9 = XmlUtils.XmlSearchById(antecedentes, "b.3.7");
+                    if (xelements9.IsFull())
+                        dseAvaluo.FEXAVA_AVALUO[0].COLONIA = xelements9.ToStringXElement();
+                }
+                IEnumerable<XElement> xelements27 = XmlUtils.XmlSearchById(antecedentes, "b.3.10.1");
+                if (xelements27.IsFull())
+                    dseAvaluo.FEXAVA_AVALUO[0].REGION = xelements27.ToStringXElement();
+                IEnumerable<XElement> xelements28 = XmlUtils.XmlSearchById(antecedentes, "b.3.10.2");
+                if (xelements28.IsFull())
+                    dseAvaluo.FEXAVA_AVALUO[0].MANZANA = xelements28.ToStringXElement();
+                IEnumerable<XElement> xelements29 = XmlUtils.XmlSearchById(antecedentes, "b.3.10.3");
+                if (xelements29.IsFull())
+                    dseAvaluo.FEXAVA_AVALUO[0].LOTE_CC = xelements29.ToStringXElement();
+                IEnumerable<XElement> xelements30 = XmlUtils.XmlSearchById(antecedentes, "b.3.10.4");
+                if (xelements30.IsFull())
+                    dseAvaluo.FEXAVA_AVALUO[0].UNIDADPRIVATIVA = xelements30.ToStringXElement();
+                IEnumerable<XElement> xelements31 = XmlUtils.XmlSearchById(antecedentes, "b.3.10.5");
+                if (xelements31.IsFull())
+                    dseAvaluo.FEXAVA_AVALUO[0].DIGITOVERIFICADOR = xelements31.ToStringXElement();
+                IEnumerable<XElement> xelements32 = XmlUtils.XmlSearchById(antecedentes, "b.3.11");
+                if (xelements32.IsFull())
+                    dseAvaluo.FEXAVA_AVALUO[0].CUENTAAGUA = xelements32.ToStringXElement();
+
+                IEnumerable<XElement> xelements33 = XmlUtils.XmlSearchById(antecedentes, "b.4");
+                if (xelements33.IsFull())
+                {
+                    try
+                     {
+                    switch (XmlUtils.XmlSearchById(xelements33, "b.4.1").ToStringXElement().ToInt())
+                    {
+                        case 1:
+                            dseAvaluo.FEXAVA_AVALUO[0].PROPOSITO = Constantes.P1;
+                            break;
+                        case 2:
+                            dseAvaluo.FEXAVA_AVALUO[0].PROPOSITO = Constantes.P2;
+                            break;
+                        case 3:
+                            dseAvaluo.FEXAVA_AVALUO[0].PROPOSITO = Constantes.P3;
+                            break;
+                        case 4:
+                            dseAvaluo.FEXAVA_AVALUO[0].PROPOSITO = XmlUtils.XmlSearchById(xelements33, "b.4.2").ToStringXElement().ToUpper();
+                            break;
+                    }
+                    }catch(Exception ex) { dseAvaluo.FEXAVA_AVALUO[0].PROPOSITO = ""; }
+                       
+                }
+
+                IEnumerable<XElement> xelements34 = XmlUtils.XmlSearchById(antecedentes, "b.5");
+                if (xelements34.IsFull())
+                    dseAvaluo.FEXAVA_AVALUO[0].OBJETO = xelements34.ToStringXElement();
+                IEnumerable<XElement> xelements35 = XmlUtils.XmlSearchById(antecedentes, "b.6");
+                if (xelements35.IsFull())
+                    dseAvaluo.FEXAVA_AVALUO[0].CODREGIMENPROPIEDAD = XmlUtils.ToDecimalXElementAv(xelements35);
+                dseAvaluo.FEXAVA_DATOSPERSONAS.AddFEXAVA_DATOSPERSONASRow(row1);
+                dseAvaluo.FEXAVA_DATOSPERSONAS.AddFEXAVA_DATOSPERSONASRow(row2);
+
+
+                IEnumerable<XElement> xelements36 = XmlUtils.XmlSearchById(antecedentes, "b.7");
+                if (xelements36.IsFull())
+                {
+                    try { 
+                    switch (XmlUtils.XmlSearchById(xelements36, "b.7.1").ToStringXElement().ToInt())
+                    {
+                        case 1:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP1;
+                            break;
+                        case 2:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP2;
+                            break;
+                        case 3:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP3;
+                            break;
+                        case 4:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP4;
+                            break;
+                        case 5:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP5;
+                            break;
+                        case 6:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP6;
+                            break;
+                        case 7:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP7;
+                            break;
+                        case 8:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP8;
+                            break;
+                        case 9:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP9;
+                            break;
+                        case 10:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP10;
+                            break;
+                        case 11:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP11;
+                            break;
+                        case 12:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP12;
+                            break;
+                        case 13:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP13;
+                            break;
+                        case 14:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP14;
+                            break;
+                        case 15:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP15;
+                            break;
+                        case 16:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP16;
+                            break;
+                        case 17:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP17;
+                            break;
+                        case 18:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = Constantes.TP18;
+                            break;
+                        case 19:
+                            dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = XmlUtils.XmlSearchById(xelements36, "b.7.2").ToStringXElement().ToUpper();
+                            break;
+                    }
+                    }catch(Exception ex) { dseAvaluo.FEXAVA_AVALUO[0].PROPOSITO = ""; }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                ExceptionPolicyWrapper.HandleException(ex);
+                throw ex;
+            }
+        }
+
+
 
         private void GuardarAvaluoCaracteristicasUrbanas(
           XElement caracteristicasUrbanas,

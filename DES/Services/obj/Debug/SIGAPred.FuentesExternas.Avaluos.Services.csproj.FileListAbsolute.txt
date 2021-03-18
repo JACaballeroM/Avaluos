@@ -167,7 +167,6 @@ C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\D
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\bin\Debug\SIGAPred.FuentesExternas.Avaluos.Enum.dll
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\bin\Debug\SIGAPred.FuentesExternas.Avaluos.Enum.pdb
-C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\obj\Debug\SIGAPred.FuentesExternas.Avaluos.Services.csprojAssemblyReference.cache
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\obj\Debug\SIGAPred.FuentesExternas.Avaluos.Services.Properties.Resources.resources
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\obj\Debug\SIGAPred.FuentesExternas.Avaluos.Services.csproj.GenerateResource.cache
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Services\obj\Debug\SIGAPred.FuentesExternas.Avaluos.Services.csproj.CoreCompileInputs.cache

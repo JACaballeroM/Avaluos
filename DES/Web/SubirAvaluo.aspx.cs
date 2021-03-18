@@ -917,7 +917,96 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                     catch (Exception ex) { }
 
 
-                                    
+                                    try
+                                    {
+
+                                        var e2 = XmlSearchById(xmlVAL, "e.2.1");
+                                        foreach (XElement element in e2)
+                                        {
+                                            decimal e21n11 = XmlSearchById(element, "e.2.1.n.11").ToDecimalXElement();
+                                            decimal e21n15 = XmlSearchById(element, "e.2.1.n.15").ToDecimalXElement();
+
+                                            if (esComercial)
+                                            {
+                                                decimal e21n12 = XmlSearchById(element, "e.2.1.n.12").ToDecimalXElement();
+                                                decimal e21n13 = XmlSearchById(element, "e.2.1.n.13").ToDecimalXElement();
+                                                if (!(e21n15.ToRound2() == (e21n11 * e21n12 * e21n13).ToRound2()))
+                                                {
+                                                    var rowVAL2115 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                                    rowVAL2115["IDERROR"] = id;
+                                                    rowVAL2115["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                                    rowVAL2115["DESCRIPCION"] = "e.2.1.n.15 Error de calculo.";
+                                                    erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL2115);
+                                                    id++;
+                                                }
+                                            }
+                                            else
+                                            {
+                                                decimal e21n16 = XmlSearchById(element, "e.2.1.n.16").ToDecimalXElement();
+                                                decimal e21n17 = XmlSearchById(element, "e.2.1.n.17").ToDecimalXElement();
+                                                if (!(e21n15.ToRound2() == (e21n11 * e21n16 * e21n17).ToRound2()))
+                                                {
+                                                    var rowVAL2115 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                                    rowVAL2115["IDERROR"] = id;
+                                                    rowVAL2115["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                                    rowVAL2115["DESCRIPCION"] = "e.2.1.n.15 Error de calculo.";
+                                                    erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL2115);
+                                                    id++;
+                                                }
+                                            }
+                                        }
+
+
+                                    }
+                                    catch (Exception ex) { }
+
+
+                                    try
+                                    {
+
+                                        var e2 = XmlSearchById(xmlVAL, "e.2.5");
+                                        foreach (XElement element in e2)
+                                        {
+                                            decimal e25n11 = XmlSearchById(element, "e.2.5.n.11").ToDecimalXElement();
+                                            decimal e25n15 = XmlSearchById(element, "e.2.5.n.15").ToDecimalXElement();
+
+                                            if (esComercial)
+                                            {
+                                                decimal e25n12 = XmlSearchById(element, "e.2.5.n.12").ToDecimalXElement();
+                                                decimal e25n13 = XmlSearchById(element, "e.2.5.n.13").ToDecimalXElement();
+                                                if (!(e25n15.ToRound2() == (e25n11 * e25n12 * e25n13).ToRound2()))
+                                                {
+                                                    var rowVAL2515 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                                    rowVAL2515["IDERROR"] = id;
+                                                    rowVAL2515["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                                    rowVAL2515["DESCRIPCION"] = "e.2.5.n.15 Error de calculo.";
+                                                    erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL2515);
+                                                    id++;
+                                                }
+                                            }else
+                                            {
+                                                decimal e25n16 = XmlSearchById(element, "e.2.5.n.16").ToDecimalXElement();
+                                                decimal e25n17 = XmlSearchById(element, "e.2.5.n.17").ToDecimalXElement();
+                                                if (!(e25n15.ToRound2() == (e25n11 * e25n16 * e25n17).ToRound2()))
+                                                {
+                                                    var rowVAL2515 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+                                                    rowVAL2515["IDERROR"] = id;
+                                                    rowVAL2515["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                                    rowVAL2515["DESCRIPCION"] = "e.2.5.n.15 Error de calculo.";
+                                                    erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVAL2515);
+                                                    id++;
+                                                }
+                                            }
+                                        }
+                                            
+                                        
+                                    }
+                                    catch (Exception ex) { }
+
+
+
+
+
 
 
 

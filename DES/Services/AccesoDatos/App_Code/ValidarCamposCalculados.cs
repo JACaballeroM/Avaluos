@@ -211,7 +211,7 @@ public static class ValidarCamposCalculados
         }
     }*/
 
-    public static bool ValidarCampoCalculado_e_2_1_n_15(
+    /*public static bool ValidarCampoCalculado_e_2_1_n_15(
       Decimal valorCalculado,
       Decimal e_2_1_n_11,
       Decimal e_2_1_n_12,
@@ -257,7 +257,7 @@ public static class ValidarCamposCalculados
             log("ValidarCampoCalculado_e_2_1_n_15_Cat", ex.Message, ex.StackTrace);
             return false;
         }
-    }
+    }*/
 
    
 
@@ -344,7 +344,7 @@ public static class ValidarCamposCalculados
         }
     }
 
-    public static bool ValidarCampoCalculado_e_2_5_n_15(
+    /*public static bool ValidarCampoCalculado_e_2_5_n_15(
       Decimal valorCalculado,
       Decimal e_2_5_n_11,
       Decimal e_2_5_n_12,
@@ -389,7 +389,7 @@ public static class ValidarCamposCalculados
             log("ValidarCampoCalculado_e_2_5_n_15_Cat ", ex.Message, ex.StackTrace);
             return false;
         }
-    }
+    }*/
 
 
    /* public static bool ValidarCampoCalculado_e_2_1_n_17(
