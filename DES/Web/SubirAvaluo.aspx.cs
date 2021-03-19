@@ -853,6 +853,26 @@ public partial class SubirAvaluo : PageBaseAvaluos
                                     }
                                     catch (Exception ex) { }
 
+                                    try
+                                    {
+                                        var rowVALe25n3 = erroresValidacion.NewERROR_VALIDACION_AVALUORow();
+
+                                        var e25 = XmlSearchById(xmlVAL, "e.2.5");
+                                        foreach (XElement element in e25)
+                                        {
+                                            string numNiveles = XmlSearchById(element, "e.2.5.n.3").ToStringXElement();
+                                            if (numNiveles.Length > 3)
+                                            {
+                                                rowVALe25n3["IDERROR"] = id;
+                                                rowVALe25n3["TIPOERROR"] = "ESQUEMA / DOCUMENTO NO VALIDO";
+                                                rowVALe25n3["DESCRIPCION"] = "e.2.5.n.3 - El elemento 'NumeroDeNivelesDelTipo' no es válido. El valor '"+numNiveles+
+                                                    "' no es válido según su tipo de datos 'SUB-NumeroDeNivelesDelTipo' - Error de restricción TotalDigits.";
+                                                erroresValidacion.AddERROR_VALIDACION_AVALUORow(rowVALe25n3);
+                                                id++;
+                                            }
+                                        }
+                                    }
+                                    catch (Exception ex) { }
 
                                     try
                                     {

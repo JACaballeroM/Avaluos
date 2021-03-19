@@ -2447,7 +2447,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                         if (xelements8.IsFull())
                             row.EDAD = xelements8.ToDecimalXElement();
                     }
-                    else { row.EDAD = 1M; }
+                    else { row.EDAD = 0M; }
 
                     if (XmlUtils.XmlSearchById(root, "e.2.1.n.8").IsFull())
                     {
@@ -2464,7 +2464,14 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     {
                         IEnumerable<XElement> xelements9 = XmlUtils.XmlSearchById(root, "e.2.1.n.9");
                         if (xelements9.IsFull())
-                            row.VIDAUTILREMANENTE = xelements9.ToDecimalXElement();
+                        {
+                            if (!xelements9.ToStringXElement().Equals(""))
+                                row.VIDAUTILREMANENTE = xelements9.ToDecimalXElement();
+                            else
+                                row.VIDAUTILREMANENTE = 1M;
+                        }
+                        else
+                            row.VIDAUTILREMANENTE = 1M;
                     }
                     else
                     {
@@ -2551,7 +2558,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                         if (xelements8.IsFull())
                             row.EDAD = xelements8.ToDecimalXElement();
                     }
-                    else { row.EDAD = 1M; }
+                    else { row.EDAD = 0M; }
 
                     if (XmlUtils.XmlSearchById(root, "e.2.5.n.8").IsFull())
                     {
@@ -2568,7 +2575,14 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     {
                         IEnumerable<XElement> xelements9 = XmlUtils.XmlSearchById(root, "e.2.5.n.9");
                         if (xelements9.IsFull())
-                            row.VIDAUTILREMANENTE = xelements9.ToDecimalXElement();
+                        {
+                            if (!xelements9.ToStringXElement().Equals(""))
+                                row.VIDAUTILREMANENTE = xelements9.ToDecimalXElement();
+                            else
+                                row.VIDAUTILREMANENTE = 1M;
+                        }
+                        else
+                            row.VIDAUTILREMANENTE = 1M;
                     }
                     else
                     {
@@ -10164,7 +10178,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     }
                     else
                     {
-                        row.EDAD = 1;
+                        row.EDAD = 0M;
                     }
                     if (XmlUtils.XmlSearchById(root, "e.2.1.n.8").IsFull())
                     {
@@ -10181,7 +10195,14 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     {
                         IEnumerable<XElement> xelements12 = XmlUtils.XmlSearchById(root, "e.2.1.n.9");
                         if (xelements12.IsFull())
-                            row.VIDAUTILREMANENTE = XmlUtils.ToDecimalXElementAv(xelements12);
+                        {
+                            if (!xelements12.ToStringXElement().Equals(""))
+                                row.VIDAUTILREMANENTE = XmlUtils.ToDecimalXElementAv(xelements12);
+                            else
+                                row.VIDAUTILREMANENTE = 1M;
+                        }
+                        else
+                            row.VIDAUTILREMANENTE = 1M;
                     }
                     else
                     {
@@ -10293,7 +10314,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                         if (xelements11.IsFull())
                             row.EDAD = xelements11.ToDecimalXElement();
                     }
-                    else { row.EDAD = 1M; }
+                    else { row.EDAD = 0M; }
 
                     if (XmlUtils.XmlSearchById(root, "e.2.5.n.8").IsFull())
                     {
@@ -10310,8 +10331,14 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     {
                         IEnumerable<XElement> xelements12 = XmlUtils.XmlSearchById(root, "e.2.5.n.9");
                         if (xelements12.IsFull())
-                            row.VIDAUTILREMANENTE = XmlUtils.ToDecimalXElementAv(xelements12);
-
+                        {
+                            if (!xelements12.ToStringXElement().Equals(""))
+                                row.VIDAUTILREMANENTE = XmlUtils.ToDecimalXElementAv(xelements12);
+                            else
+                                row.VIDAUTILREMANENTE = 1M;
+                        }
+                        else
+                            row.VIDAUTILREMANENTE = 1M;
                     }
                     else
                     {

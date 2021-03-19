@@ -839,7 +839,7 @@
 
 	<xs:complexType name="SUB-NumeroDeNivelesDelTipo">
 		<xs:simpleContent>
-			<xs:extension base="NullableDecimalPositivo30">
+			<xs:extension base="DecimalPositivo30">
 				<xs:attribute fixed="e.2.1.n.3" name="id" type="xs:string" use="required"/>
 			</xs:extension>
 		</xs:simpleContent>
@@ -847,7 +847,7 @@
 
 	<xs:complexType name="SUB-NumeroDeNivelesDelTipoComunes">
 		<xs:simpleContent>
-			<xs:extension base="NullableDecimalPositivo30">
+			<xs:extension base="DecimalPositivo30">
 				<xs:attribute fixed="e.2.5.n.3" name="id" type="xs:string" use="required"/>
 			</xs:extension>
 		</xs:simpleContent>
@@ -4547,7 +4547,7 @@
 								<xs:sequence>
 									<xs:element name="Descripcion" type="SUB-DescripcionComunes" />
 									<xs:element name="ClaveUso" type="SUB-ClaveUsoComunes" />
-									<xs:element name="NumeroDeNivelesDelTipo" type="SUB-NumeroDeNivelesDelTipoComunes"/>
+									<xs:element name="NumeroDeNivelesDelTipoComunes" type="SUB-NumeroDeNivelesDelTipoComunes"/>
 									<xs:element name="ClaveRangoDeNiveles" type="SUB-ClaveRangoDeNivelesComunes" />
 									<xs:element name="PuntajeDeClasificacion" type="SUB-PuntajeDeClasificacionComunes"/>
 									<xs:element name="ClaveClase" type="SUB-ClaveClaseComunes" />
@@ -4668,7 +4668,7 @@
 								<xs:sequence>
 									<xs:element name="Descripcion" type="SUB-DescripcionComunes" />
 									<xs:element name="ClaveUso" type="SUB-ClaveUsoComunes" />
-									<xs:element name="NumeroDeNivelesDelTipo" type="SUB-NumeroDeNivelesDelTipoComunes"/>
+									<xs:element name="NumeroDeNivelesDelTipoComunes" type="SUB-NumeroDeNivelesDelTipoComunes"/>
 									<xs:element name="ClaveRangoDeNiveles" type="SUB-ClaveRangoDeNivelesComunes" />
 									<xs:element name="PuntajeDeClasificacion" type="SUB-PuntajeDeClasificacionComunes"/>
 									<xs:element name="ClaveClase" type="SUB-ClaveClaseComunes" />
@@ -4755,12 +4755,16 @@
 						<xs:element name="NumeroDeNivelesDelTipo">
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension base="NullableDecimalPositivo30">
+									<xs:extension base="DecimalPositivo30">
 										<xs:attribute fixed="e.2.1.n.3" name="id" type="xs:string" use="required"/>
 									</xs:extension>
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
+
+						
+						
+						
 						<xs:element name="ClaveRangoDeNiveles" type="SUB-ClaveRangoDeNiveles" />
 						<xs:element name="PuntajeDeClasificacion">
 							<xs:complexType>
@@ -4808,6 +4812,18 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>-->
+
+						<xs:element name="NumeroDeNivelesDelTipoComunes">
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="DecimalPositivo30">
+										<xs:attribute fixed="e.2.5.n.3" name="id" type="xs:string" use="required"/>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+						
+						
 						<xs:element name="Superficie" type="SUB-Superficie" />
 					</xs:sequence>
 					<xs:attribute fixed="e.2" name="id" type="xs:string" use="required" />

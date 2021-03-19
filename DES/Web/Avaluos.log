@@ -132,4 +132,24 @@ Exception rethrown at [0]:
    en ServiceAvaluos.AvaluosClient.RegistrarAvaluo(Byte[] xmlBytes, String idPersona) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.6itforl_.0.cs:línea 50001
    en SubirAvaluo.RealizarRegistroAvaluo(Byte[] documentoXML) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 1252
    en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 1012
+
+18/03/2021 08:51:19 p. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+El canal de solicitud agotó el tiempo de espera mientras esperaba una respuesta después de 00:00:59.9990368. Aumente el valor de tiempo de espera pasado a la llamada a Request, o bien aumente el valor de SendTimeout en el enlace. El tiempo asignado a esta operación puede haber sido una parte de un tiempo de espera mayor.
+
+Server stack trace: 
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en ServiceAvaluos.IAvaluos.EsValidoAvaluo(EsValidoAvaluoRequest request)
+   en ServiceAvaluos.AvaluosClient.ServiceAvaluos.IAvaluos.EsValidoAvaluo(EsValidoAvaluoRequest request) en c:\Users\EdgarAntunezMartinez\AppData\Local\Temp\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.qxaxhqba.0.cs:línea 49825
+   en ServiceAvaluos.AvaluosClient.EsValidoAvaluo(Byte[] xmlAvaluoByte, Int32 idPersona, Boolean esPerito) en c:\Users\EdgarAntunezMartinez\AppData\Local\Temp\Temporary ASP.NET Files\root\d6f9f748\41f363b0\App_WebReferences.qxaxhqba.0.cs:línea 49833
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 301
 
