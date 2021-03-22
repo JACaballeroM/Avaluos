@@ -2354,13 +2354,13 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     //queryn = XmlUtils.XmlSearchById(cursor, "e.2.5.n.7");
                     //if (queryn.IsFull())
                     //    construccionesRow.EDAD = XmlUtils.ToDecimalXElementAv(queryn);
-                    if (!esComercial)
-                    {
+                    //if (!esComercial)
+                    //{
                         queryn = XmlUtils.XmlSearchById(cursor, "e.2.5.n.7");
                         if (queryn.IsFull())
                             construccionesRow.EDAD = XmlUtils.ToDecimalXElementAv(queryn);
-                    }
-                    else { construccionesRow.EDAD = 1M; }
+                    //}
+                    //else { construccionesRow.EDAD = 1M; }
 
 
                     queryn = XmlUtils.XmlSearchById(cursor, "e.2.5.n.8");

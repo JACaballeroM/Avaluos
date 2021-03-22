@@ -2441,13 +2441,13 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                         row.IDCLASESEJERCICIO = (Decimal)num;
                     }
 
-                    if (!esComercial)
-                    {
+                    //if (!esComercial)
+                    //{
                         IEnumerable<XElement> xelements8 = XmlUtils.XmlSearchById(root, "e.2.1.n.7");
                         if (xelements8.IsFull())
                             row.EDAD = xelements8.ToDecimalXElement();
-                    }
-                    else { row.EDAD = 0M; }
+                    //}
+                    //else { row.EDAD = 0M; }
 
                     if (XmlUtils.XmlSearchById(root, "e.2.1.n.8").IsFull())
                     {
@@ -2552,13 +2552,13 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     //if (xelements8.IsFull())
                     //    row.EDAD = xelements8.ToDecimalXElement();
 
-                    if (!esComercial)
-                    {
-                        IEnumerable<XElement> xelements8 = XmlUtils.XmlSearchById(root, "e.2.1.n.7");
+                    //if (!esComercial)
+                    //{
+                        IEnumerable<XElement> xelements8 = XmlUtils.XmlSearchById(root, "e.2.5.n.7");
                         if (xelements8.IsFull())
                             row.EDAD = xelements8.ToDecimalXElement();
-                    }
-                    else { row.EDAD = 0M; }
+                    //}
+                    //else { row.EDAD = 0M; }
 
                     if (XmlUtils.XmlSearchById(root, "e.2.5.n.8").IsFull())
                     {
@@ -4282,8 +4282,8 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                         }
 
                         
-                        if (!esComercial) //flag2 Es Comercial, e.2.1.n.7 se elimina de Comercial
-                        {
+                        //if (!esComercial) //flag2 Es Comercial, e.2.1.n.7 se elimina de Comercial
+                        //{
                             IEnumerable<XElement> xelements = XmlUtils.XmlSearchById(xelement, "e.2.1.n.7");
                             if (!xelements.IsFull())
                             {
@@ -4299,7 +4299,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                                 stringBuilder.AppendLine(str);
                             }
 
-                        }
+                        //}
                         
 
                         if (!XmlUtils.XmlSearchById(xelement, "e.2.1.n.8").IsFull() && !esComercial && stringXelement != "W")
@@ -4447,12 +4447,29 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                         }
 
                         //JACM Se da de baja el campo 2021-02-15
-                        /*if (!XmlUtils.XmlSearchById(rootN, "e.2.5.n.7").IsFull() && !flag2)
+                        /*if (!XmlUtils.XmlSearchById(rootN, "e.2.5.n.7").IsFull()) //&& !flag2)
                         {
                             flag1 = false;
                             string str = stringXelement == "W" ? "e.2.5.n.7 Campo obligatorio para el uso baldio" : "e.2.5.n.7 Campo obligatorio";
                             stringBuilder.AppendLine(str);
                         }*/
+
+                        IEnumerable<XElement> xelements = XmlUtils.XmlSearchById(xelement, "e.2.5.n.7");
+                        if (!xelements.IsFull())
+                        {
+                            flag1 = false;
+                            string str = //stringXelement == "W" ? "e.2.5.n.7 Campo obligatorio para el uso baldio" : 
+                            "e.2.1.n.7 Campo obligatorio";
+                            stringBuilder.AppendLine(str);
+                        }
+                        else if (xelements.Count<XElement>() != 0 && !XmlUtils.EsDecimalXmlValido(xelements))
+                        {
+                            flag1 = false;
+                            string str = "e.2.1.n.7 El dato no es correcto, se requiere asignar un valor.";
+                            stringBuilder.AppendLine(str);
+                        }
+
+
                         if (!XmlUtils.XmlSearchById(rootN, "e.2.5.n.8").IsFull() && !esComercial && stringXelement != "W")
                         {
                             flag1 = false;
@@ -8272,11 +8289,11 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     foreach (XElement root2 in xelements6)
                     {
                         //Revisar si hay que poner un valor 0
-                        if (!esComercial) { 
+                        //if (!esComercial) { 
                             IEnumerable<XElement> xelements3 = XmlUtils.XmlSearchById(root2, "e.2.1.n.7");
                             if (xelements3.IsFull())
                                 source.Add(xelements3.ToDecimalXElement());
-                        }
+                       //}
                     }
                     if (source.Count <= 0)
                         throw new Exception("No fue posible obtener la edad del avalúo.");
@@ -10171,15 +10188,16 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                         int num = FiscalUtils.SolicitarObtenerIdClasesByCodeAndAno(dateTime, codClase);
                         row.CODCLASESCONSTRUCCION = (Decimal)num;
                     }
-                    if(!esComercial)
-                    { IEnumerable<XElement> xelements11 = XmlUtils.XmlSearchById(root, "e.2.1.n.7");
+                    //if(!esComercial)
+                    //{ 
+                    IEnumerable<XElement> xelements11 = XmlUtils.XmlSearchById(root, "e.2.1.n.7");
                         if (xelements11.IsFull())
                             row.EDAD = XmlUtils.ToDecimalXElementAv(xelements11);
-                    }
-                    else
-                    {
-                        row.EDAD = 0M;
-                    }
+                    //}
+                    //else
+                    //{
+                    //    row.EDAD = 0M;
+                    //}
                     if (XmlUtils.XmlSearchById(root, "e.2.1.n.8").IsFull())
                     {
                         int idUsoEjercicio = FiscalUtils.SolicitarObtenerIdUsosByCodeAndAno(dateTime.Date, codUso);
@@ -10308,13 +10326,13 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     //if (xelements11.IsFull())
                     //    row.EDAD = XmlUtils.ToDecimalXElementAv(xelements11);
 
-                    if (!esComercial)
-                    {
-                        IEnumerable<XElement> xelements11 = XmlUtils.XmlSearchById(root, "e.2.1.n.7");
+                    //if (!esComercial)
+                    //{
+                        IEnumerable<XElement> xelements11 = XmlUtils.XmlSearchById(root, "e.2.5.n.7");
                         if (xelements11.IsFull())
                             row.EDAD = xelements11.ToDecimalXElement();
-                    }
-                    else { row.EDAD = 0M; }
+                    //}
+                    //else { row.EDAD = 0M; }
 
                     if (XmlUtils.XmlSearchById(root, "e.2.5.n.8").IsFull())
                     {
