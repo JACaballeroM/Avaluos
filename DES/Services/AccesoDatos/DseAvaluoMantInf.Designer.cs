@@ -1713,7 +1713,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos {
             
             private global::System.Data.DataColumn columnREGIMEN;
             
-            private global::System.Data.DataColumn columnTIPOCODOMINIO;
+            private global::System.Data.DataColumn columnTIPOCONDOMINIO;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -2974,9 +2974,9 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TIPOCODOMINIOColumn {
+            public global::System.Data.DataColumn TIPOCONDOMINIOColumn {
                 get {
-                    return this.columnTIPOCODOMINIO;
+                    return this.columnTIPOCONDOMINIO;
                 }
             }
             
@@ -3170,7 +3170,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos {
                         string IEYALUMBRADO, 
                         string MANZANA_CC, 
                         decimal REGIMEN, 
-                        decimal TIPOCODOMINIO) {
+                        string TIPOCONDOMINIO) {
                 FEXAVA_AVALUORow rowFEXAVA_AVALUORow = ((FEXAVA_AVALUORow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         CONSIDERACIONESPREVIAS,
@@ -3326,7 +3326,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos {
                         IEYALUMBRADO,
                         MANZANA_CC,
                         REGIMEN,
-                        TIPOCODOMINIO};
+                        TIPOCONDOMINIO};
                 rowFEXAVA_AVALUORow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFEXAVA_AVALUORow);
                 return rowFEXAVA_AVALUORow;
@@ -3502,7 +3502,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos {
                 this.columnIEYALUMBRADO = base.Columns["IEYALUMBRADO"];
                 this.columnMANZANA_CC = base.Columns["MANZANA_CC"];
                 this.columnREGIMEN = base.Columns["REGIMEN"];
-                this.columnTIPOCODOMINIO = base.Columns["TIPOCODOMINIO"];
+                this.columnTIPOCONDOMINIO = base.Columns["TIPOCONDOMINIO"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3814,8 +3814,8 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos {
                 base.Columns.Add(this.columnMANZANA_CC);
                 this.columnREGIMEN = new global::System.Data.DataColumn("REGIMEN", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnREGIMEN);
-                this.columnTIPOCODOMINIO = new global::System.Data.DataColumn("TIPOCODOMINIO", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTIPOCODOMINIO);
+                this.columnTIPOCONDOMINIO = new global::System.Data.DataColumn("TIPOCONDOMINIO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIPOCONDOMINIO);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIDAVALUO}, false));
                 this.columnPROPOSITO.AllowDBNull = false;
@@ -15315,17 +15315,17 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string TIPOCODOMINIO {
+            public string TIPOCONDOMINIO {
                 get {
                     try {
-                        return ((string)(this[this.tableFEXAVA_AVALUO.TIPOCODOMINIOColumn]));
+                        return ((string)(this[this.tableFEXAVA_AVALUO.TIPOCONDOMINIOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TIPOCODOMINIO\' in table \'FEXAVA_AVALUO\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TIPOCONDOMINIO\' in table \'FEXAVA_AVALUO\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableFEXAVA_AVALUO.TIPOCODOMINIOColumn] = value;
+                    this[this.tableFEXAVA_AVALUO.TIPOCONDOMINIOColumn] = value;
                 }
             }
             
@@ -16519,14 +16519,14 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTIPOCODOMINIONull() {
-                return this.IsNull(this.tableFEXAVA_AVALUO.TIPOCODOMINIOColumn);
+            public bool IsTIPOCONDOMINIONull() {
+                return this.IsNull(this.tableFEXAVA_AVALUO.TIPOCONDOMINIOColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTIPOCODOMINIONull() {
-                this[this.tableFEXAVA_AVALUO.TIPOCODOMINIOColumn] = global::System.Convert.DBNull;
+            public void SetTIPOCONDOMINIONull() {
+                this[this.tableFEXAVA_AVALUO.TIPOCONDOMINIOColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

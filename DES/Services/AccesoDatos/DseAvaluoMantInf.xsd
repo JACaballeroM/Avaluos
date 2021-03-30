@@ -302,7 +302,7 @@
               <xs:element name="IEYALUMBRADO" msprop:Generator_ColumnVarNameInTable="columnIEYALUMBRADO" msprop:Generator_ColumnPropNameInRow="IEYALUMBRADO" msprop:Generator_ColumnPropNameInTable="IEYALUMBRADOColumn" msprop:Generator_UserColumnName="IEYALUMBRADO" type="xs:string" minOccurs="0" />
               <xs:element name="MANZANA_CC" msprop:Generator_ColumnVarNameInTable="columnMANZANA_CC" msprop:Generator_ColumnPropNameInRow="MANZANA_CC" msprop:Generator_ColumnPropNameInTable="MANZANA_CCColumn" msprop:Generator_UserColumnName="MANZANA_CC" type="xs:string" minOccurs="0" />
               <xs:element name="REGIMEN" msprop:Generator_ColumnVarNameInTable="columnREGIMEN" msprop:Generator_ColumnPropNameInRow="REGIMEN" msprop:Generator_ColumnPropNameInTable="REGIMENColumn" msprop:Generator_UserColumnName="REGIMEN" type="xs:decimal" minOccurs="0" />
-              <xs:element name="TIPOCODOMINIO" msprop:Generator_ColumnVarNameInTable="columnTIPOCODOMINIO" msprop:Generator_ColumnPropNameInRow="TIPOCODOMINIO" msprop:Generator_ColumnPropNameInTable="TIPOCODOMINIOColumn" msprop:Generator_UserColumnName="TIPOCODOMINIO" type="xs:string" minOccurs="0" />
+              <xs:element name="TIPOCONDOMINIO" msprop:Generator_ColumnVarNameInTable="columnTIPOCONDOMINIO" msprop:Generator_ColumnPropNameInRow="TIPOCONDOMINIO" msprop:Generator_ColumnPropNameInTable="TIPOCONDOMINIOColumn" msprop:Generator_UserColumnName="TIPOCONDOMINIO" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

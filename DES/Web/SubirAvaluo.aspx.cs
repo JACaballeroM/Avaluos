@@ -1680,7 +1680,7 @@ public partial class SubirAvaluo : PageBaseAvaluos
             data["numeroUnico"] = numeroUnico;
 
             string xml64 = Convert.ToBase64String(xml);
-            string url = "http://ovica.linesolutions.tech/avaluosNew_backend/public/WsSolucionIdeas/wsRecibeAvaluo";
+            string url = "https://ovica-servicios.finanzas.cdmx.gob.mx/avaluosNew_backend/public/WsSolucionIdeas/wsRecibeAvaluo";
             var response = wb.UploadValues(url, "POST", data);
             string responseInString = Encoding.UTF8.GetString(response);   
 

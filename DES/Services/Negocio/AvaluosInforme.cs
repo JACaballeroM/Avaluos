@@ -550,7 +550,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                 {
                     dseAvaluo.FEXAVA_AVALUO[0].CODREGIMENPROPIEDAD = XmlUtils.ToDecimalXElementAv(query);
                     dseAvaluo.FEXAVA_AVALUO[0].REGIMEN = 0;
-                    dseAvaluo.FEXAVA_AVALUO[0].TIPOCODOMINIO = "0";
+                    dseAvaluo.FEXAVA_AVALUO[0].TIPOCONDOMINIO = "0";
                 }
                 /*query = XmlUtils.XmlSearchById(antecedentes, "b.6.1");
                 if (query.IsFull())
