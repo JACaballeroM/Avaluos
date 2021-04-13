@@ -998,10 +998,17 @@ public static class ValidarCamposCalculados
     {
         try
         {
+            log("ValidarCampoCalculado_i_6", "Valores: "+d_13.ToString() +", "+ 
+                e_2_3.ToString() + ", " + 
+                e_2_8.ToString() + ", " + 
+                f_12.ToString() + ", " + 
+                f_14.ToString() + ", ", 
+                "Resultado: "+(d_13 + e_2_3 + e_2_8 + f_12 + f_14).ToRound2().ToString());
             return valorCalculado.ToRound2() == (d_13 + e_2_3 + e_2_8 + f_12 + f_14).ToRound2();
         }
         catch (Exception ex)
         {
+            log("ValidarCampoCalculado_i_6", ex.Message, ex.StackTrace);
             return false;
         }
     }

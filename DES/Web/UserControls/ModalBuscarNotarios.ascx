@@ -138,7 +138,7 @@
         EnablePaging="True" MaximumRowsParameterName="pageSize" 
         SelectCountMethod="NumTotalFilasNotarios" 
         SelectMethod="ObtenerNotariosPorBusqueda" SortParameterName="SortExpression" 
-        StartRowIndexParameterName="indice" TypeName="DseNotariosConsultaPagger">
+        StartRowIndexParameterName="indice" TypeName="DseNotariosConsultaPagger" OldValuesParameterFormatString="original_{0}">
         <SelectParameters>
             <asp:ControlParameter ControlID="txtIdNotario" Name="numero" 
                 PropertyName="Text" Type="Decimal" />
@@ -169,7 +169,7 @@
         GridLines="Horizontal" 
         onselectedindexchanged="gridViewPersonas_SelectedIndexChanged" 
         AllowSorting="True" onpageindexchanging="gridViewPersonas_PageIndexChanging" 
-        onsorting="gridViewPersonas_Sorting" >
+        onsorting="gridViewPersonas_Sorting" DataSourceID="odsPorBusquedaNotario" EnableModelValidation="True" >
         <Columns>
             <asp:BoundField DataField="NUMERO" HeaderText="Nº" SortExpression="NUMERO">
                 <ItemStyle Width="50px" />

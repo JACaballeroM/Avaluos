@@ -4277,7 +4277,15 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                 stringBuilder.AppendLine(ex.Detail.Descripcion);
             }
             if (!xmlValidator.IsValid || !flag2 || (!flag1 || !flag3) || !flag4)
+            {
+                log("ValidarEsquema", "Valores: "+xmlValidator.IsValid.ToString()+
+                    "\n\r | ValidarDelegacionesColonias flag1: " + flag1.ToString() +
+                    "\n\r | ValidarValorReferido        flag2: " + flag2.ToString() +
+                    "\n\r | ValidarTipoPersona          flag3: " + flag3.ToString() +
+                    "\n\r | ValidarUsoBaldio            flag4: " + flag4.ToString() 
+                    , stringBuilder.ToString());
                 throw new FaultException<AvaluosInfoException>(new AvaluosInfoException(stringBuilder.ToString()));
+            }
         }
 
         private void ValidarUsoBaldio(XElement data)
@@ -8889,6 +8897,8 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
         {
             try
             {
+                dseAvaluo.FEXAVA_DATOSPERSONAS.IDCOLONIAColumn.AllowDBNull=true;
+                dseAvaluo.FEXAVA_DATOSPERSONAS.IDDELEGACIONColumn.AllowDBNull = true;
                 DseAvaluoMantInf.FEXAVA_DATOSPERSONASRow row1 = dseAvaluo.FEXAVA_DATOSPERSONAS.NewFEXAVA_DATOSPERSONASRow();
                 DseAvaluoMantInf.FEXAVA_DATOSPERSONASRow row2 = dseAvaluo.FEXAVA_DATOSPERSONAS.NewFEXAVA_DATOSPERSONASRow();
                 row1.FEXAVA_AVALUORow = dseAvaluo.FEXAVA_AVALUO[0];
@@ -8933,7 +8943,15 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                                 log("GuardarAvaluoAntecedentesReporte","b191", 
                                      "ClaveAlcaldia: "+xelements8.ToStringXElement()
                                     +" | colonia(b17): "+xelements9.ToStringXElement());
-                                row1.IDCOLONIA = CatastralUtils.ObtenerIdColoniaPorNombreyDelegacion(xelements9.ToStringXElement(), stringXelement);
+                                log("GuardarAvaluoAntecedentesReporte", "IDCOLONIA 1",
+                                     "ClaveAlcaldia: " + xelements8.ToStringXElement()
+                                    + " | colonia(b17): " + xelements9.ToStringXElement()
+                                    + " | stringXelement: " + stringXelement
+                                    //+ " | IDCOLONIA : "+ 
+                                    //CatastralUtils.ObtenerIdColoniaPorNombreyDelegacion(xelements9.ToStringXElement(), stringXelement)
+                                    );
+                                row1.IDCOLONIA = -1M;
+                                    //CatastralUtils.ObtenerIdColoniaPorNombreyDelegacion(xelements9.ToStringXElement(), stringXelement);
                                 row1["DescColonia"] = (object)xelements9.ToStringXElement();
                             }
                         }
@@ -9016,7 +9034,15 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                             IEnumerable<XElement> xelements9 = XmlUtils.XmlSearchById(antecedentes, "b.2.7");
                             if (xelements9.IsFull())
                             {
-                                row2.IDCOLONIA = CatastralUtils.ObtenerIdColoniaPorNombreyDelegacion(xelements9.ToStringXElement(), stringXelement);
+                                log("GuardarAvaluoAntecedentesReporte", "IDCOLONIA 2",
+                                     "ClaveAlcaldia: " + xelements8.ToStringXElement()
+                                    + " | colonia(b27): " + xelements9.ToStringXElement()
+                                    + " | stringXelement: " + stringXelement
+                                    //+ " | IDCOLONIA : " + 
+                                    //CatastralUtils.ObtenerIdColoniaPorNombreyDelegacion(xelements9.ToStringXElement(), stringXelement)
+                                    );
+                                row2.IDCOLONIA = -1M;
+                                    //CatastralUtils.ObtenerIdColoniaPorNombreyDelegacion(xelements9.ToStringXElement(), stringXelement);
                                 row2["DescColonia"] = (object)xelements9.ToStringXElement();
                             }
                         }
@@ -9027,7 +9053,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                             IEnumerable<XElement> municipio = XmlUtils.XmlSearchById(antecedentes, "b.2.9.2");
                             if (municipio.IsFull())
                             {
-                                row1["DescDeleg"] = (object)municipio.ToStringXElement();
+                                row2["DescDeleg"] = (object)municipio.ToStringXElement();
                             }
                             //Se guaraa como Colonia lo que tenga el XML 
                             IEnumerable<XElement> colonia = XmlUtils.XmlSearchById(antecedentes, "b.2.7");
@@ -9045,6 +9071,11 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                         IEnumerable<XElement> xelements9 = XmlUtils.XmlSearchById(antecedentes, "b.2.7");
                         if (xelements9.IsFull())
                         {
+                            log("GuardarAvaluoAntecedentesReporte", "IDCOLONIA 2 Exception",
+                                     "ClaveAlcaldia: " + xelements8.ToStringXElement()
+                                    + " | colonia(b27): " + xelements9.ToStringXElement()
+                                    + " | stringXelement: " + stringXelement
+                                    + " | IDCOLONIA : " + CatastralUtils.ObtenerIdColoniaPorNombreyDelegacion(xelements9.ToStringXElement(), stringXelement));
                             row2.IDCOLONIA = CatastralUtils.ObtenerIdColoniaPorNombreyDelegacion(xelements9.ToStringXElement(), stringXelement);
                             row2["DescColonia"] = (object)xelements9.ToStringXElement();
                         }
@@ -9217,6 +9248,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
             }
             catch (Exception ex)
             {
+                log("GuardarAvaluoAntecedentesReporte", ex.Message, ex.StackTrace);
                 ExceptionPolicyWrapper.HandleException(ex);
                 throw ex;
             }
