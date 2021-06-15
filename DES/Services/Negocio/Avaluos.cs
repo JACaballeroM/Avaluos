@@ -694,9 +694,21 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                 object C_AVALUOS = (object)null;
                 DseAvaluoConsulta dseAvaluoConsulta = new DseAvaluoConsulta();
                 rowsTotal = 0;
+                log("ObtenerAvaluosPorFechaNotario", "idNotario:",idNotario.ToString());
+                /*log("ObtenerAvaluosPorFechaNotario", 
+                    "fechaInicio:"+ fechaInicio.ToString() + ","+
+                    "fechaFin:" + fechaFin.ToString() + "," +
+                    "registro:" + registro.ToString() + "," +
+                    "vigente:" + vigente.ToString() + "," +
+                    "numValuo:" + numValuo.ToString() + "," +
+                    "idAvaluo:" + idAvaluo.ToString() 
+                    ,"");*/
                 this.Avaluo_vTA.FillByFecha_Notario(dseAvaluoConsulta.FEXAVA_AVALUO_V, fechaInicio, fechaFin, new Decimal?((Decimal)idNotario), registro, vigente, numValuo, idAvaluo, new Decimal?((Decimal)pageSize), new Decimal?((Decimal)indice), sortExpression, out C_AVALUOS);
                 if (dseAvaluoConsulta.FEXAVA_AVALUO_V.Any<DseAvaluoConsulta.FEXAVA_AVALUO_VRow>())
+                {
                     rowsTotal = Convert.ToInt32(dseAvaluoConsulta.FEXAVA_AVALUO_V[0].ROWS_TOTAL);
+                    log("ObtenerAvaluosPorFechaNotario", "rowsTotal:", rowsTotal.ToString());
+                }
                 return dseAvaluoConsulta;
             }
             catch (Exception ex)
@@ -2604,9 +2616,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                             row.EDAD = xelements8.ToDecimalXElement();
                     //}
                     //else { row.EDAD = 0M; }
-
-                    if (XmlUtils.XmlSearchById(root, "e.2.5.n.8").IsFull())
-                    {
+                    if (esComercial) {
                         int idUsoEjercicio = row.IDUSOSEJERCICIO.ToInt();
                         int idClaseEjercicio = row.IDCLASESEJERCICIO.ToInt();
                         if (codClase != "U")
@@ -2614,6 +2624,20 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                             DseAvaluosCatConsulta.FEXAVA_CATCLASEUSODataTable source = this.ObtenerClaseUsoByIdUsoIdClase(idUsoEjercicio, idClaseEjercicio);
                             if (source.Any<DseAvaluosCatConsulta.FEXAVA_CATCLASEUSORow>())
                                 row.IDUSOCLASEEJERCICIO = source[0].IDUSOCLASEEJERCICIO;
+                        }
+                    }
+                    else
+                    {
+                        if (XmlUtils.XmlSearchById(root, "e.2.5.n.8").IsFull())
+                        {
+                            int idUsoEjercicio = row.IDUSOSEJERCICIO.ToInt();
+                            int idClaseEjercicio = row.IDCLASESEJERCICIO.ToInt();
+                            if (codClase != "U")
+                            {
+                                DseAvaluosCatConsulta.FEXAVA_CATCLASEUSODataTable source = this.ObtenerClaseUsoByIdUsoIdClase(idUsoEjercicio, idClaseEjercicio);
+                                if (source.Any<DseAvaluosCatConsulta.FEXAVA_CATCLASEUSORow>())
+                                    row.IDUSOCLASEEJERCICIO = source[0].IDUSOCLASEEJERCICIO;
+                            }
                         }
                     }
                     if (esComercial)
@@ -6140,7 +6164,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     else if (!decimalXelement.Equals(0M))
                         stringBuilder.AppendLine("e.2.8 - Valor total de las construcciones por INDIVISO." + str);
                 }
-                foreach (XElement root2 in XmlUtils.XmlSearchById(root1, "f.9.1"))
+                /*foreach (XElement root2 in XmlUtils.XmlSearchById(root1, "f.9.1"))
                 {
                     string stringXelement = XmlUtils.XmlSearchById(root2, "f.9.1.n.1").ToStringXElement();
                     if (XmlUtils.XmlSearchById(root2, "f.9.1.n.5").IsFull() && XmlUtils.XmlSearchById(root2, "f.9.1.n.6").IsFull())
@@ -6163,11 +6187,12 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                                 stringBuilder.AppendLine("f.9.1.n.8 -  Factor de edad instalación especial PRIVATIVAS" + str + " En la instalación con clave " + stringXelement);
                         }
                     }
-                }
+                }*/
                 foreach (XElement root2 in XmlUtils.XmlSearchById(root1, "f.9.1"))
                 {
                     string stringXelement = XmlUtils.XmlSearchById(root2, "f.9.1.n.1").ToStringXElement();
-                    if (XmlUtils.XmlSearchById(root2, "f.9.1.n.4").IsFull() && XmlUtils.XmlSearchById(root2, "f.9.1.n.7").IsFull() && XmlUtils.XmlSearchById(root2, "f.9.1.n.8").IsFull())
+                    if (XmlUtils.XmlSearchById(root2, "f.9.1.n.4").IsFull() && XmlUtils.XmlSearchById(root2, "f.9.1.n.7").IsFull() && 
+                        XmlUtils.XmlSearchById(root2, "f.9.1.n.8").IsFull())
                     {
                         IEnumerable<XElement> xelements3 = XmlUtils.XmlSearchById(root2, "f.9.1.n.9");
                         if (xelements3.IsFull() && XmlUtils.EsDecimalXmlValido(xelements3))
@@ -6177,7 +6202,9 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                             listElement.Add(XmlUtils.XmlSearchById(root2, "f.9.1.n.4"));
                             listElement.Add(XmlUtils.XmlSearchById(root2, "f.9.1.n.7"));
                             listElement.Add(XmlUtils.XmlSearchById(root2, "f.9.1.n.8"));
-                            bool flag3 = XmlUtils.EsDecimalXmlValido(XmlUtils.XmlSearchById(root2, "f.9.1.n.4")) && XmlUtils.EsDecimalXmlValido(XmlUtils.XmlSearchById(root2, "f.9.1.n.7")) && XmlUtils.EsDecimalXmlValido(XmlUtils.XmlSearchById(root2, "f.9.1.n.8"));
+                            bool flag3 = XmlUtils.EsDecimalXmlValido(XmlUtils.XmlSearchById(root2, "f.9.1.n.4")) && 
+                                XmlUtils.EsDecimalXmlValido(XmlUtils.XmlSearchById(root2, "f.9.1.n.7")) && 
+                                XmlUtils.EsDecimalXmlValido(XmlUtils.XmlSearchById(root2, "f.9.1.n.8"));
                             if (!XmlUtils.IsListEmpty(listElement) && flag3)
                             {
                                 List<Decimal> listDecimal = XmlUtils.ConvetListElementToListDecimal(listElement);
@@ -6234,7 +6261,9 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                         }
                     }
                 }
-                foreach (XElement root2 in XmlUtils.XmlSearchById(root1, "f.10.1"))
+
+                //JACM Se da de baja el cálculo 2021-04-15
+                /*foreach (XElement root2 in XmlUtils.XmlSearchById(root1, "f.10.1"))
                 {
                     string stringXelement = XmlUtils.XmlSearchById(root2, "f.10.1.n.1").ToStringXElement();
                     if (XmlUtils.XmlSearchById(root2, "f.10.1.n.5").IsFull() && XmlUtils.XmlSearchById(root2, "f.10.1.n.6").IsFull())
@@ -6257,7 +6286,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                                 stringBuilder.AppendLine("f.10.1.n.8 - Factor de edad elemento accesorio PRIVATIVAS." + str + " En la elemento con clave " + stringXelement);
                         }
                     }
-                }
+                }*/
                 /*foreach (XElement root2 in XmlUtils.XmlSearchById(root1, "f.10.2"))
                 {
                     string stringXelement = XmlUtils.XmlSearchById(root2, "f.10.2.n.1").ToStringXElement();
@@ -7499,13 +7528,18 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                             }
                             if (!this.ExisteClaseUsoEjercicio(idClaseEjercicio, idUsoEjercicio))
                                 stringBuilder.AppendLine("No existe relación entre clase(e.2.5.n.6) " + codClase + " y  uso(e.2.5.n.2) " + codUso + " para la fecha " + str);
-                            IEnumerable<XElement> xelements7 = XmlUtils.XmlSearchById(xelement, "e.2.5.n.8");
-                            if (xelements7.IsFull() && codUso != "W")
+
+                            if (!esComercial)
                             {
-                                Decimal decimalXelementAv = XmlUtils.ToDecimalXElementAv(xelements7);
-                                if (!this.ValidarCatUsoClase(codUso, codClase, decimalXelementAv, dateTime))
-                                    stringBuilder.AppendLine("e.2.5.n.8 - La vida útil especificada no es correcta para la clase y el uso especificados: Clase " + codClase + ", Uso " + codUso);
+                                IEnumerable<XElement> xelements7 = XmlUtils.XmlSearchById(xelement, "e.2.5.n.8");
+                                if (xelements7.IsFull() && codUso != "W")
+                                {
+                                    Decimal decimalXelementAv = XmlUtils.ToDecimalXElementAv(xelements7);
+                                    if (!this.ValidarCatUsoClase(codUso, codClase, decimalXelementAv, dateTime))
+                                        stringBuilder.AppendLine("e.2.5.n.8 - La vida útil especificada no es correcta para la clase y el uso especificados: Clase " + codClase + ", Uso " + codUso);
+                                }
                             }
+
                             IEnumerable<XElement> xelements8 = XmlUtils.XmlSearchById(xelement, "e.2.5.n.16");
                             if (xelements8.IsFull())
                             {
@@ -10462,8 +10496,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     //}
                     //else { row.EDAD = 0M; }
 
-                    if (XmlUtils.XmlSearchById(root, "e.2.5.n.8").IsFull())
-                    {
+                    if (esComercial) {
                         int idUsoEjercicio = FiscalUtils.SolicitarObtenerIdUsosByCodeAndAno(dateTime.Date, codUso);
                         int idClaseEjercicio = FiscalUtils.SolicitarObtenerIdClasesByCodeAndAno(dateTime.Date, codClase);
                         if (codClase != "U")
@@ -10471,6 +10504,20 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                             DseAvaluosCatConsulta.FEXAVA_CATCLASEUSODataTable source = this.ObtenerClaseUsoByIdUsoIdClase(idUsoEjercicio, idClaseEjercicio);
                             if (source.Any<DseAvaluosCatConsulta.FEXAVA_CATCLASEUSORow>())
                                 row.CODCLASESVIDAS = source[0].IDUSOCLASEEJERCICIO;
+                        }
+                    }
+                    else
+                    {
+                        if (XmlUtils.XmlSearchById(root, "e.2.5.n.8").IsFull())
+                        {
+                            int idUsoEjercicio = FiscalUtils.SolicitarObtenerIdUsosByCodeAndAno(dateTime.Date, codUso);
+                            int idClaseEjercicio = FiscalUtils.SolicitarObtenerIdClasesByCodeAndAno(dateTime.Date, codClase);
+                            if (codClase != "U")
+                            {
+                                DseAvaluosCatConsulta.FEXAVA_CATCLASEUSODataTable source = this.ObtenerClaseUsoByIdUsoIdClase(idUsoEjercicio, idClaseEjercicio);
+                                if (source.Any<DseAvaluosCatConsulta.FEXAVA_CATCLASEUSORow>())
+                                    row.CODCLASESVIDAS = source[0].IDUSOCLASEEJERCICIO;
+                            }
                         }
                     }
                     if (esComercial)

@@ -2356,16 +2356,13 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                     //    construccionesRow.EDAD = XmlUtils.ToDecimalXElementAv(queryn);
                     //if (!esComercial)
                     //{
-                        queryn = XmlUtils.XmlSearchById(cursor, "e.2.5.n.7");
-                        if (queryn.IsFull())
-                            construccionesRow.EDAD = XmlUtils.ToDecimalXElementAv(queryn);
+                    queryn = XmlUtils.XmlSearchById(cursor, "e.2.5.n.7");
+                    if (queryn.IsFull())
+                        construccionesRow.EDAD = XmlUtils.ToDecimalXElementAv(queryn);
                     //}
                     //else { construccionesRow.EDAD = 1M; }
 
-
-                    queryn = XmlUtils.XmlSearchById(cursor, "e.2.5.n.8");
-                    if (queryn.IsFull())
-                    {
+                    if (esComercial) {
                         int idUsoEjercicio = FiscalUtils.SolicitarObtenerIdUsosByCodeAndAno(fechaAvaluo.Date, codUso);
                         int idClaseEjercicio = FiscalUtils.SolicitarObtenerIdClasesByCodeAndAno(fechaAvaluo.Date, codClase);
                         if (codClase != "U")// •	En el caso de clase única (U), no se debe validar el campo e.2.1.n.8 - Vida útil total del tipo y por tanto no existe la relación clase uso en la tabla fexava_claseuso
@@ -2377,7 +2374,23 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                             }
                         }
                     }
-
+                    else
+                    {
+                        queryn = XmlUtils.XmlSearchById(cursor, "e.2.5.n.8");
+                        if (queryn.IsFull())
+                        {
+                            int idUsoEjercicio = FiscalUtils.SolicitarObtenerIdUsosByCodeAndAno(fechaAvaluo.Date, codUso);
+                            int idClaseEjercicio = FiscalUtils.SolicitarObtenerIdClasesByCodeAndAno(fechaAvaluo.Date, codClase);
+                            if (codClase != "U")// •	En el caso de clase única (U), no se debe validar el campo e.2.1.n.8 - Vida útil total del tipo y por tanto no existe la relación clase uso en la tabla fexava_claseuso
+                            {
+                                DseAvaluosCatConsulta.FEXAVA_CATCLASEUSODataTable dt = ObtenerClaseUsoByIdUsoIdClase(idUsoEjercicio, idClaseEjercicio);
+                                if (dt.Any())
+                                {
+                                    construccionesRow.CODCLASESVIDAS = dt[0].IDUSOCLASEEJERCICIO;
+                                }
+                            }
+                        }
+                    }
                     queryn = XmlUtils.XmlSearchById(cursor, "e.2.5.n.9");
                     if (queryn.IsFull())
                         construccionesRow.VIDAUTILREMANENTE = XmlUtils.ToDecimalXElementAv(queryn);

@@ -4527,7 +4527,8 @@
 									<xs:element name="PuntajeDeClasificacion" type="SUB-PuntajeDeClasificacion"/>
 									<xs:element name="ClaveClase" type="SUB-ClaveClase" />
 									<xs:element name="Edad" type="SUB-Edad"/>
-									<xs:element name="VidaUtilTotalDelTipo" type ="SUB-VidaUtilTipo"/>
+									<!--//JACM Se da de baja el campo para Comercial 2021-04-15
+									<xs:element name="VidaUtilTotalDelTipo" type ="SUB-VidaUtilTipo"/>-->
 									<xs:element name="VidaMinimaRemanente" type="SUB-VidaMinimaRemanente"/>
 									<!--//JACM Se da de baja el campo 2021-02-11
 									<xs:element name="ClaveConservacion" type="SUB-ClaveConservacion"/>-->
@@ -4553,12 +4554,13 @@
 								<xs:sequence>
 									<xs:element name="Descripcion" type="SUB-DescripcionComunes" />
 									<xs:element name="ClaveUso" type="SUB-ClaveUsoComunes" />
-									<xs:element name="NumeroDeNivelesDelTipoComunes" type="SUB-NumeroDeNivelesDelTipoComunes"/>
+									<xs:element name="NumeroDeNivelesDelTipo" type="SUB-NumeroDeNivelesDelTipoComunes"/>
 									<xs:element name="ClaveRangoDeNiveles" type="SUB-ClaveRangoDeNivelesComunes" />
 									<xs:element name="PuntajeDeClasificacion" type="SUB-PuntajeDeClasificacionComunes"/>
 									<xs:element name="ClaveClase" type="SUB-ClaveClaseComunes" />
 									<xs:element name="Edad" type="SUB-EdadComunes"/>
-									<xs:element name="VidaUtilTotalDelTipo" type ="SUB-VidaUtilTipoComunes"/>
+									<!--//JACM Se da de baja el campo para Comercial 2021-04-15
+									<xs:element name="VidaUtilTotalDelTipo" type ="SUB-VidaUtilTipoComunes"/>-->
 									<xs:element name="VidaMinimaRemanente" type="SUB-VidaMinimaRemanenteComunes"/>
 									<!--<xs:element name="ClaveConservacion" type="SUB-ClaveConservacionComunes"/>-->
 									<xs:element name="Superficie" type="SUB-SuperficieComunes"/>
@@ -4675,7 +4677,7 @@
 								<xs:sequence>
 									<xs:element name="Descripcion" type="SUB-DescripcionComunes" />
 									<xs:element name="ClaveUso" type="SUB-ClaveUsoComunes" />
-									<xs:element name="NumeroDeNivelesDelTipoComunes" type="SUB-NumeroDeNivelesDelTipoComunes"/>
+									<xs:element name="NumeroDeNivelesDelTipo" type="SUB-NumeroDeNivelesDelTipoComunes"/>
 									<xs:element name="ClaveRangoDeNiveles" type="SUB-ClaveRangoDeNivelesComunes" />
 									<xs:element name="PuntajeDeClasificacion" type="SUB-PuntajeDeClasificacionComunes"/>
 									<xs:element name="ClaveClase" type="SUB-ClaveClaseComunes" />
@@ -5736,7 +5738,7 @@
 	</xs:complexType>
 	<xs:complexType name="SUB-FactorDeEdadInstalacionEspecial">
 		<xs:simpleContent>
-			<xs:extension base="DecimalPositivo06">
+			<xs:extension base="DecimalPositivo">
 				<xs:attribute fixed="f.9.1.n.8" name="id" type="xs:string" use="required" />
 			</xs:extension>
 		</xs:simpleContent>
@@ -5750,7 +5752,7 @@
 	</xs:complexType>
 	<xs:complexType name="SUB-FactorDeEdadInstalacionEspecialComunes">
 		<xs:simpleContent>
-			<xs:extension base="DecimalPositivo06">
+			<xs:extension base="DecimalPositivo">
 				<xs:attribute fixed="f.9.2.n.8" name="id" type="xs:string" use="required" />
 			</xs:extension>
 		</xs:simpleContent>
@@ -5892,7 +5894,7 @@
 	</xs:complexType>
 	<xs:complexType  name="SUB-FactorDeEdadElementoAccesorio">
 		<xs:simpleContent>
-			<xs:extension base="DecimalPositivo06">
+			<xs:extension base="DecimalPositivo">
 				<xs:attribute fixed="f.10.1.n.8" name="id" type="xs:string" use="required" />
 			</xs:extension>
 		</xs:simpleContent>
@@ -5983,7 +5985,7 @@
 	</xs:complexType>
 	<xs:complexType name="SUB-FactorDeEdadElementoAccesorioComunes">
 		<xs:simpleContent>
-			<xs:extension base="DecimalPositivo06">
+			<xs:extension base="DecimalPositivo">
 				<xs:attribute fixed="f.10.2.n.8" name="id" type="xs:string" use="required" />
 			</xs:extension>
 		</xs:simpleContent>
@@ -6075,7 +6077,7 @@
 	</xs:complexType>
 	<xs:complexType name="SUB-FactorDeEdadObraComplementaria-Privativas" >
 		<xs:simpleContent>
-			<xs:extension base="DecimalPositivo06">
+			<xs:extension base="DecimalPositivo">
 				<xs:attribute fixed="f.11.1.n.8" name="id" type="xs:string" use="required" />
 			</xs:extension>
 		</xs:simpleContent>
@@ -6166,7 +6168,7 @@
 	</xs:complexType>
 	<xs:complexType name="SUB-FactorDeEdadObraComplementaria-Comunes">
 		<xs:simpleContent>
-			<xs:extension base="DecimalPositivo06">
+			<xs:extension base="DecimalPositivo">
 				<xs:attribute fixed="f.11.2.n.8" name="id" type="xs:string" use="required" />
 			</xs:extension>
 		</xs:simpleContent>

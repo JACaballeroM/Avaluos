@@ -280,12 +280,21 @@ public partial class SubirAvaluo : PageBaseAvaluos
                             error = ex.Message;
                             esXMLValido = false;
                         }
-
+                        XElement xmlAnio = (XElement)XDocument.Parse(xmlAvaluo.InnerXml).Root;
+                        DateTime fechaAvaluo = System.DateTime.Now;
+                        try
+                        {
+                            fechaAvaluo = DateTime.Parse(XmlSearchById(xmlAnio, "a.2").ToStringXElement());
+                        }
+                        catch (Exception ex)
+                        {
+                            error = Constantes.ERR_FECHA_AVALUO;
+                            esXMLValido = false;
+                        }
                         if (esXMLValido)
                         {
                             documentoXMLComprimido = SIGAPred.Common.Compresion.Compresion.Comprimir(documentoXML, SIGAPred.Common.Compresion.Compresion.TipoFichero.DocumentoTexto);
-                            XElement xmlAnio = (XElement)XDocument.Parse(xmlAvaluo.InnerXml).Root;
-                            DateTime fechaAvaluo = DateTime.Parse(XmlSearchById(xmlAnio, "a.2").ToStringXElement());
+                            
                             if (fechaAvaluo.Year > 2020)
                             {
                                 if (rbNormal.Checked)
@@ -1461,7 +1470,9 @@ public partial class SubirAvaluo : PageBaseAvaluos
 
                         else
                         {
-                            MostrarMensajeInformativo(string.Format("{0}: <br> {1} <br><br> Error: <br> {2}", Constantes.MSJ_XML_ERROR, "El documento introducido no es un XML o no está bien formado.", error), true);
+                            MostrarMensajeInformativo(string.Format("{0}: <br> {1} <br><br> Error: <br> {2}", 
+                                Constantes.MSJ_XML_ERROR, 
+                                "El documento introducido no es un XML o no está bien formado.", error), true);
                         }
 
                     }

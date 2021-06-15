@@ -41,7 +41,13 @@ public static class ValidarCamposCalculados
         try
         {
             //return valorCalculado.ToRound2() == Math.Max(0.6M, (d_5_n_3 * d_5_n_4 * d_5_n_5 * d_5_n_6 * d_5_n_7 * d_5_n_9).ToRound2());
-            return valorCalculado.ToRound2() ==  (d_5_n_3_2 * d_5_n_4_2 * d_5_n_5_2 * d_5_n_6_2 * d_5_n_7_2 ).ToRound2();
+            var res =(d_5_n_3_2 * d_5_n_4_2 * d_5_n_5_2 * d_5_n_6_2 * d_5_n_7_2).ToRound2();
+            if (res > 1.0M)
+                throw new Exception();
+            else if (res < 0.6M)
+                res = 0.6M;
+
+            return valorCalculado.ToRound2() ==  res;
         }
         catch (Exception ex)
         {
@@ -555,7 +561,7 @@ public static class ValidarCamposCalculados
         }
     }
 
-    public static bool ValidarCampoCalculado_f_9_1_n_8(
+   /* public static bool ValidarCampoCalculado_f_9_1_n_8(
       Decimal valorCalculado,
       Decimal f_9_1_n_5,
       Decimal f_9_1_n_6)
@@ -569,9 +575,10 @@ public static class ValidarCamposCalculados
         {
             return false;
         }
-    }
+    }*/
 
-    public static bool ValidarCampoCalculado_f_10_1_n_8(
+    //JACM Se da de baja el cálculo 2021-04-15
+    /*public static bool ValidarCampoCalculado_f_10_1_n_8(
       Decimal valorCalculado,
       Decimal f_10_1_n_5,
       Decimal f_10_1_n_6)
@@ -585,9 +592,9 @@ public static class ValidarCamposCalculados
         {
             return false;
         }
-    }
+    }*/
 
-    public static bool ValidarCampoCalculado_f_10_2_n_8(
+   /* public static bool ValidarCampoCalculado_f_10_2_n_8(
       Decimal valorCalculado,
       Decimal f_10_2_n_5,
       Decimal f_10_2_n_6)
@@ -612,7 +619,7 @@ public static class ValidarCamposCalculados
             log("ValidarCampoCalculado_f_10_2_n_8 ", ex.Message, ex.StackTrace);
             return false;
         }
-    }
+    }*/
     //JACM se da de baja la validación
     /*public static bool ValidarCampoCalculado_f_11_1_n_8(
       Decimal valorCalculado,
@@ -671,7 +678,7 @@ public static class ValidarCamposCalculados
         }
     }
 
-    public static bool ValidarCampoCalculado_f_9_2_n_8(
+    /*public static bool ValidarCampoCalculado_f_9_2_n_8(
       Decimal valorCalculado,
       Decimal f_9_2_n_5,
       Decimal f_9_2_n_6)
@@ -685,7 +692,7 @@ public static class ValidarCamposCalculados
         {
             return false;
         }
-    }
+    }*/
 
     public static bool ValidarCampoCalculado_f_9_2_N_9(
       Decimal valorCalculado,

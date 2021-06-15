@@ -165,6 +165,7 @@ C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\D
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\ServicesHost\bin\MyExtentions.dll
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\ServicesHost\bin\BouncyCastle.Crypto.dll
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.Enum.pdb
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.Enum.xml
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.Services.pdb
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.Services.xml
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.Services.dll.config

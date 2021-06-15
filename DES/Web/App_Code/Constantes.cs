@@ -186,6 +186,9 @@ public static class Constantes
     /// </summary>
     //public const string URL_DESCARGA_ACUSE_AVALUO = "~/DescargaAcuseAvaluo.aspx";
 
+    public const string ERR_FECHA_AVALUO = "Falta el elemento a.2 'FechaAvaluo'.";
+
+
     public const string URL_AVALUOS_INFORME =       "https://ovica-servicios.finanzas.cdmx.gob.mx/avaluosNew_backend/public/reimprime";
     public const string URL_DESCARGA_ACUSE_AVALUO = "https://ovica-servicios.finanzas.cdmx.gob.mx/avaluosNew_backend/public/acuse";
 

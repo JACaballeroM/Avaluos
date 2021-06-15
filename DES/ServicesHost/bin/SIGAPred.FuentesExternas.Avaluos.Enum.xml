@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SIGAPred.FuentesExternas.Avaluos.Enum</name>
+    </assembly>
+    <members>
+        <member name="T:SIGAPred.FuentesExternas.Avaluos.Services.Enum.EstadosAvaluoEnum">
+            <summary>
+            Estados Avaluo.
+            </summary>
+        </member>
+        <member name="F:SIGAPred.FuentesExternas.Avaluos.Services.Enum.EstadosAvaluoEnum.Aceptado">
+            <summary>
+            Aceptado
+            </summary>
+        </member>
+        <member name="F:SIGAPred.FuentesExternas.Avaluos.Services.Enum.EstadosAvaluoEnum.Recibido">
+            <summary>
+            Recibido
+            </summary>
+        </member>
+        <member name="F:SIGAPred.FuentesExternas.Avaluos.Services.Enum.EstadosAvaluoEnum.Cancelado">
+            <summary>
+            Cancelado
+            </summary>
+        </member>
+        <member name="F:SIGAPred.FuentesExternas.Avaluos.Services.Enum.EstadosAvaluoEnum.PendienteValidacion">
+            <summary>
+            Pendiente de Validacion
+            </summary>
+        </member>
+        <member name="F:SIGAPred.FuentesExternas.Avaluos.Services.Enum.EstadosAvaluoEnum.EnValidacion">
+            <summary>
+            En Validacion
+            </summary>
+        </member>
+        <member name="F:SIGAPred.FuentesExternas.Avaluos.Services.Enum.EstadosAvaluoEnum.Rechazado">
+            <summary>
+            Rechazado
+            </summary>
+        </member>
+        <member name="F:SIGAPred.FuentesExternas.Avaluos.Services.Enum.EstadosAvaluoEnum.EnviadoNotario">
+            <summary>
+            Enviado a Notario
+            </summary>
+        </member>
+        <member name="F:SIGAPred.FuentesExternas.Avaluos.Services.Enum.EstadosAvaluoEnum.EnviadoDictaminador">
+            <summary>
+            Enviado a Dictaminador
+            </summary>
+        </member>
+        <member name="T:SIGAPred.FuentesExternas.Avaluos.Services.Enum.TiposAvaluoEnum">
+            <summary>
+            Tipos Avaluo
+            </summary>
+        </member>
+        <member name="F:SIGAPred.FuentesExternas.Avaluos.Services.Enum.TiposAvaluoEnum.Catastral">
+            <summary>
+            Catastral
+            </summary>
+        </member>
+        <member name="F:SIGAPred.FuentesExternas.Avaluos.Services.Enum.TiposAvaluoEnum.Comercial">
+            <summary>
+            Comercial
+            </summary>
+        </member>
+    </members>
+</doc>

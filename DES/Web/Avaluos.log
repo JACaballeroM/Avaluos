@@ -158,4 +158,25 @@ Exception rethrown at [0]:
 08/04/2021 01:45:19 p. m. BandejaEntrada ActualizarUrlAcuse : URL_DESCARGA_ACUSE_AVALUO: https://ovica-servicios.finanzas.cdmx.gob.mx/avaluosNew_backend/public/acuse | 17610834 | A-COM-2021-11255 | https://ovica-servicios.finanzas.cdmx.gob.mx/avaluosNew_backend/public/acuse?no_unico=A-COM-2021-11255
 
 08/04/2021 02:12:26 p. m. BandejaEntrada ActualizarUrlAcuse : URL_DESCARGA_ACUSE_AVALUO: https://ovica-servicios.finanzas.cdmx.gob.mx/avaluosNew_backend/public/acuse | 17635979 | A-COM-2021-12083 | https://ovica-servicios.finanzas.cdmx.gob.mx/avaluosNew_backend/public/acuse?no_unico=A-COM-2021-12083
+
+16/04/2021 06:05:48 p. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+La secuencia no contiene elementos
+   en System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   en SIGAPred.Common.Extensions.XElementUtils.ToStringXElement(IEnumerable`1 elemento)
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 288
+
+16/04/2021 06:07:58 p. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+La secuencia no contiene elementos
+   en System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   en SIGAPred.Common.Extensions.XElementUtils.ToStringXElement(IEnumerable`1 elemento)
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 288
+
+16/04/2021 06:11:17 p. m. MostrarMensajeInfoExcepcion : Exception: Se presentó un error al realizar la operación: 
+
+La secuencia no contiene elementos
+   en System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   en SIGAPred.Common.Extensions.XElementUtils.ToStringXElement(IEnumerable`1 elemento)
+   en SubirAvaluo.btnGuardar_Click(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\Web\SubirAvaluo.aspx.cs:línea 288
 
