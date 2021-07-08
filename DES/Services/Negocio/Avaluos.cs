@@ -5282,8 +5282,8 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                         if (!XmlUtils.IsListEmpty(listElement))
                         {
                             List<Decimal> listDecimal = XmlUtils.ConvetListElementToListDecimal(listElement);
-                            //if (esComercial)
-                            //{
+                                //if (esComercial)
+                                //{
                                 /*if (!this.esFactorZonaValido(listDecimal[0]))
                                     stringBuilder.AppendLine("d.5.n.3.2 - Valor no permitido");
                                 if (!this.esFactorUbicacionValido(listDecimal[1]))
@@ -5293,24 +5293,30 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                                 if (!this.esFactorSuperficieValido(listDecimal[4]))
                                     stringBuilder.AppendLine("d.5.n.7.2 - Valor no permitido");*/
 
-                                if (listDecimal[0] > 1.99M)
+                                /*if (listDecimal[0] > 1.99M)
                                     stringBuilder.AppendLine("d.5.n.3.2 - Valor no permitido");
                                 if (listDecimal[1] > 1.99M)
                                     stringBuilder.AppendLine("d.5.n.4.2 - Valor no permitido");
                                 if (listDecimal[2] > 1.99M)
                                     stringBuilder.AppendLine("d.5.n.5.2 - Valor no permitido");
                                 if (listDecimal[4] > 1.99M)
-                                    stringBuilder.AppendLine("d.5.n.7.2 - Valor no permitido");
-                            //}
-                            /*if (flag3)
-                            {
-                                if (!ValidarCamposCalculados.ValidarCampoCalculado_d_5_n_10(decimalXelement, listDecimal[0], listDecimal[1], listDecimal[2], listDecimal[3], listDecimal[4], listDecimal[5]))
-                                    stringBuilder.AppendLine("d.5.n.10 - Fre." + str);
+                                    stringBuilder.AppendLine("d.5.n.7.2 - Valor no permitido");*/
+                                //}
+                                /*if (flag3)
+                                {
+                                    if (!ValidarCamposCalculados.ValidarCampoCalculado_d_5_n_10(decimalXelement, listDecimal[0], listDecimal[1], listDecimal[2], listDecimal[3], listDecimal[4], listDecimal[5]))
+                                        stringBuilder.AppendLine("d.5.n.10 - Fre." + str);
+                                }
+                                else
+                                if (!ValidarCamposCalculados.ValidarCampoCalculado_d_5_n_10(decimalXelement, listDecimal[0], listDecimal[1], listDecimal[2], listDecimal[3], listDecimal[4])) //, 1M))
+                                    //stringBuilder.AppendLine("d.5.n.10 - Fre." + str);
+                                    stringBuilder.AppendLine("d.5.n.10 - Fre. Valor no permitido.");*/
+                                string mensaje = "";
+                                mensaje = ValidarCamposCalculados.ValidarCampoCalculado_d_5_n_10(decimalXelement, listDecimal[0], listDecimal[1], listDecimal[2], listDecimal[3], listDecimal[4]);
+                                if (!mensaje.Equals("")) //, 1M))
+                                                                                                                                                                                              //stringBuilder.AppendLine("d.5.n.10 - Fre." + str);
+                                    stringBuilder.AppendLine("d.5.n.10 - Fre. "+mensaje+".");
                             }
-                            else*/ 
-                            if (!ValidarCamposCalculados.ValidarCampoCalculado_d_5_n_10(decimalXelement, listDecimal[0], listDecimal[1], listDecimal[2], listDecimal[3], listDecimal[4])) //, 1M))
-                                stringBuilder.AppendLine("d.5.n.10 - Fre." + str);
-                        }
                     }
                     else
                         stringBuilder.AppendLine("d.5.n.10 - Fre." + str);
@@ -6834,7 +6840,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                         if (!XmlUtils.IsListEmpty(listElement))
                         {
                             List<Decimal> listDecimal = XmlUtils.ConvetListElementToListDecimal(listElement);
-                            
+
                                 /*if (!this.esFactorZonaValido(listDecimal[0]))
                                     stringBuilder.AppendLine("h.1.1.n.10.2 - Valor no permitido");
                                 if (!this.esFactorUbicacionValido(listDecimal[1]))
@@ -6846,7 +6852,7 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                                 if (!this.esFactorSuperficieValido(listDecimal[4]))
                                     stringBuilder.AppendLine("h.1.1.n.14.2 - Valor no permitido");*/
 
-                                if (listDecimal[0] > 1.99M)
+                                /*if (listDecimal[0] > 1.99M)
                                     stringBuilder.AppendLine("h.1.1.n.10.2 - Valor no permitido");
                                 if (listDecimal[1] > 1.99M)
                                     stringBuilder.AppendLine("h.1.1.n.11.2 - Valor no permitido");
@@ -6855,16 +6861,21 @@ namespace SIGAPred.FuentesExternas.Avaluos.Services.Negocio
                                 if (listDecimal[3] > 1.99M)
                                     stringBuilder.AppendLine("h.1.1.n.13.2 - Valor no permitido");
                                 if (listDecimal[4] > 1.99M)
-                                    stringBuilder.AppendLine("h.1.1.n.14.2 - Valor no permitido");
-                            
-                            /*if (flag3)
-                            {*/
+                                    stringBuilder.AppendLine("h.1.1.n.14.2 - Valor no permitido");*/
+
+                                /*if (flag3)
+                                {
                                 if (!ValidarCamposCalculados.ValidarCampoCalculado_h_1_1_n_17(decimalXelement, listDecimal[0], listDecimal[1], listDecimal[2], listDecimal[3], listDecimal[4]))
-                                    stringBuilder.AppendLine("h.1.1.n.17 - Fre. El calculo da incorrecto. " + str);
-                           /* }
-                            else if (!ValidarCamposCalculados.ValidarCampoCalculado_h_1_1_n_17(decimalXelement, listDecimal[0], listDecimal[1], listDecimal[2], listDecimal[3], listDecimal[4]))
-                                stringBuilder.AppendLine("h.1.1.n.17 - Fre." + str);*/
-                        }
+                                    stringBuilder.AppendLine("h.1.1.n.17 - Fre. Valor no permitido."); // + str);
+                                 }
+                                 else if (!ValidarCamposCalculados.ValidarCampoCalculado_h_1_1_n_17(decimalXelement, listDecimal[0], listDecimal[1], listDecimal[2], listDecimal[3], listDecimal[4]))
+                                     stringBuilder.AppendLine("h.1.1.n.17 - Fre." + str);*/
+                                string mensaje = "";
+                                mensaje = ValidarCamposCalculados.ValidarCampoCalculado_h_1_1_n_17(decimalXelement, listDecimal[0], listDecimal[1], listDecimal[2], listDecimal[3], listDecimal[4]);
+                                if (!mensaje.Equals(""))
+                                    stringBuilder.AppendLine("h.1.1.n.17 - Fre. "+mensaje+"."); // + str);
+
+                            }
                         else
                             stringBuilder.AppendLine("h.1.1.n.17 - Fre. No hay datos permitidos " + str);
                     }

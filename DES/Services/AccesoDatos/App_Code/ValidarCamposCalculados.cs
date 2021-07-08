@@ -28,7 +28,7 @@ public static class ValidarCamposCalculados
         }
     }
 
-    public static bool ValidarCampoCalculado_d_5_n_10(
+    public static string ValidarCampoCalculado_d_5_n_10(
       Decimal valorCalculado,
       Decimal d_5_n_3_2,
       Decimal d_5_n_4_2,
@@ -42,17 +42,23 @@ public static class ValidarCamposCalculados
         {
             //return valorCalculado.ToRound2() == Math.Max(0.6M, (d_5_n_3 * d_5_n_4 * d_5_n_5 * d_5_n_6 * d_5_n_7 * d_5_n_9).ToRound2());
             var res =(d_5_n_3_2 * d_5_n_4_2 * d_5_n_5_2 * d_5_n_6_2 * d_5_n_7_2).ToRound2();
-            if (res > 1.0M)
+            string mensaje = "";
+            if (res > 2.00M)
                 throw new Exception();
-            else if (res < 0.6M)
+            if (res < 0.6M)
                 res = 0.6M;
 
-            return valorCalculado.ToRound2() ==  res;
+            if (valorCalculado.ToRound2() != res && (valorCalculado.ToRound2() >= 0.6M && valorCalculado.ToRound2() <= 2.00M))
+                mensaje = "Error al validar el cálculo";
+            else
+                throw new Exception();
+
+            return mensaje;
         }
         catch (Exception ex)
         {
             log("ValidarCampoCalculado_d_5_n_10", ex.Message, ex.StackTrace);
-            return false;
+            return "Valor no permitido";
         }
     }
 
@@ -961,7 +967,7 @@ public static class ValidarCamposCalculados
         }
     }
 
-    public static bool ValidarCampoCalculado_h_1_1_n_17(
+    public static string ValidarCampoCalculado_h_1_1_n_17(
       Decimal fre,
       Decimal h_1_1_n_10_2,
       Decimal h_1_1_n_11_2,
@@ -972,6 +978,7 @@ public static class ValidarCamposCalculados
         try
         {
             //Decimal val1 = 0.6M;
+            string mensaje = "";
             System.IO.File.AppendAllText(AppDomain.CurrentDomain.BaseDirectory + "\\Avaluos.log", "\n\r" + DateTime.Now.ToString() 
                 + " ValidarCampoCalculado_h_1_1_n_17 "
                 + fre.ToString() + "\n\r"
@@ -981,17 +988,31 @@ public static class ValidarCamposCalculados
                 + h_1_1_n_13_2.ToString() + "\n\r"
                 + h_1_1_n_14_2.ToString() + "\n\r"
                 + fre.ToRound2().ToString() + "\n\r"
-                + (1M / (h_1_1_n_10_2 * h_1_1_n_11_2 * h_1_1_n_12_2 * h_1_1_n_13_2 * h_1_1_n_14_2)).ToRound2().ToString() + "\n\r"
+                //+ (1M / (h_1_1_n_10_2 * h_1_1_n_11_2 * h_1_1_n_12_2 * h_1_1_n_13_2 * h_1_1_n_14_2)).ToRound2().ToString() + "\n\r"
+                + ( (h_1_1_n_10_2 * h_1_1_n_11_2 * h_1_1_n_12_2 * h_1_1_n_13_2 * h_1_1_n_14_2)).ToRound2().ToString() + "\n\r"
                 + "\n\r");
 
-            return fre.ToRound2() == //Math.Max(val1, 
-                (1M / (h_1_1_n_10_2 * h_1_1_n_11_2 * h_1_1_n_12_2 * h_1_1_n_13_2 * h_1_1_n_14_2)).ToRound2();
+            var res= (h_1_1_n_10_2 * h_1_1_n_11_2 * h_1_1_n_12_2 * h_1_1_n_13_2 * h_1_1_n_14_2).ToRound2();
+
+            if (res > 2.00M)
+                throw new Exception();
+            if (res < 0.6M)
+                res = 0.6M;
+
+            if (fre.ToRound2() != res && (fre.ToRound2() >= 0.6M && fre.ToRound2() <=2.00M))
+                mensaje = "Error al validar el cálculo";
+            else
+                throw new Exception();
+
+            return mensaje;
+            //Math.Max(val1, 
+            //(1M / (h_1_1_n_10_2 * h_1_1_n_11_2 * h_1_1_n_12_2 * h_1_1_n_13_2 * h_1_1_n_14_2)).ToRound2();
 
         }
         catch (Exception ex)
         {
             log("ValidarCampoCalculado_h_1_1_n_17", ex.Message, ex.StackTrace);
-            return false;
+            return "Valor no permitido";
         }
     }
 

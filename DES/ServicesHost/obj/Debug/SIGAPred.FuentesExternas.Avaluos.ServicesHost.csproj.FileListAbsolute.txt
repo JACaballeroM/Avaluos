@@ -174,3 +174,32 @@ C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\D
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\ServicesHost\obj\Debug\SIGAPred.FuentesExternas.Avaluos.ServicesHost.csproj.CopyComplete
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\ServicesHost\obj\Debug\SIGAPred.FuentesExternas.Avaluos.ServicesHost.dll
 C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Avaluos\DES\ServicesHost\obj\Debug\SIGAPred.FuentesExternas.Avaluos.ServicesHost.pdb
+C:\Repos\Avaluos\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.ServicesHost.dll.config
+C:\Repos\Avaluos\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.ServicesHost.dll
+C:\Repos\Avaluos\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.ServicesHost.pdb
+C:\Repos\Avaluos\DES\ServicesHost\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Repos\Avaluos\DES\ServicesHost\bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+C:\Repos\Avaluos\DES\ServicesHost\bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll
+C:\Repos\Avaluos\DES\ServicesHost\bin\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+C:\Repos\Avaluos\DES\ServicesHost\bin\Microsoft.Practices.ObjectBuilder2.dll
+C:\Repos\Avaluos\DES\ServicesHost\bin\SevenZipSharp.dll
+C:\Repos\Avaluos\DES\ServicesHost\bin\SIGAPred.Common.Compresion.dll
+C:\Repos\Avaluos\DES\ServicesHost\bin\SIGAPred.Common.DataAccess.dll
+C:\Repos\Avaluos\DES\ServicesHost\bin\SIGAPred.Common.dll
+C:\Repos\Avaluos\DES\ServicesHost\bin\SIGAPred.Documental.Services.dll
+C:\Repos\Avaluos\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.Enum.dll
+C:\Repos\Avaluos\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.Services.dll
+C:\Repos\Avaluos\DES\ServicesHost\bin\Oracle.DataAccess.dll
+C:\Repos\Avaluos\DES\ServicesHost\bin\SecurityCore.dll
+C:\Repos\Avaluos\DES\ServicesHost\bin\MyExtentions.dll
+C:\Repos\Avaluos\DES\ServicesHost\bin\BouncyCastle.Crypto.dll
+C:\Repos\Avaluos\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.Enum.pdb
+C:\Repos\Avaluos\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.Enum.xml
+C:\Repos\Avaluos\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.Services.pdb
+C:\Repos\Avaluos\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.Services.xml
+C:\Repos\Avaluos\DES\ServicesHost\bin\SIGAPred.FuentesExternas.Avaluos.Services.dll.config
+C:\Repos\Avaluos\DES\ServicesHost\obj\Debug\SIGAPred.FuentesExternas.Avaluos.ServicesHost.csprojAssemblyReference.cache
+C:\Repos\Avaluos\DES\ServicesHost\obj\Debug\SIGAPred.FuentesExternas.Avaluos.ServicesHost.csproj.CoreCompileInputs.cache
+C:\Repos\Avaluos\DES\ServicesHost\obj\Debug\SIGAPred.FuentesExternas.Avaluos.ServicesHost.csproj.CopyComplete
+C:\Repos\Avaluos\DES\ServicesHost\obj\Debug\SIGAPred.FuentesExternas.Avaluos.ServicesHost.dll
+C:\Repos\Avaluos\DES\ServicesHost\obj\Debug\SIGAPred.FuentesExternas.Avaluos.ServicesHost.pdb

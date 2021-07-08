@@ -1482,7 +1482,7 @@
 							<xs:element name="Fre">
 								<xs:complexType>
 									<xs:simpleContent>
-										<xs:extension base="DecimalPositivo222">
+										<xs:extension base="DecimalPositivo32">
 											<xs:attribute fixed="h.1.1.n.17" name="id" type="xs:string" use="required" />
 										</xs:extension>
 									</xs:simpleContent>
@@ -4486,7 +4486,7 @@
 
 	<xs:complexType name="SUB-Fre">
 		<xs:simpleContent>
-			<xs:extension base="DecimalPositivo222">
+			<xs:extension base="DecimalPositivo32">
 				<xs:attribute fixed="d.5.n.10" name="id" type="xs:string" use="required" />
 			</xs:extension>
 		</xs:simpleContent>

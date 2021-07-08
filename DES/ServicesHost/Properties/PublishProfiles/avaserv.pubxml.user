@@ -5,83 +5,83 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <_PublishTargetUrl>C:\Users\EdgarAntunezMartinez\Documents\Publicaciones\FuentesExternas\Servicios\Avaluos</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Publicaciones\AvaluosServices</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="Avaluos.svc">
-      <publishTime>06/18/2015 14:39:10</publishTime>
+      <publishTime>06/15/2021 12:59:36</publishTime>
     </File>
     <File Include="bin/BouncyCastle.Crypto.dll">
-      <publishTime>06/18/2015 13:45:02</publishTime>
+      <publishTime>06/08/2021 13:16:03</publishTime>
     </File>
     <File Include="bin/Microsoft.Practices.EnterpriseLibrary.Common.dll">
-      <publishTime>06/18/2015 14:39:38</publishTime>
+      <publishTime>06/15/2021 12:59:37</publishTime>
     </File>
     <File Include="bin/Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll">
-      <publishTime>06/18/2015 14:39:38</publishTime>
+      <publishTime>06/15/2021 12:59:38</publishTime>
     </File>
     <File Include="bin/Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll">
-      <publishTime>06/18/2015 14:39:38</publishTime>
+      <publishTime>06/15/2021 12:59:38</publishTime>
     </File>
     <File Include="bin/Microsoft.Practices.EnterpriseLibrary.Logging.dll">
-      <publishTime>06/18/2015 14:39:38</publishTime>
+      <publishTime>06/15/2021 12:59:38</publishTime>
     </File>
     <File Include="bin/Microsoft.Practices.ObjectBuilder2.dll">
-      <publishTime>06/18/2015 14:39:38</publishTime>
+      <publishTime>06/15/2021 12:59:38</publishTime>
     </File>
     <File Include="bin/MyExtentions.dll">
-      <publishTime>11/27/2018 20:49:24</publishTime>
+      <publishTime>06/15/2021 12:59:35</publishTime>
     </File>
     <File Include="bin/Oracle.DataAccess.dll">
-      <publishTime>06/18/2015 14:39:38</publishTime>
+      <publishTime>06/15/2021 12:59:38</publishTime>
     </File>
     <File Include="bin/SecurityCore.dll">
-      <publishTime>06/18/2015 14:49:32</publishTime>
+      <publishTime>06/15/2021 12:59:35</publishTime>
     </File>
     <File Include="bin/SevenZipSharp.dll">
-      <publishTime>06/18/2015 14:39:38</publishTime>
+      <publishTime>06/15/2021 12:59:38</publishTime>
     </File>
     <File Include="bin/SIGAPred.Common.Compresion.dll">
-      <publishTime>06/18/2015 14:39:40</publishTime>
+      <publishTime>06/15/2021 12:59:38</publishTime>
     </File>
     <File Include="bin/SIGAPred.Common.DataAccess.dll">
-      <publishTime>06/18/2015 14:39:40</publishTime>
+      <publishTime>06/15/2021 12:59:38</publishTime>
     </File>
     <File Include="bin/SIGAPred.Common.dll">
-      <publishTime>06/18/2015 14:39:40</publishTime>
+      <publishTime>06/15/2021 12:59:38</publishTime>
     </File>
     <File Include="bin/SIGAPred.Documental.Services.dll">
-      <publishTime>06/18/2015 14:39:40</publishTime>
+      <publishTime>06/15/2021 12:59:38</publishTime>
     </File>
     <File Include="bin/SIGAPred.Excepciones.ClaseExcepcion.dll">
-      <publishTime>11/27/2018 21:04:00</publishTime>
+      <publishTime>06/15/2021 12:59:36</publishTime>
     </File>
     <File Include="bin/SIGAPred.FuentesExternas.Avaluos.Enum.dll">
-      <publishTime>04/20/2021 13:09:06</publishTime>
+      <publishTime>07/02/2021 12:47:15</publishTime>
     </File>
     <File Include="bin/SIGAPred.FuentesExternas.Avaluos.Enum.pdb">
-      <publishTime>04/20/2021 13:09:06</publishTime>
+      <publishTime>07/02/2021 12:47:15</publishTime>
     </File>
     <File Include="bin/SIGAPred.FuentesExternas.Avaluos.Services.dll">
-      <publishTime>06/07/2021 16:31:57</publishTime>
+      <publishTime>07/07/2021 13:17:23</publishTime>
     </File>
     <File Include="bin/SIGAPred.FuentesExternas.Avaluos.Services.dll.config">
-      <publishTime>03/25/2021 17:37:16</publishTime>
+      <publishTime>07/02/2021 12:47:16</publishTime>
     </File>
     <File Include="bin/SIGAPred.FuentesExternas.Avaluos.Services.pdb">
-      <publishTime>06/07/2021 16:31:57</publishTime>
+      <publishTime>07/07/2021 13:17:23</publishTime>
     </File>
     <File Include="bin/SIGAPred.FuentesExternas.Avaluos.ServicesHost.dll">
-      <publishTime>06/07/2021 16:32:09</publishTime>
+      <publishTime>07/07/2021 13:17:33</publishTime>
     </File>
     <File Include="bin/SIGAPred.FuentesExternas.Avaluos.ServicesHost.pdb">
-      <publishTime>06/07/2021 16:32:09</publishTime>
+      <publishTime>07/07/2021 13:17:33</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
       <publishTime>03/02/2021 10:19:25</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>03/25/2021 17:37:16</publishTime>
+      <publishTime>07/02/2021 12:47:19</publishTime>
     </File>
   </ItemGroup>
 </Project>
